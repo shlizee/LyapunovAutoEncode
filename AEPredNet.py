@@ -15,14 +15,15 @@ class AEPredNet(nn.Module):
 		self.input_size = input_size
 		self.lr = lr
 		self.learning_rate_decay= decay_rate
-		
+		self.dtype = dtype
+		self.device = device
 		self.global_step = 0
 		self.train_loss = torch.zeros((0,))
 		self.val_loss = torch.zeros((0,))
 		self.vl1 = torch.zeros((0,))
 		self.vl2 = torch.zeros((0,))
 		self.alphas =torch.zeros((0, 2))
-		
+
 		
 		self.drop = nn.Dropout(p = p_drop)
 		if act == 'tanh':
@@ -54,6 +55,7 @@ class AEPredNet(nn.Module):
 		self.best_state = self.state_dict()
 		
 	def forward(self, input, predict = True):
+		# input = input.to(self.device)
 		enc = self.drop(self.act(self.fc_e1(input)))
 		enc = self.drop(self.act(self.fc_e2(enc)))
 		enc = self.fc_e3(enc)
@@ -67,7 +69,9 @@ class AEPredNet(nn.Module):
 		out = dec
 		
 		if predict:
+			# print("prediction target:", self.prediction(latent).squeeze())
 			return out, latent, self.prediction(latent).squeeze()
+
 		else:
 			return out, latent
 	
