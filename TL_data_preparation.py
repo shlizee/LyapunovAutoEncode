@@ -10,12 +10,13 @@ import matplotlib.pyplot as plt
 # Visualizing g vs. target_learning loss(and its average)
 def plotting(gs, targets_avg, targets_all):
     plt.figure()
-    plt.scatter(gs, targets_avg)
-    plt.plot(gs, targets_avg)
+
     for i in range(0, 7):
         x_axis = gs[i] * torch.ones([50, 1])
         plt.scatter(x_axis, targets_all[i * 50 : (i + 1) * 50])
-
+    plt.scatter(gs, targets_avg)
+    plt.plot(gs, targets_avg, 'k-', linewidth=3)
+    plt.axis([1.1, 1.9, -.1, 1.1])
     plt.show()
 
 # Fetch the LEs and target_learning loss as inputs and targets for auto-encoder network
@@ -83,9 +84,9 @@ def interpolate(inputs, inputs_dim = 512, target_dim = 1024):
     return new_inputs
 
 def main():
-    # inputs_epoch = 4
-    # target_epoch = 14
-    # pre_preparation()
+    inputs_epoch = 4
+    target_epoch = 14
+    pre_preparation()
     # data_path = "training_data/4sine_epoch_{}".format(inputs_epoch)
     # data = pickle.load(open(data_path, 'rb'))
     #
