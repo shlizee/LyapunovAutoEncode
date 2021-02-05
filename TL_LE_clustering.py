@@ -45,7 +45,7 @@ def main():
         plt.scatter(y[:, 0], y[:, 1], s=6, label=gs[idx])
     plt.legend()
     # torch.save(Y, 'tsne.p')
-    plt.savefig('AEPredNet_tsne_size.png', dpi=200)
+    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_size.png', dpi=200)
 
 
 def param_plot():
@@ -70,7 +70,7 @@ def param_plot():
     plt.ylim([1.1, 2.6])
     plt.ylabel('Validation Loss \n (Predicted)')
     plt.title('AE Predictions')
-    plt.savefig('AEPredNet_paramPlot.png', bbox_inches="tight", dpi=200)
+    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_paramPlot.png', bbox_inches="tight", dpi=200)
 
     plt.figure()
     targets = torch.load('Processed/lstm_allValLoss.p')
@@ -110,7 +110,7 @@ def tsne_perf():
     plt.colorbar(label='Val Loss')
     plt.xlabel('TSNE 1')
     plt.ylabel('TSNE 2')
-    plt.savefig('AEPredNet_tsne_performance.png', dpi=200)
+    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_performance.png', dpi=200)
 
 
 def tsne_param():
@@ -129,10 +129,10 @@ def tsne_param():
     plt.colorbar(label='Init Param')
     plt.xlabel('TSNE 1')
     plt.ylabel('TSNE 2')
-    plt.savefig('AEPredNet_tsne_params.png', dpi=200)
+    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_params.png', dpi=200)
 
 
 if __name__ == "__main__":
-    # main()
-    tsne_perf()
+    main()
+    # tsne_perf()
 # tsne_param()
