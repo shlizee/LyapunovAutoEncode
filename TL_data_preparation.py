@@ -11,22 +11,23 @@ import matplotlib.pyplot as plt
 def plotting(gs, targets_avg, targets_all):
     plt.figure()
 
-    for i in range(0, 7):
+    for i in range(0, len(gs)):
         x_axis = gs[i] * torch.ones([50, 1])
         plt.scatter(x_axis, targets_all[i * 50 : (i + 1) * 50])
     plt.scatter(gs, targets_avg)
     plt.plot(gs, targets_avg, 'k-', linewidth=3)
-    plt.axis([1.1, 1.9, -.1, 1.1])
+    plt.axis([min(gs)-0.1, max(gs) + 0.1, -.1, 1.1])
     plt.show()
 
 # Fetch the LEs and target_learning loss as inputs and targets for auto-encoder network
 def pre_preparation():
     inputs_epoch = 4
     target_epoch = 14
-    gs = [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8]
+    N = 256
+    gs = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
     targets_avg = torch.zeros((len(gs), 1))
     for i, g in enumerate(gs):
-        file_path = '../lyapunov-hyperopt-master/trials/4sine_learner_N_512_g_{}.p'.format(g)
+        file_path = '../lyapunov-hyperopt-master/trials/N_{}/4sine_learner_N_{}_g_{}.p'.format(N, N, g)
         trials = pickle.load(open(file_path, 'rb'))
         # print(type(trials))
 
@@ -44,6 +45,7 @@ def pre_preparation():
         # print(targets)
         inputs = torch.tensor(inputs)
         targets = torch.tensor(targets)
+        inputs = interpolate(inputs)
         inputs = interpolate(inputs)
         targets_avg[i] = torch.mean(targets)
         print(targets_avg[i])
@@ -87,11 +89,11 @@ def main():
     inputs_epoch = 4
     target_epoch = 14
     pre_preparation()
-    # data_path = "training_data/4sine_epoch_{}".format(inputs_epoch)
-    # data = pickle.load(open(data_path, 'rb'))
-    #
-    # inputs, targets = data['inputs'], data['targets']
-    # print(inputs.shape)
+    data_path = "training_data/4sine_epoch_{}".format(inputs_epoch)
+    data = pickle.load(open(data_path, 'rb'))
+
+    inputs, targets = data['inputs'], data['targets']
+    print(inputs.shape)
     # print(targets)
 if __name__ == "__main__":
     main()

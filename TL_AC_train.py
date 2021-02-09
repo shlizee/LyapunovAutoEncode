@@ -69,16 +69,19 @@ def main():
     data_path = "training_data/4sine_epoch_{}".format(inputs_epoch)
     data = pickle.load(open(data_path, 'rb'))
     x_data, targets = data['inputs'], data['targets']
+    # print(x_data.shape)
 
 
-    if os.path.exists('data_split_vfrac0.2.p'):
-        split = torch.load('data_split_vfrac0.2.p')
-    else:
-        split = train_val_split(x_data, targets, 0.2)
+    # if os.path.exists('data_split_vfrac0.2.p'):
+    #     split = torch.load('data_split_vfrac0.2.p')
+    # else:
+    split = train_val_split(x_data, targets, 0.2)
     x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'], split['val_data'], split[
         'val_targets']
+    # print(x_train.shape)
     model = AEPredNet(latent_size=128, lr=1e-5, act='tanh', device=device)
     alphas = [5, 5, 10, 20]
+
     for alpha in alphas:
         ae_train(model, x_train, y_train, x_val, y_val, alpha=alpha, epochs=1000, print_interval=250, batch_size=128)
     plt.plot(range(model.global_step), model.val_loss, label='total')

@@ -8,7 +8,7 @@ import seaborn as sns
 
 def tsne(model, X, tsne_params={}):
     encoded = model(X)[1]
-    tsne_model = TSNE(**tsne_params)
+    tsne_model = TSNE(**tsne_params, random_state=1)
     X_embedded = tsne_model.fit_transform(encoded.detach().numpy())
     print(X_embedded.shape)
     return tsne_model
@@ -30,22 +30,26 @@ def main():
 
     # x_data = torch.load('Processed/lstm_allLEs.p')
     split = torch.load('data_split_vfrac0.2.p')
-    indices = [0, 50, 100, 150, 200, 250, 300, 350]
-    gs = [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8]
+    indices = [0, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550 ,600]
+    gs = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
     # indices = [0, 300, 600, 900, 1200]
     # sizes = [64, 128, 256, 512]
     tsne_model = tsne(model, split['train_data'], tsne_params={'perplexity': 10})
     splits = []
-    i_list = torch.arange(350)
+    i_list = torch.arange(600)
     splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
               i in range(len(indices) - 1)]
-    Y = tsne_model.fit_transform(x_data)
+    Y = tsne_model.fit_transform(model(x_data)[1].detach())
+    print(Y)
     for idx, g in enumerate(gs):
         y = Y[splits[idx]]
         plt.scatter(y[:, 0], y[:, 1], s=6, label=gs[idx])
     plt.legend()
-    # torch.save(Y, 'tsne.p')
+    # plt.xlim([-60, 40])
+    # plt.ylim([-60, 80])
+    torch.save(Y, 'tsne.p')
     plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_size.png', dpi=200)
+    plt.show()
 
 
 def param_plot():
@@ -91,8 +95,8 @@ def tsne_perf():
     data_path = "training_data/4sine_epoch_{}".format(inputs_epoch)
     data = pickle.load(open(data_path, 'rb'))
     x_data, targets = data['inputs'], data['targets']
-    indices = [0, 50, 100, 150, 200, 250, 300, 350]
-    gs = [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8]
+    indices = [0, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550 ,600]
+    gs = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
 
     # indices = [0, 300, 600, 900, 1200]
     # sizes = [64, 128, 256, 512]
@@ -110,8 +114,10 @@ def tsne_perf():
     plt.colorbar(label='Val Loss')
     plt.xlabel('TSNE 1')
     plt.ylabel('TSNE 2')
-    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_performance.png', dpi=200)
-
+    # plt.xlim([-60, 40])
+    # plt.ylim([-60, 80])
+    # plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_performance.png', dpi=200)
+    plt.show()
 
 def tsne_param():
     indices = [0, 300, 600, 900, 1200]
@@ -134,5 +140,6 @@ def tsne_param():
 
 if __name__ == "__main__":
     main()
-    # tsne_perf()
+
+    tsne_perf()
 # tsne_param()

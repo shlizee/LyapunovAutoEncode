@@ -79,6 +79,7 @@ class AEPredNet(nn.Module):
 	def train_step_ae(self, input, targets = None, alpha = 1, predict = True):
 		self.opt.zero_grad()
 		self.train()
+		# print(input.shape)
 		outputs = self(input)
 		out = outputs[0]
 		loss1 = self.rec_loss(input, out)
