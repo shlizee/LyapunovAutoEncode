@@ -42,7 +42,11 @@ def mini_batch_ae(features, batch_size):
 		
 def train_val_split(data, targets, val_split = 0.2, save = True):
 	samples = data.shape[0]
+<<<<<<< HEAD
 	train_samples = torch.arange(floor(samples * (1- val_split)))
+=======
+	train_samples = torch.arange(floor(samples * (1 - val_split)))
+>>>>>>> 40aeaf8ece1869e6a32deb9dc2e10862449e34b8
 	val_samples = torch.arange(torch.max(train_samples)+1, samples)
 	shuffle_idx = torch.randperm(samples)
 	train_idx, val_idx = shuffle_idx[train_samples], shuffle_idx[val_samples]

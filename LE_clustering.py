@@ -90,7 +90,7 @@ def tsne_perf():
 def tsne_param():
 	indices = [0, 300, 600, 900, 1200]
 	sizes = [64, 128, 256, 512]
-	params = torch.load('lstm_allParams.p')
+	# params = torch.load('lstm_allParams.p')
 	splits = []
 	i_list = torch.arange(1200)
 	splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
