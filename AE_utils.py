@@ -52,7 +52,7 @@ def train_val_split(data, targets, val_split = 0.2, save = True):
 	
 	split_dict = {'train_data': train_data, 'train_targets':train_targets, 'val_data': val_data, 
 					'val_targets': val_targets, 'train_idx': train_idx, 'val_idx': val_idx }
-	torch.save(split_dict, f'data_split_vfrac{val_split}.p')
+	torch.save(split_dict, f'Results/N_512_g_1.5/epoch_5/data_split_vfrac{val_split}.p')
 	return split_dict
 	
 if __name__ == '__main__':

@@ -91,7 +91,7 @@ class AEPredNet(nn.Module):
 		loss = loss1 + alpha*loss2
 		loss.backward()
 		self.opt.step()
-		return loss
+		return loss, outputs
 		
 	def val_step_ae(self, input, targets = None, alpha = 1, predict = True):
 		self.opt.zero_grad()
@@ -106,7 +106,7 @@ class AEPredNet(nn.Module):
 			else:
 				loss2 = torch.zeros_like(loss1)
 			loss = loss1 + alpha*loss2
-			return loss, loss1, loss2
+			return loss, loss1, loss2, outputs
 	
 		
 	

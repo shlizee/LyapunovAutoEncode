@@ -6,8 +6,7 @@ import os
 import pickle
 
 def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size=64, val_batch_size=64, alpha=1,
-             epochs=100,
-             verbose=True, print_interval=10, suffix='', device=torch.device('cpu')):
+             epochs=100, verbose=True, print_interval=10, suffix='', device=torch.device('cpu'), inputs_epoch=4):
     train_loss = torch.zeros((epochs,), device=device)
     val_loss = torch.zeros((epochs,), device=device)
     val1 = torch.zeros((epochs,), device=device)
@@ -15,6 +14,7 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
     for epoch in range(epochs):
         x_train = mini_batch_ae(train_data, batch_size)
         tar_train = mini_batch_ae(train_targets, batch_size)
+        # print("tar_train: ", tar_train)
         x_val = mini_batch_ae(val_data, val_batch_size)
         tar_val = mini_batch_ae(val_targets, val_batch_size)
         tl = 0
@@ -26,8 +26,8 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
         for xt, tt in zip(x_train, tar_train):
             train_samples = xt.shape[0]
             train_batches += 1
-            tl += float(model.train_step_ae(input=xt.to(device), targets=tt.to(device),
-                                            alpha=alpha)) * train_samples / batch_size
+            loss, outputs = model.train_step_ae(input=xt.to(device), targets=tt.to(device),alpha=alpha)
+            tl += float(loss * train_samples / batch_size)
         for xv, tv in zip(x_val, tar_val):
             val_samples = xv.shape[0]
             val_batches += 1
@@ -55,7 +55,7 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
     model.vl1 = torch.cat((model.vl1, val1))
     model.vl2 = torch.cat((model.vl2, val2))
     model.alphas = torch.cat((model.alphas, torch.Tensor([alpha, epochs]).unsqueeze(dim=0)), dim=0)
-    torch.save(model, f'ae_prednet_{model.global_step}{suffix}.ckpt')
+    torch.save(model, f'Results/N_512_g_1.5/epoch_{inputs_epoch}/ae_prednet_{model.global_step}{suffix}.ckpt')
 
 
 def main():
@@ -63,27 +63,24 @@ def main():
         device = torch.device('cuda')
     else:
         device = torch.device('cpu')
-
-    inputs_epoch = 4
+    N = 512
+    inputs_epoch = 13
     target_epoch = 14
-    data_path = "training_data/4sine_epoch_{}".format(inputs_epoch)
+    data_path = "training_data/g_1.5/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
     data = pickle.load(open(data_path, 'rb'))
     x_data, targets = data['inputs'], data['targets']
-    # print(x_data.shape)
 
-
-    # if os.path.exists('data_split_vfrac0.2.p'):
-    #     split = torch.load('data_split_vfrac0.2.p')
-    # else:
     split = train_val_split(x_data, targets, 0.2)
     x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'], split['val_data'], split[
         'val_targets']
     # print(x_train.shape)
     model = AEPredNet(latent_size=128, lr=1e-5, act='tanh', device=device)
+    # alphas = [1, 0.2, 0.2, 0.1]
     alphas = [5, 5, 10, 20]
 
     for alpha in alphas:
-        ae_train(model, x_train, y_train, x_val, y_val, alpha=alpha, epochs=1000, print_interval=250, batch_size=128)
+        ae_train(model, x_train, y_train, x_val, y_val, alpha=alpha, epochs=1000, print_interval=250, batch_size=128,
+                 inputs_epoch=inputs_epoch)
     plt.plot(range(model.global_step), model.val_loss, label='total')
     plt.plot(range(model.global_step), model.vl1, label='rec loss (L1)')
     plt.plot(range(model.global_step), model.vl2, label='pred loss (L2)')
@@ -91,7 +88,7 @@ def main():
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.yscale('log')
-    plt.savefig(f"../lyapunov-hyperopt-master/Figures/Prednet_AE_valCurve.png", bbox_inches="tight", dpi=200)
+    plt.savefig("../lyapunov-hyperopt-master/Figures/Prednet_AE_valCurve_epoch_{}.png".format(inputs_epoch), bbox_inches="tight", dpi=200)
 
 
 if __name__ == "__main__":
