@@ -8,226 +8,142 @@ import pickle
 import seaborn as sns
 import pandas as pd
 
-def tsne(model, X, tsne_params={}):
-    encoded = model(X)[1]
-    tsne_model = TSNE(**tsne_params,n_components=2, random_state=1)
-    X_embedded = tsne_model.fit_transform(encoded.detach().numpy())
-    print(X_embedded.shape)
-    return tsne_model
+def tsne(X, targets, dim=2):
+    tsne_model = TSNE(perplexity=10,n_components=dim, random_state=1)
 
+    x_embedded = tsne_model.fit_transform(X.detach().numpy())
+
+    # x_embedded = tsne(hidden_outputs.detach(), dim=tsne_dim)
+
+    fig = plt.figure()
+    if (dim==2):
+        plt.scatter(x_embedded[:, 0], x_embedded[:, 1], s=6)
+        plt.xlim([-60, 40])
+        plt.ylim([-60, 80])
+    elif (dim==3):
+        ax = fig.add_subplot(111, projection='3d')
+        ax.scatter(x_embedded[:, 0], x_embedded[:, 1],
+                   x_embedded[:, 2], s=6)
+    plt.legend()
+    plt.title("TSNE")
+    plt.show()
+    print(x_embedded.shape)
+
+    tsne_results = {'x_embedded':x_embedded, 'targets':targets}
+    # plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne.png', dpi=200)
+
+    return tsne_results
+
+
+def tsne_perf(dim, path, x_embedded=None):
+    if not x_embedded:
+        tsne_results = torch.load(path + 'tsne.p')
+        x_embedded, targets = tsne_results['x_embedded'], tsne_results['targets']
+    fig = plt.figure()
+    if (dim == 2):
+        ax = fig.add_subplot(111)
+        p = ax.scatter(x_embedded[:, 0], x_embedded[:, 1], s=6, c = targets,
+                       norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()))
+        fig.colorbar(p, label='Val Loss')
+        plt.xlabel('TSNE 1')
+        plt.ylabel('TSNE 2')
+    elif (dim==3):
+        ax = fig.add_subplot(111, projection='3d')
+        p = ax.scatter(x_embedded[:, 0], x_embedded[:, 1],
+                   x_embedded[:, 2], s=6, c = targets,
+                       norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()))
+        fig.colorbar(p, label='Val Loss')
+        ax.set_xlabel('TSNE 1')
+        ax.set_ylabel('TSNE 2')
+        ax.set_zlabel('TSNE 3')
+    plt.title("TSNE Performance")
+    plt.show()
+    # plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_performance.png', dpi=200)
+
+def pca(X, targets, dim=2):
+    U,S,V = torch.pca_lowrank(X)
+    low_rank = torch.matmul(X, V[:, :dim]).detach().numpy()
+    fig = plt.figure()
+    if (dim==2):
+        plt.scatter(low_rank[:, 0], low_rank[:, 1], s=6)
+    elif (dim==3):
+        ax = fig.add_subplot(111, projection='3d')
+        ax.scatter(low_rank[:, 0], low_rank[:, 1],
+                   low_rank[:, 2], s=6)
+    plt.legend()
+    plt.title("PCA")
+    plt.show()
+    pca_results = {"low_rank": low_rank, "targets": targets}
+    return pca_results
+
+def pca_perf(dim, path, low_rank=None, targets=None):
+    if not low_rank:
+        pca_results = torch.load(path + 'PCA_dim{}.p'.format(dim))
+        low_rank, targets = pca_results['low_rank'], pca_results['targets']
+    fig = plt.figure()
+    if (dim == 2):
+        ax = fig.add_subplot(111)
+        p = ax.scatter(low_rank[:, 0], low_rank[:, 1], s=6, c = targets,
+                       norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()))
+        fig.colorbar(p, label='Val Loss')
+        plt.xlabel('PC 1')
+        plt.ylabel('PC 2')
+    elif (dim==3):
+        ax = fig.add_subplot(111, projection='3d')
+        p = ax.scatter(low_rank[:, 0], low_rank[:, 1],
+                   low_rank[:, 2], s=6, c = targets,
+                       norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()))
+        fig.colorbar(p, label='Val Loss')
+        ax.set_xlabel('PC 1')
+        ax.set_ylabel('PC 2')
+        ax.set_zlabel('PC 3')
+    plt.title("PCA Performance")
+    plt.show()
+
+def visualization(targets, predictions):
+    plt.figure()
+    plt.scatter(torch.ones_like(targets) , targets)
+    plt.scatter(torch.ones_like(predictions) * 1.1, predictions.detach())
+    plt.legend(["Targets", 'Predictions'])
+    # plt.axis([0.95, 1.15, -.1, 1.])
+    plt.show()
 
 def main():
+    g = 1.5
+    N = 512
+    inputs_epoch = 7
+    val_split = 0.1
+    dim = 2
+    prediction_loss_type = 'MSE'
+    Results_path = 'Results/N_{}_g_{}/epoch_{}/'.format(N, g, inputs_epoch)
+    model = torch.load(Results_path+'{}/ae_prednet_4000.ckpt'.format(prediction_loss_type))
+    model.load_state_dict(model.best_state)
     if torch.cuda.is_available():
         device = torch.device('cuda')
     else:
         device = torch.device('cpu')
-    model = torch.load('Results/N_512_g_1.5/epoch_5/ae_prednet_4000.ckpt')
-    model.load_state_dict(model.best_state)
 
-    inputs_epoch = 13
-    target_epoch = 14
-    N = 512
-
-    data_path = "training_data/g_1.5/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
+    data_path = "training_data/g_{}/4sine_epoch_{}_N_{}".format(g, inputs_epoch, N)
     data = pickle.load(open(data_path, 'rb'))
+    inputs, targets = data['inputs'], data['targets']
 
-    x_data, targets = data['inputs'], data['targets']
-    print(targets)
-    # plt.figure()
-    # plt.scatter(torch.ones_like(targets) , targets)
-    # plt.scatter(torch.ones_like(outputs[-1]) * 1.1, outputs[-1].detach())
-    # plt.axis([0.9, 1.1, -.1, 1.1])
-    # plt.show()
+    split = torch.load(Results_path + 'data_split_vfrac{}.p'.format(val_split))
 
-    split = torch.load('Results/N_512_g_1.5/epoch_13/data_split_vfrac0.2.p')
+    rec_outputs, hidden_outputs, pred_outputs = model(inputs)
+    visualization(targets, pred_outputs)
 
-    indices = [0, len(targets)]
-    gs = [1.5]
+    # tsne
+    tsne_results = tsne(X=hidden_outputs, targets=targets, dim=dim)
+    torch.save(tsne_results, Results_path + '{}/tsne.p'.format(prediction_loss_type))
+    tsne_perf(dim, Results_path+prediction_loss_type+'/')
 
-    tsne_model = tsne(model, split['train_data'], tsne_params={'perplexity': 10})
-    i_list = torch.arange(indices[-1])
-    splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
-              i in range(len(indices) - 1)]
-    outputs = model(x_data)
-    Y = tsne_model.fit_transform(outputs[1].detach())
-
-    plt.figure()
-    plt.scatter(torch.ones_like(targets), targets)
-    plt.scatter(torch.ones_like(outputs[-1]) * 1.1, outputs[-1].detach())
-    plt.show()
-    print(Y.shape)
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    # ax = fig.add_subplot(111, projection='3d')
-    for idx, g in enumerate(gs):
-        y = Y[splits[idx]]
-        ax.scatter(y[:, 0], y[:, 1], s=6, label=gs[idx])
-        # ax.scatter(y[:, 0], y[:, 1], y[:, 2], s=6, label=gs[idx])
-    plt.legend()
-    # plt.xlim([-60, 40])
-    # plt.ylim([-60, 80])
-    torch.save(Y, 'tsne.p')
-    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_size.png', dpi=200)
-    plt.show()
-
-def pca_plot():
-    if torch.cuda.is_available():
-        device = torch.device('cuda')
-    else:
-        device = torch.device('cpu')
-    model = torch.load('ae_prednet_4000.ckpt')
-    model.load_state_dict(model.best_state)
-
-    inputs_epoch = 4
-    target_epoch = 14
-    N = 512
-    data_path = "training_data/4sine_epoch_{}_N_512".format(inputs_epoch, N)
-    data = pickle.load(open(data_path, 'rb'))
-    x_data, targets = data['inputs'], data['targets']
-
-    x_data, targets = x_data[300:550, :], targets[300:550].detach()
-    # x_data = torch.load('Processed/lstm_allLEs.p')
-    split = torch.load('data_split_vfrac0.2.p')
-    # indices = [0, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550 ,600]
-    # gs = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
-    indices = [0, 250]
-    gs = [1.4]
-
-    splits = []
-
-    i_list = torch.arange(indices[-1])
-    splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
-              i in range(len(indices) - 1)]
-
-    pca = PCA(n_components=2)
-    principalComponents = pca.fit_transform(x_data)
-    principalDf = pd.DataFrame(data=principalComponents
-                               , columns=['principal component 1',
-                                          'principal component 2'])
-    finalDf = pd.concat([principalDf, targets], axis=1)
-
-    fig = plt.figure(figsize=(8, 8))
-    ax = fig.add_subplot(1, 1, 1)
-    ax.set_xlabel('Principal Component 1', fontsize=15)
-    ax.set_ylabel('Principal Component 2', fontsize=15)
-    ax.set_title('2 component PCA', fontsize=20)
-    colors = ['r','g','b']
-    for i, color in  enumerate(colors):
-        indicesToKeep = targets < 0.3 * (i+1)
-        ax.scatter(finalDf.loc[indicesToKeep, 'principal component 1']
-                   , finalDf.loc[indicesToKeep, 'principal component 2']
-                   , c=color
-                   , s=50)
-    ax.legend(targets)
-    ax.grid()
-
-    # plt.xlim([-60, 40])
-    # plt.ylim([-60, 80])
-    # torch.save(Y, 'pca.p')
-    # plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_size.png', dpi=200)
-    plt.show()
-def param_plot():
-    model = torch.load('ae_prednet_4000.ckpt')
-    model.load_state_dict(model.best_state)
-    x_data = torch.load('Processed/lstm_allLEs.p')
-    params = torch.load('lstm_allParams.p')
-    split = torch.load('data_split_vfrac0.2.p')
-    indices = [0, 300, 600, 900, 1200]
-    sizes = [64, 128, 256, 512]
-    val_idx = split['val_idx']
-    val_splits = []
-    for i in range(len(sizes)):
-        val_splits.append(
-            ((val_idx > torch.ones_like(val_idx) * indices[i]) * (val_idx < torch.ones_like(val_idx) * indices[i + 1])))
-        # print(torch.arange(1200).float()>torch.ones(1200)*indices[i])
-        # print(val_idx[val_splits[i]].shape)
-        plt.scatter(params[val_idx[val_splits[i]]], model(x_data[val_idx[val_splits[i]]])[2].detach(), label=sizes[i],
-                    s=14)
-    plt.legend()
-    plt.xlabel('Init Param')
-    plt.ylim([1.1, 2.6])
-    plt.ylabel('Validation Loss \n (Predicted)')
-    plt.title('AE Predictions')
-    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_paramPlot.png', bbox_inches="tight", dpi=200)
-
-    plt.figure()
-    targets = torch.load('Processed/lstm_allValLoss.p')
-    for i in range(4):
-        plt.scatter(params[val_idx[val_splits[i]]], targets[val_idx[val_splits[i]]], label=sizes[i], s=14)
-    plt.legend(prop={'size': 12})
-    plt.ylabel('Val Loss\n(Actual)')
-    plt.xlabel('Init Param')
-    plt.ylim([1.1, 2.6])
-    plt.title(f'Ground Truth')
-    plt.savefig('Actual_paramPlot.png', bbox_inches="tight", dpi=200)
+    # pca
+    pca_results = pca(X=hidden_outputs, dim=dim, targets=targets)
+    torch.save(pca_results, '{}/{}/PCA_dim{}.p'.format(Results_path, prediction_loss_type, dim))
+    pca_perf(dim=dim, path=Results_path + prediction_loss_type + '/')
 
 
-def tsne_perf():
-
-    inputs_epoch = 4
-    target_epoch = 14
-    N = 512
-    data_path = "training_data/g_1.5/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
-    data = pickle.load(open(data_path, 'rb'))
-    x_data, targets = data['inputs'], data['targets']
-    # indices = [0, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550 ,600]
-    # gs = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
-    x_data, targets = x_data[0:396, :], targets[0:396]
-    # x_data, targets = x_data[300:550, :], targets[300:550]
-    # x_data, targets = x_data[550: 800, :], targets[550:800]
-    indices = [0, 396]
-    gs = [1.4]
-    # indices = [0, 300, 550, 800]
-    # gs = [1.4, 1.5, 1.6]
-
-
-    # indices = [0, 300, 600, 900, 1200]
-    # sizes = [64, 128, 256, 512]
-    # targets = torch.load('Processed/lstm_allValLoss.p')
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    # ax = fig.add_subplot(111, projection='3d')
-
-    splits = []
-    i_list = torch.arange(max(indices))
-    splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
-              i in range(len(indices) - 1)]
-    Y = torch.load('tsne.p')
-    for idx, g in enumerate(gs):
-        y = Y[splits[idx]]
-        # p = ax.scatter(y[:, 0], y[:, 1], y[:, 2], s=6, c=targets[splits[idx]],
-        #             norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()))
-        p = ax.scatter(y[:, 0], y[:, 1], s=6, c=targets[splits[idx]],
-                    norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()))
-    fig.colorbar(p, label='Val Loss')
-    plt.xlabel('TSNE 1')
-    plt.ylabel('TSNE 2')
-    # plt.xlim([-60, 40])
-    # plt.ylim([-60, 80])
-    # plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_performance.png', dpi=200)
-    plt.show()
-
-def tsne_param():
-    indices = [0, 300, 600, 900, 1200]
-    sizes = [64, 128, 256, 512]
-    # params = torch.load('lstm_allParams.p')
-    splits = []
-    i_list = torch.arange(1200)
-    splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
-              i in range(len(indices) - 1)]
-    Y = torch.load('tsne.p')
-    for idx, size in enumerate(sizes):
-        y = Y[splits[idx]]
-        plt.scatter(y[:, 0], y[:, 1], s=6,
-                    c=params[splits[idx]])  # , norm=colors.LogNorm(vmin=params.min(), vmax=params.max()))
-    plt.colorbar(label='Init Param')
-    plt.xlabel('TSNE 1')
-    plt.ylabel('TSNE 2')
-    plt.savefig('../lyapunov-hyperopt-master/Figures/AEPredNet_tsne_params.png', dpi=200)
 
 
 if __name__ == "__main__":
     main()
-    # pca_plot()
-    # tsne_perf()
-# tsne_param()

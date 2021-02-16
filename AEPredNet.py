@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 
+
 class AEPredNet(nn.Module):
 	'''
 	A simple vanilla autoencoder with three intermediate layers. The latent space can be used to predict the validation loss.
@@ -10,7 +11,7 @@ class AEPredNet(nn.Module):
 	'''
 	
 	def __init__(self, input_size = 1024, latent_size = 128, lr = 1e-3, decay_rate = 0.999, dtype = torch.float, p_drop = 0.1, 
-					device = torch.device('cpu'), act = 'tanh', act_param = 0.01):
+					device = torch.device('cpu'), act = 'tanh', act_param = 0.01, prediction_loss_type='L1'):
 		super(AEPredNet, self).__init__()
 		self.input_size = input_size
 		self.lr = lr
@@ -23,7 +24,7 @@ class AEPredNet(nn.Module):
 		self.vl1 = torch.zeros((0,))
 		self.vl2 = torch.zeros((0,))
 		self.alphas =torch.zeros((0, 2))
-
+		self.prediction_loss_type = prediction_loss_type
 		
 		self.drop = nn.Dropout(p = p_drop)
 		if act == 'tanh':
@@ -40,7 +41,7 @@ class AEPredNet(nn.Module):
 		
 		#Prediction
 		self.prediction = nn.Linear(in_features = latent_size, out_features = 1)
-		
+		self.pred_activation = nn.Sigmoid()
 		#Decoder
 		self.fc_d1 = nn.Linear(in_features = latent_size, out_features = input_size//4)
 		self.fc_d2 = nn.Linear(in_features = input_size//4, out_features = input_size//2)
@@ -48,9 +49,13 @@ class AEPredNet(nn.Module):
 		
 		self.opt = torch.optim.Adam(self.parameters(), lr = self.lr)
 		self.rec_loss = nn.L1Loss()
-		# self.pred_loss = nn.MSELoss()
-		self.pred_loss = nn.L1Loss()
-		
+		if (self.prediction_loss_type=='MSE'):
+			self.pred_loss = nn.MSELoss()
+		elif (self.prediction_loss_type=='L1'):
+			self.pred_loss = nn.L1Loss()
+		elif (self.prediction_loss_type=='BCE'):
+			self.pred_loss = nn.BCELoss()
+
 		self.best_val = 1e7
 		self.best_state = self.state_dict()
 		
@@ -70,7 +75,9 @@ class AEPredNet(nn.Module):
 		
 		if predict:
 			# print("prediction target:", self.prediction(latent).squeeze())
-			return out, latent, self.prediction(latent).squeeze()
+			prediction = self.prediction(latent).squeeze()
+			prediction = self.pred_activation(prediction)
+			return out, latent, prediction
 
 		else:
 			return out, latent
@@ -85,6 +92,8 @@ class AEPredNet(nn.Module):
 		loss1 = self.rec_loss(input, out)
 		if predict:
 			pred = outputs[-1]
+			# loss2 = self.pred_loss(pred, targets)
+			targets = targets.type(torch.FloatTensor)
 			loss2 = self.pred_loss(pred, targets)
 		else:
 			loss2 = torch.zeros_like(loss1)
@@ -102,6 +111,7 @@ class AEPredNet(nn.Module):
 			loss1 = self.rec_loss(input, out)
 			if predict:
 				pred = outputs[-1]
+				targets = targets.type(torch.FloatTensor)
 				loss2 = self.pred_loss(pred, targets)
 			else:
 				loss2 = torch.zeros_like(loss1)

@@ -24,7 +24,7 @@ def pre_preparation(inputs_epoch, target_epoch, N, gs):
     targets_avg = torch.zeros((len(gs), 1))
     for i, g in enumerate(gs):
         first_time = True
-        for trial in range(0, 11):
+        for trial in range(0, 12):
             file_path = '../lyapunov-hyperopt-master/trials/N_{}/4sine_learner_N_{}_g_{}_trial_{}.p'.format(N, N, g, trial)
             trials = pickle.load(open(file_path, 'rb'))
             count = 0
@@ -61,16 +61,17 @@ def pre_preparation(inputs_epoch, target_epoch, N, gs):
         else:
             inputs_all = torch.cat((inputs_all, inputs_g), dim=0).to(device)
             targets_all = torch.cat((targets_all, targets_g), dim=0).to(device)
+        # Save data for AE network
+        data_path = "training_data/g_{}/4sine_epoch_{}_N_{}".format(g, inputs_epoch, N)
+        data = {"inputs": inputs_all, "targets": targets_all}
+        pickle.dump(data, open(data_path, 'wb'))
     print(inputs_all.shape)
     print(targets_all.shape)
 
     # Visualizing
     plotting(gs, targets_avg, targets_all)
 
-    # Save data for AE network
-    data_path = "training_data/g_1.5/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
-    data = {"inputs": inputs_all, "targets": targets_all}
-    pickle.dump(data, open(data_path, 'wb'))
+
 
 # interpolate the inputs so that its dimension increases to twice
 def interpolate(inputs, inputs_dim = 512, target_dim = 1024):
@@ -92,12 +93,12 @@ def interpolate(inputs, inputs_dim = 512, target_dim = 1024):
     return new_inputs
 
 def main():
-    inputs_epoch = 13
+    inputs_epoch = 10
     target_epoch = 14
     N = 512
-    gs = [1.5]
+    gs = [1.4]
     pre_preparation(inputs_epoch, target_epoch, N, gs)
-    data_path = "training_data/g_1.5/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
+    data_path = "training_data/g_1.4/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
     data = pickle.load(open(data_path, 'rb'))
 
     inputs, targets = data['inputs'], data['targets']

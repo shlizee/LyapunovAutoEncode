@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 import os
 import pickle
 
-def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size=64, val_batch_size=64, alpha=1,
-             epochs=100, verbose=True, print_interval=10, suffix='', device=torch.device('cpu'), inputs_epoch=4):
+def ae_train(model, train_data, train_targets, val_data,
+             val_targets, batch_size=64, val_batch_size=64, alpha=1,
+             epochs=100, verbose=True, print_interval=10,
+             suffix='', device=torch.device('cpu'), inputs_epoch=4):
     train_loss = torch.zeros((epochs,), device=device)
     val_loss = torch.zeros((epochs,), device=device)
     val1 = torch.zeros((epochs,), device=device)
@@ -55,7 +57,7 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
     model.vl1 = torch.cat((model.vl1, val1))
     model.vl2 = torch.cat((model.vl2, val2))
     model.alphas = torch.cat((model.alphas, torch.Tensor([alpha, epochs]).unsqueeze(dim=0)), dim=0)
-    torch.save(model, f'Results/N_512_g_1.5/epoch_{inputs_epoch}/ae_prednet_{model.global_step}{suffix}.ckpt')
+    torch.save(model, f'Results/N_512_g_1.5/epoch_{inputs_epoch}/{model.prediction_loss_type}/ae_prednet_{model.global_step}{suffix}.ckpt')
 
 
 def main():
@@ -64,19 +66,26 @@ def main():
     else:
         device = torch.device('cpu')
     N = 512
-    inputs_epoch = 13
+    g = 1.5
+    inputs_epoch = 7
     target_epoch = 14
+    val_split = 0.1
     data_path = "training_data/g_1.5/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
     data = pickle.load(open(data_path, 'rb'))
     x_data, targets = data['inputs'], data['targets']
 
-    split = train_val_split(x_data, targets, 0.2)
+    split = train_val_split(data=x_data, targets=targets, val_split=val_split)
+
+    torch.save(split, f'Results/N_{N}_g_{g}/epoch_{inputs_epoch}/data_split_vfrac{val_split}.p')
+
     x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'], split['val_data'], split[
         'val_targets']
-    # print(x_train.shape)
-    model = AEPredNet(latent_size=128, lr=1e-5, act='tanh', device=device)
-    # alphas = [1, 0.2, 0.2, 0.1]
-    alphas = [5, 5, 10, 20]
+    print(x_train.shape, y_train.shape, x_val.shape, y_val.shape)
+    prediction_loss_type = "MSE"
+    model = AEPredNet(latent_size=128, lr=1e-4, act='tanh', device=device, prediction_loss_type=prediction_loss_type)
+    alphas = [5,5,10, 20]
+    # alphas = [20, 20, 30, 40]
+
 
     for alpha in alphas:
         ae_train(model, x_train, y_train, x_val, y_val, alpha=alpha, epochs=1000, print_interval=250, batch_size=128,
