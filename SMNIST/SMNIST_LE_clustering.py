@@ -37,7 +37,6 @@ def tsne(X, targets, dim=2):
 
     return tsne_results
 
-
 def tsne_perf(dim, path, x_embedded=None):
     if not x_embedded:
         tsne_results = torch.load(path + 'tsne.p')
@@ -275,20 +274,13 @@ def visualization(targets, predictions):
     plt.show()
 
 def main():
-    g = 1.4
-    N = 512
-    inputs_epoch = 10
-    val_split = 0.2
+    inputs_epoch = 5
+    N = 32
+    val_split = 0.1
     dim = 2
-    isRFORCE = False
-    if isRFORCE:
-        distribution = 'RFORCE'
-    else:
-        distribution = "FORCE"
 
-    function_type = "random_4sine"
-    prediction_loss_type = 'BCE'
-    Results_path = 'Results/{}/N_{}_g_{}/epoch_{}/'.format(function_type, N, g, inputs_epoch)
+    prediction_loss_type = 'MSE'
+    Results_path = '../SMNIST/Results/N_{}_as_mixed/epoch_{}/'.format(N, inputs_epoch)
     model = torch.load(Results_path+'{}/ae_prednet_4000.ckpt'.format(prediction_loss_type))
     model.load_state_dict(model.best_state)
     if torch.cuda.is_available():
@@ -296,8 +288,8 @@ def main():
     else:
         device = torch.device('cpu')
 
-    data_path = "training_data/{}/{}/g_{}/{}_epoch_{}_N_{}".format(
-        distribution, function_type, g, function_type, inputs_epoch, N)
+    data_path = "../SMNIST/TrainingData/interpreted/a_mixed/epoch_{}_N_{}.pickle".format(inputs_epoch, N)
+
     data = pickle.load(open(data_path, 'rb'))
     inputs, targets = data['inputs'], data['targets']
 
@@ -306,23 +298,23 @@ def main():
     rec_outputs, hidden_outputs, pred_outputs = model(inputs)
     visualization(targets, pred_outputs)
 
-    # tsne
-    for i in range(9, 10):
-        threshold = (i + 1) * 0.01
-        tsne_results = tsne(X=hidden_outputs, targets=targets, dim=dim)
-        torch.save(tsne_results, Results_path + '{}/tsne.p'.format(prediction_loss_type))
-        tsne_perf(dim, Results_path+prediction_loss_type+'/')
-        tsne_binary(dim, Results_path+prediction_loss_type+'/', threshold=threshold)
-        tsne_hist(dim, Results_path+prediction_loss_type+'/', threshold=threshold)
+    # # tsne
+    # for i in range(9, 10):
+    #     threshold = (i + 1) * 0.01
+    #     tsne_results = tsne(X=hidden_outputs, targets=targets, dim=dim)
+    #     torch.save(tsne_results, Results_path + '{}/tsne.p'.format(prediction_loss_type))
+    #     tsne_perf(dim, Results_path+prediction_loss_type+'/')
+    #     tsne_binary(dim, Results_path+prediction_loss_type+'/', threshold=threshold)
+    #     tsne_hist(dim, Results_path+prediction_loss_type+'/', threshold=threshold)
 
     # pca
-    # for i in range(14, 15):
-    #     threshold = (i + 1) * 0.01
-    #     pca_results = pca(X=hidden_outputs, dim=dim, targets=targets)
-    #     torch.save(pca_results, '{}/{}/PCA_dim{}.p'.format(Results_path, prediction_loss_type, dim))
-    #     pca_perf(dim=dim, path=Results_path + prediction_loss_type + '/')
-    #     pca_binary(dim=dim, path=Results_path + prediction_loss_type + '/', threshold=threshold)
-    #     pca_hist(dim, Results_path + prediction_loss_type + '/', threshold=threshold)
+    for i in range(14, 15):
+        threshold = (i + 1) * 0.01
+        pca_results = pca(X=hidden_outputs, dim=dim, targets=targets)
+        torch.save(pca_results, '{}/{}/PCA_dim{}.p'.format(Results_path, prediction_loss_type, dim))
+        pca_perf(dim=dim, path=Results_path + prediction_loss_type + '/')
+        # pca_binary(dim=dim, path=Results_path + prediction_loss_type + '/', threshold=threshold)
+        # pca_hist(dim, Results_path + prediction_loss_type + '/', threshold=threshold)
 
 
 

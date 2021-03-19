@@ -19,13 +19,18 @@ def plotting(gs, targets_avg, targets_all):
     plt.show()
 
 # Fetch the LEs and target_learning loss as inputs and targets for auto-encoder network
-def pre_preparation(inputs_epoch, target_epoch, N, gs):
-
+def pre_preparation(inputs_epoch, target_epoch, N, gs, function_type, isRFORCE, interpreted=False):
+    if isRFORCE:
+        distribution = 'RFORCE'
+    else:
+        distribution = "FORCE"
     targets_avg = torch.zeros((len(gs), 1))
     for i, g in enumerate(gs):
         first_time = True
-        for trial in range(0, 12):
-            file_path = '../lyapunov-hyperopt-master/trials/N_{}/4sine_learner_N_{}_g_{}_trial_{}.p'.format(N, N, g, trial)
+        g = int(g * 10) / 10
+        for trial in range(0, 6):
+            file_path = '../lyapunov-hyperopt-master/trials/{}/{}/N_{}/g_{}/{}_learner_N_{}_g_{}_trial_{}.p'.format(
+                distribution ,function_type, N, g, function_type, N, g, trial)
             trials = pickle.load(open(file_path, 'rb'))
             count = 0
             for key in trials.keys():
@@ -41,7 +46,8 @@ def pre_preparation(inputs_epoch, target_epoch, N, gs):
             # print(targets)
             inputs = torch.tensor(inputs)
             targets = torch.tensor(targets)
-            inputs = interpolate(inputs)
+            if interpreted:
+                inputs = interpolate(inputs)
             # targets_avg[i] = torch.mean(targets)
             # print(targets_avg[i])
             device = inputs.device
@@ -52,24 +58,38 @@ def pre_preparation(inputs_epoch, target_epoch, N, gs):
             else:
                 inputs_g = torch.cat((inputs_g, inputs), dim=0).to(device)
                 targets_g = torch.cat((targets_g, targets), dim=0).to(device)
-                print(g, targets_g.shape)
+                # print(g, targets_g.shape)
         targets_avg[i] = torch.mean(targets_g)
-        print(targets_avg[i])
+        # print(targets_avg[i])
         if i == 0:
             inputs_all = inputs_g
             targets_all = targets_g
         else:
             inputs_all = torch.cat((inputs_all, inputs_g), dim=0).to(device)
             targets_all = torch.cat((targets_all, targets_g), dim=0).to(device)
+
         # Save data for AE network
-        data_path = "training_data/g_{}/4sine_epoch_{}_N_{}".format(g, inputs_epoch, N)
+        if interpreted:
+            if len(gs) > 1:
+                data_path = "training_data/{}/{}/interpreted/g_mixed/".format(distribution, function_type, g)
+            else:
+                data_path = "training_data/{}/{}/interpreted/g_{}/".format(distribution, function_type, g)
+        else:
+            if len(gs) > 1:
+                data_path = "training_data/{}/{}/non_interpreted/g_mixed/".format(distribution, function_type, g)
+            else:
+                data_path = "training_data/{}/{}/non_interpreted/g_{}/".format(distribution, function_type, g)
+        if not os.path.exists(data_path):
+            os.makedirs(data_path)
+
         data = {"inputs": inputs_all, "targets": targets_all}
-        pickle.dump(data, open(data_path, 'wb'))
-    print(inputs_all.shape)
+        pickle.dump(data, open(data_path + '{}_epoch_{}_N_{}'.format(function_type, inputs_epoch, N), 'wb'))
+    # print(inputs_all.shape)
     print(targets_all.shape)
 
+
     # Visualizing
-    plotting(gs, targets_avg, targets_all)
+    # plotting(gs, targets_avg, targets_all)
 
 
 
@@ -93,18 +113,22 @@ def interpolate(inputs, inputs_dim = 512, target_dim = 1024):
     return new_inputs
 
 def main():
-    inputs_epoch = 10
-    target_epoch = 14
-    N = 512
-    gs = [1.4]
-    pre_preparation(inputs_epoch, target_epoch, N, gs)
-    data_path = "training_data/g_1.4/4sine_epoch_{}_N_{}".format(inputs_epoch, N)
-    data = pickle.load(open(data_path, 'rb'))
+    for inputs_epoch in range(5, 10):
+        # inputs_epoch = 5
+        target_epoch = 14
+        N = 512
+        # g = 1.4
+        gs = np.linspace(1.1, 2., 11)
+        isRFORCE = False
+        function_type = 'random_4sine'
+        pre_preparation(inputs_epoch, target_epoch, N, gs, function_type, isRFORCE)
+        # data_path = "training_data/{}/g_{}/{}_epoch_{}_N_{}".format(
+        #     function_type,g,function_type, inputs_epoch, N)
+        # data = pickle.load(open(data_path, 'rb'))
+        #
+        # inputs, targets = data['inputs'], data['targets']
 
-    inputs, targets = data['inputs'], data['targets']
-
-
-    plotting(gs, torch.mean(targets), targets)
-    # print(targets)
+        # plotting(gs, torch.mean(targets), targets)
+        # print(targets)
 if __name__ == "__main__":
     main()
