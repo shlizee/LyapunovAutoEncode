@@ -11,6 +11,7 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
 	val_loss 	= torch.zeros((epochs,), device = device)
 	val1 		= torch.zeros((epochs,), device = device)
 	val2 		= torch.zeros((epochs,), device = device)
+	model.to(device)
 	for epoch in range(epochs):
 		x_train = mini_batch_ae(train_data, batch_size)
 		tar_train = mini_batch_ae(train_targets, batch_size)
@@ -48,29 +49,32 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
 			# print(model.val_loss)
 			print(f'Validation Loss at epoch {model.global_step -1}: {val_loss[epoch]:.3f}')
 			print(f'Best Prediction Loss: {model.best_val:.3f}')
-	model.train_loss = torch.cat((model.train_loss, train_loss))
-	model.val_loss = torch.cat((model.val_loss, val_loss))
-	model.vl1 = torch.cat((model.vl1, val1))
-	model.vl2 = torch.cat((model.vl2, val2))
+	model.train_loss = torch.cat((model.train_loss, train_loss.cpu()))
+	model.val_loss = torch.cat((model.val_loss, val_loss.cpu()))
+	model.vl1 = torch.cat((model.vl1, val1.cpu()))
+	model.vl2 = torch.cat((model.vl2, val2.cpu()))
 	model.alphas = torch.cat((model.alphas, torch.Tensor([alpha, epochs]).unsqueeze(dim = 0)), dim = 0)
-	torch.save(model, f'ae_prednet_{model.global_step}{suffix}.ckpt')
+	torch.save(model, f'Models/Latent_{model.latent_size}/ae_prednet_{model.global_step}{suffix}.ckpt')
 	
 def main():
+	model_type = 'gru'
+	dir = 'gru/'
+	latent_size = 32
 	if torch.cuda.is_available():
 		device= torch.device('cuda')
 	else: 
 		device= torch.device('cpu')
-	x_data = torch.load('Processed/lstm_allLEs.p')
-	targets = torch.load('Processed/lstm_allValLoss.p')
-	if os.path.exists('data_split_vfrac0.2.p'):
-		split = torch.load('data_split_vfrac0.2.p')
+	x_data = torch.load(f'Processed/{dir}{model_type}_allLEs.p')
+	targets = torch.load(f'Processed/{dir}{model_type}_allValLoss.p')
+	if os.path.exists(f'Processed/{model_type}_data_split_vfrac0.2.p'):
+		split = torch.load(f'Processed/{model_type}_data_split_vfrac0.2.p')
 	else:
 		split = train_val_split(x_data, targets, 0.2)
 	x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'], split['val_data'], split['val_targets']
-	model = AEPredNet(latent_size = 128, lr = 1e-5, act = 'tanh', device = device)
+	model = AEPredNet(latent_size = latent_size, lr = 1e-5, act = 'tanh', device = device)
 	alphas = [5, 5, 10, 20]
 	for alpha in alphas:
-		ae_train(model, x_train, y_train, x_val, y_val, alpha = alpha, epochs = 1000, print_interval = 250, batch_size = 128)
+		ae_train(model, x_train, y_train, x_val, y_val, alpha = alpha, epochs = 1000, print_interval = 250, batch_size = 128, device = device)
 	plt.plot(range(model.global_step), model.val_loss, label = 'total')
 	plt.plot(range(model.global_step), model.vl1, label ='rec loss (L1)')
 	plt.plot(range(model.global_step), model.vl2, label = 'pred loss (L2)')
@@ -78,7 +82,7 @@ def main():
 	plt.xlabel('Epoch')
 	plt.ylabel('Loss')
 	plt.yscale('log')
-	plt.savefig(f"Figures/Prednet_AE_valCurve.png",bbox_inches="tight",dpi=200)
+	plt.savefig(f"Figures/{model_type}_Prednet_AE_valCurve.png",bbox_inches="tight",dpi=200)
 	
 	
 	
