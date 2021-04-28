@@ -106,7 +106,7 @@ def tsne_param(no_evals = 400, model_type = 'lstm'):
 	plt.ylabel('TSNE 2')
 	plt.savefig('AEPredNet_tsne_params.png', dpi = 200)
 
-def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, suffix = ''):
+def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, suffix = '', thresh = 1.75):
 	if torch.cuda.is_available():
 		device= torch.device('cuda')
 	else: 
@@ -115,7 +115,8 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, su
 	model.load_state_dict(model.best_state)
 	x_data = torch.load(f'Processed/{model_type}/{model_type}_allLEs.p')
 	targets = torch.load(f'Processed/{model_type}/{model_type}_allValLoss.p')
-	print(f'Target shape {targets.shape}')
+	target_mask = targets < thresh
+	# print(f'Target shape {targets.shape}')
 	split = torch.load(f'Processed/{model_type}_data_split_vfrac{v_frac}.p')
 	indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
 	sizes = [64, 128, 256, 512]
@@ -127,17 +128,25 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, su
 	torch.save(low_rank, f'PCA_dim{dim}.p')
 	#Performance PCA Plot
 	fig = plt.figure()
-
-	if dim == 3:
-		ax = fig.add_subplot(111, projection='3d')
-	else:
-		ax = fig.add_subplot(111)
+	
+	ax = fig.add_subplot(111)
 	for idx, size in enumerate(sizes):
 		y = low_rank[splits[idx]]
-		if dim == 3:
-			im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
-		else:
-			im = ax.scatter(y[:,0], y[:,1], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
+		print(y[:,0].shape)
+		im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 6, c = 'g')
+		im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 6, c = 'r')
+		
+	
+	# if dim == 3:
+		# ax = fig.add_subplot(111, projection='3d')
+	# else:
+		# ax = fig.add_subplot(111)
+	# for idx, size in enumerate(sizes):
+		# y = low_rank[splits[idx]]
+		# if dim == 3:
+			# im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
+		# else:
+			# im = ax.scatter(y[:,0], y[:,1], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
 	# ax.add_colorbar(label = 'Val Loss')
 	# plt.colorbar(im, label = 'Val Loss', )
 	ax.set_xlabel('PCA 1')
@@ -212,6 +221,61 @@ def pca_size(latent_size, size = 512, dim=2, model_type = 'lstm'):
 	ax.set_title(f'PCA for size {size}')
 	plt.savefig(f'Figures/Latent/AEPredNet_pcaPerf_dim{dim}_size{size}.png', bbox_inches = 'tight', dpi = 200)
 
+def param_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, suffix = '', thresh = 1.75):
+	if torch.cuda.is_available():
+		device= torch.device('cuda')
+	else: 
+		device= torch.device('cpu')
+	params = torch.load(f'Processed/{dir}{model_type}_allParams.p').flatten()
+	targets = torch.load(f'Processed/{model_type}/{model_type}_allValLoss.p')
+	split = torch.load(f'Processed/{model_type}_data_split_vfrac{v_frac}.p')
+	target_mask = targets < thresh
+	f = plt.figure()
+	bins = [0.04, 0.10, 0.16, 0.22, 0.28, 0.34, 0.40]
+	i = 0
+	# print(torch.sum((params<i+1)*(params >i)*target_mask).item())
+	good_counts = [torch.sum(((params<bins[i+1])*(params >bins[i])*target_mask)[split['val_idx']]).item() for i in range(len(bins)-1)]
+	bad_counts = [torch.sum(((params<bins[i+1])*(params >bins[i])*~target_mask)[split['val_idx']]).item() for i in range(len(bins)-1)]
+	bar_width = 0.05
+	plt.bar(torch.Tensor(bins[1:])-0.03, good_counts, width = bar_width, color = 'g')
+	plt.bar(torch.Tensor(bins[1:])-0.03, bad_counts, bottom = good_counts, width = bar_width, color = 'r')
+	plt.xticks(torch.tensor(bins[1:])-0.03, labels = [f'{bins[i]:.2f} -'.lstrip('0') + f'{bins[i+1]:.2f}'.lstrip('0') for i in range(len(bins)-1)], rotation = 0)
+	plt.xlabel('Initialization Parameter')
+	plt.savefig(f'Figures/param_dist.png', bbox_inches = 'tight', dpi = 200)
+
+
+def size_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, suffix = '', thresh = 1.75):
+	if torch.cuda.is_available():
+		device= torch.device('cuda')
+	else: 
+		device= torch.device('cpu')
+	params = torch.load(f'Processed/{dir}{model_type}_allParams.p').flatten()
+	targets = torch.load(f'Processed/{model_type}/{model_type}_allValLoss.p')
+	target_mask = targets < thresh
+	split = torch.load(f'Processed/{model_type}_data_split_vfrac{v_frac}.p')
+	target_mask = targets < thresh
+	f = plt.figure()
+	indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
+	sizes = [64, 128, 256, 512]
+	i_list = torch.arange(len(sizes)*no_evals)
+	splits = [(i_list>=torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
+	val_mask = torch.zeros(1200, dtype = torch.bool)
+	val_mask.index_fill_(0, split['val_idx'].sort()[0], True)
+	f = plt.figure()
+	good_counts = []
+	bad_counts = []
+	for i, size in	enumerate(sizes):
+		s_idx = splits[torch.where(torch.Tensor(sizes) == size)[0]]
+		good_counts.append(torch.sum(s_idx*val_mask*target_mask).item())
+		bad_counts.append(torch.sum(s_idx*val_mask*~target_mask).item())
+	xs = [1, 2, 3, 4]
+	plt.bar(xs, good_counts, color = 'g', width = 0.9)
+	plt.bar(xs, bad_counts, bottom = good_counts, color = 'r', width = 0.9)
+	plt.xlabel('Network Size')
+	plt.xticks(xs, sizes)
+	plt.savefig(f'Figures/size_dist.png', bbox_inches = 'tight', dpi = 200)
+
+
 def get_cmap(data, n_colors = 5):
 	base = np.min(data)
 	dmax = np.max(data)
@@ -227,8 +291,11 @@ if __name__ == "__main__":
 	# tsne_param(model_type = 'merged')
 	# param_plot(latent_size, 'gru', no_evals = 100, val_split = 0.9)
 	# param_plot(latent_size, 'lstm', no_evals = 300, val_split = 0.2, dir = 'lstm/')
-	pca(latent_size = latent_size, dim = 3, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_')
-	pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_')
+	# pca(latent_size = latent_size, dim = 3, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_')
+	thresh = 1.75
+	pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_', thresh = thresh)
+	param_dist(thresh = thresh)
+	size_dist(thresh = thresh)
 	# tsne_perf(model_type = 'merged')
 	# pca(3, model_type = 'gru', no_evals = 100, v_frac = 0.9, suffix = 'GRU_')
 	# pca(3)
