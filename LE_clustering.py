@@ -3,7 +3,8 @@ from AEPredNet import AEPredNet
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from matplotlib import colors
-from mpl_toolkits.mplot3d import Axes3D 
+from mpl_toolkits.mplot3d import Axes3D
+# from config import *
 
 latent_size = 32
 def tsne(model, X, tsne_params = {}, model_type = 'lstm'):
@@ -29,13 +30,13 @@ def main(latent_size, model_type = 'lstm', dir = ''):
 	i_list = torch.arange(1200)
 	splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
 	Y = tsne_model.fit_transform(model(x_data)[1].detach())
-	plt.figure()
+	plt.figure(figsize = (4,3))
 	for idx, size in enumerate(sizes):
 		y = Y[splits[idx]]
-		plt.scatter(y[:,0], y[:,1], s = 6, label = size)
+		plt.scatter(y[:,0], y[:,1], s = 4, label = size)
 	plt.legend()
 	torch.save(Y, 'tsne.p')
-	plt.savefig('AEPredNet_tsne_size.png', dpi = 200)
+	plt.savefig('AEPredNet_tsne_size.png', dpi = 200, hbbox_inches = 'tight')
 
 def param_plot(latent_size, model_type = 'lstm', dir = '', no_evals = 300, val_split = 0.2):
 	model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt').cpu()
@@ -127,14 +128,14 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, su
 	low_rank = torch.matmul(latent, V[:, :dim])
 	torch.save(low_rank, f'PCA_dim{dim}.p')
 	#Performance PCA Plot
-	fig = plt.figure()
+	fig = plt.figure(figsize = (4,4))
 	
 	ax = fig.add_subplot(111)
 	for idx, size in enumerate(sizes):
 		y = low_rank[splits[idx]]
-		print(y[:,0].shape)
-		im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 6, c = 'g')
-		im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 6, c = 'r')
+		# print(y[:,0].shape)
+		im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+		im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
 		
 	
 	# if dim == 3:
@@ -149,13 +150,19 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, su
 			# im = ax.scatter(y[:,0], y[:,1], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
 	# ax.add_colorbar(label = 'Val Loss')
 	# plt.colorbar(im, label = 'Val Loss', )
-	ax.set_xlabel('PCA 1')
-	ax.set_ylabel('PCA 2')
+	ax.set_xlabel('PC 1')
+	ax.set_ylabel('PC 2')
+	ax.spines['top'].set_visible(False)
+	ax.spines['right'].set_visible(False)
+	ax.spines['left'].set_visible(False)
+	ax.spines['bottom'].set_visible(False)
+	ax.set_xticks([])
+	ax.set_yticks([])
 	if dim == 3:
 		ax.set_zlabel('PCA 3')
-	plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png', dpi = 200)
+	plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png', dpi = 200, bbox_inches = 'tight')
 	#Size PCA Plot
-	fig = plt.figure()
+	fig = plt.figure(figsize = (4,4))
 	if dim == 3:
 		ax = fig.add_subplot(111, projection='3d')
 	else:
@@ -170,6 +177,12 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, su
 	# plt.colorbar(label = 'Val Loss')
 	ax.set_xlabel('PCA 1')
 	ax.set_ylabel('PCA 2')
+	ax.set_xticks([])
+	ax.set_yticks([])
+	ax.spines['top'].set_visible(False)
+	ax.spines['right'].set_visible(False)
+	ax.spines['left'].set_visible(False)
+	ax.spines['bottom'].set_visible(False)
 	if dim == 3:
 		ax.set_zlabel('PCA 3')
 	plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_dim{dim}.png', dpi = 200)
@@ -209,7 +222,8 @@ def pca_size(latent_size, size = 512, dim=2, model_type = 'lstm'):
 		im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, c = vals, norm=colors.LogNorm(vmin=vals.min(), vmax=vals.max()), cmap = plt.get_cmap('gr'))
 	else:
 		im = ax.scatter(y[:,0], y[:,1], s = 6, c = vals, norm=colors.LogNorm(vmin=vals.min(), vmax=vals.max()), cmap = plt.get_cmap('gr'))
-
+	
+	plt.figure(figsize = (4,3))
 	plt.colorbar(im, label = 'Val Loss')
 	ax.set_xlabel('PCA 1')
 	ax.set_ylabel('PCA 2')
@@ -234,13 +248,20 @@ def param_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, 
 	bins = [0.04, 0.10, 0.16, 0.22, 0.28, 0.34, 0.40]
 	i = 0
 	# print(torch.sum((params<i+1)*(params >i)*target_mask).item())
-	good_counts = [torch.sum(((params<bins[i+1])*(params >bins[i])*target_mask)[split['val_idx']]).item() for i in range(len(bins)-1)]
-	bad_counts = [torch.sum(((params<bins[i+1])*(params >bins[i])*~target_mask)[split['val_idx']]).item() for i in range(len(bins)-1)]
-	bar_width = 0.05
-	plt.bar(torch.Tensor(bins[1:])-0.03, good_counts, width = bar_width, color = 'g')
-	plt.bar(torch.Tensor(bins[1:])-0.03, bad_counts, bottom = good_counts, width = bar_width, color = 'r')
-	plt.xticks(torch.tensor(bins[1:])-0.03, labels = [f'{bins[i]:.2f} -'.lstrip('0') + f'{bins[i+1]:.2f}'.lstrip('0') for i in range(len(bins)-1)], rotation = 0)
-	plt.xlabel('Initialization Parameter')
+	
+	plt.figure(figsize = (4,2))
+	plt.scatter(params[target_mask], targets[target_mask], s = 20, c = 'lime', alpha = 0.5)
+	plt.scatter(params[~target_mask], targets[~target_mask], s = 20, c = 'r', alpha = 0.5)
+	# plt.ylabel('Validation Loss')
+	plt.yticks([1.5, 2, 2.5, 3])
+	
+	# good_counts = [torch.sum(((params<bins[i+1])*(params >bins[i])*target_mask)[split['val_idx']]).item() for i in range(len(bins)-1)]
+	# bad_counts = [torch.sum(((params<bins[i+1])*(params >bins[i])*~target_mask)[split['val_idx']]).item() for i in range(len(bins)-1)]
+	# bar_width = 0.05
+	# plt.bar(torch.Tensor(bins[1:])-0.03, good_counts, width = bar_width, color = 'lime')
+	# plt.bar(torch.Tensor(bins[1:])-0.03, bad_counts, bottom = good_counts, width = bar_width, color = 'r')
+	# plt.xticks(torch.tensor(bins[1:])-0.03, labels = [f'{bins[i]:.2f} -'.lstrip('0') + f'{bins[i+1]:.2f}'.lstrip('0') for i in range(len(bins)-1)], rotation = 0)
+	# plt.xlabel('Initialization Parameter')
 	plt.savefig(f'Figures/param_dist.png', bbox_inches = 'tight', dpi = 200)
 
 
@@ -264,14 +285,15 @@ def size_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, s
 	f = plt.figure()
 	good_counts = []
 	bad_counts = []
+	plt.figure(figsize = (4,2))
 	for i, size in	enumerate(sizes):
 		s_idx = splits[torch.where(torch.Tensor(sizes) == size)[0]]
 		good_counts.append(torch.sum(s_idx*val_mask*target_mask).item())
 		bad_counts.append(torch.sum(s_idx*val_mask*~target_mask).item())
 	xs = [1, 2, 3, 4]
-	plt.bar(xs, good_counts, color = 'g', width = 0.9)
+	plt.bar(xs, good_counts, color = 'lime', width = 0.9)
 	plt.bar(xs, bad_counts, bottom = good_counts, color = 'r', width = 0.9)
-	plt.xlabel('Network Size')
+	# plt.xlabel('Network Size')
 	plt.xticks(xs, sizes)
 	plt.savefig(f'Figures/size_dist.png', bbox_inches = 'tight', dpi = 200)
 
@@ -282,7 +304,8 @@ def get_cmap(data, n_colors = 5):
 	gradient = np.logspace(base = base, start = np.log(0.5)/np.log(base), stop = np.log(dmax)/np.log(base), num = n_colors)
 	cmap = plt.cm.get_cmap('gr')
 	return cmap
-	
+
+
 
 if __name__ == "__main__":
 	latent_size = 32
@@ -293,9 +316,10 @@ if __name__ == "__main__":
 	# param_plot(latent_size, 'lstm', no_evals = 300, val_split = 0.2, dir = 'lstm/')
 	# pca(latent_size = latent_size, dim = 3, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_')
 	thresh = 1.75
-	pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_', thresh = thresh)
+	# pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_', thresh = thresh)
 	param_dist(thresh = thresh)
 	size_dist(thresh = thresh)
+	# logit_plot()
 	# tsne_perf(model_type = 'merged')
 	# pca(3, model_type = 'gru', no_evals = 100, v_frac = 0.9, suffix = 'GRU_')
 	# pca(3)
