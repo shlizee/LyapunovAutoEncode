@@ -83,32 +83,29 @@ def train_model(full_con, model, optimizer, trial_data, start_epoch= 0, print_in
     #             print(loss.item())
             val_loss += loss.item()
 
-<<<<<<< HEAD
-	for epoch in range(start_epoch+1, full_con.train.max_epoch+1):
-		if epoch%print_interval == 0 and verbose:
-			print('Training epoch {} of {}'.format(epoch, full_con.train.max_epoch), end = '')
-		running_loss = 0.0
-		hidden = model.init_hidden(full_con.train.batch_size)
-		print(f'Train input shape: {train_input.shape}')
-		#train for all batches in the training set
-		model.train()
-		for batch_in, batch_target in zip(train_input.unsqueeze(dim = -1), train_target):
-			optimizer.zero_grad()
-			loss = 0.0
-			batch_out, _ = model(batch_in, hidden)
-			loss += criterion(batch_out.view(-1, full_con.model.rnn_atts['input_size']), batch_target.view(-1,)).to(device)
-			loss.backward()
-			optimizer.step()
-	#             print(loss.item())
-			running_loss += loss.item()
-		train_loss.append(running_loss/(train_input.shape[0]))
-=======
+    for epoch in range(start_epoch+1, full_con.train.max_epoch+1):
+        if epoch%print_interval == 0 and verbose:
+            print('Training epoch {} of {}'.format(epoch, full_con.train.max_epoch), end = '')
+        running_loss = 0.0
+        hidden = model.init_hidden(full_con.train.batch_size)
+        print(f'Train input shape: {train_input.shape}')
+        #train for all batches in the training set
+        model.train()
+        for batch_in, batch_target in zip(train_input.unsqueeze(dim = -1), train_target):
+            optimizer.zero_grad()
+            loss = 0.0
+            batch_out, _ = model(batch_in, hidden)
+            loss += criterion(batch_out.view(-1, full_con.model.rnn_atts['input_size']), batch_target.view(-1,)).to(device)
+            loss.backward()
+            optimizer.step()
+    #             print(loss.item())
+            running_loss += loss.item()
+        train_loss.append(running_loss/(train_input.shape[0]))
         val_loss = val_loss/(val_input.shape[0])
         scheduler.step()
 
         if epoch%print_interval == 0 and verbose:
             print(', Training Loss: {:.4f}, Validation Loss {:.4f}'.format(train_loss[-1], val_loss))
->>>>>>> d2781ba6ad099b1d1882d2bcedbe6f4269d7c4a5
 
         #save model checkpoint
         if epoch%save_interval == 0:
