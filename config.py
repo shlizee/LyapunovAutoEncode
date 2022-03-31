@@ -5,7 +5,6 @@ import lyapunov as lyap
 import pickle as pkl
 from torch import functional as F
 
-from tensorflow.keras.utils import to_categorical
 
 class DataConfig(object):
 	def __init__(self, data_dir, batch_size, input_seq_length, target_seq_length, train_frac = 0.8, val_frac = 0.1, test_frac= 0.1, input_size = 1):
