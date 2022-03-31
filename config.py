@@ -3,6 +3,7 @@ from torch import optim, nn
 from dataloader import *
 import lyapunov as lyap
 import pickle as pkl
+from torch import functional as F
 
 from keras.utils import to_categorical
 
@@ -208,7 +209,8 @@ class LyapConfig(object):
 		xt = torch.roll(xt, shifts = i, dims = 0)
 		xt = xt[:self.batch_size *self.seq_length * math.floor(xt.shape[0]/(self.batch_size * self.seq_length))]
 		if self.one_hot:
-			xt = torch.from_numpy(to_categorical(xt.view(-1, self.batch_size, self.seq_length), fcon.model.rnn_atts['input_size']))
+			xt = F.one_hot(xt, fcon.model.rnn_atts['input_size'])
+			# xt = torch.from_numpy(to_categorical(xt.view(-1, self.batch_size, self.seq_length), fcon.model.rnn_atts['input_size']))
 		self.input = xt
 		return xt.to(fcon.device)
 		
