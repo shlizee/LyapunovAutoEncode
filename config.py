@@ -1,7 +1,7 @@
 import torch
 from torch import optim, nn
 from dataloader import *
-import lyapunov_test as lyap
+import lyapunov as lyap
 import pickle as pkl
 
 from keras.utils import to_categorical
