@@ -9,12 +9,12 @@ import pickle as pkl
 
 class CharRNNTrials(object):
 	def __init__(self, fcon, min_pval = 0.04, max_pval = 0.40, hidden_size = 512, evals = 300, keep_amt = 0.4, model_type = 'lstm'):
-		self.params = torch.round((torch.rand(evals)*(max_pval - min_pval) + min_pval)*10**3)/(10**3)
+		self.params = torch.round((torch.rand(int(evals))*(max_pval - min_pval) + min_pval)*10**3)/(10**3)
 		self.keep_amt = keep_amt
 		# print(self.params)
 		self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 		self.train_losses = []
-		self.val_losses= torch.zeros((evals,))
+		self.val_losses= torch.zeros((int(evals),))
 		self.train_trials(fcon)
 		
 		
