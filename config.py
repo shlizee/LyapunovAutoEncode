@@ -3,7 +3,7 @@ from torch import optim, nn
 from dataloader import *
 import lyapunov as lyap
 import pickle as pkl
-from torch import functional as F
+from torch.nn import functional as F
 
 
 class DataConfig(object):
