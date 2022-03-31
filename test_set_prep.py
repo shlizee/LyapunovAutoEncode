@@ -75,4 +75,4 @@ if __name__ == '__main__':
 	val_set = (full_input_set[shuffle_idx][split_idx:], full_target_set[shuffle_idx][split_idx:])
 	data = {'train_set': train_set, 'val_set': val_set, 'char_to_int': char_map}
 
-	torch.save(data, 'book_data.p')
+	torch.save(data, 'data/book_data.p')
