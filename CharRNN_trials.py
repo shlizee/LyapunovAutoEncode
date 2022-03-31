@@ -84,7 +84,7 @@ def main(args):
 	warmup = 500			#Number of steps to evolve the system before calculating LEs. Helps to remove transients by relaxing onto attractor
 	
 	#Define data configuration and trial directory
-	dcon = TestDataConfig('data', test_file = 'book_data.p', train_frac = 0.8, val_frac = 0.2, test_frac = 0.0)   
+	dcon = TestDataConfig('data/', test_file = 'book_data.p', train_frac = 0.8, val_frac = 0.2, test_frac = 0.0)   
 	trials_dir = f'{model_type}/'
 	if not os.path.isdir(trials_dir):
 		os.makedir(trials_dir)
