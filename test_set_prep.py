@@ -36,7 +36,7 @@ if __name__ == '__main__':
 	full_target_set = torch.ByteTensor(0, batch_size, seq_length - 1)
 	char_map = dcon.datasets['char_to_int']
 
-	txt_dir = ''
+	txt_dir = 'data/'
 	text_files = glob.glob(txt_dir+ "*.txt")
 	for file in tqdm(text_files):
 		f = open(file, 'rt', encoding = 'utf8')
