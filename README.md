@@ -1,14 +1,19 @@
 # LyapunovAutoEncode
 ## System Requirements
-Software Dependencies
-Versions tested on
-Required Nonstandard Hardware
+Our code is run on Ubuntu 18.04. No non-standard hardware is required.
 
 ## Installation Guide
-Instructions
-Typical Install Time on "normal" desktop
-
+### requirement
+- Python 3.8
+- Pytorch 1.10.2
+- Additional requirements in requirements.txt
+  - ```bash
+    # installation could take a couple minutes
+    pip install -r requirements.txt
 ## Demo
+  ```python
+  python3 main.py
+  ```
 Instructions to run on data
 Expected output
 Expected run time for demo on "normal" desktop computer
