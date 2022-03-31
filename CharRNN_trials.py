@@ -64,10 +64,10 @@ class CharRNNTrials(object):
 		
 	
 def main(args):
-    parser = argparse.ArgumentParser(description="Train recurrent models")
-    parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
-    parser.add_argument("-evals", "--evals", type=float, default= 20, required=False)
-    args = parser.parse_args(args)
+	parser = argparse.ArgumentParser(description="Train recurrent models")
+	parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+	parser.add_argument("-evals", "--evals", type=float, default= 20, required=False)
+	args = parser.parse_args(args)
 	model_type = args.model_type
 	evals = args.evals
 	
