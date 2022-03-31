@@ -1,0 +1,198 @@
+ 
+  
+ ''The Dispossessed: An Ambiguous Utopia'' is a 1974 in literature|1974 utopian science fiction novel by American writer Ursula K. Le Guin, set in the fictional universe of the seven novels of the Hainish Cycle, e.g. ''The Left Hand of Darkness''. The book won the Nebula Award for Best Novel in 1974,     as well as winning both the Hugo Award|Hugo and Locus Awards in 1975,     and received a nomination for the John W. Campbell John W. Campbell Memorial Award for Best Science Fiction Novel|Memorial Award in 1975.   It achieved a degree of literary recognition unusual for science fiction due to its exploration of themes such as anarchism (on a natural satellite|satellite planet called ''Anarres'') and Revolution|revolutionary societies, capitalism, and individualism and collectivism. 
+ 
+ It features the development of the mathematical theory underlying a fictional ''ansible'', an instantaneous communications device that plays a critical role in Le Guin's novels in the Hainish Cycle. The invention of an ansible places the novel first in the Hainish_Cycle#Sequence_of_writing_versus_story_chronology|internal chronology of the Hainish Cycle, although it was the fifth published.  In ''The Word for World is Forest'', a newly created ansible is brought to Athshe, a planet being settled by Earth-humans. In other tales in the Hainish Cycle, an ansible already exists. The word  " ansible "  was coined in ''Rocannon's World'' (first in order of publication but third in internal chronology), where it is central to the plot, and became an important concept throughout the realm of science fiction.  
+ 
+ ==Background== 
+ In her new introduction to the Library of America reprint in 2017, reflecting back some 40 years from late in her life, the author wrote: 
+  
+ 
+ Le Guin's parents, academic anthropologists Alfred L. Kroeber|Alfred and Theodora Kroeber, were friends with J. Robert Oppenheimer; Le Guin stated that Oppenheimer was the model for Shevek, the book's protagonist.     
+ 
+ ==Meaning of the title== 
+ It has been suggested that Le Guin's title is a reference to Fyodor Dostoevsky|Dostoyevsky's novel about anarchists, ''Demons (Dostoyevsky novel)|Demons'' (, ''Bésy''), one popular English-language translation of which is titled ''The Possessed''.   Many of the philosophical underpinnings and ecological concepts came from Murray Bookchin's ''Post-Scarcity Anarchism'' (1971), according to a letter Le Guin sent to Bookchin.  Janet Biehl, Bookchin biographer; letter in UKL archive   Anarres citizens are ''dispossessed'' not just by political choice, but by the very lack of actual resources to possess. Here, again, Le Guin draws a contrast with the natural wealth of Urras, and the competitive behaviors this fosters.  Mathiesen.  
+ 
+ ==Setting== 
+ 
+ ''The Dispossessed'' is set on Anarres and Urras, the twin inhabited worlds of Tau Ceti in fiction|Tau Ceti. Urras is divided into several State (polity)|states, but is dominated by its two rival superpowers, A-Io and Thu. The main character spends most of his time in A-Io while on Urras, a state with a capitalism|capitalist economy and a patriarchy|patriarchal system. The state of Thu is never actually visited, but is said to have an authoritarian system that claims to rule in the name of the proletariat. A-Io has dissent in its borders, including a few different oppositional left-wing parties, one of which is closely linked to the rival society of Thu. When a revolution is sparked in Benbili, the third major, yet undeveloped, area of Urras, A-Io invades the Thu-supported revolutionary area, generating a proxy war. 
+ 
+ The moon, Anarres, represents a more idealist ideological structure: anarcho-syndicalism. The Anarresti, who call themselves Odonians after the founder of their political philosophy, arrived on Anarres from Urras around 200 years ago. In order to forestall an anarcho-syndicalist rebellion, the major Urrasti states gave the revolutionaries the right to live on Anarres, along with a guarantee of non-interference (the story is told in Le Guin's  " The Day Before the Revolution " .)  Before this, Anarres had had no permanent settlements, apart from some mining facilities. 
+ 
+ The economic and political situation of Anarres and its relation to Urras is ambiguous. The people of Anarres consider themselves as being free and independent, having broken off from the political and social influence of the old world. However, the powers of Urras consider Anarres as being essentially their mining colony, as the annual consignment of Anarres' precious metals and their distribution to major powers on Urras is a major economic event of the old world. 
+ 
+ === Theoretical timeline === 
+ In the last chapter of ''The Dispossessed'', we learn that the Hainish people arrived at Tau Ceti 60 years previously, which is more than 100 years after the secession of the Odonians from Urras and their exodus to Anarres. Terrans are also there, and the novel occurs some time in the future, according to an elaborate chronology worked out by science fiction author Ian Watson (author)|Ian Watson in 1975:  " the baseline date of AD 2300 for The Dispossessed is taken from the description of Earth in that book (§11) as having passed through an ecological and social collapse with a population peak of 9 billion to a low-population but highly centralized recovery economy. "     In the same article, Watson assigns a date of AD 4870 to ''The Left Hand of Darkness''; both dates are problematic — as Watson says himself, they are contradicted by  " Genly Ai's statement that Terrans 'were ignorant until about three thousand years ago of the uses of zero' " . 
+ 
+ == Story == 
+ The chapters alternate between the two planets and between the present and the past. The even-numbered chapters, which are set on Anarres, chronologically take place first and are followed by the odd-numbered chapters, which take place on Urras. The only exceptions occur in the first and last chapters: the first takes place on both the moon and the planet; the last takes place in a spaceship. 
+ {| class= " wikitable " 
+ !Chronological order of chapters 
+ |- 
+ |2, 4, 6, 8, 10, 12, 1, 3, 5, 7, 9, 11, 13 
+ |} 
+ 
+ ===Anarres (chapters 1, 2, 4, 6, 8, 10, 12)=== 
+ Chapter One begins in the middle of the story. The protagonist Shevek is an Anarresti physicist attempting to develop a General Temporal Theory. The physics of the book describes time as having a much deeper, more complex structure than as it is understood. It incorporates not only mathematics and physics, but also philosophy and ethics. Shevek finds his work blocked by a jealous superior, as his theories conflict with the prevailing political philosophy and are thus distrusted by the society. His work is further disrupted by his obligation to perform manual labor during a drought in Anarres' anarchist society. In order to ensure survival in a harsh environment, the people of Anarres must put the needs of society ahead of their own personal desires, so Shevek performs hard agricultural labor in a dusty desert for four years instead of working on his research. After the drought, he arranges to go to Urras, having won a prestigious award for his work there, to finish and publish his theory. His contact with scholars on Urras and his decision to travel there results in political turmoil on Anarres. Shevek is accused of being a traitor and of threatening the political separation between the two worlds. 
+ 
+ ===Urras (chapters 1, 3, 5, 7, 9, 11)=== 
+ Arriving on Urras, Shevek is feted. Shevek soon finds himself disgusted with the social, sexual and political conventions of the hierarchical capitalist society of Urras. He is kept at a university and manipulated by the physicists there, who hope that his breakthrough on the General Temporal Theory will allow them to build a faster-than-light ship. Shevek escapes the university, contacts an underground revolutionary group and joins in a labor protest that is violently suppressed. He flees to the Terran embassy, where he asks them to transmit his theory to all worlds instead of letting the Urrasti monopolize it. The Terrans provide him safe passage back to Anarres. 
+ 
+ ===Onboard the ''Davenant'' (chapter 13)=== 
+ For interplanetary travel to his world, Anarres, Shevek is shown around a Hainish spaceship. Hainish culture is described. A Hainishman named Ketho wants to disembark with Shevek when they land on Anarres. 
+ 
+ ==Themes== 
+ 
+ === Symbolism === 
+ The ambiguity of Anarres' economic and political situation in relation to Urras is symbolically manifested in the low wall surrounding Anarres' single spaceport. This wall is the only place on the anarchist planet where  " No Trespassing! "  signs may be seen, and it is where the book begins and ends. The people of Anarres believe that the wall divides a free world from the corrupting influence of an oppressor's ships. On the other hand, the wall could be a prison wall keeping the rest of the planet imprisoned and cut off. Shevek's life attempts to answer this question. 
+ 
+ In addition to Shevek's journey to answer questions about his society's true level of freedom, the meaning of his theories themselves weave their way into the plot; they not only describe abstract physical concepts, but they also reflect ups and downs of the characters' lives, and the transformation of the Anarresti society. An oft-quoted saying in the book is  " true journey is return. "  Said by Shevek near the end of Chapter 13   The meaning of Shevek's theories—which deal with the nature of time and simultaneity—have been subject to interpretation. For example, there have been interpretations that the non-linear nature of the novel is a reproduction of Shevek's theory.  Rigsby, Ellen M. (2005), p. 169  
+ 
+ === Anarchism and capitalism === 
+ Le Guin's foreword to the novel notes that her anarchism is closely akin to that of Peter Kropotkin, whose ''Mutual Aid: A Factor of Evolution|Mutual Aid'' closely assessed the influence of the natural world on competition and cooperation.  Peter Kropotkin, ''Mutual Aid: A Factor of Evolution|Mutual Aid'' (1902).  
+ 
+ Many conflicts occur between the freedom of anarchism and the constraints imposed by authority and society, both on Anarres and Urras. These constraints are both physical and social. Physically, Odo was imprisoned in the Fort for nine years. Socially speaking, 'time after time the question of who is being locked out or in, which side of the wall one is on, is the focus of the narrative.'     Mark Tunik emphasises that ''the wall'' is the dominant metaphor for these social constraints. Shevek hits ‘the wall of charm, courtesy, indifference.” He later notes that he let a “wall be built around him” that kept him from seeing the poor people on Urras. He had been co-opted, with walls of smiles of the rich, and he didn't know how to break them down. Shevek at one point speculates that the people on Urras are not truly free, precisely because they have so many walls built between people and are so possessive. He says, “You are all in jail. Each alone, solitary, with a heap of what he owns. You live in prison, die in prison. It is all I can see in your eyes – the wall, the wall!” ‘     It is not just the state of mind of those inside the prisons that concerns Shevek, he also notes the effect on those outside the walls. Steve Grossi says, ‘by building a physical wall to keep the bad in, we construct a mental wall keeping ourselves, our thoughts, and our empathy out, to the collective detriment of all. "  Shevek himself later says, “those who build walls are their own prisoners.”     Le Guin makes this explicit in chapter two, when the schoolchildren construct their own prison and detain one of their own inside.  [  " Study Guide for Ursula LeGuin: The Dispossessed (1974) "  - Paul Brians]      
+ 
+ The language spoken on Anarres also reflects anarchism. Pravic is a constructed language in the tradition of Esperanto. Pravic reflects many aspects of the philosophical foundations of utopian anarchism.  Laurence, Davis and Peter G. Stillman. ''The New Utopian Politics of Ursula K. Le Guin's The Dispossessed'', Lexington Books (2005). Pp. 287-298.   For instance, the use of the possessive case is strongly discouraged, a feature that also is reflected by the novel's title.  Conley, Tim and Stephen Cain. ''Encyclopedia of Fictional and Fantastic Languages''. Greenwood Press, Westport (2006). Pp. 46-47.   Children are trained to speak only about matters that interest others; anything else is  " egoizing "  (pp. & nbsp;28–31). There is no property ownership of any kind. Shevek's daughter, upon meeting him for the first time, tells him,  " You can share the handkerchief I use "  Ursula K. Le Guin, ''The Dispossessed'', p.69.   rather than  " You may borrow my handkerchief " , thus conveying the idea that the handkerchief is not owned by the girl, but is merely used by her.  Burton (1985).  
+ 
+ === Utopianism === 
+ The work is sometimes said to represent one of the few modern revivals of the Utopian and dystopian fiction|utopian genre.  Davis and Stillman (2005).   When first published, the book included the tagline:  " The magnificent epic of an ambiguous utopia! "  which was shortened by fans to  " An ambiguous utopia "  and adopted as a subtitle in certain editions.  [ Book review discussing meanings]   [ Penn State University Press listing]   There are also many characteristics of a utopian novel found in this book. For example, Shevek is an outsider when he arrives on Urras, which capitalizes on the utopian and scientific fiction theme of the  " estrangement-setting " .    
+ 
+ Le Guin's utopianism, however, differs from the traditional  " anarchist commune. "  Whereas most utopian novels attempt to convey a society that is absolutely good, this world differs as it is portrayed only as  " ambiguously good. "  
+ 
+ === Feminism === 
+ There is some disagreement as to whether ''The Dispossessed'' should be considered a Feminism|feminist utopia or a feminist science fiction novel. According to Mary Morrison of the State University of New York at Buffalo, the anarchist themes in this book help to promote feminist themes as well. Other critics, such as William Marcellino of SUNY Buffalo and Sarah Lefanu, writer of  " Popular Writing and Feminist Intervention in Science Fiction, "  argue that there are distinct anti-feminist undertones throughout the novel. 
+ 
+ Morrison argues that Le Guin's portrayed ideals of Taoism, the celebration of labor and the body, and desire or sexual freedom in an anarchist society contribute greatly to the book's feminist message. Taoism, which rejects dualisms and divisions in favor of a Yin and Yang balance, brings attention to the balance between not only the two planets, but between the male and female inhabitants. The celebration of labor on Anarres stems from a celebration of a mother's labor, focusing on creating life rather than on building objects. The sexual freedom on Anarres also contributes to the book's feminist message.   |last1=Morrison |first1=Mary Irene |title=Anarcho-feminism and permanent revolution in Ursula K. Le Guin's 'The Dispossessed' |publisher=State University of New York at Buffalo |year=2011 }}  
+ 
+ On the other hand, some critics believe that Le Guin's feminist themes are either weak or not present. Some believe that the Taoist interdependence between the genders actually weakens Le Guin's feminist message. Marcellino believes that the anarchist themes in the novel take precedence and dwarf any feminist themes.   |doi=10.1111/j.1542-734X.2009.00711.x }}   Lefanu adds that there is a difference between the feminist messages that the book explicitly presents and the anti-feminist undertones. For example, the book says that women created the society on Anarres. However, female characters seem secondary to the male protagonist, who seems to be a traditional male hero; this subversion weakens any feminist message that Le Guin was trying to convey.    
+ 
+ === Ansible theory === 
+ The theory Shevek is working on in the novel seeks to tie together the seemingly contradictory natures of Simultaneity and Sequentiality in temporal physics. This is also described, in the banter at a party, as being linear time versus circular time. Shevek is aware of the concept of an ansible, which would allow for instantaneous communication across space, and how his theory would allow for its development. But the implications of that theory might also allow for  " the instantaneous transferral of matter across space " .     
+ 
+ ==Critical reception== 
+ The novel received generally positive reviews. On the positive side, Baird Searles characterized the novel as an  " extraordinary work " , saying Le Guin had  " created a working society in exquisite detail "  and  " a fully realized hypothetical culture [as well as] living breathing characters who are inevitable products of that culture " .  " The Dispossessed: Visit from A Small Planet " , ''Village Voice'', November 21, 1974, pp.56, 58   Gerald Jonas, writing in ''The New York Times'', said that  " Le Guin's book, written in her solid, no-nonsense prose, is so persuasive that it ought to put a stop to the writing of prescriptive Utopias for at least 10 years " .  " Of Things to Come " , ''The New York Times Book Review'', October 26, 1975   Theodore Sturgeon praised ''The Dispossessed'' as  " a beautifully written, beautifully composed book " , saying  " it performs one of [science fiction's] prime functions, which is to create another kind of social system to see how it would work. Or if it would work. "  " Galaxy Bookshelf " , ''Galaxy Science Fiction'', June 1974, pp.97-98  
+ 
+ Lester del Rey, however, gave the novel a mixed review, citing the quality of Le Guin's writing but claiming that the ending  " slips badly " , a ''deus ex machina'' that  " destroy[s] much of the strength of the novel " .  " Reading Room " , If (magazine)|''If'', August 1974, pp.144-45  
+ 
+ ==Other versions== 
+ In 1987, the CBC Radio anthology program ''Vanishing Point (CBC)|Vanishing Point'' adapted ''The Dispossessed'' into a series of six 30 minute episodes.  [ Times Past Old Time Radio Archives].  
+ 
+ ===Translations=== 
+ 
+  
+  
+ *Bulgarian language|Bulgarian: '''' 
+ *Chinese language|Chinese (Simplified): , 2009 
+ *Chinese language|Chinese (Traditional): , 2005 
+ *Catalan language|Catalan: ''Els desposseïts'', 2018 
+ *Croatian language|Croatian: '''', 2009 
+ *Czech language|Czech: '''', 1995 
+ *Danish language|Danish: '''', 1979 
+ *Dutch language|Dutch: '''' 
+ *Estonian language|Estonian: ''Ilmajäetud'', 2018 
+ *Finnish language|Finnish: '''', 1979 
+ *French language|French: '''', 1975 
+ *Georgian language|Georgian: '''', 2018 
+ *German language|German: '''', 1976 later '''', 2006, later '''', 2017 
+ *Greek language|Greek: '''' 
+  
+ *Hebrew: '''', & lrm; 1980; later '''', & lrm; 2015 
+ *Hungarian language|Hungarian: '''', 1994 
+ *Italian language|Italian: '''', later '''', 1976 
+ *Japanese language|Japanese: , 1980 
+ *Korean language|Korean: '', 2002'' 
+ *Polish language|Polish: '''' 
+ *Portuguese language|Portuguese: '''', '''' 
+ *Romanian language|Romanian: '''', 1995 
+ *Russian language|Russian: '''', 1994, '''', 1997 
+ *Serbian language|Serbian: '''', 1987 
+ *Spanish language|Spanish: '''', 1983 
+ *Swedish language|Swedish: '''', 1976 
+ *Turkish language|Turkish: '''', 1990 
+ *, 2018 
+  
+ 
+ ==See also== 
+ 
+ * Ursula K. Le Guin bibliography 
+ * Anarchism in the arts 
+ 
+ ==References== 
+ 
+  
+ 
+ ==Sources== 
+  
+ 
+ ===Anarchism and ''The Dispossessed''=== 
+ * John P. Brennan,  " Anarchism and Utopian Tradition in ''The Dispossessed'' " , pp. & nbsp;116–152, in Olander  &  Greenberg, editors, ''Ursula K. Le Guin'', New York: Taplinger (1979). 
+ * Samuel R. Delany,  " To Read ''The Dispossessed'', "  in ''The Jewel-Hinged Jaw''. N.Y.: Dragon Press, 1977, pp. & nbsp;239–308 (anarchism in ''The Dispossessed''). [ (pdf available online] through Project Muse)  
+ * Neil Easterbrook,  " State, Heterotopia: The Political Imagination in Heinlein, Le Guin, and Delany " , pp. & nbsp;43–75, in Hassler  &  Wilcox, editors, ''Political Science Fiction'', Columbia, SC: U of South Carolina Press (1997). 
+ * Leonard M. Fleck,  " Science Fiction as a Tool of Speculative Philosophy: A Philosophic Analysis of Selected Anarchistic and Utopian Themes in Le Guin's ''The Dispossessed'' " , pp. & nbsp;133–45, in Remington, editor, ''Selected Proceedings of the 1978 Science Fiction Research Association National Conference'', Cedar Falls: Univ. of Northern Iowa (1979). 
+ *  
+ * Larry L. Tifft,  " Possessed Sociology and Le Guin's ''Dispossessed'': From Exile to Anarchism " , pp. & nbsp;180–197, in De Bolt  &  Malzberg, editors, ''Voyager to Inner Lands and to Outer Space'', Port Washington, NY: Kennikat (1979). 
+ * Kingsley Widmer,  " The Dialectics of Utopianism: Le Guin's ''The Dispossessed'' " , ''Liberal and Fine Arts Review'', v.3, nos.1–2, pp. & nbsp;1–11 (Jan.–July 1983). 
+ 
+ ===Gender and ''The Dispossessed''=== 
+ * Lillian M. Heldreth,  " Speculations on Heterosexual Equality: Morris, McCaffrey, Le Guin " , pp. & nbsp;209–220 in Palumbo, ed., ''Erotic Universe: Sexuality and Fantastic Literature'', Westport, CT: Greenwood (1986). 
+ * Neil Easterbrook,  " State, Heterotopia: The Political Imagination in Heinlein, Le Guin, and Delany " , pp. & nbsp;43–75, in Hassler  &  Wilcox, editors, ''Political Science Fiction'', Columbia, SC: U of South Carolina Press (1997). 
+ *  
+ * Jim Villani,  " The Woman Science Fiction Writer and the Non-Heroic Male Protagonist " , pp. & nbsp;21–30 in Hassler, ed., ''Patterns of the Fantastic'', Mercer Island, WA: Starmont House (1983). 
+ 
+ ===Language and ''The Dispossessed''=== 
+ *  
+ 
+ ===Property and possessions=== 
+ * Werner Christie Mathiesen,  " The Underestimation of Politics in Green Utopias: The Description of Politics in Aldous Huxley|Huxley's ''Island'', Le Guin's ''The Dispossessed'', and Ernest Callenbach|Callenbach's ''Ecotopia'' " , ''Utopian Studies: Journal of the Society for Utopian Studies'', v.12, n.1, pp. & nbsp;56–78 (2001). 
+ 
+ ===Science and ''The Dispossessed''=== 
+ * Ellen M. Rigsby,  " Time and the Measure of the Political Animal. "  ''The New Utopian Politics of Ursula K. Le Guin's The Dispossessed.'' Ed., Laurence Davis and Peter Stillman. Lanham: Lexington books., 2005. 
+ 
+ ===Taoism and ''The Dispossessed''=== 
+ * Elizabeth Cummins Cogell,  " Taoist Configurations: ''The Dispossessed'' " , pp. & nbsp;153–179 in De Bolt  &  Barry Malzberg|Malzberg, editors, ''Ursula K. Le Guin: Voyager to Inner Lands and to Outer Space'', Port Washington, NY: Kennikat (1979). 
+ 
+ ===Utopian literature and ''The Dispossessed''=== 
+ * James W. Bittner,  " Chronosophy, Ethics, and Aesthetics in Le Guin's ''The Dispossessed: An Ambiguous Utopia'', pp. 244–270 in Rabkin, Greenberg, and Olander, editors, ''No Place Else: Explorations in Utopian and Dystopian Fiction'', Carbondale: Southern Illinois University Press (1983). 
+ * John P. Brennan,  " Anarchism and Utopian Tradition in ''The Dispossessed'' " , pp. & nbsp;116–152, in Olander  &  Greenberg, editors, ''Ursula K. Le Guin'', New York: Taplinger (1979). 
+ * Bülent Somay,  " Towards an Open-Ended Utopia " , ''Science-Fiction Studies'', v.11, n.1 (#32), pp. & nbsp;25–38 (March 1984). 
+ * Peter Fitting,  " Positioning and Closure: On the 'Reading Effect' of Contemporary Utopian Fiction " , ''Utopian Studies'', v.1, pp. & nbsp;23–36 (1987). 
+ * Kingsley Widmer,  " The Dialectics of Utopianism: Le Guin's ''The Dispossessed'' " , ''Liberal and Fine Arts Review'', v.3, nos.1–2, pp. & nbsp;1–11 (Jan.–July 1983). 
+ * L. Davis and P. Stillman, editors,  " The new utopian politics of Ursula K. Le Guin's ''The Dispossessed'' " , Lexington Books, (2005). 
+ * Carter F. Hanson,  " Memory's Offspring and Utopian Ambiguity in Ursula K. Le Guin's 'The Day Before the Revolution' and ''The Dispossessed'' " , ''Science Fiction Studies'' (2013) 
+ 
+ ===Additional references=== 
+ * Judah Bierman,  " Ambiguity in Utopia: ''The Dispossessed'' " , ''Science-Fiction Studies'', v.2, pp. & nbsp;249–255 (1975). 
+ * James F. Collins,  " The High Points So Far: An Annotated Bibliography of Ursula K. LeGuin's ''The Left Hand of Darkness'' and ''The Dispossessed'' " , ''Bulletin of Bibliography'', v.58, no.2, pp. & nbsp;89–100 (June 2001). 
+ * James P. Farrelly,  " The Promised Land: Moses, Nearing, Skinner, and Le Guin " , ''JGE: The Journal of General Education'', v.33, n.1, pp. & nbsp;15–23 (Spring 1981). 
+  
+ 
+ ==External links== 
+  
+ *Full text of [ ''The Dispossessed''] at Libcom.org 
+ * 
+ *[ Audio review and discussion of ''The Dispossessed''] at The Science Fiction Book Review Podcast 
+ *Readable maps of [ Anarres] and [ Urras] 
+ *[ ''The Dispossessed''] at Worlds Without End 
+ *CBC Radio Vanishing Point (CBC)|Vanishing Point audio production of ''The Dispossessed'' at the Internet Archive: [ Part 1], [ 2], [ 3], [ 4], [ 5], [ 6] 
+ 
+  
+  
+  
+  
+ 
+  
+  
+  
+ Category:1974 American novels 
+ Category:Anarchist fiction 
+ Category:Hainish Cycle 
+ Category:Hugo Award for Best Novel-winning works 
+ Category:1974 science fiction novels 
+ Category:Social science fiction 
+ Category:Nebula Award for Best Novel-winning works 
+ Category:Utopian novels 
+ Category:Anarcho-communism 
+ Category:Novels by Ursula K. Le Guin 
+ Category:Harper  &  Row books 
+ Category:Fiction about Tau Ceti

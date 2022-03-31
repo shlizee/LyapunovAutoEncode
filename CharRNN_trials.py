@@ -1,4 +1,6 @@
 import torch
+import os
+import argparse
 from models import RNNModel
 from config import *
 from training import *
@@ -20,8 +22,6 @@ class CharRNNTrials(object):
 		for idx, p in enumerate(self.params):
 			start_time = time.time()
 			print(f'Training network {idx + 1} out of {len(self.params)}', end = ', ')
-			# mcon = ModelConfig(model_type, num_layers= 1, hidden_size = hidden_size, input_size = self.fcon.data.input_size, output_size = self.fcon.data.input_size,
-								# dropout = 0.1, init_type = 'uni', device = self.device, init_params = {'a':-p, 'b':p}, bias = False, id_init_param = 'b')
 			fcon.model.init_params = {'a': -p, 'b':p}
 			trial_data = self.load_trial_data(fcon.data, keep_amt = self.keep_amt)
 			model = RNNModel(fcon.model).to(self.device)
@@ -63,36 +63,53 @@ class CharRNNTrials(object):
 		torch.save(self.all_LEs, f'LE_stats/{fcon.model.model_type}_{hidden_size}_allLEs.p')
 		
 	
-def main(size = 64, model_type = 'lstm'):
-	test = True
-	batch_size = 32
-	le_batch_size = 10
-	max_epoch = 15
-	keep_amt = 0.2
-	evals = 50
-	dcon = TestDataConfig('', test_file = 'book_data.p', train_frac = 0.8, val_frac = 0.2, test_frac = 0.0)   
-	# torch.save(dcon, 'dcon.p')
-	# dcon = torch.load('dcon.p')
-	# print('dcon saved')
-	# hidden_size = size
-	trials_dir = f'{model_type}'
-	if test:
-		trials_dir = f'test_{trials_dir}'
+def main(args):
+    parser = argparse.ArgumentParser(description="Train recurrent models")
+    parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+    parser.add_argument("-evals", "--evals", type=float, default= 20, required=False)
+    args = parser.parse_args(args)
+	model_type = args.model_type
+	evals = args.evals
+	
+	# Non-argument hyperparameters
+	size = 64 				#Ignore this value (needed for initial creation of Config object but meaningless)
+	batch_size = 32 		#Training batch size
+	max_epoch = 15			#Max epochs for which models are trained
+	keep_amt = 0.2			#Proportion of training set kept for each trial, to maintain independence of models
+	
+	# LE Hyperparameters
+	le_batch_size = 15		#Batch size used for LE calculation 
+	le_seq_length = 100		#Length of LE sequence (in theory, should be infinity, but usually converges after finite number)
+	ON_step = 1				#Number of steps between orthonormalization. Greater than 1 means calculations are faster but less precise for more negative LEs
+	warmup = 500			#Number of steps to evolve the system before calculating LEs. Helps to remove transients by relaxing onto attractor
+	
+	#Define data configuration and trial directory
+	dcon = TestDataConfig('data', test_file = 'book_data.p', train_frac = 0.8, val_frac = 0.2, test_frac = 0.0)   
+	trials_dir = f'{model_type}/'
+	if not os.path.isdir(trials_dir):
+		os.makedir(trials_dir)
+	
+	#Define Hyperparameters
 	learning_rate = 0.002
 	dropout = 0.1
 	device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+	
+	#Create Model and Training Configuration Objects
 	mcon = ModelConfig(model_type, 1, 64, dcon.input_size, output_size = dcon.input_size, dropout=dropout, 
 						init_type = 'uni', device = device, bias = False, id_init_param = 'b', encoding = 'one_hot')
 	tcon = TrainConfig('Models', batch_size, max_epoch, 'adam', learning_rate, {}, start_epoch = 0)
+	
+	#Train Models
 	for hidden_size in [64, 128, 256, 512]:
-		torch.save([], f'{trials_dir}/test.p')
 		print(f'Hidden Size: {hidden_size}')
 		mcon.rnn_atts['hidden_size'] = hidden_size
 		fcon = FullConfig(dcon, tcon, mcon)
 		trials = CharRNNTrials(fcon, hidden_size = hidden_size, evals= evals, keep_amt = keep_amt)
 		torch.save(trials, f'{trials_dir}/CharRNNTrials_keep{keep_amt}_size{hidden_size}.p')
 	fcon = FullConfig(dcon, tcon, mcon)
-	lcon = LyapConfig(batch_size = le_batch_size, seq_length = 100, ON_step = 1, warmup = 500, one_hot= True)
+	
+	#Calculate Lyapunov Exponents
+	lcon = LyapConfig(batch_size = le_batch_size, seq_length = le_seq_length, ON_step = 1, warmup = 500, one_hot= True)
 	print('Retrieving LE data')
 	le_data = lcon.get_input(fcon)
 	for hidden_size in [64, 128, 256, 512]:
@@ -113,11 +130,5 @@ def extract_trials(size, dir = '', model_type = 'lstm', keep = 0.4):
 	torch.save(params, f'{dir}/{model_type}_{size}_params.p')
 	
 if __name__ == '__main__':
-	main(model_type = 'lstm')
-	# hidden_size = 64
-	# keep_amt = 0.4
-	# model_type = 'lstm'
-	# trials = torch.load(open(f'CharRNNTrials_keep{keep_amt}_size{hidden_size}.p', 'rb'))
-	# print(trials)
-	# torch.save(trials, f'CharRNNTrials_keep{keep_amt}_size{hidden_size}.p')
-	# trials.all_LEs = torch.load(f'LE_stats/{model_type}_{hidden_size}_allLEs.p')
+	import sys
+	main(sys.argv[1:])

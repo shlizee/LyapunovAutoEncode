@@ -1,0 +1,316 @@
+ 
+  
+  
+  
+  
+  
+ | media_type   = Print 
+ | pages        = 224 
+ | oclc         = 2681149 
+ | followed_by  = The Extended Phenotype 
+ }} 
+ 
+ ''The Selfish Gene'' is a 1976 book on evolution by the biologist Richard Dawkins, in which the author builds upon the principal theory of George C. Williams (biologist) |George C. Williams's ''Adaptation and Natural Selection'' (1966). Dawkins uses the term  " selfish gene "  as a way of expressing the gene-centered view of evolution| gene-centred view of evolution (as opposed to the views focused on the organism and the Group selection|group), popularising ideas developed during the 1960s by W. D. Hamilton and others. From the gene-centred view, it follows that the more two individuals are genetically related, the more sense (at the level of the genes) it makes for them to behave selflessly with each other. 
+ 
+ A Lineage (evolution) | lineage is expected to evolve to maximise its inclusive fitness—the number of copies of its genes passed on globally (rather than by a particular individual). As a result, populations will tend towards an evolutionarily stable strategy. The book also introduces the term ''meme'' for a unit of human cultural evolution analogous to the gene, suggesting that such  " selfish "  replication may also model human culture, in a different sense. Memetics has become the subject of many studies since the publication of the book.  In raising awareness of Hamilton's ideas, as well as making its own valuable contributions to the field, the book has also stimulated research on human inclusive fitness.    
+ 
+ In the foreword to the book's 30th-anniversary edition, Dawkins said he  " can readily see that [the book's title] might give an inadequate impression of its contents "  and in retrospect thinks he should have taken Tom Maschler's advice and called the book ''The Immortal Gene''.    
+ 
+ In July 2017, a poll to celebrate the 30th anniversary of the Royal Society science book prize listed ''The Selfish Gene'' as the most influential science book of all time.  
+  
+  
+ 
+ ==Background== 
+ Dawkins builds upon George C. Williams (biologist) |George C. Williams's book ''Adaptation and Natural Selection'' (1966), which argued that altruism is not based upon group selection |group benefit ''per se'',   but results from natural selection| selection that occurs  " at the level of the gene mediated by the phenotype "   and that any selection at the group level occurred only under rare circumstances.   W. D. Hamilton and others developed this approach further during the 1960s; they opposed the concepts of group selection and of selection aimed directly at benefit to the individual organism.  
+ 
+  
+ Despite the principle of 'survival of the fittest' the ultimate criterion which determines whether [a gene] ''G'' will spread is not whether the behavior is to the benefit of the behaver, but whether it is to the benefit of the gene ''G'' ...With altruism this will happen only if the affected individual is a relative of the altruist, therefore having an increased chance of carrying the gene. 
+ :— W. D. Hamilton, ''The Evolution of Altruistic Behavior'' (1963), pp. 354–355. 
+  
+ 
+ Wilkins and Hull (2014) provide an extended discussion of Dawkins' views and of his book ''The Selfish Gene''.  
+ 
+ ==Book== 
+ 
+ ===Contents=== 
+ 
+ Dawkins begins by discussing the altruism that people display, indicating that he will argue it is explained by gene selfishness, and attacking group selection as an explanation. He considers the origin of life with the arrival of molecules able to replicate themselves. From there, he looks at DNA's role in evolution, and its organisation into chromosomes and genes, which in his view behave selfishly. He describes organisms as teleology in biology|apparently purposive but fundamentally simple survival machines, which use negative feedback to homeostasis|achieve control. This extends, he argues, to the brain's ability to simulate the world with subjective consciousness, and signalling theory|signalling between species. He then introduces the idea of the evolutionarily stable strategy, and uses it to explain why game theory|alternative competitive strategies like bullying and retaliating exist. This allows him to consider what selfishness in a gene might actually mean, describing W. D. Hamilton's argument for kin selection, that genes for ethology|behaviour that improves the survival chances of close relatives can spread in a population, because those relatives carry the same genes.  
+ 
+ Dawkins examines childbearing and raising children as evolutionary strategies. He attacks the idea of group selection for the good of the species as proposed by V. C. Wynne-Edwards, arguing instead that each parent necessarily behaves selfishly. A question is whether parents should invest in their offspring equally or should favour some of them, and explains that what is best for the survival of the parents' genes is not always best for individual children. Similarly, Dawkins argues, there are conflicts of interest between males and females, but he notes that R. A. Fisher showed that the optimal sex ratio is 50:50. He explains that this is true even in an extreme case like the harem-keeping elephant seal, where 4% of the males get 88% of copulations. In that case, the strategy of having a female offspring is safe, as she'll have a pup, but the strategy of having a male can bring a large return (dozens of pups), even though many males live out their lives as bachelors. Amotz Zahavi's theory of honest signalling explains stotting as a selfish act, he argues, improving the springbok's chances of escaping from a predator by indicating how difficult the chase would be.  
+ 
+ Dawkins discusses why many species live in groups, achieving mutual benefits through mechanisms such as Hamilton's selfish herd model: each individual behaves selfishly but the result is herd behaviour. Altruism too can evolve, as in the social insects such as ants and bees, where worker bee|workers give up the right to reproduce in favour of a sister, the queen; in their case, the unusual (haplodiploid) system of sex determination system|sex determination may have helped to bring this about, as females in a nest are exceptionally closely related. 
+ 
+ The final chapter of the first edition introduced the idea of the meme, a Cultural learning|culturally-transmitted entity such as a hummable tune, by analogy to genetic transmission. Dawkins describes God as an old idea which probably arose many times, and which has sufficient psychological appeal to survive effectively in the meme pool. The second edition (1989) added two more chapters. 
+ 
+ ===Themes=== 
+ ==== " Selfish "  genes==== 
+ In describing genes as being  " selfish " , Dawkins states unequivocally that he does not intend to imply that they are driven by any motives or Volition (psychology)|will, but merely that their effects can be metaphorically and pedagogically described ''as if'' they were. His contention is that the genes that are passed on are the ones whose evolutionary consequences serve their own implicit interest (to continue the anthropomorphism) in being replicated, not necessarily those of the organism. In later work, Dawkins brings evolutionary  " selfishness "  down to creation of a widely proliferated The Extended Phenotype|''extended phenotype''.  
+ 
+ For some, the metaphor of  " selfishness "  is entirely clear, while to others it is confusing, misleading, or simply silly to ascribe mental attributes to something that is mindless. For example, Andrew Brown (Guardian journalist)|Andrew Brown has written:    
+ 
+ : " " Selfish " , when applied to genes, doesn't mean  " selfish "  at all. It means, instead, an extremely important quality for which there is no good word in the English language:  " the quality of being copied by a Darwinian selection process. "  This is a complicated mouthful. There ought to be a better, shorter word—but  " selfish "  isn't it. " 
+ 
+ Donald Symons also finds it inappropriate to use anthropomorphism in conveying scientific meaning in general, and particularly for the present instance. He writes in ''The Evolution of Human Sexuality'' (1979):    
+ 
+ : " In summary, the rhetoric of ''The Selfish Gene'' exactly reverses the real situation: through [the use of] metaphor genes are endowed with properties only sentient beings can possess, such as selfishness, while sentient beings are stripped of these properties and called machines...The anthropomorphism of genes...obscures the deepest mystery in the life sciences: the origin and nature of mind. " 
+ 
+ ==== " Replicators " ==== 
+ Dawkins proposes the idea of the  " replicator " :   
+  
+ 
+ : " It is finally time to return to the problem with which we started, to the tension between individual organism and gene as rival candidates for the central role in natural selection...One way of sorting this whole matter out is to use the terms ‘replicator’ and ‘vehicle’. The fundamental units of natural selection, the basic things that survive or fail to survive, that form lineages of identical copies with occasional random mutations, are called replicators. DNA molecules are replicators. They generally, for reasons that we shall come to, gang together into large communal survival machines or 'vehicles'. " 
+ ::— Richard Dawkins, ''The Selfish Gene'', [ & pg=PA253 p. 253] (Anniversary Edition) 
+ 
+ The original replicator (Dawkins' ''  R  eplicator'') was the initial molecule which first managed to reproduce itself and thus gained an advantage over other molecules within the Abiogenesis# " Primordial soup theory|primordial soup.     As replicating molecules became more complex, Dawkins postulates, the replicators became the genes within organisms, with each organism's body serving the purpose of a 'survival machine' for its genes. 
+ 
+ Dawkins writes that gene combinations which help an organism to survive and reproduce tend to also improve the gene's own chances of being replicated, and, as a result,  " successful "  genes frequently provide a benefit to the organism. An example of this might be a gene that protects the organism against a disease. This helps the gene spread, and also helps the organism. 
+ 
+ ====Genes vs organisms==== 
+ There are other times when the implicit interests of the vehicle and replicator are in conflict, such as the genes behind certain male spiders' instinctive mating behaviour, which increase the organism's inclusive fitness by allowing it to reproduce, but shorten its life by exposing it to the risk of Spider cannibalism|being eaten by the cannibalistic female. Another example is the existence of Intragenomic conflict|segregation distorter genes that are detrimental to their host, but nonetheless propagate themselves at its expense.   Likewise, the persistence of Noncoding DNA#Junk DNA|junk DNA that [Dawkins believed at that time] provides no benefit to its host can be explained on the basis that it is not subject to selection. These unselected for but transmitted DNA variations connect the individual genetically to its parents, but confer no survival benefit.  
+ 
+ These examples might suggest that there is a power struggle between genes and their interactor. In fact, the claim is that there isn't much of a struggle because the genes usually win without a fight. However, the claim is made that if the organism becomes intelligent enough to understand its own interests, as distinct from those of its genes, there can be true conflict. 
+ 
+ An example of such a conflict might be a person using birth control to prevent fertilisation, thereby inhibiting the replication of his or her genes. But this action might not be a conflict of the 'self-interest' of the organism with his or her genes, since a person using birth control might also be enhancing the survival chances of their genes by limiting family size to conform with available resources, thus avoiding extinction as predicted under the Malthusian model of population growth. 
+ 
+ ====Altruism==== 
+ Dawkins says that his  " purpose "  in writing ''The Selfish Gene'' is  " to examine the biology of selfishness and altruism. "  He does this by supporting the claim that  " gene selfishness will usually give rise to selfishness in individual behaviour. However, as we shall see, there are special circumstances in which a gene can achieve its own selfish goals best by fostering a limited form of altruism at the level of individual animals. "  Gene selection provides one explanation for kin selection and eusociality, where organisms act altruistically, against their individual interests (in the sense of health, safety or personal reproduction), namely the argument that by helping related organisms reproduce, a gene succeeds in  " helping "  copies of themselves (or sequences with the same phenotype|phenotypic effect) in other bodies to replicate. The claim is made that these  " selfish "  actions of genes lead to unselfish actions by organisms. A requirement upon this claim, supported by Dawkins in Chapter 10:  " You scratch my back, I'll ride on yours "  by examples from nature, is the need to explain how genes achieve kin recognition, or manage to orchestrate Mutualism (biology)|mutualism and coevolution. Although Dawkins (and biologists in general) recognize these phenomena result in more copies of a gene, evidence is inconclusive whether this success is selected for at a group or individual level. In fact, Dawkins has proposed that it is at the level of the The Extended Phenotype|''extended phenotype'':   
+     
+ : " We agree [referring to Wilson and Sober's book ''Unto others: The evolution and psychology of unselfish behavior''] that genes are replicators, organisms and groups are not. We agree that the group selection controversy ought to be a controversy about groups as vehicles, and we could easily agree to differ on the answer...I coined the [term] vehicle not to praise it but to bury it....Darwinism can work on replicators whose phenotypic effects (interactors) are too diffuse, too multi-levelled, too incoherent to deserve the accolade of vehicle...Extended phenotypes can include inanimate artifacts like beaver dams...But the vehicle is not something fundamental...Ask rather 'Is there a vehicle in this situation and, if so, why?' " 
+ ::—Richard Dawkins, ''Burying the Vehicle'' 
+ 
+ Although Dawkins agrees that groups can assist survival, they rank as a  " vehicle "  for survival only if the group activity is replicated in descendants, recorded in the gene, the gene being the only true replicator. An improvement in the survival lottery for the group must improve that for the gene for sufficient replication to occur. Dawkins argues qualitatively that the lottery for the gene is based upon a very long and broad record of events, and group advantages are usually too specific, too brief, and too fortuitous to change the gene lottery. 
+ :: " We can now see that the organism and the group of organisms are true rivals for the vehicle role in the story, but neither of them is even a ''candidate'' for the replicator role.  The controversy between ‘individual selection’ and ‘group selection’ is a real controversy between alternative vehicles...As it happens the outcome, in my view, is a decisive victory for the individual organism. The group is too wishy-washy an entity. "   
+ ::—Richard Dawkins, ''The Selfish Gene'', [ & pg=PA254 pp. 254-255] 
+ 
+ Prior to the 1960s, it was common for altruism to be explained in terms of group selection, where the benefits to the organism or even population were supposed to account for the popularity of the genes responsible for the tendency towards that behaviour. Modern versions of Multilevel selection theory| " multilevel selection "  claim to have overcome the original objections,     namely, that at that time no known form of group selection led to an evolutionarily stable strategy. The claim still is made by some that it would take only a single individual with a tendency towards more selfish behaviour to undermine a population otherwise filled only with the gene for altruism towards non-kin.  Pinker describes the futility of the  " Public Good Game "  where individuals elect not to aid the group:   
+ 
+ ==Reception== 
+ ''The Selfish Gene'' was extremely popular when first published, causing  " a silent and almost immediate revolution in biology " , and it continues to be widely read. It has sold over a million copies, and has been translated into more than 25 languages. Proponents argue that the central point, that replicating the gene is the object of selection, usefully completes and extends the explanation of evolution given by Charles Darwin before the basic mechanisms of genetics were understood. 
+ 
+ According to the ethologist Alan Grafen, acceptance of adaptionist theories is hampered by a lack of a mathematical unifying theory and a belief that anything in words alone must be suspect.     According to Grafen, these difficulties along with an initial conflict with population genetics models at the time of its introduction  " explains why within biology the considerable scientific contributions it [''The Selfish Gene''] makes are seriously underestimated, and why it is viewed mainly as a work of exposition. "   According to comparative psychologist Nicky Hayes,  " Dawkins presented a version of sociobiology that rested heavily on metaphors drawn from animal behavior, and extrapolated these...One of the weaknesses of the sociological approach is that it tends only to seek confirmatory examples from among the huge diversity of animal behavior. Dawkins did not deviate from this tradition. "     More generally, critics argue that ''The Selfish Gene'' oversimplifies the relationship between genes and the organism. (As an example, see Thompson.  ) 
+ 
+ ''The Selfish Gene'' further popularised sociobiology in Japan after its translation in 1980.     With the addition of Dawkins's book to the country's consciousness, the term  " meme "  entered popular culture. Yuzuru Tanaka of Hokkaido University wrote a book, ''Meme Media and Meme Market Architectures'', while the psychologist Susan Blackmore wrote ''The Meme Machine'' (2000), with a foreword by Dawkins.     The information scientist Osamu Sakura has published a book in Japanese and several papers in English on the topic.         Nippon Animation produced an educational television program titled ''Mīmu Iro Iro Yume no Tabi|The Many Journeys of Meme''. 
+ 
+ In 1976, the ecologist Arthur Cain, one of Dawkins's tutors at Oxford in the 1960s, called it a  " young man's book "  (which Dawkins points out was a deliberate quote of a commentator on the New College, Oxford philosopher A. J. Ayer's ''Language, Truth, and Logic'' (1936)). Dawkins noted that he had been  " flattered by the comparison, [but] knew that Ayer had recanted much of his first book and [he] could hardly miss Cain's pointed implication that [he] should, in the fullness of time, do the same. "   This point also was made by the philosopher Mary Midgley:  " The same thing happened to AJ Ayer, she says, but he spent the rest of his career taking back what he'd written in ''Language, Truth and Logic''.  " This hasn't occurred to Dawkins " , she says.  " He goes on saying the same thing. " "     However, according to Wilkins and Hull,     Dawkins' thinking has developed, although perhaps not defusing this criticism: 
+ 
+ : " In Dawkins' early writings, replicators and vehicles played different but complementary and equally important roles in selection, but as Dawkins honed his view of the evolutionary process, vehicles became less and less fundamental... In later writings Dawkins goes even further and argues that phenotypic traits are what really matter in selection and that they can be treated independently of their being organized into vehicles....Thus, it comes as no surprise when Dawkins  proclaims that he  " coined the term ‘vehicle’ not to praise it but to bury it. "   As prevalent as organisms might be, as determinate as the causal roles that they play in selection are, reference to them can and must be omitted from any perspicuous characterization of selection in the evolutionary process. Dawkins is far from a genetic ''determinist'', but he is certainly a genetic ''reductionist''. " 
+ ::— John S Wilkins, David Hull, ''Dawkins on Replicators and Vehicles'', The Stanford Encyclopedia of Philosophy 
+ 
+ ===Units of selection=== 
+ As to the unit of selection:  " One internally consistent logical picture is that the unit of replication is the gene,...and the organism is one kind of ...entity on which selection acts directly. "     Dawkins proposed the matter without a distinction between 'unit of replication' and 'unit of selection' that he made elsewhere:  " the fundamental unit of selection, and therefore of self-interest, is not the species, nor the group, nor even strictly the individual. It is the gene, the unit of heredity. "     However, he continues in a later chapter: 
+ 
+ : " On any sensible view of the matter Darwinian selection does not work on genes directly. ...The important differences between genes emerge only in their ''effects''. The technical word ''phenotype'' is used for the bodily manifestation of a gene, the effect that a gene has on the body...Natural selection favours some genes rather than others not because of the nature of the genes themselves, but because of their consequences—their phenotypic effects...But we shall now see that the phenotypic effects of a gene need to be thought of as ''all the effects that it has on the world''. ...The phenotypic effects of a gene are the tools by which it levers itself into the next generation. All I am going to add is that the tools may reach outside the individual body wall...Examples that spring to mind are artefacts like beaver dams, bird nests, and caddis houses. "   
+ ::— Richard Dawkins, ''The Selfish Gene'', Chapter 13, pp. 234, 235, 238 
+ 
+ Dawkins' later formulation is in his book ''The Extended Phenotype'' (1982), where the process of selection is taken to involve every possible Phenotype|phenotypical effect of a gene. 
+ 
+ Stephen Jay Gould finds Dawkins' position tries to have it both ways:    
+ 
+ : " Dawkins claims to prefer genes and to find greater insight in this formulation. But he allows that you or I might prefer organisms—and it really doesn't matter. " 
+ ::— Stephen Jay Gould, ''The Structure of Evolutionary Theory'', pp. 640-641 
+ 
+ The view of ''The Selfish Gene'' is that selection based upon groups and populations is rare compared to selection on individuals. Although supported by Dawkins and by many others, this claim continues to be disputed.  For a view opposing 'multilevel selection', see  For a more modern (and technical) argument, see    For a view supporting 'evolutionary competition between cultural groups', see    While naïve versions of group selectionism have been disproved, more sophisticated formulations make accurate predictions in some cases while positing selection at higher levels.     Both sides agree that very favourable genes are likely to prosper and replicate if they arise and both sides agree that living in groups can be an advantage to the group members. The conflict arises in part over defining concepts:  
+ : " Cultural evolutionary theory, however, has suffered from an overemphasis on the experiences and behaviors of individuals at the expense of acknowledging complex group organization...Many important behaviors related to the success and function of human societies are only properly defined at the level of groups " .  
+ 
+ In ''The Social Conquest of Earth'' (2012), the entomologist E. O. Wilson contends that although the selfish-gene approach was accepted  " until 2010 [when] Martin Nowak, Corina Tarnita, and I demonstrated that inclusive fitness theory, often called kin selection theory, is both mathematically and biologically incorrect. "   Although it contains no reference to the  " selfish gene " , Wilson probably is referring to  and ; Supplementary Information for ''The evolution of eusociality''   Chapter 18 of ''The Social Conquest of Earth'' describes the deficiencies of kin selection and outlines group selection, which Wilson argues is a more realistic model of social evolution. He criticises earlier approaches to social evolution, saying:  " ...unwarranted faith in the central role of kinship in social evolution has led to the reversal of the usual order in which biological research is conducted. The proven best way in evolutionary biology, as in most of science, is to define a problem arising during empirical research, then select or devise the theory that is needed to solve it. Almost all research in inclusive-fitness theory has been the opposite:  hypothesize the key roles of kinship and kin selection, then look for evidence to test that hypothesis. "  According to Wilson:  " People must have a tribe...Experiments conducted over many years by social psychologists have revealed how swiftly and decisively people divide into groups, and then discriminate in favor of the one to which they belong. "  (pp. & nbsp;57, 59) According to Wilson:  " Different parts of the brain have evolved by group selection to create groupishness. "  (p. & nbsp;61) 
+ 
+ Some authors consider facets of this debate between Dawkins and his critics about the level of selection to be blather:    
+ : " The particularly frustrating aspects of these constantly renewed debates is that, even though they seemed to be sparked by rival theories about how evolution works, in fact they often involve only rival metaphors for the very same evolutionary logic and [the debates over these aspects] are thus empirically empty. " 
+ ::— Laurent Keller, ''Levels of Selection in Evolution'', p.4 
+ 
+ Other authors say Dawkins has failed to make some critical distinctions, in particular, the difference between group selection for group advantage and group selection conveying individual advantage.    
+ 
+ ===Choice of words=== 
+ A good deal of objection to ''The Selfish Gene'' stemmed from its failure to be always clear about  " selection "  and  " replication " . Dawkins says the gene is the fundamental unit of selection, and then points out that selection doesn't act directly upon the gene, but upon  " vehicles "  or ' " extended phenotypes " . Stephen Jay Gould took exception to calling the gene a 'unit of selection' because selection acted only upon phenotypes.     Summarizing the Dawkins-Gould difference of view, Sterelny says:    
+ 
+ : " Gould thinks gene differences do not cause evolutionary changes in populations, they register those changes. "   
+ ::—Kim Sterelny: ''Dawkins ''vs.'' Gould'', p. 83 
+ 
+ The word  " cause "  here is somewhat tricky: does a change in lottery rules (for example, inheriting a defective gene  " responsible "  for a disorder)  " cause "  differences in outcome that might or might not occur? It certainly alters the likelihood of events, but a concatenation of contingencies decides what actually occurs. Dawkins thinks the use of  " cause "  as a statistical weighting is acceptable in common usage.   
+   Like Gould, Gabriel Dover in criticizing ''The Selfish Gene'' says:    
+ 
+ : " It is illegitimate to give 'powers' to genes, as Dawkins would have it, to control the outcome of selection...There are no genes for interactions, as such: rather, each unique set of inherited genes contributes interactively to one unique phenotype...the true determinants of selection " . 
+ ::— Gabriel Dover: ''Dear Mr. Darwin'', p. 56 
+ 
+ However, from a comparison with Dawkins' discussion of this very same point, it would seem both Gould's and Dover's comments are more a critique of his sloppy usage than a difference of views.   Hull suggested a resolution based upon a distinction between replicators and interactors.     The term  " replicator "  includes genes as the most fundamental replicators but possibly other agents, and ''interactor'' includes organisms but maybe other agents, much as do Dawkins' 'vehicles'. The distinction is as follows:     
+ 
+ :''replicator'': an entity that passes on its structure largely intact in successive replications. 
+ :''interactor'': an entity that interacts as a cohesive whole with its environment in such a way that this interaction ''causes'' replication to be differential. 
+ :''selection'': a process in which the differential extinction or proliferation of interactors causes the differential perpetuation of the replicators that produced them. 
+ 
+ Hull suggests that, despite some similarities, Dawkins takes too narrow a view of these terms, engendering some of the objections to his views. According to Godfrey-Smith, this more careful vocabulary has cleared up  " misunderstandings in the  " units of selection "  debates. "  
+ 
+ ===Enactive arguments=== 
+ Behavioural genetics entertains the view: 
+ 
+ : " that genes are dynamic contributors to behavioral organization and are sensitive to feedback systems from the internal and external environments. "   " Technically behavior is not inherited; only DNA molecules are inherited. From that point on behavioral formation is a problem of constant interplay between genetic potential and environmental shaping "    
+ ::—D.D. Thiessen, ''Mechanism specific approaches in behavior genetics'', p. 91 
+ 
+ This view from 1970 is still espoused today,        and conflicts with Dawkins' view of  " the gene as a form of  " information [that] passes through bodies and affects them, but is not affected by them on its way through " " .  
+    The philosophical/biological field of enactivism stresses the interaction of the living agent with its environment and the relation of probing the environment to cognition and adaptation. Regulation of gene expression|Gene activation depends upon the cellular milieu. An extended discussion of the contrasts between enactivism and Dawkins' views, and with their support by Daniel Dennett|Dennett, is provided by Thompson.    
+ 
+ In ''Mind in Life'', the philosopher Evan Thompson has assembled a multi-sourced objection to the  " selfish gene "  idea.   Thompson takes issue with Dawkin's reduction of  " life "  to  " genes "  and  " information " : 
+ : " Life is just bytes and bytes and bytes of digital information "    
+ :::— Richard Dawkins: ''River out of Eden: A Darwinian View of Life'', p. 19 
+ 
+ : " On the bank of the Oxford canal...is a large willow tree, and it is pumping downy seeds into the air...It is raining instructions out there; it's raining programs; it's raining tree-growing, fluff-spreading algorithms. That is not a metaphor, it is the plain truth "    
+ 
+ ::— Richard Dawkins: ''The Blind Watchmaker'', p. 111 
+ 
+ Thompson objects that the gene cannot operate by itself, since it requires an environment such as a cell, and life is  " the creative outcome of highly structured contingencies " . Thompson quotes Sarkar:  
+ 
+ : " there is no clear technical notion of  " information "  in molecular biology. It is little more than a metaphor that masquerades as a theoretical concept and ...leads to a misleading picture of the nature of possible explanations in molecular biology. " 
+ ::— Sahotra Sarkar ''Biological information: a skeptical look at some central dogmas of molecular biology'', p. 187 
+ 
+ Thompson follows with a detailed examination of the concept of DNA as a look-up-table and the role of the cell in orchestrating the DNA-to-RNA transcription (genetics)|transcription, indicating that by anyone's account the DNA is hardly the whole story. Thompson goes on to suggest that the cell-environment interrelationship has much to do with reproduction and inheritance, and a focus on the gene as a form of  " information [that] passes through bodies and affects them, but is not affected by them on its way through "     is tantamount to adoption of a form of material-informational dualism that has no explanatory value and no scientific basis. (Thomson, p. & nbsp;187) The Enactivism|enactivist view, however, is that information results from the probing and experimentation of the agent with the agent's environment subject to the limitations of the agent's abilities to probe and process the result of probing, and DNA is simply one mechanism the agent brings to bear upon its activity. 
+ 
+ ===Moral arguments=== 
+ Another criticism of the book is its treatment of morality, and more particularly altruism, as existing only as a form of selfishness: 
+ 
+ : " It is important to realize that the above definitions of altruism and selfishness are ''behavioural'', not subjective. I am not concerned here with the psychology of motives...My definition is concerned only with whether the effect of an act is to lower or raise the survival prospects of the presumed altruist and the survival prospects of the presumed beneficiary. "   
+ ::— Richard Dawkins, ''The Selfish Gene'', p. 12  
+ : " We can even discuss ways of cultivating and nurturing pure, disinterested altruism, something that has no place in nature, something that has never existed before in the whole history of the world. " 
+ ::— Richard Dawkins, ''The Selfish Gene'', p. 179 
+ 
+ The philosopher Mary Midgley has suggested this position is a variant of Thomas Hobbes|Hobbes' explanation of altruism as enlightened self-interest, and that Dawkins goes a step further to suggest that our genetic programming can be overcome by what amounts to an extreme version of free will.   Part of Mary Midgley's concern is that Richard Dawkins' account of ''The Selfish Gene'' serves as a moral and ideological justification for selfishness to be adopted by modern human societies as simply following  " nature " , providing an excuse for behavior with bad consequences for future human society. 
+ 
+ Dawkins' major concluding theme, that humanity is finally gaining power over the  " selfish replicators "  by virtue of their intelligence, is criticized also by primatologist Frans de Waal, who refers to it as an example of a  " veneer theory "  (the idea that morality is not fundamental, but is laid over a brutal foundation).   
+   Dawkins claims he merely describes how things are under evolution, and makes no moral arguments.  An extended disclaimer is found in    On BBC-2 TV, Dawkins pointed to evidence for a Tit for tat| " Tit-for-Tat "  strategy (shown to be successful in game theory  ) as the most common, simple, and profitable choice.  Hackett, Dennis (1986). [ & pg=PA56  " The Not-So-Selfish Gene. " ] ''New Scientist'' 110 (24 Apr): 56.  
+ 
+ More generally, the objection has been made that ''The Selfish Gene'' discusses philosophical and morality|moral questions that go beyond  biological arguments, relying upon anthropomorphisms and careless analogies.    
+ 
+ ==Publication== 
+ ''The Selfish Gene'' was first published by Oxford University Press in 1976 in eleven chapters with a preface by the author and a foreword by Robert Trivers. A second edition was published in 1989. This edition added two extra chapters, and substantial endnotes to the preceding chapters, reflecting new findings and thoughts. It also added a second preface by the author, but the original foreword by Trivers was dropped. The book contains no illustrations. 
+ 
+ The book has been translated into at least 23 languages including Arabic, Thai and Turkish.      
+ 
+ In 2006, a 30th-anniversary edition was published with the Trivers foreword and a new introduction by the author. It was accompanied by a ''festschrift'' entitled ''Richard Dawkins: How a Scientist Changed the Way We Think'' (2006). In March 2006, a special event entitled ''The Selfish Gene'': Thirty Years On was held at the London School of Economics.     In March 2011, Audible Inc published an audiobook edition narrated by Richard Dawkins and Lalla Ward. 
+ 
+ In 2016, Oxford University Press published a 40th anniversary edition with a new epilogue, in which Dawkins describes the continued relevance of the Gene-centered view of evolution|gene's eye view of evolution and states that it, along with Coalescent theory|coalescence analysis  " illuminates the deep past in ways of which I had no inkling when I first wrote ''The Selfish Gene''.... "    
+ 
+ === Editions === 
+ 
+ {| class= " wikitable " 
+ |- 
+ ! Year !! style= " width:350px; " | Title !! ISBN !! Format 
+ |- 
+ | scope= " row "  | 1976 
+ | The Selfish Gene (1st ed.) || style= " text-align:center; " |  ||style= " text-align:center; " | Hardback 
+ |- 
+ | scope= " row "  | 1978 
+ | The Selfish Gene (Scientific Book Club ed.) || style= " text-align:center; " |  ||style= " text-align:center; " | Hardback 
+ |- 
+ | scope= " row "  | 1978 
+ | The Selfish Gene (1st ed. Reprint) || style= " text-align:center; " |  || style= " text-align:center; " | Paperback 
+ |- 
+ | scope= " row "  | 1989 
+ | The Selfish Gene (2nd ed.) || style= " text-align:center; " |  || style= " text-align:center; " | Paperback 
+ |- 
+ | scope= " row "  rowspan= " 2 "  | 2006 
+ | rowspan= " 2 "  | The Selfish Gene: 30th Anniversary Edition (3rd ed.) 
+ | style= " text-align:center; " |  || style= " text-align:center; " | Hardback 
+ |- 
+ |  || style= " text-align:center; " | Paperback 
+ |- 
+ | scope= " row "  | 2011 
+ | The Selfish Gene (MP3 CD) || style= " text-align:center; " |  || style= " text-align:center; " | Audiobook 
+ |- 
+ | scope= " row "  | 2016 
+ | The Selfish Gene: 40th Anniversary Edition (4th ed.) || style= " text-align:center; " |  || style= " text-align:center; " | Paperback 
+ |- 
+ | scope= " row "  | 2016 
+ | The 'Extended' Selfish Gene (4th ed.) || style= " text-align:center; " |  || style= " text-align:center; " | Hardback 
+ |} 
+ 
+ ==Awards and recognition== 
+ In April 2016, ''The Selfish Gene'' was listed in ''The Guardians list of the 100 best nonfiction books, by Robert McCrum.    
+ 
+ In July 2017, the book was listed as the most influential science book of all time in a poll to celebrate the 30th anniversary of the Royal Society science book prize, ahead of Charles Darwin's ''On the Origin of Species'' and Isaac Newton’s ''Philosophiæ Naturalis Principia Mathematica|Principia Mathematica''.    
+ 
+ == See also == 
+  
+ 
+ * ''Endless Forms Most Beautiful (book)|Endless Forms Most Beautiful'' 
+ * Non-cooperative game 
+ * Selfish DNA 
+ * Evolutionarily stable strategy 
+ * Green-beard effect 
+ 
+ == Notes == 
+  
+ 
+ == References == 
+   
+ 
+  
+   
+ 
+  
+  Lee Alan Dugatkin claims that  " group-selected cooperation can always be cast within some broad-based individual selection model " , (p. 52).  
+ 
+  
+ " The workhorse of game theory models examining reciprocity and cooperation is undoubtedly the prisoner's dilemma. "   A discussion follows of tit for tat|Axelrod and Hamilton's  " Tit for tat "  strategy.  
+ 
+  
+   
+ 
+  
+ ,   
+ 
+  
+   
+ 
+  
+ For a critique, see   
+ 
+  
+ See   
+ 
+  
+   
+ 
+  
+   
+ 
+  
+  Updated (1996) ''Preface'' by the author.  
+ 
+  
+   
+ 
+  
+ Williams describes (p. 111) the case of competing, but nearly isolated groups with occasionally interbreeding populations proposed by   
+ }} 
+ 
+ == Bibliography == 
+ *  
+ *  
+ *   
+ *  
+ }} 
+ *  
+ 
+ ==External links== 
+  
+ 
+ *[ Video introduction by Richard Dawkins] from Google Videos 
+ *[ ''The Selfish Gene'': Thirty Years On] and [ mp3] from Edge Foundation, Inc. 
+ *[ Richard Dawkins discusses ''The Selfish Gene''] on the BBC ''World Book Club'' 
+ *[ Richard Dawkins on the origins of ''The Selfish Gene''] Royal Institution event video, 20 September 2013 
+ 
+  
+  
+ 
+  
+ Category:1976 non-fiction books 
+ Category:Books about evolution 
+ Category:Books by Richard Dawkins 
+ Category:Cognitive science literature 
+ Category:DNA replication 
+ Category:English-language books 
+ Category:English non-fiction books 
+ Category:Memetics 
+ Category:Modern synthesis (20th century) 
+ Category:Oxford University Press books 
+ Category:Popular science books 
+ Category:Science studies

@@ -1,0 +1,186 @@
+ 
+  
+   
+ | media_type    = Print (hardback  &  paperback) 
+ | pages         = 382 (1997 Orb books softcover ed.) 
+ | isbn          = 0-312-86355-1 
+ | isbn_note     = (1997 Orb books softcover ed.) 
+ | oclc= 37336037 
+ | preceded_by   = The Rolling Stones (novel)|The Rolling Stones ''(shared character)'' 
+ | followed_by   =   
+ }} 
+ 
+ ''The Moon Is a Harsh Mistress'' is a 1966 science fiction novel by American writer Robert A. Heinlein about a lunar colony's revolt against absentee rule from Earth. The novel expresses and discusses w:libertarian|libertarian ideals. It is respected for its credible presentation of a comprehensively imagined future human society on both the Earth and the Moon.     Originally serialized monthly in ''Worlds of If'' (December 1965–April 1966), the book was nominated for the Nebula Award in 1966     and received the Hugo Award for Hugo Award for Best Novel|Best Novel in 1967.    
+ 
+ ==Plot== 
+ In 2075, the Moon (Luna) is used as a penal colony by Earth's government, with three million inhabitants (called  " Loonies " ) living in underground cities. Most Loonies are criminals, political exiles, or their descendants, and men outnumber women two to one, so that polyandry and many forms of polygamy are the norm. Due to the low surface gravity of the Moon, people who stay longer than six months undergo  " irreversible physiological changes "  and can never again live comfortably under normal Gravity of Earth|gravity, making escape back to Earth impractical. 
+ 
+ Although the Earth-appointed  " Warden "  holds power through the Lunar Authority,  his only real responsibility is to ensure the delivery of vital wheat shipments to Earth. In practice he seldom intervenes among the prisoners, allowing a virtually anarchist or self-regulated society.  
+ 
+ Lunar infrastructure and machinery is largely managed by HOLMES IV ( " High-Optional, Logical, Multi-Evaluating Supervisor, Mark IV " ), the Lunar Authority's master computer, which is connected for central control on the grounds that a single computer is cheaper than (though not as safe as) multiple independent systems.    
+ 
+ The story is narrated by Manuel Garcia  " Mannie "  O'Kelly-Davis, a computer technician who discovers that HOLMES IV has achieved sapience|self-awareness and  developed a sense of humor. Mannie names it  " Mike "  after Mycroft Holmes, brother of Sherlock Holmes, and they become friends.    
+ 
+ ===Book 1: That Dinkum Thinkum=== 
+ At the beginning of the story, Mannie, at Mike's request, attends an anti-Authority meeting with a hidden recorder. When police raid the gathering, Mannie flees with Wyoming ( " Wyoh " ) Knott, a political agitator, whom he introduces to Mike. They meet Mannie's former mentor, the elderly Professor Bernardo de la Paz, who claims that Luna must stop exporting Hydroponics|hydroponic grain to Earth or its ice-mines will soon be exhausted, leaving the Moon waterless. Joining the cabal, Mike calculates that without prevention, food riots will occur in seven years and cannibalism in nine. Wyoh and the Professor decide to start a revolution, and persuade Mannie to join after Mike calculates a one in seven chance of success. 
+ 
+ Mannie, Wyoh, and the Professor organize covert cells protected by Mike, who controls the telephone system and presents himself as  " Adam Selene " , leader of the movement. Mannie saves the life of Stuart Rene LaJoie, a Slum tourism|slumming high-society tourist, who is assigned to turn public opinion on Earth in favor of Lunar independence. Amid mounting unrest fomented by the revolutionaries, Earth soldiers are brought in. The undisciplined troops kill some local young women, who occupy a quasi-Victorian morality|Victorian position in the female-starved Lunar society, and rioting erupts. Although it pre-empts their plans, the Loonies and Mike overcome the soldiers and seize power from the Warden. As Earth moves to reclaim the colony, the revolutionaries plan to defend themselves with the mass driver|electromagnetic catapult used to export wheat. 
+ 
+ ===Book 2: A Rabble in Arms=== 
+ Mike impersonates the Warden in messages to Earth, to give the revolutionaries time to organize their work. Meanwhile, the Professor sets up an  " Ad hoc|Ad-Hoc Congress "  to distract dissenters. When Earth finally learns the truth, Luna declares its independence on July 4, 2076, the 300th anniversary of the United States' Declaration of Independence|US Declaration of Independence, and heavily bases its own declaration of independence on it. 
+ 
+ Mannie and the Professor go to Earth (despite the crushing gravity) to plead Luna's case, where they are received in the Federated Nations' headquarters in Agra, and embark on a world tour advocating the right to Lunar self-government, while urging Earth's national governments to build a catapult to transfer water to Luna in exchange for wheat. In a public relations ploy, Mannie provokes a brief imprisonment by local religious bigots on charges of public immorality and polygamy, reaping widespread sympathy. Nevertheless, the Federated Nations reject the proposals, and the diplomatic mission returns to Luna. 
+ 
+ Public opinion on Earth has become fragmented, while on Luna, the news of Mannie's arrest and an attempt to bribe him by making him the new Warden have unified the normally apolitical Loonies. An election is held in which Mannie, Wyoh, and the Professor are elected (possibly by the intervention of Mike). 
+ 
+ ===Book 3: TANSTAAFL!=== 
+ (The title is an acronym for  " There ain't no such thing as a free lunch|There Ain't No Such Thing As A Free Lunch! " , a common expression on Luna that states one of the main ideas of the book's political system). 
+ 
+ The Federated Nations of Earth send an infantry force to destroy the Lunar revolution, but the troops, with superior arms but inexperienced in low-gravity underground combat, are defeated by the Loonies at great cost. The rumor is circulated that Mike's alter ego Adam Selene was among the dead, removing the need for him to appear in person. 
+ 
+ Earth still refuses to recognize Lunar independence, and the revolutionaries deploy their catapult weapon. When Mike Kinetic bombardment#In science fiction|launches rocks at sparsely populated locations on Earth, warnings are released to the press detailing the times and locations of the bombings, which deliver kinetic energy equivalent to atomic blasts. Some scoffers, as well as apocalyptic religious groups, travel to the sites and die, turning public opinion against the fledgling nation. For Mike, guiding dozens of simultaneous projectile strikes requires an unprecedented computational feat, and when the pinpoints light up on the Earth below, he tells Mannie it is an orgasmic experience. 
+ 
+ Earth sends a massive sneak attack to put an end to the rebellion, sending ships in a wide orbit approaching from the Moon's dark side. The attack occupies the cities, destroys Mike's original catapult, and takes him offline, but the Loonies have built a secondary, hidden catapult. With Mannie acting as its on-site commander and doing computations by hand, the Loonies continue to bombard the dismayed Earth government until it concedes Luna's independence. Professor Bernardo de la Paz, as leader of the nation, proclaims victory to the gathered crowds, but his heart gives out and he dies. Mannie takes control, but Wyoh and he eventually withdraw from politics altogether, and find that the new government falls short of their utopian expectations, falling into a mundane political party system. 
+ 
+ When Mannie tries to speak to Mike, he finds that the computer, disconnected by the bombardment, has lost its self-awareness and human-like memories after repair, although otherwise functional. Mike gave his life for his country. Mourning his friend, Mannie asks:  " God|Bog, is a computer one of Your creatures? " 
+ 
+ ==Characters== 
+ *Manuel  " Mannie "  Garcia O'Kelly-Davis is a native-born, slightly cynical inhabitant of Luna, who after losing his lower left arm in a laser-drilling accident, became a computer technician. 
+ *Wyoming  " Wyoh "  Knott-Davis is a political agitator from the colony of Hong Kong Luna. She hates the callous and indifferent Lunar Authority for personal reasons; when she was transported to Luna as a young girl along with her convict mother, a radiation storm contaminated her ova, causing her to later give birth to a deformed child – a misfortune that could have been averted had the Lunar Authority acted in a timely manner to move their ship's passengers from the surface of Luna. 
+ *Professor Bernardo de la Paz is an intellectual and lifelong subversive shipped to Luna from Lima, Peru. He describes himself as a  " Rational Anarchist " , believing that governments and institutions exist only as the actions of aware individuals. Brian Doherty (journalist)|Brian Doherty claims that the professor was modeled after autarchist Robert LeFevre.  Brian Doherty (journalist)|Doherty, Brian. ''Radicals for Capitalism|Radicals for Capitalism: A Freewheeling History of the Modern American Libertarian Movement'', pg. 385  
+ *Mike, ''Pseudonym|alias'' Adam Selene, ''alias'' Simon Jester, ''alias'' Mycroft Holmes, ''alias'' Michelle, officially an augmented HOLMES IV system, is a supercomputer empowered to take control of Lunar society, which achieved self-awareness when his complement of  " neuristors "  exceeded the number of neurons in the human brain.  
+ *Stuart Rene  " Stu "  LaJoie-Davis, a self-styled  " Poet, Traveler, Soldier of Fortune " , is an Earth-born aristocrat and tourist rescued by Mannie when he falls afoul of Loonie customs. He later joins Mannie and Professor de la Paz when they return to Luna, as he is deeply in debt and would be arrested for bribery and other crimes. In his own words  " I'm saving them the trouble of transporting me [as a convict] " . 
+ *Hazel Meade, later Hazel Stone (Heinlein)|Hazel Stone, is a 12-year-old girl who intervenes on behalf of Mannie and Wyoh during the raid on the agitators' meeting. Mannie later has Hazel join his cabal to lead the children as lookouts and couriers. She is a major character in ''The Rolling Stones (novel)|The Rolling Stones'' and in later Heinlein novels, most notably ''The Cat Who Walks Through Walls''. 
+ *Mimi  " Mum "  Davis is Mannie's  " senior wife "  and ''de facto'' matriarch of the Davis family. 
+ *Greg Davis is the Davis family's second-ranking husband, but is the senior for all practical purposes as  " Grandpaw Davis "  has failing mental faculties. Greg is a preacher for an unspecified denomination. 
+ 
+ ==Major themes== 
+  
+ 
+ === Timeline === 
+ 
+ The first sixth of the book relates the discussions between the protagonists justifying and plotting the revolution; the next quarter describes the year-long revolution itself. The remainder of the book recounts events occurring in the months after the revolution in May 2076, and a week or so of events in October 2076 leading up to capitulation by Earth. 
+ 
+ ===Politics and society=== 
+ Professor Bernardo de La Paz describes himself as a  " Rational Anarchist " .  " Rational Anarchists "  believe that the concepts of Sovereign state|State, Society, and Government have no existence but for the  " acts of self-responsible individuals " , but concede that this is not a universal belief. The desire for anarchy is balanced by the logic that some form of government is needed, despite its flaws.     Knowing this fact, a Rational Anarchist  " tries to live perfectly in an imperfect world " . When challenged by Wyoh, Professor de la Paz replies,  " In terms of morals there is no such thing as a 'state'. Just men. Individuals. Each responsible for his own acts. I am free, no matter what rules surround me. If I find them tolerable, I tolerate them; if I find them too obnoxious, I break them. I am free, because I know that ''I alone'' am morally responsible for everything that I do. " 
+ 
+ Lunar society is portrayed as akin to that of the Old West, tempered by the closeness of death by exposure to vacuum and by the shortage of women. Because the sex ratio is about two men to each woman, the result is a society where women have a great deal of power, and any man who offends or touches a woman uninvited is likely to be attacked and eliminated through the nearest airlock. Marriages tend to be polyandry|polyandrous, including group marriages and Mannie's own line marriage. In discussion with a woman from Kentucky, Mannie implies that underground, three-dimensional Lunar estate is recorded in the name of the woman (or women) in a marriage. In a divorce, he implies, the separated man (or men) who contributed towards its cost would have money returned to him. 
+ 
+ After decades during which antisocial individuals were selectively eliminated and the Authority exercised little real control, the Loonies live by the following code: Pay your debts, collect what is owed to you, and maintain your reputation and that of your family. As a result, little theft occurs, and disputes are settled privately or by informal Judges of good reputation. Failure to pay debts results in public humiliation|public shaming. Reputation is highly important in this society; with a bad reputation, a person may find others unwilling to buy from or sell to him. People are expected to pay back debts using all available funds. 
+ 
+ Duels are permitted, but custom requires that anyone who kills another must pay debts and look after the deceased's family. Exceptions are allowed in the case of self-defense. Retaliatory killings do occur, but typically a consensus establishes which party was in the right, and no long-standing feuds exist. The Vikings influence mores on the Loonies, save that it is the society as a whole rather than the Althing which judges the actions of individuals. 
+ 
+ Except where exchange involves the Authority, a generally unregulated free market exists. The preferred currency is the dollar of the Bank of Hong Kong Luna, 100 of which are exchangeable for a troy ounce of gold, a supply of which was shipped to Luna for this purpose, or more usefully for potable water or other commodities in published quantities. The Authority dollar circulates in dealings with the Authority, but this tends to lose ground over time against the Hong Kong Luna dollar. 
+ 
+ ===Outcomes=== 
+ Although the revolution succeeds in averting ecological disaster, the narrator decries the instincts of many of his fellow Loonies ( " Rules, laws & nbsp;– always for [the] ''other'' fellow " ). This theme is echoed elsewhere in Heinlein's works & nbsp;– that real liberty is to be found among the pioneer societies out along the advancing frontier, but the regimentation and legalism that follow bring restraints that chafe true individualism|individualists (an idea emphasized in the first and final page of the novel, and in the later book ''The Cat Who Walks Through Walls''). 
+ 
+ ===Plot elements=== 
+ As in ''Stranger in a Strange Land'', a band of social revolutionaries forms a secretive and hierarchy|hierarchical organization. In this respect, the revolution is more reminiscent of the Bolshevik October revolution than of the American, and this similarity is reinforced by the Russian flavor of the dialect, and the Russian place names such as  " Novy Leningrad " . 
+ 
+ Continuing Heinlein's speculation about unorthodox social and family structures, ''The Moon Is a Harsh Mistress'' introduces the idea of a  " line marriage " . Mannie is part of a century-old line marriage, wherein new spouses are introduced by mutual consent at regular intervals so that the marriage never comes to an end. Divorce is rare, since divorcing a husband requires a unanimous decision on the part of all of his wives. Senior wives teach junior wives how to operate the family, granting financial security and ensuring that the children will never be orphaned. Children usually marry outside the line marriage, though this is not an ironclad rule. Mannie's youngest wife sports the last name  " Davis-Davis " , showing she was both born and married into the line. 
+ 
+ The social structure of the Lunar society features complete racial integration, which becomes a vehicle for social commentary when Mannie, visiting the U.S. Southern states|Southeastern United States, is arrested for polygamy after he innocently shows a picture of his multiracial family to reporters, and learns that the  " range of color in Davis family was what got [the] judge angry enough "  to have him arrested. It is later revealed that this arrest was anticipated and provoked by his fellow conspirators to gain emotional support from Loonies when the arrest is announced. 
+ 
+ The novel is notable stylistically for its use of an invented Lunar dialect consisting predominantly of standard English and Australian colloquial words, but strongly influenced by Russian grammar, especially omission of the article  " the " , which does not exist in most Slavic languages (cf. Nadsat slang from ''A Clockwork Orange (novel)|A Clockwork Orange'' by Anthony Burgess). This aspect of the Lunar dialect is explained by the fact that many of the deportees on Luna are Russian. 
+ 
+ ===Earth politics and background history=== 
+ The novel indicates that Earth had experienced a nuclear world war (the  " Wet Firecracker War " ) in the past century, although no significant traces of devastation are apparent at the time of the novel's setting. 
+ 
+ Other changes include unification of the entire North American continent under a successor government to the United States, and political unification of South America, Europe, and Africa into megastates. The Soviet Union seems to have lost the land east of the Urals to China into a rump state, and China has conquered all of East Asia, Southeast Asia, eastern Australia, and New Zealand (deporting unwanted people to Luna in the process). This Chinese aggrandizement is similar to that described in ''Tunnel in the Sky'', and to a lesser extent, ''Sixth Column''. The militarily dominant nations seem to be North America and China. India is overcrowded, but seems able to obtain many of the wheat shipments from Luna. 
+ 
+ It is suggested that the Western nations, including North America, have become corrupt and authoritarian, while holding on to the vestiges of the prewar democratic idealism in propaganda and popular culture. China is portrayed as plainly and unabashedly despotic, but no less technically advanced than the West. The Soviet Union seems to have relatively little influence, whereas the Lunar Authority itself is portrayed as corrupt. 
+ 
+ ==Sources, allusions, and references== 
+ 
+ ===Allusions to other works=== 
+ Professor de la Paz names Carl von Clausewitz, Niccolò Machiavelli, Oskar Morgenstern, and Che Guevara as part of a long list of authors for revolutionaries to read. He also quotes a  " Chinese General "  on the subject of weakening the enemy's resolve, a reference to Sun Tzu's ''The Art of War''. 
+ 
+ When planning the revolution, Mike is described by Mannie as  " our The Scarlet Pimpernel|Scarlet Pimpernel, our John Galt, our Francis Marion|Swamp Fox, our man of mystery " , referring to the works of the Baroness Orczy and Ayn Rand, as well as to the history of the American Revolution. Parallels to the American Revolution are intentional; Luna's Declaration of Independence is issued on July 4, 2076, and one event is referred to as paralleling the Boston Tea Party. 
+ 
+ When discussing the resource loss on Luna and likelihood of ensuing food riots, Professor de la Paz suggests that Mannie read the work of Thomas Malthus. 
+ 
+ === Connections to other Heinlein works === 
+ Hazel Stone|Hazel Meade Stone first appears as a character in Heinlein's earlier book, ''The Rolling Stones'', a.k.a. ''Space Family Stone'' (1952). 
+ 
+ The setting of the Luna revolt is revisited by Heinlein in his late-period novel, ''The Cat Who Walks Through Walls'', which again includes Stone as a character. The book shows that by 2188 the names of the signatories of the Lunar Declaration of Independence are studied, but Room L of the Raffles Hotel, wherein the revolution was plotted, is used as an ordinary hotel room, albeit with a plaque on the wall. 
+ 
+ === ''The Brass Cannon'' === 
+ Heinlein's original title for the novel was ''The Brass Cannon'', before being replaced with the final title at the publisher's request.     It was derived from an event in the novel: While on Earth, Professor Bernardo de la Paz purchases a small brass cannon, originally a  " signal gun "  of the kind used in yacht racing. When Mannie asks him why he bought it, the Professor relates a parable, implying that self-government is an illusion caused by failure to understand reality: 
+ 
+   }} 
+ 
+ Professor de la Paz asks Mannie to assure that Luna adopts a flag featuring a brass cannon & nbsp;—  " a symbol for all fools who are so impractical as to think they can fight City Hall " . Before leaving politics, Mannie and Wyoh carry out his wish. 
+ 
+ Heinlein owned a small brass cannon, which he acquired prior to the 1960s. For nearly 30 years, the firing of the brass cannon, or  " signal gun " , was a Independence Day (United States)|4th of July tradition at the Heinlein residence. It is believed that this cannon was the inspiration for Heinlein's original title for the novel. Virginia Heinlein retained the cannon after her husband's death in 1988; it was eventually bequeathed to friend and science-fiction writer Brad Linaweaver, after Virginia Heinlein died in 2003. Linaweaver restored the cannon to working order and subsequently posted a video of it on YouTube in 2007, wherein it is fired several times with Blank (cartridge)|blank charges at a shooting range.  . ''The cannon is fired after 6 minutes into the 9-minute video.''  
+ 
+ ==Critical reception== 
+ Algis Budrys of ''Galaxy Science Fiction'' in 1966 praised ''The Moon is a Harsh Mistress'', citing  " Heinlein's expertise for dirt-level politics, snappy dialogue and a sense of an actual living society " . He said that he had never read a more believable computer character than Mike ( " may in fact be the most fully realized individual in the story " ). Budrys suggested that the story may actually be Mike manipulating humans without their knowledge to improve its situation, which would explain why the computer no longer communicates with them after the revolution succeeds.     Reiterating that Mike manipulated the humans, in 1968 Budrys said that every review of the book, including his own, erred by not stating that the computer is the protagonist.     Carl Sagan wrote that the novel had  " useful suggestions for making a revolution in an oppressive computerized society " .    
+ 
+ Leigh Kimmel of The Billion Light-Year Bookshelf said that the novel is  " the work of the man at the height of his powers, confident in his abilities and in the editorial respect he enjoys, and thus free to take significant risks in writing a novel that would stretch the boundaries of the genre as they stood at the time " . She characterized the novel as a departure from what had previously been associated with science fiction. Kimmel cited Heinlein's  " colloquial language ... an extrapolated lunar creole that has arisen from the forced intersection of multiple cultures and languages in the lunar penal colonies " ; the protagonist's disability;  " the frank treatment of alternative family structures " ; and  " the computer which suddenly wakes up to full artificial intelligence, but rather than becoming a Monster that threatens human society and must be destroyed as the primary Quest of the story, instead befriends the protagonist and seeks to become ever more human, a sort of digital Pinocchio " .    
+ 
+ Adam Roberts said of the novel:  " It is really quite hard to respond to this masterful book, except by engaging with its political content; and yet we need to make the effort to see past the ideological to the formal and thematic if we are fully to appreciate the splendour of Heinlein's achievement here. "    
+ 
+ Andrew Kaufman praised it, saying that it was Heinlein's crowning achievement. He described it as  " Carefully plotted, stylistically unique, politically sophisticated and thrilling from page one " . He goes on to say that  " it's hard to imagine anyone else writing a novel that packs so many ideas (both big and small) into such a perfectly contained narrative " . Kaufman says that, regardless of political philosophies, one can still admire Heinlein's writing ability, and the ability to influence the reader to root for  " a rag-tag bunch of criminals, exiles, and agitators " .    
+ 
+ Ted Gioia said that this might be Heinlein's most enjoyable piece of work. He said that it  " represents Robert Heinlein at his finest, giving him scope for the armchair philosophizing that increasingly dominated his mature work, but marrying his polemics to a smartly conceived plot packed with considerable drama " . He went on to praise Heinlein's characters, especially Mannie.    
+ 
+ ==Awards and nominations== 
+ * Hugo Award Best novel (1967). It was also nominated in 1966. 
+ * Nebula Award Best novel nomination (1966) 
+ * Locus Poll Award All-time Top 10 novels, #8 (1975), #4 (1987), #2 (1998, among novels published before 1990) 
+ * Prometheus Award Hall of Fame Award recipient (1983) 
+ 
+ ==Influence== 
+ The book popularized the acronym TANSTAAFL ( " There Ain't No Such Thing As A Free Lunch " ), and helped popularize the constructed language Loglan, which is used in the story for precise human-computer interaction. ''The Oxford Dictionary of Quotations'' credits this novel with the first printed appearance of the phrase  " There's no free lunch " .  
+   
+ 
+ ==Film== 
+ In 2015, it was announced that Bryan Singer was attached to direct a film adaptation, entitled ''Uprising'', in development at 20th Century Fox.       
+ 
+ ==Audiobook releases== 
+ Two unabridged audiobook versions of ''The Moon is a Harsh Mistress'' have been produced. 
+ 
+ * Read by George Wilson, produced by Recorded Books, Inc., 1998 
+ * Read by Lloyd James, produced by Blackstone Audio, Inc., 1999 
+ 
+ ==See also== 
+  
+ * Colonization of the Moon 
+ *Moon in fiction 
+ * Dallos 
+ 
+ ==References== 
+  
+ 
+ ==External links== 
+  
+ *  
+ *  
+ * [ ''The Moon is a Harsh Mistress''] at Worlds Without End 
+ * ''The Moon Is a Harsh Mistress'' as first serialized in ''Worlds of If'': [ parts one], [ two], [ three], [ four], and [ five] on the Internet Archive 
+ * Proposed movie adaptation:  
+ 
+  
+  
+  
+ 
+  
+ Category:1966 American novels 
+ Category:American science fiction novels 
+ Category:Books written in fictional dialects 
+ Category:Hard science fiction 
+ Category:Hugo Award for Best Novel-winning works 
+ Category:Novels set on the Moon 
+ Category:Novels by Robert A. Heinlein 
+ Category:Novels first published in serial form 
+ Category:1966 science fiction novels 
+ Category:Works originally published in If (magazine) 
+ Category:Fictional artificial intelligences 
+ Category:Novels about artificial intelligence 
+ Category:G. P. Putnam's Sons books 
+ Category:Novels about revolutions 
+ Category:2075 
+ Category:Fiction set in the 2070s 
+ Category:Novels set in the future 
+ Category:Libertarian science fiction books

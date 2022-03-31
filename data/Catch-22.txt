@@ -1,0 +1,200 @@
+ 
+  
+  
+   
+ | country           = United States 
+ | language          = English 
+ | genre             = Dark comedy, Absurdist fiction, Satire, War novel|War fiction, Historical fiction 
+ | publisher         = Simon  &  Schuster 
+ | release_date      = November 10, 1961 
+ | media_type        = Print (hardback) 
+ | pages             = 453  (1st edition hardback) 
+ | isbn              = 0-671-12805-1 
+ | dewey             = 813/.54 22 
+ | congress          = PS3558.E476 C3 2004 
+ | oclc              = 35231812 
+ | followed_by       = Closing Time (novel)|Closing Time ''(1994)'' 
+ }} 
+ ''Catch-22'' is a satire|satirical war novel by American author Joseph Heller. He began writing it in 1953; the novel was first published in 1961. Often cited as one of the most significant novels of the twentieth century,     it uses a distinctive non-chronological Narrative mode#Third-person, omniscient|third-person omniscient narration, describing events from the points of view of different characters. The separate storylines are out of sequence so the timeline develops along with the plot. 
+ 
+ The novel is set during World War II, from 1942 to 1944. It mainly follows the life of antihero Captain (United States O-3)|Captain John Yossarian, a United States Army Air Forces|U.S. Army Air Forces B-25 Bombardier (air force)|bombardier. Most of the events in the book occur while the fictional 256th US Army Air Squadron is based on the island of Pianosa, in the Mediterranean Sea west of Italy, though it also covers episodes from basic training at Lowry Field in Colorado and Air Corps training at Santa Ana Army Air Base in California. The novel examines the absurdity of war and military life through the experiences of Yossarian and his cohorts, who attempt to maintain their sanity while fulfilling their service requirements so that they may return home. 
+ 
+ The book was made into a Catch-22 (film)|film adaptation in 1970, directed by Mike Nichols. In 1994, Heller published a sequel to the 1961 novel entitled ''Closing Time (novel)|Closing Time''. 
+ 
+ == Synopsis == 
+ 
+ The development of the novel can be split into segments. The first (chapters 1–11) broadly follows the story fragmented between characters, but in a single chronological time in 1944. The second (chapters 12–20) flashes back to focus primarily on the  " Great Big Siege of Bologna "  before once again jumping to the chronological present of 1944 in the third part (chapter 21–25). The fourth (chapters 26–28) flashes back to the origins and growth of Milo Minderbinder|Milo's syndicate, with the fifth part (chapter 28–32) returning again to the narrative present and maintaining the tone of the previous four. The sixth and final part (chapter 32 and on) remains in the story's present, but takes a much darker turn and spends the remaining chapters focusing on the serious and brutal nature of war and life in general.  Clinton S. Burhans, Jr. ''Spindrift and the Sea: Structural Patterns and Unifying Elements in Catch 22.'' Twentieth Century Literature, Vol. 19, No. 4, pp. 239–250, 1973. [ JSTOR online access]  
+ Previously the reader had been cushioned from experiencing the full horror of events, but in the final section, the events are laid bare. The horror begins with the attack on the undefended Italian mountain village, with the following chapters involving despair (Doc Daneeka and the Chaplain Tappman|Chaplain), disappearance in combat (Orr (Catch-22)|Orr and Clevinger), disappearance caused by the army (Dunbar) or death of most of Yossarian's friends (Nately, McWatt, Kid Sampson, Dobbs, Chief White Halfoat and Hungry Joe), culminating in the horrors of Chapter 39, in particular the rape and murder of the innocent young woman, Aarfy#Michaela|Michaela.   In Chapter 41 the full details of the gruesome death of Yossarian#Snowden|Snowden are finally revealed. 
+ 
+ Nevertheless, the novel ends on an upbeat note with Yossarian learning of Orr (Catch-22)|Orr's miraculous escape to Sweden and Yossarian's pledge to follow him there. 
+ 
+ == Style == 
+ Many events in the book are repeatedly described from differing points of view, so the reader learns more about each event from each iteration, with the new information often completing a joke, the setup of which was told several chapters previously. The narrative's events are out of sequence, but events are referred to as if the reader is already familiar with them so that the reader must ultimately piece together a timeline of events. Specific words, phrases, and questions are also repeated frequently, generally to comic effect. 
+ 
+ Much of Heller's prose in ''Catch-22'' is circular and repetitive, exemplifying in its form the structure of a Catch-22 (logic)|Catch-22. Circular reasoning is widely used by some characters to justify their actions and opinions. Heller revels in paradox. For example:  " The Texan (fictional character)|The Texan turned out to be good-natured, generous and likable. In three days no one could stand him " ; and  " The case against Clevinger was open and shut. The only thing missing was something to charge him with. "  This atmosphere of apparently logical irrationality pervades the book, especially. This style is also recognizable regarding how exactly Clevinger's trial would be executed by Lieutenant Scheisskopf:  " As a member of the Action Board, Lieutenant Scheisskopf was one of the judges who would weigh the merits of the case against Clevenger as presented by the prosecutor. Lieutenant Scheisskopf was also the prosecutor. Clevinger had an officer defending him. The officer defending him was Lieutenant Scheisskopf. "       
+ 
+ While a few characters are most prominent, especially Yossarian and the Chaplain, the majority of named characters are described in detail with fleshed out or multidimensional personas to the extent that there are few if any  " minor characters " . There are no traditional heroes in the novel, reflecting the underlying commentary that war has no heroes, only victims.    
+ 
+ Although its nonchronological structure may at first seem random, ''Catch-22'' is highly structured. It is founded on a structure of Free association (psychology)|free association; ideas run into one another through seemingly random connections. For example, Chapter 1, titled  " The Texan " , ends with  " everybody but the United States Army Criminal Investigation Command|CID man, who had caught a cold from the fighter captain and come down with pneumonia. "   Chapter 2, titled  " Clevinger " , begins with  " In a way, the CID man was pretty lucky because outside the hospital the war was still going on. "   The CID man connects the two chapters like a free association bridge and eventually Chapter 2 flows from the CID man to Clevinger through more free association links. 
+ 
+ == Themes == 
+ 
+ === Paradox === 
+ Yossarian comes to fear his commanding officers more than he fears the Germans attempting to shoot him down and he feels that  " they "  are  " out to get him " . The reason Yossarian fears his commanders more than the enemy is that as he flies more missions, Colonel Cathcart increases the number of required combat missions before a soldier may return home; he reaches the magic number only to have it retroactively raised. He comes to despair of ever getting home and is greatly relieved when he is sent to the hospital for a condition that is almost jaundice. In Yossarian's words: 
+ 
+ : The enemy is anybody who's going to get you killed, no matter which ''side'' he's on, and that includes Colonel Cathcart. And don't you forget that, because the longer you remember it, the longer you might live.   
+ 
+ === Tragedy and farce === 
+ Much of the farce in the novel is fueled by intentional and unintentional miscommunication, occasionally leading to tragic consequences. For example, Cathcart's desire to become a general is thwarted by ex-P.F.C. Wintergreen sabotaging his correspondence. Major Major's and Yossarian's mis-censoring of correspondence is blamed on the Chaplain, who is threatened with imprisonment as a result. 
+ 
+ === Theodicy === 
+ Yossarian questions the idea that God is all-powerful, all-good, and all knowing. The narrator seems to believe that God, if not evil, is incompetent. In chapter 18, Yossarian states that he  " believes in the God he doesn't believe in " , this version of God having created Hitler, the war, and all the failures of human life and society, as exemplified in the following passage:  " And don't tell me God works in mysterious ways " , Yossarian continued, hurtling over her objections.  " There's nothing so mysterious about it. He's not working at all. He's playing or else He's forgotten all about us. That's the kind of God you people talk about—a country bumpkin, a clumsy, bungling, brainless, conceited, uncouth hayseed. Good God, how much reverence can you have for a Supreme Being who finds it necessary to include such phenomena as phlegm and tooth decay in His divine system of creation? What in the world was running through that warped, evil, scatological mind of His when He robbed old people of the power to control their bowel movements? Why in the world did he ever create pain? … Oh, He was really being charitable to us when He gave us pain! [to warn us of danger] Why couldn't He have used a doorbell instead to notify us, or one of His celestial choirs? Or a system of blue-and-red neon tubes right in the middle of each person's forehead. Any jukebox manufacturer worth his salt could have done that. Why couldn't He? … What a colossal, immortal blunderer! When you consider the opportunity and power He had to really do a job, and then look at the stupid, ugly little mess He made of it instead, His sheer incompetence is almost staggering. … "   Later Heller writes of Yossarian wandering through a war-torn Italian city (Chapter 39):    " Yossarian quickened his pace to get away, almost ran. The night was filled with horrors, and he thought he knew how Christ must have felt as he walked through the world, like a psychiatrist through a ward full of nuts, like a victim through a prison full of thieves. What a welcome sight a leper must have been. At the next corner a man was beating a small boy brutally in the midst of an immobile crowd of adult spectators who made no effort to intervene... "     
+ 
+ === Anti-capitalism === 
+ While the military's enemies are Germans, none appear in the story as enemy combatants. This ironic situation is epitomized in the single appearance of German personnel in the novel, who act as pilots employed by the squadron's Mess Officer, Milo Minderbinder, to bomb the American encampment on Pianosa. This predicament indicates a tension between traditional motives for violence and the modern economic machine, which seems to generate violence simply as another means to profit, quite independent of geographical or ideological constraints which creates a military–industrial complex.     Heller emphasizes the danger of profit-seeking by portraying Milo without  " evil intent. "  Milo's actions are portrayed as the result of greed, not malice.    
+ 
+ == Characters == 
+  
+ 
+ == Influences == 
+ Heller wanted to be a writer from an early age. His experiences as a bombardier (air force)|bombardier during World War II inspired ''Catch-22'';     Heller later said that he  " never had a bad officer " . In a 1977 essay on ''Catch-22'', Heller stated that the  " antiwar and antigovernment feelings in the book "  were a product of the Korean War and the 1950s rather than World War II itself. Heller's criticisms are not intended for World War II but for the Cold War and McCarthyism.    
+ 
+ The influence of the 1950s on ''Catch-22'' is evident through Heller's extensive use of anachronism. Though the novel is ostensibly set in World War II, Heller intentionally included anachronisms like loyalty oaths and computers (IBM machines) to situate the novel in the context of the 1950s.    Many of the characters are based on or connected to individuals from the 1950s: 
+ * Milo Minderbinder's maxim  " What's good for M & M Enterprises is good for the country "  alludes to the former president of General Motors Charles Erwin Wilson's statement before the Senate:  " What's good for General Motors is good for the country. "  
+ * The question of  " Who promoted Major Major Major Major|Major Major? "  alludes to Joseph McCarthy's questioning of the promotion of Irving Peress|Major Peress, an army dentist who refused to sign loyalty oaths.  
+ 
+ Czech writer Arnošt Lustig recounts in his book ''3x18'' that Joseph Heller told him that he would never have written ''Catch-22'' had he not first read ''The Good Soldier Švejk'' by Jaroslav Hašek.    
+ 
+ In 1998, some critics raised the possibility that Heller's book had questionable similarities to Louis Falstein's 1950 novel, ''Face of a Hero''. Falstein never raised the issue between ''Catch-22s publication and his death in 1995 and Heller claimed never to have been aware of the obscure novel. Heller said that the novel had been influenced by Louis-Ferdinand Céline|Céline, Evelyn Waugh|Waugh and Vladimir Nabokov|Nabokov. Many of the similarities have been stated to be attributable to the authors' experiences, both having served as U.S. Army Air Forces aircrew in Italy in World War II. However, their themes and styles are different.    
+ 
+ == Concept == 
+ A  " Catch-22 (logic)|Catch-22 "  is  " a problem for which the only solution is denied by a circumstance inherent in the problem or by a rule. "  catch-22, Merriam-Webster. Retrieved March 8, 2012    For example, losing something is typically a conventional problem; to solve it, one looks for the lost item until one finds it. But if the thing lost is one's glasses, one cannot see to look for them — a Catch-22. The term  " Catch-22 "  is also used more broadly to mean a tricky problem or a no-win or absurd situation. 
+ 
+ In the book, Catch-22 is a military rule typifying bureaucratic operation and reasoning. The rule is not stated in a precise form, but the principal example in the book fits the definition above: If one is crazy, one does not have to fly missions; and one must be crazy to fly. But one has to apply to be excused, and applying demonstrates that one is not crazy. As a result, one must continue flying, either not applying to be excused, or applying and being refused. The narrator explains: 
+ 
+  There was only one catch and that was Catch-22, which specified that a concern for one's safety in the face of dangers that were real and immediate was the process of a rational mind. Orr (Catch-22)|Orr was crazy and could be grounded. All he had to do was ask; and as soon as he did, he would no longer be crazy and would have to fly more missions. Orr would be crazy to fly more missions and sane if he didn't, but if he were sane he had to fly them. If he flew them he was crazy and didn't have to, but if he didn't want to he was sane and had to. Yossarian was moved very deeply by the absolute simplicity of this clause of Catch-22 and let out a respectful whistle. (p. 56, ch. 5)  
+ 
+ Other forms of Catch-22 are invoked throughout the novel to justify various bureaucratic actions. At one point, victims of harassment by military police quote the MPs' explanation of one of Catch-22's provisions:  " Catch-22 states that agents enforcing Catch-22 need not prove that Catch-22 actually contains whatever provision the accused violator is accused of violating. "  Another character explains:  " Catch-22 says they have a right to do anything we can't stop them from doing. " 
+ 
+ Yossarian comes to realize that Catch-22 does not actually exist, but because the powers that be claim it does, and the world believes it does, it nevertheless has potent effects. Indeed, because it does not exist, there is no way it can be repealed, undone, overthrown, or denounced. The combination of force with specious and spurious legalistic justification is one of the book's primary motifs. 
+ 
+ The motif of bureaucratic absurdity is further explored in 1994's Closing Time (novel)|''Closing Time'', Heller's sequel to ''Catch-22''. This darker, slower-paced, apocalyptic novel explores the pre- and post-war lives of some of the major characters in ''Catch-22'', with particular emphasis on the relationship between Yossarian and tail gunner Sammy Singer. 
+ 
+ == Literary allusions == 
+ ''Catch-22'' contains allusions to many works of literature. Howard Jacobson, in his 2004 introduction to the Vintage Classics publication, wrote that the novel was  " positioned teasingly ... between literature and literature's opposites & nbsp;– between Shakespeare and Rabelais and Dickens and Dostoevsky and Gogol and Louis-Ferdinand Céline|Céline and the Absurdism|Absurdists and of course Kafka on the one hand, and on the other vaudeville and slapstick and The Phil Silvers Show|Bilko and Abbott and Costello and Tom and Jerry and the Goons (if Heller had ever heard of the Goons). "  Random House  [ Vintage Classics]  
+ One critic argues that it is Kafka's influence that can be seen most strongly in the novel:   " Like Kafka's heroes, Yossarian is riddled with anxiety and caught in an inexorable nightmare – in his case created by Colonel Cathcart and the inevitability of his raising the number of missions he has to fly. "  [ McDonald, Paul. ''Reading Catch-22.'' Humanities E-Books]  
+ 
+ == Historical context == 
+ 
+ The idea for ''Catch-22'' was based on Joseph Heller's personal experience in World War II. The feelings that Yossarian and the other bomber crew felt were taken directly from problems he suffered while on duty. Heller flew 60 bombing missions from May to October in 1944. Heller was able to make it out of the war, but it took until 1953 before he could start writing about it. For this reason, the book contains references to post World War II phenomena like IBM computers and loyalty oaths. The war experience turned Heller into a  " tortured, funny, deeply peculiar human being " .    
+ 
+ After publication in 1961, ''Catch-22'' became very popular among teenagers at the time. ''Catch-22'' seemed to embody the feelings that young people had toward the Vietnam War. A common joke was that every student who went off to college at the time took along a copy of ''Catch-22''. The popularity of the book created a cult following, which led to more than eight million copies being sold in the United States. On October 26, 1986, professor and author John W. Aldridge wrote a piece in ''The New York Times'' celebrating the 25th anniversary of the publishing of  " Catch-22 " . He commented that Heller's book presaged the chaos in the world that was to come: 
+ 
+  The comic fable that ends in horror has become more and more clearly a reflection of the altogether uncomic and horrifying realities of the world in which we live and hope to survive.     
+ 
+ Although ''Catch-22'' is considered by many to be an anti-war novel, Heller stated in a talk he gave at the New York Public Library on August 31, 1998 that he and the other men he knew in World War II considered the war to be  " noble "  and  " nobody really objected to fighting it " . The anti-war reputation of the novel was fueled instead by the pacifist, anti-war ethos among young Americans surrounding the Vietnam War. 
+ 
+ == Title == 
+ 
+ The title is a reference to a fictional bureaucratic stipulation which embodies forms of illogical and immoral reasoning.   The opening chapter of the novel was originally published in ''New World Writing'' as ''Catch-18'' in 1955, but Heller's agent, Candida Donadio, requested that he change the title of the novel, so it would not be confused with another recently published World War II novel, Leon Uris's ''Mila 18''.   The number 18 (number)|18 has special meaning in Judaism (it refers to ''Chai (symbol)|chai'', meaning  " alive " , in Gematria), and was relevant to early drafts of the novel, which had a somewhat greater emphasis on Jewish themes in the novel.  N James.  " The Early Composition History of Catch-22 " . In ''Biographies of Books: The Compositional Histories of Notable American Writings'', J Barbour, T Quirk (edi.) pp. 262–290. Columbia: University of Missouri Press, 1996.  
+ 
+ The title ''Catch-11'' was suggested, with the duplicated 1 paralleling the repetition found in a number of character exchanges in the novel, but because of the release of the 1960 movie ''Ocean's Eleven (1960 film)|Ocean's Eleven'', this was also rejected.   ''Catch-17'' was rejected so as not to be confused with the World War II film ''Stalag 17'', as was ''Catch-14'', apparently because the publisher did not believe that 14 was a  " funny number " . Eventually, the title came to be ''Catch-22'', which, like 11, has a duplicated digit, with the 2 also referring to a number of ''déjà vu''-like events common in the novel.  
+ 
+ == Publication and movie rights == 
+ ''Catch-22'' was sold to Simon  &  Schuster, where it had been championed by editor Robert Gottlieb, who, along with Nina Bourne, would edit and oversee the marketing of the book.     Gottlieb was a strong advocate for the book along with Peter Schwed and Justin Kaplan. Henry Simon, a vice president at Simon  &  Schuster, found it repetitive and offensive.   The editorial board decided to contract the book when Heller agreed to revisions; he signed for .  
+ 
+ Officially published on October 10, 1961, the hardcover sold for $5.95. The book was not a best-seller in hardcover in the United States. Though twelve thousand copies were sold by Thanksgiving (United States)|Thanksgiving, it never entered the New York Times Bestseller List. It received good notices and was nominated for the National Book Award in March 1962, though Walker Percy's ''The Moviegoer'' won. ''Catch-22'' went through four printings in hardcover but sold well on only the East Coast. The book never established itself nationally until it was published in paperback for 75 cents.     
+ 
+ Upon publication in Great Britain, the book became the #1 best-seller.    Don Fine of Dell Publishing|Dell Paperbacks bought the paperback reprint rights to ''Catch-22'' for $32,000. Between the paperback's release in September 1962 and April 1963, it sold 1.1 million copies.   
+ 
+ In August 1962, Donadio brokered the sale of movie rights to Columbia Pictures for $100,000 plus $25,000 to write a treatment or a first draft of a screenplay.   
+ 
+ == Reception == 
+ The initial reviews of the book ranged from very positive to very negative. There were positive reviews from ''The Nation'' ( " the best novel to come out in years " ), the ''New York Herald Tribune'' ( " A wild, moving, shocking, hilarious, raging, exhilarating, giant roller-coaster of a book " ) and ''The New York Times'' ( " A dazzling performance that will outrage nearly as many readers as it delights " ). On the other hand, ''The New Yorker'' ( " doesn't even seem to be written; instead, it gives the impression of having been shouted onto paper " ,  " what remains is a debris of sour jokes " ) and a second review from the ''New York Times'' ( " repetitive and monotonous. Or one can say that it is too short because none of its many interesting characters and actions is given enough play to become a controlling interest " )     disliked it. One commentator of ''Catch-22'' recognized that  " many early audiences liked the book for just the same reasons that caused others to hate it " .     The book had a cult following though, especially among teenagers and college students. Heller remarks that in 1962, after appearing on the ''Today'' show he went out drinking with the host at the time, John Chancellor, who handed him stickers that Chancellor had got privately printed reading  " YOSSARIAN LIVES " . Heller also said that Chancellor had been secretly putting them on the walls of the corridors and executive bathrooms in the NBC building.   
+ 
+ Although the novel won no awards upon release, it has remained in print and is seen as one of the most significant American novels of the 20th century.   Scholar and fellow World War II veteran Hugh Nibley said it was the most accurate book he ever read about the military.  Hugh Nibley and Alex Nibley, ''Sergeant Nibley PhD.: Memories of an Unlikely Screaming Eagle'', Salt Lake City: Shadow Mountain, 2006, p. 255    ten million copies have been sold. 
+ 
+ Although he continued writing, including a sequel novel ''Closing Time (novel)|Closing Time'', Heller's later works were inevitably overshadowed by the success of ''Catch-22''. When asked by critics why he'd never managed to write another novel as good as his first, Heller would retort with a smile,  " Who has? "    
+ 
+ == Rankings == 
+    }} 
+ * The Modern Library ranked ''Catch-22'' as the 7th (by review panel) and 12th (by public) greatest English-language novel of the 20th century.  [ Randomhouse.com] Modern Library's 100 best novels of the 20th century  
+ * The Radcliffe Publishing Course rank ''Catch-22'' as number 15 of the 20th century's top 100 novels.    
+ * ''The Observer'' listed ''Catch-22'' as one of the 100 greatest novels of all time.    
+ * ''TIME'' puts ''Catch-22'' in the top 100 English-language modern novels (1923 onwards, unranked).    
+ * The Big Read by the BBC ranked ''Catch-22'' as number 11 on a web poll of the UK's best-loved book.  [ The BBC's Big Read]  
+ 
+ == Adaptations == 
+ File:Catch22-1970 opening.jpg|thumb|250px|Opening title of the film adaptation 
+ * ''Catch-22'' was adapted into a Catch-22 (film)|feature film of the same name in 1970, directed by Mike Nichols. Alan Arkin portrayed Capt. Yossarian, with an ensemble cast including Art Garfunkel as Nately, Jon Voight as Milo Minderbinder, Orson Welles as General Dreedle, and Martin Balsam as Colonel Cathcart, amongst many others. 
+ * A television pilot|pilot for a comedy series based upon ''Catch-22'' was made and televised in 1973, with Richard Dreyfuss in the starring role of Yossarian.    
+ * Catch-22 (play)|''Catch-22'' play: Aquila Theatre produced a stage adaptation of ''Catch-22'', based on Heller's 1971 stage adaption. It was directed by Peter Meineck. This production toured the US in 2007/8 with a Bexhill on Sea production in the fall of 2008.    
+ * A Catch-22 (miniseries)|six-episode miniseries produced by, and co-starring, George Clooney was picked up by Hulu for a straight-to-series order. It streamed on May 17, 2019. It was also broadcast by Channel 4 in the United Kingdom.  Kyle Chandler portrays Colonel Cathcart     and Christopher Abbott portrays Yossarian. 
+ 
+ == Selected releases == 
+ This list covers the first and most recent printed publications by the original publisher Simon  &  Schuster as well as all other formats. Other print publishers include Dell Publishing|Dell, Corgi, Vintage (publisher)|Vintage, Alfred A. Knopf|Knopf, Black Swan, Grasset  &  Fasquelle, and Wahlström  &  Widstrand. 
+ 
+ The original manuscript is held by Brandeis University.  [ Heller archive] , Brandeis University.  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ 
+ == See also == 
+  
+ * Antinomy 
+ * Hobson's choice 
+ * Morton's fork 
+ * Order No. 227 
+ 
+ == References == 
+  
+ 
+ == External links == 
+  
+ * [ Librarything.com with many photos of other ''Catch-22'' covers] 
+ * [ Photos of the first edition of ''Catch-22''] 
+ * [ Catch-22 as a figure of speech] 
+ * [ ''Catch-22'' study guide] & nbsp;– analysis, themes, quotes, and teaching guide 
+ * [ Why a novel so acclaimed took 46 years to make it to the stage: How the cult classic was adapted for the stage] 
+ * [ History of combat crew rotation - World War II and Korean War] 
+ * [ Historical Sources for the Events in Joseph Heller's Novel, Catch-22 By Daniel Setzer] 
+ 
+  
+  
+ 
+  
+ 
+ Category:Catch-22|  
+ Category:Fiction set in 1943 
+ Category:1961 American novels 
+ Category:American comedy novels 
+ Category:American novels adapted into films 
+ Category:American novels adapted into plays 
+ Category:American philosophical novels 
+ Category:American satirical novels 
+ Category:American war novels 
+ Category:Anti-war novels 
+ Category:Aviation novels 
+ Category:Black comedy books 
+ Category:Fiction about the United States Army 
+ Category:Books with cover art by Paul Bacon 
+ Category:Censored books 
+ Category:Military humor 
+ Category:Novels by Joseph Heller 
+ Category:Postmodern novels 
+ Category:Satirical novels 
+ Category:Simon  &  Schuster books 
+ Category:Suicide in fiction 
+ Category:Novels set during World War II 
+ Category:Books about Assyrian people 
+ Category:Bureaucracy in fiction 
+ Category:1961 debut novels 
+ Category:Nonlinear narrative novels

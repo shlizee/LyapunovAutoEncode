@@ -56,10 +56,21 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
 	model.alphas = torch.cat((model.alphas, torch.Tensor([alpha, epochs]).unsqueeze(dim = 0)), dim = 0)
 	torch.save(model, f'Models/Latent_{model.latent_size}/ae_prednet_{model.global_step}{suffix}.ckpt')
 	
-def main():
-	model_type = 'gru'
-	dir = 'gru/'
-	latent_size = 32
+
+def main(args):
+    parser = argparse.ArgumentParser(description="Train Lyapunov Autoencoder")
+    parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+    parser.add_argument("-latent", "--latent_size", type=float, default= 32, required=False)
+	parser.add_argument("-alphas", "--alphas", type=list, default= [5, 5, 10, 20], required=False)
+	parser.add_argument("-ae_lr", "--lr", type=float, default= 1e-5, required=False)
+	parser.add_argument("-epochs", "--epochs", type=int, default= 1000, required=False)
+    args = parser.parse_args(args)
+	model_type = args.model_type
+	latent_size = args.latent_size
+	alphas = args.alphas
+	epochs = args.epochs
+	lr = args.lr
+	
 	if torch.cuda.is_available():
 		device= torch.device('cuda')
 	else: 
@@ -71,10 +82,11 @@ def main():
 	else:
 		split = train_val_split(x_data, targets, 0.2)
 	x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'], split['val_data'], split['val_targets']
-	model = AEPredNet(latent_size = latent_size, lr = 1e-5, act = 'tanh', device = device)
-	alphas = [5, 5, 10, 20]
+	if not os.path.isdir('Models/'):
+		os.makedir('Models')
+	model = AEPredNet(latent_size = latent_size, lr = lr, act = 'tanh', device = device)
 	for alpha in alphas:
-		ae_train(model, x_train, y_train, x_val, y_val, alpha = alpha, epochs = 1000, print_interval = 250, batch_size = 128, device = device)
+		ae_train(model, x_train, y_train, x_val, y_val, alpha = alpha, epochs = epochs, print_interval = 250, batch_size = 128, device = device)
 	plt.plot(range(model.global_step), model.val_loss, label = 'total')
 	plt.plot(range(model.global_step), model.vl1, label ='rec loss (L1)')
 	plt.plot(range(model.global_step), model.vl2, label = 'pred loss (L2)')
@@ -82,10 +94,13 @@ def main():
 	plt.xlabel('Epoch')
 	plt.ylabel('Loss')
 	plt.yscale('log')
+	if not os.path.isdir('Figures/'):
+		os.makedir('Figures')
 	plt.savefig(f"Figures/{model_type}_Prednet_AE_valCurve.png",bbox_inches="tight",dpi=200)
 	
 	
 	
-if __name__ == "__main__":
-	main()
+if __name__ == '__main__':
+	import sys
+	main(sys.argv[1:])
 		

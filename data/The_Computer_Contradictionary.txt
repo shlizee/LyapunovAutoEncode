@@ -1,0 +1,28 @@
+ 
+ ''The Computer Contradictionary'' is a non-fiction book by Stan Kelly-Bootle that compiles a satirical list of definitions of computer industry terms.  It is an example of  " cynical lexicography "  in the tradition of Ambrose Bierce's ''The Devil's Dictionary''.      Rather than offering a factual account of usage, its definitions are largely made up by the author.    
+ 
+ The book was published in May 1995 by MIT Press and is an update of Kelly-Bootle's ''The Devil's data processing|DP Dictionary'' which appeared in 1981.  
+ 
+ == Examples == 
+ :Endless loop.  See:  ''Loop, endless'' 
+ 
+ :Loop, endless.  See:   ''Endless loop'' 
+ 
+ :Recursion. See: ''Recursion'' 
+ 
+ ==Reception== 
+ The ''Los Angeles Times'' panned the book, wrote that it was  " smartly-titled "  but was an  " awfully stupid book " .      ''ACM Computing Reviews'' recommended dipping into it because  " a dictionary is a difficult read " .    
+ 
+ ==References== 
+  
+ 
+ 
+  
+ 
+ Category:Satirical books 
+ Category:MIT Press books 
+ Category:1995 books 
+ Category:Computer humor 
+ 
+ 
+ 

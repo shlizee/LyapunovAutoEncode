@@ -1,0 +1,83 @@
+ 
+  
+ }} 
+  (1987 hardcover)   (2008 paperback, revised translation) 
+ }} 
+ ''Life: A User's Manual'' (the original title is ''La Vie mode d'emploi'') is Georges Perec's most famous novel, published in 1978, first translated into English by David Bellos in 1987. Its title page describes it as  " novels " , in the plural, the reasons for which become apparent on reading. Some critics have cited the work as an example of postmodern fiction, but Perec preferred to avoid labels and his only long-term affiliation with any movement was with the Oulipo or ''OUvroir de LIttérature POtentielle''. 
+ 
+ ''La Vie mode d'emploi'' is a tapestry of interwoven stories and ideas as well as literary and historical allusions, based on the lives of the inhabitants of a fictitious Parisian apartment block, 11 rue Simon-Crubellier (no such street exists, although the quadrangle Perec claims Simon-Crubellier cuts through does exist in 17th arrondissement of Paris|Paris XVII arrondissement). It was written according to a complex plan of constrained writing|writing constraints, and is primarily constructed from several elements, each adding a layer of complexity. 
+ 
+ ==Plot== 
+ Between World War I and II, a tremendously wealthy Englishman, Bartlebooth (whose name combines two literary characters, Herman Melville's Bartleby, the Scrivener|Bartleby and Valery Larbaud's Barnabooth), devises a plan that will both occupy the remainder of his life and spend his entire fortune. First, he spends 10 years learning to paint watercolors under the tutelage of Valène, an artist who is a resident of 11 rue Simon-Crubellier, where Bartlebooth also purchases an apartment. Then, he embarks on a 20-year trip around the world with his loyal servant Smautf (also a resident of 11 rue Simon-Crubellier), painting a watercolor of a different port roughly every two weeks for a total of 500 watercolors. 
+ 
+ Bartlebooth then sends each painting back to France, where the paper is glued to a support board, and a carefully selected craftsman named Gaspard Winckler (also a resident of 11 rue Simon-Crubellier) cuts it into a jigsaw puzzle. Upon his return, Bartlebooth spends his time solving each jigsaw, re-creating the scene. 
+ 
+ Each finished puzzle is treated to re-bind the paper with a special solution invented by Georges Morellet, another resident of 11 rue Simon-Crubellier. After the solution is applied, the wooden support is removed, and the painting is sent to the port where it was painted. Exactly 20 years to the day after it was painted, the painting is placed in a detergent solution until the colors dissolve, and the paper, blank except for the faint marks where it was cut and re-joined, is returned to Bartlebooth. 
+ 
+ Ultimately, there would be nothing to show for 50 years of work: The project would leave absolutely no mark on the world. Unfortunately for Bartlebooth, Winckler's puzzles become increasingly difficult and Bartlebooth becomes blind. An art fanatic also intervenes in an attempt to stop Bartlebooth from destroying his art. Bartlebooth is forced to change his plans and have the watercolors burned in a furnace locally instead of couriered back to the sea, for fear of those involved in the task betraying him. By 1975, Bartlebooth is 16 months behind in his plans, and he dies while he is about to finish his 439th puzzle. The last hole in the puzzle is in the shape of the letter X while the piece that he is holding is in the shape of the letter W. 
+ 
+ ==Structure== 
+ The entire block is primarily presented frozen in time, on June 23, 1975, just before 8 pm, moments after the death of Bartlebooth. Nonetheless, the constraints system creates hundreds of separate stories concerning the inhabitants of the block, past and present, and the other people in their lives. The story of Bartlebooth is the principal thread, but it interlinks with many others. 
+ 
+ Another key thread is the painter Serge Valène's final project. Bartlebooth hires him as a tutor before embarking on his tour of the world, and buys himself a flat in the same block where Valène lives. He is one of several painters who have lived in the block over the century. He plans to paint the entire apartment block, seen in elevation with the facade removed, showing all the occupants and the details of their lives: Valène, a character in the novel, seeks to create a representation of the novel as a painting. Chapter 51, falling in the middle of the book, lists all of Valène's ideas, and in the process picks out the key stories seen so far and yet to come. 
+ 
+ Both Bartlebooth and Valène fail in their projects: This is a recurring theme in many of the stories. 
+ 
+ ==Elements== 
+ 
+ === Apartment block === 
+ 
+ One of Perec's long-standing projects was the description of a Parisian apartment block as it could be seen if the entire facade were removed, exposing every room. Perec was obsessed with lists: such a description would be exhaustive down to the last detail. 
+ 
+ Some precedents of this theme can be found in the Spanish novel '''' (1641,  " The Lame Devil "  or  " The Crippled Devil " ) by Luis Vélez de Guevara (partially adapted to 18th century France by Alain-René Lesage in his 1707 novel Le Diable boiteux (novel)|''Le Diable boiteux'',  " The Lame Devil "  or  " The Devil upon Two Sticks " ) and the 20th-century Russian novel ''The Master and Margarita'' by Mikhail Bulgakov. Another well-known literary puzzle is ''Hopscotch (Julio Cortázar novel)|Hopscotch'' (1963) by the Paris-resident Argentinian novelist Julio Cortázar. 
+ 
+ While Bartlebooth's puzzle narrative is the central story of the book, 11 rue Simon-Crubellier is the subject of the novel. 11 rue Simon-Crubellier has been frozen at the instant in time when Bartlebooth dies. People are frozen in different apartments, on the stairs, and in the cellars. Some rooms are vacant. 
+ 
+ The narrative moves like a knight in a chess game, one chapter for each room (thus, the more rooms an apartment has the more chapters are devoted to it). In each room we learn about the residents of the room, or the past residents of the room, or about someone they have come into contact with. 
+ 
+ Many of the characters at 11 rue Simon-Crubellier, such as Smautf, Valène, Winckler, and Morellet, have a direct connection to Bartlebooth's quest. Thus, in those rooms the Bartlebooth puzzle-narrative tends to be carried further. Many of the narratives, however, are linked to Bartlebooth only by being related to the history of 11 rue Simon-Crubellier. 
+ 
+ === Knight's tour === 
+ A knight's tour as a means of generating a novel was a long-standing idea of the Oulipo group. Perec devises the elevation of the building as a 10 & times;10 grid: 10 storeys, including basements and attics and 10 rooms across, including two for the stairwell. Each room is assigned to a chapter, and the order of the chapters is given by the knight's moves on the grid. However, as the novel contains only 99 chapters, bypassing a basement, Perec expands the theme of Bartlebooth's failure to the structure of the novel as well. 
+ 
+ === Lists === 
+ File:GraecoLatinSquare-Order3.svg|thumb|An example of a bi-square. Perec used 21 larger (10x10) grids to distribute the elements of his 42 lists 
+ The content of Perec's novel was partly generated by 42 lists, each containing 10 elements (e.g. the  " Fabrics "  list contains ten different fabrics). Perec used Graeco-Latin squares or  " bi-squares "  to distribute these elements across the 99 chapters of the book. A bi-square is similar to a sudoku puzzle, though more complicated, as ''two'' lists of elements must be distributed across the grid. In the pictured example, these two lists are the first three letters of the Greek and Latin alphabets; each cell contains a Greek and a Latin character, and, as in a sudoku, each row and column of the grid also contains each character exactly once. Using the same principle, Perec created 21 bi-squares, each distributing two lists of 10 elements. This allowed Perec to distribute all 42 of his 10-element lists across the 99 chapters. Any given cell on the 10x10 map of the apartment block could be cross-referenced with the equivalent cell on each of the 21 bi-squares, for each chapter a unique list of 42 elements to mention could be produced. 
+ 
+ The elements in Lists 39 and 40 ( " Gap "  and  " Wrong " ) are nothing more than the numbers 1 to 10; if Perec consulted the  " Wrong "  bi-square and found, for example, a  " 6 "  in a given cell, he would ensure that the chapter corresponding to that cell would do something  " wrong "  when including the particular fabric, colour, accessory or jewel the bi-squares for the lists in group 6 had assigned to the cell/chapter in question. 
+ 
+ Perec also sub-divided 40 of these lists into 10 groups of four (the sixth sub-group, for example, contains the lists  " Fabrics " ,  " Colours " ,  " Accessories "  and  " Jewels " ,  Bellos, David (2010). ''Georges Perec: A Life in Words'', pp. 600–602. Harvill Press, London. .  ) which gave the story-generating machine an additional layer of complexity.  
+ 
+ Another variation comes from the presence of Lists 39 and 40 in the 10th sub-group; Lists 39 and 40 would sometimes number their own sub-group as the one to be tampered with in a given chapter. According to Perec's biographer, David Bellos, this self-reflexive aspect of Lists 39 and 40  " allowed him to apply 'gap' in such cases by ''not'' missing out any other constraint in the group ('gapping the gap') or by missing out a constraint in a group ''not'' determined by the bi-square number ('wronging the wrong') or by ''not'' getting anything wrong at all ('gapping the wrong') " .   The 41st and 42nd lists collectively form ten  " couples "  (such as  " Pride  &  Prejudice "  and  " Laurel  &  Hardy " ) which are exempt from the disruptions of the  " Gap "  and  " Wrong "  lists that affect the first forty lists.  Bellos, David (2010). ''Georges Perec: A Life in Words'', p. 601. Harvill Press, London. .   It is important to note that Perec acknowledged the lists were often mere prompts; certain chapters include far fewer than 42 of their prescribed elements. 
+ 
+ ==Appendix== 
+ An appendix section in the book contains a chronology of events starting at 1833, a 70-page index, a list of the 100 or so main stories, and a plan of the elevation of the block as the 10x10 grid. The index lists many of the people, places and works of art mentioned in the book: 
+ * real, such as Wolfgang Amadeus Mozart|Mozart 
+ * fictitious, such as Jules Verne's character Captain Nemo 
+ * ''internally real'', such as Bartlebooth himself 
+ * ''internally fictitious'': the characters in a story written by a schoolboy, for instance 
+ 
+ ==Reception== 
+ In ''The New York Times Book Review'', novelist Paul Auster wrote  " Georges Perec died in 1982 at the age of 46, leaving behind a dozen books and a brilliant reputation. In the words of Italo Calvino, he was 'one of the most singular literary personalities in the world, a writer who resembled absolutely no one else.' It has taken a while for us to catch on, but now that his major work – ''Life: A User's Manual'' (1978) – has at last been translated into English it will be impossible for us to think of contemporary French writing in the same way again. "  Paul Auster, [  " The Bartlebooth Follies " ], ''The New York Times Book Review'', November 15, 1987.  
+ 
+ In a list of nontechnical books he has read, computer scientist Donald Knuth referred to this book as  " perhaps the greatest 20th century novel " .    
+ 
+ ==See also== 
+ *Knight's graph 
+ *Le Monde's 100 Books of the Century|''Le Monde'' 100 Books of the Century 
+ 
+ ==References== 
+  
+ 
+ == External links == 
+ *[ A review] 
+ 
+  
+ 
+  
+ 
+ Category:1978 French novels 
+ Category:Novels by Georges Perec 
+ Category:Novels about artists 
+ Category:Constrained writing 
+ Category:Hachette (publisher) books

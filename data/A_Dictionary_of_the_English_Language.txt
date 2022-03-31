@@ -1,0 +1,178 @@
+ 
+  
+  
+  
+  
+ 
+ Published on 15 April 1755  Advertisement in Derby Mercury 4 April 1755, page 4 'This day is published a Dictionary of the English Language by Samuel Johnson'   and written by Samuel Johnson, ''A Dictionary of the English Language'', sometimes published as ''Johnson's Dictionary'', is among the most influential dictionary|dictionaries in the history of the English language. 
+ 
+ There was dissatisfaction with the dictionaries of the period, so in June 1746 a group of London booksellers contracted Johnson to write a dictionary for the sum of 1,500 Guinea (British coin)|guineas (£1,575), equivalent to about £|0}} in . Johnson took seven years to complete the work, although he had claimed he could finish it in three. He did so single-handedly, with only clerical assistance to copy the illustrative quotations that he had marked in books. Johnson produced several revised editions during his life. 
+ 
+ Until the completion of the ''Oxford English Dictionary'' 173 & nbsp;years later, Johnson's was viewed as the pre-eminent English dictionary. According to Walter Jackson Bate, the Dictionary  " easily ranks as one of the greatest single achievements of scholarship, and probably the greatest ever performed by one individual who laboured under anything like the disadvantages in a comparable length of time " .  Bate, Walter Jackson. ''Samuel Johnson'', Ch. 15,  " Storming the Main Gate: The ''Dictionary'' " . New York: Harcourt Brace Jovanovich, 1975.  
+ 
+ == Background == 
+  
+ In earlier times, books had been regarded with something approaching veneration, but by the mid-eighteenth century this was no longer the case. The rise of literacy among the general public, combined with the technical advances in the mechanics of printing and bookbinding, meant that for the first time, books, texts, maps, pamphlets and newspapers were widely available to the general public at a reasonable cost. Such an explosion of the printed word demanded a set pattern of grammar, definition, and spelling for those words. This could be achieved by means of an authoritative dictionary of the English language. In 1746, a consortium of London's most successful printers, including Robert Dodsley and Thomas Longman – none could afford to undertake it alone – set out to satisfy and capitalise on this need by the ever-increasing reading and writing public. 
+ 
+ Johnson's dictionary was not the first English dictionary, nor even among the first dozen. Over the previous 150 & nbsp;years more than twenty dictionaries had been published in England, the oldest of these being a Latin-English  " wordbook "  by Sir Thomas Elyot published in 1538. 
+ 
+ The next to appear was by Richard Mulcaster, a headmaster, in 1583. Mulcaster compiled what he termed  " a generall table [of eight thousand words] we commonlie use...[yet] It were a thing verie praise worthy...if som well learned...would gather all words which we use in the English tung...into one dictionary... "  Hitchings 2005, London p. & nbsp;48; New York p. & nbsp;53  
+ 
+ In 1598, an Italian–English dictionary by John Florio was published. It was the first English dictionary to use quotations ( " illustrations " ) to give meaning to the word; in none of these dictionaries so far were there any actual definitions of words. This was to change, to a small extent, in schoolmaster Robert Cawdrey's ''Table Alphabeticall'', published in 1604. Though it contained only 2,449 words, and no word beginning with the letters ''W'', ''X'', or ''Y'', this was the first monolingual English dictionary. 
+ 
+ Several more dictionaries followed: in Latin, English, French and Italian. Benjamin Martin (lexicographer)|Benjamin Martin's ''Lingua Britannica Reformata'' (1749) and Robert Ainsworth (lexicographer)|Ainsworth's ''Thesaurus Linguae Latinae'' (1737) are both significant, in that they define entries in separate senses, or aspects, of the word. In English (among others), John Cowell (jurist)|John Cowell's ''Interpreter'', a law dictionary, was published in 1607, Edward Phillips' ''The new world of English words'' came out in 1658 and a dictionary of 40,000 words had been prepared in 1721 by Nathan Bailey, though none was as comprehensive in breadth or style as Johnson's. 
+ 
+ The problem with these dictionaries was that they tended to be little more than poorly organised and poorly researched glossaries of  " hard words " : words that were technical, foreign, obscure or antiquated. But perhaps the greatest single fault of these early lexicographers was, as historian Henry Hitchings put it, that they  " failed to give sufficient sense of [the English] language as it appeared ''in use''. "  Hitchings 2005, London p. & nbsp;49; New York p. & nbsp;55   In that sense Dr. Johnson's dictionary was the first to comprehensively document the English lexicon. 
+ 
+ === Johnson's preparation === 
+  
+ Johnson's dictionary was prepared at Dr. Johnson's House|17 Gough Square, London, an eclectic household, between the years of 1746 and 1755. By 1747 Johnson had written his ''Plan of a Dictionary of the English Language'', which spelled out his intentions and proposed methodology for preparing his document. He clearly saw benefit in drawing from previous efforts, and saw the process as a parallel to Precedent|legal precedent (possibly influenced by Cowell): 
+  
+ 
+ Johnson's ''Plan'' received the patronage of Philip Stanhope, 4th Earl of Chesterfield but not to Johnson's pleasure.  Lane pp. 117–118   Chesterfield did not care about praise, but was instead interested by Johnson's abilities.  Lane p. 118   Seven years after first meeting Johnson to discuss the work, Chesterfield wrote two anonymous essays in ''The World'' that recommended the ''Dictionary''.   He complained that the English language was lacking structure and argued: 
+  
+ However, Johnson did not appreciate the tone of the essay, and he felt that Chesterfield had not made good on his promise to be the work's patron.   In a letter, Johnson explained his feelings about the matter: 
+  
+ 
+ ==The text== 
+ ''A Dictionary of the English Language'' was somewhat large and very expensive. Its pages were  tall and nearly  wide. The paper was of the finest quality available, the cost of which ran to nearly £1,600; more than Johnson had been paid to write the book. Johnson himself pronounced the book '' " Vasta mole superbus " '' ( " Proud in its great bulk " ).  Hitchings 2005, London p. 195; New York p. 209   No bookseller could possibly hope to print this book without help; outside a few special editions of the Bible no book of this heft and size had even been set to type. 
+ 
+ The title page reads: 
+  
+  
+ A 
+  DICTIONARY 
+  of the 
+   ENGLISH LANGUAGE  : 
+  in which 
+  The WORDS are deduced from their ORIGINALS, 
+  and 
+  ILLUSTRATED in their DIFFERENT SIGNIFICATIONS 
+  by 
+  EXAMPLES from the best WRITERS. 
+  To which are prefixed, 
+  A HISTORY of the LANGUAGE, 
+  and AN ENGLISH GRAMMAR. 
+  By   SAMUEL JOHNSON  , A.M. 
+  In TWO Volumes 
+  VOL. I 
+  
+  
+ The words  " Samuel Johnson "  and  " English Language "  were printed in red; the rest was printed in black. The preface and headings were set in 4.6 & nbsp;mm  " English "  Typeface|type, the text—double columned—was set in 3.5 & nbsp;mm Pica (typography)|pica. This first edition of the dictionary contained a 42,773-word list, to which only a few more were added in subsequent editions. One of Johnson's important innovations was to illustrate the semantics|meanings of his words by literature|literary quotation, of which there are around 114,000. The authors most frequently cited by Johnson include William Shakespeare|Shakespeare, John Milton|Milton and John Dryden|Dryden. For example: 
+ 
+ :OPULENCE 
+ 
+ :Wealth; riches; affluence 
+ 
+ : " There in full ''opulence'' a banker dwelt, 
+ :Who all the joys and pangs of riches felt; 
+ :His sideboard glitter'd with imagin'd plate, 
+ :And his proud fancy held a vast estate. " 
+ :-- Jonathan Swift 
+ 
+ Furthermore, Johnson, unlike Bailey, added notes on a word's usage, rather than being merely descriptive. 
+ 
+ Unlike most modern lexicographers, Johnson introduced humour or prejudice into quite a number of his definitions. Among the best-known are: 
+ * " Excise: a hateful tax levied upon commodities and adjudged not by the common judges of property but wretches hired by those to whom excise is paid "  See [ online copy of sixth edition]  
+ * " Lexicographer: a writer of dictionaries; a harmless drudge that busies himself in tracing the original and detailing the signification of words "  See [ online copy of sixth edition]  
+ * " Oats: a grain which in England is generally given to horses, but in Scotland supports the people "  See [ online copy of sixth edition]  
+ 
+ A couple of less well-known examples are: 
+ * " Monsieur: a term of reproach for a Frenchman "  See [ online copy of sixth edition]  
+ * " Patron: One who countenances, supports, or protects. Commonly a wretch who supports with insolence, and is paid with flattery. "  See [ onlike copy of sixth edition]   which some have understood to be a jab at his patron Philip Stanhope.  Winchester, Simon.  ''The Professor and the Madman.'' HarperCollins Publishers, 1998.  
+ 
+ He included whimsical little-known words, such as: 
+ * " Writative – A word of Alexander Pope|Pope's, not to be imitated:  " Increase of years makes men more talkative but less ''writative''; to that degree I now write letters but of plain how d'ey's. " "  Kacirk, Jeffrey, ''Forgotten English'', 21 May (page)  
+ 
+ On a more serious level, Johnson's work showed a heretofore unseen meticulousness. Unlike all the proto-dictionaries that had come before, painstaking care went into the completeness when it came not only to  " illustrations "  but also to definitions as well: 
+ * " Turn "  had 16 definitions with 15 illustrations 
+ * " Time "  had 20 definitions with 14 illustrations 
+ * " Put "  ran more than 5,000 words spread over 3 pages 
+ * " Take "  had 134 definitions, running 8,000 words, over 5 pages  Hitchings 2005, London p. 87; New York p. 93  
+ 
+ The original goal was to publish the dictionary in two Book size|folio volumes: A–K and L–Z. But that soon proved unwieldy, unprofitable, and unrealistic. Subsequent printings ran to four volumes; even these formed a stack  tall, and weighed in at nearly . In addition to the sheer physical heft of Johnson's dictionary, came the equally hefty price: £4/10/– (equivalent to approximately £|0}} in ). So discouraging was the price that by 1784, thirty years after the first edition was published, when the dictionary had by then run through five editions, only about 6,000 copies were in circulation—an average sale of 200 books a year for thirty years. 
+ 
+ Johnson's etymology|etymologies would be considered poor by modern standards, and he gave little guide to pronunciation; one example being  " Cough: A convulsion of the lungs, vellicated by some sharp serosity. It is pronounced coff " . Much of his dictionary was Linguistic prescription|prescriptivist. It was also linguistically conservative, advocating traditional spellings such as ''publick'' rather than the simpler spellings that would be favoured 73 & nbsp;years later by Noah Webster. 
+ 
+ In spite of its shortcomings, the dictionary was far and away the best of its day. Its scope and structure were carried forward in dictionaries that followed, including Noah Webster's American Dictionary of the English Language|''Webster's Dictionary'' in 1828 and the ''Oxford English Dictionary'' later in the same century. 
+ 
+ == Reception history == 
+ 
+ === Initial reception === 
+ From the beginning there was universal appreciation not only of the content of the ''Dictionary'' but also of Johnson's achievement in single-handedly creating it:  " When Boswell came to this part of Johnson's life, more than three decades later, he pronounced that 'the world contemplated with wonder so stupendous a work achieved by one man, while other countries had thought such undertakings fit only for whole academies'. "  Hitchings 2005, p. & nbsp;198    " The ''Dictionary'' was considered, from the moment of its inception, to be Johnson's, and from the time of its completion it was ''Johnson's Dictionary''—his book and his property, his monument, his memorial. "  Hitchings 2005, p. & nbsp;200  
+ 
+ Immediately after publication  " The ''Dictionary'' was enthusiastically written up in important periodicals such as the ''London Magazine'' and—none too surprisingly—the ''Gentleman's Magazine''. In the latter it received an eight-page notice " .  Hitchings 2005, p. & nbsp;198–9   Reviews, such as they were, proved generous in tone:  " Of the less positive assessments the only properly judicious one came from Adam Smith in the pro-Whig ''Edinburgh Review'' ... he wished that Johnson 'had oftener passed his own censure upon those words which are not of approved use, though sometimes to be met with in authors of no mean name'. Furthermore, Johnson's approach was not 'sufficiently grammatical' " .  Hitchings 2005, p. & nbsp;199  
+ 
+ Despite the ''Dictionarys critical acclaim, Johnson's general financial situation continued in its dismal fashion for some years after 1755:  " The image of Johnson racing to write ''Rasselas'' to pay for his mother's funeral, romantic hyperbole though it is, conveys the precariousness of his existence, almost four years after his work on the ''Dictionary'' was done. His financial uncertainties continued. He gave up the house in Gough Square in March 1759, probably for lack of funds. Yet, just as Johnson was plunging into another trough of despondency, the reputation of the ''Dictionary'' at last brought reward. In July 1762 Johnson was granted a state pension of £300 a year by the twenty-four-year-old monarch, George III. The pension did not make him rich, but it ensured he would no longer have to grub around for the odd guinea. "  Hitchings 2005, p. & nbsp;203  
+ 
+ === Criticism === 
+ As lexicography developed, faults were found with Johnson's work:  " From an early stage there were noisy detractors. Perhaps the loudest of them was John Horne Tooke ... Not content to pronounce it 'imperfect and faulty', he complained that it was 'one of the most idle performances ever offered to the public', that its author 'possessed not one single requisite for the undertaking', that its grammatical and historical parts were 'most truly contemptible performances', and that 'nearly one third ... is as much the language of the Khoikhoi|Hottentots as of the English'. "  Hitchings 2005, p. & nbsp;221    " Horace Walpole, 4th Earl of Orford|Horace Walpole summed up for the unbelievers when he pronounced at the end of the eighteenth century, 'I cannot imagine that Dr Johnson's reputation will be very lasting.' His dictionary was 'a surprising work for one man', but 'the task is too much for one man, and ... a society should alone pretend to publish a standard dictionary.' Notwithstanding Walpole's reservations, the admirers out-numbered the detractors, and the reputation of the ''Dictionary'' was repeatedly boosted by other philologists, lexicographers, educationalists and word detectives. "  Hitchings 2005, p. & nbsp;222  
+ 
+ Johnson's dictionary was made when etymology was largely based on guesswork. His Classics|Classical leanings led him to prefer spellings that pointed to Latin or Greek sources,  " while his lack of sound scholarship prevented him from detecting their frequent errors " . For example, he preferred the spelling ''wikt:ache|ache'' over ''wikt:ake|ake'' as he wrongly thought it came from the Greek ''achos''. Some of his spelling choices were also inconsistent:  " while retaining the Latin ''p'' in ''receipt'' he left it out of ''deceit''; he spelled ''deign'' one way and ''disdain'' another; he spelled ''uphill'' but ''downhil'', ''muckhill'' but ''dunghil'', ''instill'' but ''distil'', ''inthrall'' but ''disenthral'' " .  [ ''Handbook of Simplified Spelling'']. Simplified Spelling Board, 1920. p. & nbsp;7  
+ 
+ Boswell     relates that  " A lady once asked him [Johnson] how he came to define ''wikt:pastern|pastern'' as the ''knee'' of a horse: instead of making an elaborate reply, as she expected, he at once replied, 'Ignorance, Madam, pure ignorance.' "  On the same page, Boswell notes that Johnson's definition of ''wikt:network|network'' ( " Any thing reticulated or decussated, at equal distances, with interstices between the intersections " )      " has often been quoted with sportive malignity, as obscuring a thing in itself very plain. " 
+ 
+ === Influence in Britain === 
+ Despite the criticisms,  " The influence of the ''Dictionary'' was sweeping. Johnson established both a methodology for how dictionaries should be put together and a paradigm for how entries should be presented. Anyone who sought to create a dictionary, post-Johnson, did so in his shadow. "  Hitchings 2005, p. & nbsp;220    " In his history of the ''Oxford English Dictionary'', Simon Winchester asserts of its eighteenth-century predecessor that 'by the end of the century every educated household had, or had access to, the great book. So firmly established did it swiftly become that any request for  " The Dictionary "  would bring forth Johnson and none other.' 'One asked for The Dictionary,' writes Winchester, 'much as one might demand The Bible.' "  Hitchings 2005, p. & nbsp;212   One of the first editors of the ''OED'', James Murray (lexicographer)|James Murray, acknowledged that many of Johnson's explanations were adopted without change, for 'When his definitions are correct, and his arrangement judicious, it seems to be expedient to follow him.' ... In the end the ''OED'' reproduced around 1,700 of Johnson's definitions, marking them simply 'J.'. "  Hitchings 2005, pp. & nbsp;227–8  
+ 
+ === Reputation abroad === 
+ Johnson's influence was not confined to Britain and English:  " The president of the Florentine Accademia declared that the ''Dictionary'' would be 'a perpetual Monument of Fame to the Author, an Honour to his own Country in particular, and a general Benefit to the Republic of Letters'. This was no empty commendation. Johnson's work served as a model for lexicographers abroad. It is no surprise that his friend Giuseppe Marc'Antonio Baretti|Giuseppe Baretti chose to make the ''Dictionary'' the model for his Italian—English dictionary of 1760, and for his Spanish dictionary nearly two decades later.  ''A DICTIONARY, Spanish and English, and English and Spanish, . . ''   But there are numerous examples of influence beyond Johnson's own circle. His work was translated into French and German. "  Hitchings 2005, p. & nbsp;223   And  " In 1777, when Ferdinando Bottarelli published a pocket dictionary of Italian, French and English (the three languages side by side), his authorities for the French and Italian words were the works of the French and Italian academies: for the English he used Johnson. "  Hitchings 2005, p. & nbsp;224  
+ 
+ === Influence in America === 
+ The ''Dictionary'' was exported to America.  " The American adoption of the ''Dictionary'' was a momentous event not just in its history, but in the history of lexicography. For Americans in the second half of the eighteenth century, Johnson was the seminal authority on language, and the subsequent development of American lexicography was coloured by his fame. "   For American lexicographers the ''Dictionary'' was impossible to ignore:  " America's two great nineteenth-century lexicographers, Noah Webster and Joseph Emerson Worcester, argued fiercely over Johnson's legacy ... In 1789 [Webster] declared that 'Great Britain, whose children we are, and whose language we speak, should no longer be ''our'' standard; for the taste of her writers is already corrupted, and her language on the decline.' "  Hitchings 2005, p. & nbsp;225    " Where Webster found fault with Johnson, Joseph Worcester saluted him ... In 1846 he completed his ''Universal and Critical Dictionary of the English Language''. He defended Johnson's work, arguing that 'from the time of its publication, [it] has been, far more than any other, regarded as the standard for the language'. "  Hitchings 2005, pp. & nbsp;226–7   Notwithstanding the evolution of lexicography in America,  " The ''Dictionary'' has also played its part in the law, especially in the United States. Legislators are much occupied with ascertaining 'first meanings', with trying to secure the literal sense of their predecessors' legislation ... Often it is a matter of historicizing language: to understand a law, you need to understand what its terminology meant to its original architects ... as long as United States Constitution|the American Constitution remains intact, Johnson's ''Dictionary'' will have a role to play in Law of the United States|American law. "  Hitchings 2005, pp. & nbsp;229–31  
+ 
+ == Folio and abridged editions == 
+ File:Johnson Folio and Abridged dictionaries.JPG|thumb|Samuel Johnson's ''Folio'' and ''Abridged Dictionaries'' together 
+ File:Close up Samuel Johnson Folio and Abridged dictionaries – letter M.JPG|thumb|Close up of pages for M entries in the ''Folio'' and ''Abridged Dictionaries'' of 1755 and 1756 by Samuel Johnson 
+ 
+ Johnson's famous dictionary came out in two forms. 
+ 
+ The first was the 1755 ''Folio'' edition, which came in two large volumes on 4 April. The folio edition also features full literary quotes by those authors that Johnson quoted, such as Dryden and Shakespeare. It was followed a few weeks later by a second edition published in 165 weekly parts. The third edition was published in 1765, but it was the fourth, which came out in 1773 which included significant revisions by Johnson of the original work.    
+ 
+ The ''Abridged'' edition came out in 1756 in two octavo volumes with entries,  " abstracted from the folio edition by the author " ,     laid out as two columns per page. The abridged version did not feature the literary quotes, just the author quoted. This made it cheaper to produce and buy. It sold over a thousand copies a year for the next 30 years bringing  " The Dictionary "  to the reach of every literate home.    
+ 
+ == Modern editions == 
+ Johnson's ''Dictionary'' has been available in replica editions for some years. The entire first ''Folio'' edition is available on [ A Dictionary of the English Language]     as an electronic scan. 
+ 
+ The Preface to the ''Dictionary'' is available on Project Gutenberg.     In addition, a scan of the 6th (1785) edition can be found at the Internet Archive in its two volumes.       
+ 
+ == In popular culture == 
+ The compilation of Johnson's ''Dictionary'' was the main plot-line for an Ink and Incapability|episode of Blackadder the Third where Edmund Blackadder (Rowan Atkinson), after confounding the scholar with a barrage of fabricated nonexistent words, tries to conceal the destruction of the dictionary's manuscript by his servant. Johnson had given his only manuscript to the Prince and was presumably destroyed by Blackadder's apprentice dogbody Baldrick. The episode ends with Baldrick obliviously throwing the dictionary into the fire. 
+ 
+ == Notes == 
+  
+ 
+ == References == 
+ *  
+ * Collins, H. P. (1974)  " The Birth of the Dictionary. "  ''History Today'' (March 1974), Vol. 24 Issue 3, pp 197-203 online. 
+ *  
+ ** US edition:  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ 
+ == External links == 
+ *[ Johnson's ''Plan of a Dictionary of the English Language'' (1747)] at the Library of Congress. 
+ *Johnson's ''Dictionary'', first folio edition, 1755 : [ Volume I] [ Volume II] at the Pomeranian Digital Library. 
+ *Johnson's ''Dictionary'', sixth folio edition, 1785 : [ Volume 1] and [ Volume 2] at the Internet Archive. 
+ *  
+ *Web site : [ ''Samuel Johnson Dictionary Sources'', an extensive examination of the sources of quotations in Johnson's ''Dictionary''.] 
+ *Web site : [ searchable version of the 1st Folio edition of Johnson's ''Dictionary'' (partial transcription)] 
+ *Web site : [ HTML version of the 1756 ''abridged'' edition of Johnson's ''Dictionary'' (partial OCR)] 
+ *Article : [ ''Words count''] from ''The Guardian'', April 2005. 
+ *Web page : [ ''A Brief History of English Lexicography'']; an HTML table. 
+ 
+  
+  
+ 
+  
+ 
+  
+ Category:1755 books 
+ Category:1755 in England 
+ Category:Books by Samuel Johnson 
+ Category:British non-fiction literature 
+ Category:English dictionaries

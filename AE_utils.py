@@ -3,14 +3,11 @@ from AEPredNet import AEPredNet
 import numpy as np
 from math import floor
 import os
-<<<<<<< HEAD
 from CharRNN_trials import *
-=======
 import pickle
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import pandas as pd
->>>>>>> 6a3b9cc7df7d2820c3d4d466dfa4a71729250b18
 
 def interpolate_LEs(start_size, target_size, prefix = 'lstm', suffix = ''):
 	factor_increase = target_size//start_size
@@ -34,6 +31,8 @@ def interpolate_LEs(start_size, target_size, prefix = 'lstm', suffix = ''):
 	
 	
 def combine_sizes(start_sizes, target_size, prefix = 'lstm', suffix = '', num_params = 1):
+	if not os.path.isdir('Processed/'):
+		os.makedir('Processed/')
 	le_data = torch.zeros((0, target_size))
 	val_data = torch.zeros((0, ))
 	params = torch.zeros((0, num_params))
@@ -51,12 +50,11 @@ def mini_batch_ae(features, batch_size):
 		yield features[start:end]
 		
 def train_val_split(data, targets, val_split = 0.2, save = True, prefix = 'lstm'):
+	if not os.path.isdir('Processed/'):
+		os.makedir('Processed/')
 	samples = data.shape[0]
-<<<<<<< HEAD
 	train_samples = torch.arange(floor(samples * (1- val_split)))
-=======
 	train_samples = torch.arange(floor(samples * (1 - val_split)))
->>>>>>> 6a3b9cc7df7d2820c3d4d466dfa4a71729250b18
 	val_samples = torch.arange(torch.max(train_samples)+1, samples)
 	shuffle_idx = torch.randperm(samples)
 	train_idx, val_idx = shuffle_idx[train_samples], shuffle_idx[val_samples]
@@ -66,11 +64,11 @@ def train_val_split(data, targets, val_split = 0.2, save = True, prefix = 'lstm'
 	
 	split_dict = {'train_data': train_data, 'train_targets':train_targets, 'val_data': val_data, 
 					'val_targets': val_targets, 'train_idx': train_idx, 'val_idx': val_idx }
-<<<<<<< HEAD
 	torch.save(split_dict, f'Processed/{prefix}_data_split_vfrac{val_split}.p')
 	return split_dict
 
 def merge_data(dir = ''):
+	#If using both LSTM and GRU data, you can combine them into a single dataset using this method
 	lstm_data = torch.load('Processed/lstm_allLEs.p')
 	lstm_targets = torch.load('Processed/lstm_allValLoss.p')
 	gru_data = torch.load('Processed/gru_allLEs.p')
@@ -84,8 +82,17 @@ def merge_data(dir = ''):
 	return merged_data, merged_targets
 	
 if __name__ == '__main__':
-	model_type = 'lstm'
-	dir = 'lstm'
+	import sys
+	main(sys.argv[1:])
+	
+	
+def main(args):
+    parser = argparse.ArgumentParser(description="Train recurrent models")
+    parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+    args = parser.parse_args(args)
+	model_type = args.model_type
+	
+	dir = model_type
 	no_evals = 300
 	sizes = [64, 128, 256, 512]
 	for size  in sizes:
@@ -102,43 +109,41 @@ if __name__ == '__main__':
 		split = train_val_split(data, targets, val_split = 0.2, prefix = model_type)
 		print(f'New dataset created')
 		print(split['train_data'].shape[0])
-	
-=======
 	return split_dict
 
-def main():
-	N = 512
-	g = 1.5
-	inputs_epoch = 3
-	target_epoch = 14
-	data_path = "training_data/g_{}/4sine_epoch_{}_N_{}".format(g, inputs_epoch, N)
-	data = pickle.load(open(data_path, 'rb'))
-	inputs, targets = data['inputs'], data['targets']
-	val_split = 0.1
-	split = train_val_split(data=inputs, targets=targets, val_split=val_split)
-	x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'],\
-									 split['val_data'], split['val_targets']
+# def main():
+	# N = 512
+	# g = 1.5
+	# inputs_epoch = 3
+	# target_epoch = 14
+	# data_path = "training_data/g_{}/4sine_epoch_{}_N_{}".format(g, inputs_epoch, N)
+	# data = pickle.load(open(data_path, 'rb'))
+	# inputs, targets = data['inputs'], data['targets']
+	# val_split = 0.1
+	# split = train_val_split(data=inputs, targets=targets, val_split=val_split)
+	# x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'],\
+									 # split['val_data'], split['val_targets']
 
-	plt.figure()
-	plt.scatter(torch.ones_like(y_train), y_train, s=2)
-	plt.scatter(torch.ones_like(y_val) * 1.1, y_val.detach(), s=2)
-	plt.axis([0.95, 1.15, -.1, 1.])
-	plt.legend(["Train", "Validation"])
-	plt.show()
+	# plt.figure()
+	# plt.scatter(torch.ones_like(y_train), y_train, s=2)
+	# plt.scatter(torch.ones_like(y_val) * 1.1, y_val.detach(), s=2)
+	# plt.axis([0.95, 1.15, -.1, 1.])
+	# plt.legend(["Train", "Validation"])
+	# plt.show()
 
-	pca = PCA(2)
-	plt.figure()
-	x_pca = pca.fit_transform(x_train)
-	x_pca = pd.DataFrame(x_pca)
-	x_pca.columns = ['PC1', 'PC2']
-	plt.scatter(x_pca.values[:,0], x_pca.values[:,1], c=y_train)
-	plt.title('Scatter plot')
-	plt.xlabel('x')
-	plt.ylabel('y')
-	plt.show()
+	# pca = PCA(2)
+	# plt.figure()
+	# x_pca = pca.fit_transform(x_train)
+	# x_pca = pd.DataFrame(x_pca)
+	# x_pca.columns = ['PC1', 'PC2']
+	# plt.scatter(x_pca.values[:,0], x_pca.values[:,1], c=y_train)
+	# plt.title('Scatter plot')
+	# plt.xlabel('x')
+	# plt.ylabel('y')
+	# plt.show()
 
-if __name__ == '__main__':
-	main()
+# if __name__ == '__main__':
+	# main()
 	# x_data = torch.load('Processed/lstm_allLEs.p')
 	# targets = torch.load('Processed/lstm_allValLoss.p')
 	# if os.path.exists('data_split_vfrac0.2.p'):
@@ -147,6 +152,4 @@ if __name__ == '__main__':
 	# 	split = train_val_split(x_data, targets, 0.2)
 	# 	print(f'New dataset created')
 	# 	print(split['train_data'].shape[0])
-	#
->>>>>>> 6a3b9cc7df7d2820c3d4d466dfa4a71729250b18
 	

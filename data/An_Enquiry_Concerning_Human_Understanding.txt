@@ -1,0 +1,122 @@
+ 
+  
+  
+ File:David Hume.jpg|thumb|right|150px|David Hume by Allan Ramsay (artist)|Allan Ramsay (1766) 
+ ''An Enquiry Concerning Human Understanding'' is a book by the Scottish Empiricism|empiricist philosopher David Hume, published in English in 1748.  See  via Google Books   It was a revision of an earlier effort, Hume's ''A Treatise of Human Nature'', published anonymously in London in 1739 & ndash;40. Hume was disappointed with the reception of the ''Treatise'', which  " fell dead-born from the press, "  Hume, David (1776), ''My Own Life'', Appendix A of Ernest Campbell Mossner, ''The Life of David Hume'', University of Texas Press, 1954.   as he put it, and so tried again to disseminate his more developed ideas to the public by writing a shorter and more polemical work. 
+ 
+ The end product of his labours was the ''Enquiry''. The ''Enquiry'' dispensed with much of the material from the ''Treatise'', in favor of clarifying and emphasizing its most important aspects. For example, Hume's views on personal identity do not appear. However, more vital propositions, such as Hume's argument for the role of Habit (psychology)|habit in a theory of knowledge, are retained. 
+ 
+ This book has proven highly influential, both in the years that would immediately follow and today. Immanuel Kant points to it as the book which woke him from his self-described  " dogmatic slumber. "  I. Immanuel Kant|Kant  " Prolegomena to Any Future Metaphysics "   The ''Enquiry'' is widely regarded as a classic in Modern philosophy|modern philosophical literature. 
+ 
+ ==Content== 
+ The argument of the ''Enquiry'' proceeds by a series of incremental steps, separated into chapters which logically succeed one another. After expounding his epistemology, Hume explains how to apply his principles to specific topics. 
+ 
+ === 1. Of the different species of philosophy === 
+ 
+ In the first section of the Enquiry, Hume provides a rough introduction to philosophy as a whole. For Hume, philosophy can be split into two general parts: natural philosophy and the philosophy of human nature (or, as he calls it,  " moral philosophy " ). The latter investigates both actions and thoughts. He emphasizes in this section, by way of warning, that philosophers with nuanced thoughts will likely be cast aside in favor of those whose conclusions more intuitively match popular opinion. However, he insists, precision helps art and craft of all kinds, including the craft of philosophy. 
+ 
+ === 2. Of the origin of ideas === 
+ 
+ Next, Hume discusses the distinction between impressions and ideas. By  " impressions " , he means sensations, while by  " ideas " , he means memories and imaginings. According to Hume, the difference between the two is that ideas are less ''vivacious'' than impressions. For example, the idea of the taste of an orange is far inferior to the impression (or sensation) of actually eating one. Writing within the tradition of empiricism, he argues that impressions are the source of all ideas. 
+ 
+ Hume accepts that ideas may be either the product of mere sensation or of the imagination working in conjunction with sensation.  In Locke's terminology, this was known as the division between ''simple and complex'' ideas of sense.   According to Hume, the creative faculty makes use of (at least) four mental operations that produce imaginings out of sense-impressions. These operations are ''compounding'' (or the addition of one idea onto another, such as a horn on a horse to create a unicorn); ''transposing'' (or the substitution of one part of a thing with the part from another, such as with the body of a man upon a horse to make a centaur); ''augmenting'' (as with the case of a giant (mythology)|giant, whose size has been augmented); and ''diminishing'' (as with Lilliput and Blefuscu|Lilliputians, whose size has been diminished). (Hume 1974:317) In a later chapter, he also mentions the operations of ''mixing'', ''separating'', and ''dividing''. (Hume 1974:340) File:Missing blue shade.svg|thumb|Fig. 1. The Missing Shade of Blue 
+ 
+ However, Hume admits that there is one objection to his account: the problem of '' " The Missing Shade of Blue " ''. In this thought-experiment, he asks us to imagine a man who has experienced every shade of blue except for one (see Fig. 1). He predicts that this man will be able to divine the color of this particular shade of blue, despite the fact that he has never experienced it. This seems to pose a serious problem for the empirical account, though Hume brushes it aside as an exceptional case by stating that one may experience a novel idea that itself is derived from combinations of previous impressions. (Hume 1974:319) 
+ 
+ === 3. Of the association of ideas === 
+ 
+ In this chapter, Hume discusses how thoughts tend to come in sequences, as in trains of thought. He explains that there are at least three kinds of associations between ideas: ''resemblance'', ''contiguity'' in space-time, and ''cause-and-effect''. He argues that there must be some ''universal principle'' that must account for the various sorts of connections that exist between ideas. However, he does not immediately show what this principle might be. (Hume 1974:320-321) 
+ 
+ === 4. Sceptical doubts concerning the operations of the understanding (in two parts) === 
+ 
+ In the first part, Hume discusses how the objects of inquiry are either  " relations of ideas "  or  " matters of fact " , which is roughly the Analytic-synthetic distinction|distinction between logical truth|analytic and fact|synthetic propositions. The former, he tells the reader, are proved by demonstration, while the latter are given through experience. (Hume 1974:322) In explaining how matters of fact are entirely a product of experience, he dismisses the notion that they may be arrived at through ''A priori and a posteriori|a priori'' reasoning. For Hume, every effect only follows its cause arbitrarily—they are entirely distinct from one another. (Hume 1974:324) 
+ 
+ In part two, Hume inquires into how anyone can justifiably believe that experience yields any conclusions about the world: 
+ 
+ :: " When it is asked, ''What is the nature of all our reasonings concerning matter of fact?'' the proper answer seems to be, that they are founded on the relation of cause and effect. When again it is asked, ''What is the foundation of all our reasonings and conclusions concerning that relation?'' it may be replied in one word, ''experience''. But if we still carry on our sifting humor, and ask, ''What is the foundation of all conclusions from experience?'' this implies a new question, which may be of more difficult solution and explication. "  (Hume 1974:328) 
+ 
+ He shows how a satisfying argument for the validity of experience can be based neither on demonstration (since  " it implies no contradiction that the course of nature may change " ) nor experience (since that would be a circular argument). (Hume 1974:330-332) Here he is describing what would become known as the problem of induction. 
+ 
+ === 5. Sceptical solution of these doubts (in two parts) === 
+ 
+ For Hume, we assume that experience tells us something about the world because of ''habit or custom'', which human nature forces us to take seriously. This is also, presumably, the  " principle "  that organizes the connections between ideas. Indeed, one of the many famous passages of the ''Enquiry'' is on the topic of the incorrigibility of human custom. In Section XII, ''Of the academical or sceptical philosophy'', Hume will argue,  
+ 
+ ::'' " The great subverter of Pyrrhonism or the excessive principles of skepticism is action, and employment, and the occupations of common life. These principles may flourish and triumph in the schools; where it is, indeed, difficult, if not impossible, to refute them. But as soon as they leave the shade, and by the presence of the real objects, which actuate our passions and sentiments, are put in opposition to the more powerful principles of our nature, they vanish like smoke, and leave the most determined skeptic in the same condition as other mortals. " '' (Hume 1974:425) 
+ 
+ In the second part, he provides an account of beliefs. He explains that the difference between belief and fiction is that the former produces a certain feeling of confidence which the latter doesn't. (Hume 1974:340) 
+ 
+ === 6. Of probability === 
+ 
+ This short chapter begins with the notions of probability and chance. For him,  " probability "  means a ''higher chance'' of occurring, and brings about a higher degree of subjective expectation in the viewer. By  " chance " , he means all those particular comprehensible events which the viewer considers possible in accord with the viewer's experience. However, further experience takes these equal chances, and forces the imagination to observe that certain chances arise more frequently than others. These gentle forces upon the imagination cause the viewer to have strong beliefs in outcomes. This effect may be understood as another case of ''custom or habit'' taking past experience and using it to predict the future. (Hume 1974:346-348) 
+ 
+ === 7. Of the idea of necessary connection (in two parts) === 
+ 
+ File:Nicolas Malebranche.jpg|right|thumb|150px|Nicolas Malebranche, one of Hume's philosophical opponents 
+ 
+ By  " necessary connection " , Hume means the power or force which necessarily ties one idea to another. He rejects the notion that any sensible qualities are necessarily conjoined, since that would mean we could know something prior to experience. Unlike his predecessors, Berkeley and Locke, Hume rejects the idea that volitions or impulses of the will may be inferred to necessarily connect to the actions they produce by way of some sense of the power of the will. He reasons that, 1. if we knew the nature of this power, then the mind-body divide would seem totally unmysterious to us; 2. if we had immediate knowledge of this mysterious power, then we would be able to intuitively explain why it is that we can control some parts of our bodies (e.g., our hands or tongues), and not others (e.g., the liver or heart); 3. we have no immediate knowledge of the powers which allow an impulse of volition to create an action (e.g., of the  " muscles, and nerves, and animal spirits "  which are the immediate cause of an action). (Hume 1974:353-354) He produces like arguments against the notion that we have knowledge of these powers as they affect the mind alone. (Hume 1974:355-356) He also argues in brief against the idea that causes are mere Occasionalism|occasions of the will of some god(s), a view associated with the philosopher Nicolas Malebranche. (Hume 1974:356-359) 
+ 
+ Having dispensed with these alternative explanations, he identifies the source of our knowledge of necessary connections as arising out of ''observation of constant conjunction of certain impressions across many instances''. In this way, people know of necessity through rigorous custom or habit, and not from any immediate knowledge of the powers of the will. (Hume 1974:361) 
+ 
+ === 8. Of liberty and necessity (in two parts) === 
+ 
+ Here Hume tackles the problem of how liberty may be reconciled with metaphysical necessity (otherwise known as a compatibilist formulation of free will). Hume believes that all disputes on the subject have been merely verbal arguments—that is to say, arguments which are based on a lack of prior agreement on definitions. He first shows that it is clear that most events are deterministic, but human actions are more controversial. However, he thinks that these too occur out of necessity since an outside observer can see the same regularity that he would in a purely physical system. To show the compatibility of necessity and liberty, Hume defines liberty as the ability to act on the basis of one's will e.g. the capacity to will one's actions but not to will one's will. He then shows (quite briefly) how determinism and free will are compatible notions, and have no bad consequences on ethics or moral life. 
+ 
+ === 9. Of the reason of animals === 
+ 
+ Hume insists that the conclusions of the Enquiry will be very powerful if they can be shown to apply to animals and not just humans. He believed that animals were able to infer the relation between cause and effect in the same way that humans do: through learned expectations. (Hume 1974:384) He also notes that this  " inferential "  ability that animals have is not through reason, but custom alone. Hume concludes that there is an innate faculty of instincts which both beasts and humans share, namely, the ability to reason experimentally (through custom). Nevertheless, he admits, humans and animals differ in mental faculties in a number of ways, including: differences in memory and attention, inferential abilities, ability to make deductions in a long chain, ability to grasp ideas more or less clearly, the human capacity to worry about conflating unrelated circumstances, a sagely prudence which arrests generalizations, a capacity for a greater inner library of analogies to reason with, an ability to detach oneself and scrap one's own biases, and an ability to converse through language (and thus gain from the experience of others' testimonies). (Hume 1974:385, footnote 17.) 
+ 
+ === 10. Of miracles (in two parts) === 
+  
+ The next topic which Hume strives to give treatment is that of the reliability of human testimony, and of the role that social epistemology|testimony plays a part in epistemology. This was not an idle concern for Hume. Depending on its outcome, the entire treatment would give the epistemologist a degree of certitude in the treatment of miracles. 
+ 
+ True to his empirical thesis, Hume tells the reader that, though testimony does have some force, it is never quite as powerful as the direct evidence of the senses. That said, he provides some reasons why we may have a basis for trust in the testimony of persons: because a) human memory can be relatively tenacious; and b) because people are inclined to tell the truth, and ashamed of telling falsities. Needless to say, these reasons are only to be trusted to the extent that they conform to experience. (Hume 1974:389) 
+ 
+ And there are a number of reasons to be skeptical of human testimony, also based on experience. If a) testimonies conflict one another, b) there are a small number of witnesses, c) the speaker has no integrity, d) the speaker is overly hesitant or bold, or e) the speaker is known to have motives for lying, then the epistemologist has reason to be skeptical of the speaker's claims. (Hume 1974:390) 
+ 
+ There is one final criterion that Hume thinks gives us warrant to doubt any given testimony, and that is f) if the propositions being communicated are miraculous. Hume understands a miracle to be any event which contradicts the laws of nature. He argues that the laws of nature have an overwhelming body of evidence behind them, and are so well demonstrated to everyone's experience, that any deviation from those laws necessarily flies in the face of all evidence. (Hume 1974:391-392) 
+ 
+ Moreover, he stresses that talk of the miraculous has no surface validity, for four reasons. First, he explains that in all of history there has never been a miracle which was attested to by a wide body of disinterested experts. Second, he notes that human beings delight in a sense of wonder, and this provides a villain with an opportunity to manipulate others. Third, he thinks that those who hold onto the miraculous have tended towards barbarism. Finally, since testimonies tend to conflict with one another when it comes to the miraculous—that is, one man's religious miracle may be contradicted by another man's miracle—any testimony relating to the fantastic is self-denunciating. (Hume 1974:393-398) 
+ 
+ Still, Hume takes care to warn that historians are generally to be trusted with confidence, so long as their reports on facts are extensive and uniform. However, he seems to suggest that historians are as fallible at interpreting the facts as the rest of humanity. Thus, if every historian were to claim that there was a solar eclipse in the year 1600, then though we might at first naively regard that as in violation of natural laws, we'd come to accept it as a fact. But if every historian were to assert that Queen Elizabeth was observed walking around happy and healthy after her funeral, and then interpreted that to mean that they had risen from the dead, then we'd have reason to appeal to natural laws in order to dispute their interpretation. (Hume 1974:400-402) 
+ 
+ === 11. Of a particular providence and of a future state === 
+ 
+ Hume continues his application of epistemology to theology by an extended discussion on heaven and hell. The brunt of this chapter allegedly narrates the opinions, not of Hume, but of one of Hume's anonymous friends, who again presents them in an imagined speech by the philosopher Epicurus. His friend argues that, though it is possible to abductive reasoning|trace a cause from an effect, it is not possible to infer unseen effects from a cause thus traced. The friend insists, then, that even though we might postulate that there is a first cause behind all things—God—we can't infer anything about the afterlife, because we don't know anything of the afterlife from experience, and we can't infer it from the existence of God. (Hume 1974:408) 
+ 
+ Hume offers his friend an objection: if we see an unfinished building, then can't we infer that it has been created by humans with certain intentions, and that it will be finished in the future? His friend concurs, but indicates that there is a relevant disanalogy that we can't pretend to know the contents of the mind of God, while we can know the designs of other humans. Hume seems essentially persuaded by his friend's reasoning. (Hume 1974:412-414) 
+ 
+ === 12. Of the academical or skeptical philosophy (in three parts) === 
+ 
+ The first section of the last chapter is well organized as an outline of various skeptical arguments. The treatment includes the arguments of atheism, Cartesian skepticism,  " light "  skepticism, and rationalist critiques of empiricism. Hume shows that even light skepticism leads to crushing doubts about the world which - while they ultimately are philosophically justifiable - may only be combated through the non-philosophical adherence to custom or habit. He ends the section with his own reservations towards Cartesian and Lockean epistemologies. 
+ 
+ In the second section he returns to the topic of hard skepticism by sharply denouncing it. 
+ 
+ :: " For here is the chief and most confounding objection to ''excessive'' skepticism, that no durable good can ever result from it; while it remains in its full force and vigor. We need only ask such a skeptic, ''What his meaning is? And what he proposes by all these curious researches?'' He is immediately at a loss, and knows not what to answer... a Pyrrhonian cannot expect, that his philosophy will have any constant influence on the mind: or if it had, that its influence would be beneficial to society. On the contrary, he must acknowledge, if he will acknowledge anything, that all human life must perish, were his principles universally and steadily to prevail. "  (Hume 1974:426) 
+ 
+ He concludes the volume by setting out the limits of knowledge once and for all.  " ''When we run over libraries, persuaded of these principles, what havoc must we make? If we take in our hand any volume; of divinity or school metaphysics, for instance; let us ask, ''Does it contain any abstract reasoning concerning quantity or number?'' No. ''Does it contain any experimental reasoning concerning matter of fact and existence?'' No. Commit it then to the flames: for it can contain nothing but sophistry and illusion.'' "  Hume, D., ''Enquiries concerning Human Understanding and concerning the Principles of Morals'' Reprinted from 1777 edition, Third Edition, L. A. Selby-Bigge (ed.), Clarendon Press, Oxford, Sect. XII, Part III, p.165.  
+ 
+ ==Critiques and rejoinders== 
+ The criteria Hume lists in his examination of the validity of human testimony are roughly upheld in modern social psychology, under the rubric of the communication-persuasion paradigm. Supporting literature includes: the work of social impact theory, which discusses persuasion in part through the number of persons engaging in influence; as well as studies made on the relative influence of communicator credibility in different kinds of persuasion; and examinations of the Trust (social sciences)|trustworthiness of the speaker. 
+ 
+ The  " custom "  view of learning can in many ways be likened to associationist psychology. This point of view has been subject to severe criticism in the research of the 20th century. Still, testing on the subject has been somewhat divided. Testing on certain animals like cats have concluded that they do not possess any faculty which allow their minds to grasp an insight into cause and effect. However, it has been shown that some animals, like chimpanzees, were able to generate creative plans of action to achieve their goals, and thus would seem to have a causal insight which transcends mere custom.  Kohler, Wolfgang. (1925). ''The mentality of apes.'' New York: Harcourt. Cited from: Passer, Michael et al. (2003). ''Psychology: Frontiers and Applications.'' First Canadian Edition. McGraw-Hill: Toronto. p. 267.  
+ 
+ ==References== 
+  
+ 
+ ==External links== 
+  
+  
+ * [ ''An Enquiry Concerning Human Understanding'': Mirrored at eBooks@Adelaide] 
+ *  
+ *  
+ * [ A version of this work, slightly edited for easier reading] 
+ * [ ''An Enquiry Concerning Human Understanding''] The ''Enquiry'' hosted at infidels.org 
+ 
+  
+ 
+  
+ 
+  
+ Category:1748 books 
+ Category:Books by David Hume 
+ Category:Epistemology literature

@@ -1,0 +1,695 @@
+ 
+  
+  
+  (all under the pseudonym 'Publius') 
+ | title_orig = The Federalist  
+ | country = United States  
+ | language = English  
+ | publisher =  
+ | pub_date = October 27, 1787 – May 28, 1788 
+ | media_type =  
+ }} 
+ ''The Federalist Papers'' is a collection of 85 articles and essays written by Alexander Hamilton, James Madison, and John Jay under the Pseudonym|collective pseudonym  " Publius "  to promote the History of the United States Constitution|ratification of the United States Constitution. The collection was commonly known as ''The Federalist'' until the name ''The Federalist Papers'' emerged in the 20th century. 
+ 
+ The first 77 of these essays were published serially in the ''The Independent Journal|Independent Journal'', the ''New York Packet'', and ''The Daily Advertiser'' between October 1787 and April 1788.   A compilation of these 77 essays and eight others were published in two volumes as ''The Federalist: A Collection of Essays, Written in Favour of the New Constitution, as Agreed upon by the Federal Convention, September 17, 1787'' by publishing firm J.  &  A. McLean in March and May 1788.      |year=1995 |publisher=Yale University Press |isbn=978-0-300-05536-8 |page=194}}   The last eight papers (Nos. 78–85) were republished in the New York newspapers between June 14 and August 16, 1788. 
+ 
+ The authors of ''The Federalist'' intended to influence the voters to ratify the Constitution. In Federalist No. 1, they explicitly set that debate in broad political terms:  It has been frequently remarked, that it seems to have been reserved to the people of this country, by their conduct and example, to decide the important question, whether societies of men are really capable or not, of establishing good government from reflection and choice, or whether they are forever destined to depend, for their political constitutions, on accident and force.     
+ 
+ In Federalist No. 10, Madison discusses the means of preventing tyranny of the majority|rule by majority faction and advocates a large, commercial republic. This is complemented by Federalist No. 14, in which Madison takes the measure of the United States, declares it appropriate for an extended republic, and concludes with a memorable defense of the constitutional and political creativity of the Federal Convention.  Wills, x.   In Federalist No. 84, Hamilton makes the case that there is no need to amend the Constitution by adding a United States Bill of Rights|Bill of Rights, insisting that the various provisions in the proposed Constitution protecting liberty amount to a  " bill of rights " . Federalist No. 78, also written by Hamilton, lays the groundwork for the doctrine of judicial review by federal courts of federal legislation or executive acts. Federalist No. 70 presents Hamilton's case for a one-man chief executive. In Federalist No. 39, Madison presents the clearest exposition of what has come to be called  " Federalism in the United States|Federalism " .  In Federalist No. 51, Madison distills arguments for checks and balances in an essay often quoted for its justification of government as  " the greatest of all reflections on human nature. "  According to historian Richard B. Morris, the essays that make up ''The Federalist Papers'' are an  " incomparable exposition of the Constitution, a classic in political science unsurpassed in both breadth and depth by the product of any later American writer. "  Richard B. Morris, ''The Forging of the Union: 1781–1789'' (1987) p. 309  
+ 
+ On June 21, 1788, the proposed Constitution was ratified by the minimum of nine states required under Article VII. Towards the end of July 1788, with eleven states having ratified the new Constitution, the process of organizing the new government began. 
+ 
+ ==History== 
+ ===Origins=== 
+ File: Alexander Hamilton portrait by John Trumbull 1806.jpg|thumb|Alexander Hamilton, author of the majority of ''The Federalist Papers'' 
+ The Federal Convention (Constitutional Convention) sent the proposed Constitution to the Confederation Congress, which in turn submitted it to the states for ratification at the end of September 1787. On September 27, 1787,  " Cato "  first appeared in the New York press criticizing the proposition;  " Brutus "  followed on October 18, 1787.  Furtwangler, [ pp. 48–49].   These and other articles and public letters critical of the new Constitution would eventually become known as the  " Anti-Federalist Papers " . In response, Alexander Hamilton decided to launch a measured defense and extensive explanation of the proposed Constitution to the people of the state of New York. He wrote in Federalist No. 1 that the series would  " endeavor to give a satisfactory answer to all the objections which shall have made their appearance, that may seem to have any claim to your attention. "   |isbn =978-0-14-039087-2}}  
+ 
+ Hamilton recruited collaborators for the project. He enlisted John Jay, who after four strong essays (Federalist No. 2|Federalist Nos. 2, Federalist No. 3|3, Federalist No. 4|4, and Federalist No. 5|5), fell ill and contributed only one more essay, Federalist No. 64, to the series. Jay also distilled his case into a pamphlet in the spring of 1788, ''An Address to the People of the State of New-York'';   Excerpted from:    Hamilton cited it approvingly in Federalist No. 85. James Madison, present in New York as a Virginia delegate to the Confederation Congress, was recruited by Hamilton and Jay and became Hamilton's primary collaborator. Gouverneur Morris and William Duer (1747-1799)|William Duer were also considered. However, Morris turned down the invitation, and Hamilton rejected three essays written by Duer.  Furtwangler, [ pp. 51–56].   Duer later wrote in support of the three Federalist authors under the name  " Philo-Publius, "  or  " Friend of Publius. " 
+ 
+ Alexander Hamilton chose the pseudonymous name  " Publius " . While many other pieces representing both sides of the constitutional debate were written under Roman names, historian Albert Furtwangler contends that Publius' was a cut above 'Julius Caesar|Caesar' or 'Marcus Junius Brutus|Brutus' or even 'Cato the Younger|Cato'. Publius Valerius Publicola|Publius Valerius helped found the ancient republic of Rome. His more famous name, Publicola, meant 'friend of the people'. "  Furtwangler, [ p. 51].   Hamilton had applied this pseudonym to three letters in 1778, in which he attacked fellow Federalist Samuel Chase and revealed that Chase had taken advantage of knowledge gained in Congress to try to dominate the flour market.  
+ 
+ === Authorship === 
+ File:James Madison.jpg|right|thumb|James Madison, Hamilton's major collaborator, later fourth President of the United States (1809-1817) 
+ At the time of publication, the authors of ''The Federalist Papers'' attempted to hide their identities due to Hamilton and Madison having attended the convention.  |title=Anonymous Speech: Literature, Law and Politics|publisher=Bloomsbury Publishing|year=2016|isbn=9781509904075|location=New York|page=38}}   Astute observers, however, correctly discerned the identities of Hamilton, Madison, and Jay. Establishing authorial authenticity of the essays that comprise ''The Federalist Papers'' has not always been clear. After Alexander Hamilton died in 1804, a list emerged, claiming that he alone had written two-thirds of ''The Federalist'' essays. Some believe that several of these essays were written by James Madison (Nos. 49–58 and 62–63).  The scholarly detective work of Douglass Adair in 1944 postulated the following assignments of authorship, corroborated in 1964 by a computer analysis of the text:   |year=2012 |publisher=Springer Science  &  Business Media |isbn=978-1-4612-5256-6}}  
+ 
+ * Alexander Hamilton (51 articles: Nos. 1, 6–9, 11–13, 15–17, 21–36, 59–61, and 65–85) 
+ * James Madison (29 articles: Nos. 10, 14, 18–20,   37–58 and 62–63) 
+ * John Jay (5 articles: Nos. 2–5 and 64). 
+ 
+ In six months, a total of 85 articles were written by the three men. Hamilton, who had been a leading advocate of national constitutional reform throughout the 1780s and was one of the three representatives for New York (state)|New York at the Philadelphia convention|Constitutional Convention, in 1789 became the first Secretary of the Treasury, a post he held until his resignation in 1795. Madison, who is now acknowledged as the father of the Constitution—despite his repeated rejection of this honor during his lifetime,  Banning, Lance. [ ''James Madison: Federalist''], note 1. .   became a leading member of the U.S. House of Representatives from Virginia (1789–1797), Secretary of State (1801–1809), and ultimately the fourth President of the United States (1809-1817).  See, e.g., Ralph Ketcham, ''James Madison''.  New York: Macmillan, 1971; reprint ed., Charlottesville: University Press of Virginia, 1998.  See also Irving N. Brant, ''James Madison: Father of the Constitution, 1787–1800''. Indianapolis: Bobbs-Merrill, 1950.   John Jay, who had been secretary for foreign affairs under the Articles of Confederation from 1784 through their expiration in 1789, became the first Chief Justice of the United States in 1789, stepping down in 1795 to accept election as governor of New York, a post he held for two terms, retiring in 1801. 
+ 
+ ===Publication=== 
+ File:An Advertisement of The Federalist - Project Gutenberg eText 16960.jpg|thumb|An advertisement for the book edition of ''The Federalist'' 
+ ''The Federalist'' articles appeared in three New York newspapers: ''The Independent Journal'', the ''New-York Packet'', and the ''Daily Advertiser'', beginning on October 27, 1787. Although written and published with haste, ''The Federalist'' articles were widely read and greatly influenced the shape of American political institutions.   Hamilton, Madison and Jay published the essays at a rapid pace. At times, three to four new essays by Publius appeared in the papers in a single week. Garry Wills observes that this fast pace of production  " overwhelmed "  any possible response:  " Who, given ample time could have answered such a battery of arguments? And no time was given. "  Wills, xii.   Hamilton also encouraged the reprinting of the essays in newspapers outside New York state, and indeed they were published in several other states where the ratification debate was taking place. However, they were only irregularly published outside New York, and in other parts of the country they were often overshadowed by local writers.  Furtwangler, [ p. 20].  
+ 
+ Because the essays were initially published in New York, most of them begin with the same salutation:  " To the People of the State of New York " . 
+ 
+ The high demand for the essays led to their publication in a more permanent form. On January 1, 1788, the New York publishing firm J.  &  A. McLean announced that they would publish the first 36 essays as a bound volume; that volume was released on March 22, 1788, and was titled ''The Federalist'' Volume 1.     New essays continued to appear in the newspapers; Federalist No. 77 was the last number to appear first in that form, on April 2. A second bound volume was released on May 28, containing Federalist Nos. 37–77 and the previously unpublished Nos. 78–85.   The last eight papers (Nos. 78–85) were republished in the New York newspapers between June 14 and August 16, 1788.    |year=2007 |publisher=John Wiley  &  Sons |isbn=978-0-470-11792-7}}  
+ 
+ A 1792 French edition ended the collective anonymity of Publius, announcing that the work had been written by  " Mm. Hamilton, Maddisson e Gay, citoyens de l'État de New York " .   |year=1977 |publisher=Univ. of Wisconsin Press |isbn=978-0-299-07270-4 |page=[ 260] |url= }}   In 1802, George Hopkins published an American edition that similarly named the authors. Hopkins wished as well that  " the name of the writer should be prefixed to each number, "  but at this point Hamilton insisted that this was not to be, and the division of the essays among the three authors remained a secret.  Adair, 40–41.  
+ 
+ The first publication to divide the papers in such a way was an 1810 edition that used a list left by Hamilton to associate the authors with their numbers; this edition appeared as two volumes of the compiled  " Works of Hamilton " . In 1818, Jacob Gideon published a new edition with a new listing of authors, based on a list provided by Madison. The difference between Hamilton's list and Madison's formed the basis for a dispute over the authorship of a dozen of the essays.  Adair, 44–46.  
+ 
+ Both Hopkins's and Gideon's editions incorporated significant edits to the text of the papers themselves, generally with the approval of the authors.  In 1863, Henry Dawson published :s:The Federalist (Dawson)|an edition containing the original text of the papers, arguing that they should be preserved as they were written in that particular historical moment, not as edited by the authors years later.    
+ 
+ Modern scholars generally use the text prepared by Jacob E. Cooke for his 1961 edition of ''The Federalist''; this edition used the newspaper texts for essay numbers 1–76 and the McLean edition for essay numbers 77–85.  Alexander Hamilton, John Jay, and James Madison (Jacob E. Cooke, ed., ''The Federalist'' (Middletown, CT: Wesleyan University Press, 1961 and later reprintings). .  
+ 
+ ===Disputed essays=== 
+ File:John Jay (Gilbert Stuart portrait).jpg|thumb|right|upright|John Jay, author of five of ''The Federalist Papers'', later became the first Chief Justice of the United States 
+ While the authorship of 73 of ''The Federalist'' essays is fairly certain, the identities of those who wrote the twelve remaining essays are disputed by some scholars. The modern consensus is that Madison wrote essays Nos. 49–58, with Nos. 18–20 being products of a collaboration between him and Hamilton; Federalist No. 64|No. 64 was by John Jay. The first open designation of which essay belonged to whom was provided by Hamilton who, in the days before his ultimately fatal gun duel with Aaron Burr, provided his lawyer with a list detailing the author of each number. This list credited Hamilton with a full 63 of the essays (three of those being jointly written with Madison), almost three-quarters of the whole, and was used as the basis for an 1810 printing that was the first to make specific attribution for the essays.  Adair, 46–48.  
+ 
+ Madison did not immediately dispute Hamilton's list, but provided his own list for the 1818 Gideon edition of ''The Federalist''. Madison claimed 29 essays for himself, and he suggested that the difference between the two lists was  " owing doubtless to the hurry in which [Hamilton's] memorandum was made out. "  A known error in Hamilton's list—Hamilton incorrectly ascribed Federalist No. 54|No. 54 to John Jay, when in fact, Jay wrote No. 64—provided some evidence for Madison's suggestion.  Adair, 48.  
+ 
+ Stylometry|Statistical analysis has been undertaken on several occasions in attempts to accurately identify the author of each individual essay. After examining word choice and writing style, studies generally agree that the disputed essays were written by James Madison. However, there are notable exceptions maintaining that some of the essays which are now widely attributed to Madison were, in fact, collaborative efforts.        
+ 
+ ===Influence on the ratification debates=== 
+ ''The Federalist Papers'' were written to support the ratification of the Constitution, specifically in New York (state)|New York. Whether they succeeded in this mission is questionable. Separate ratification proceedings took place in each state, and the essays were not reliably reprinted outside of New York; furthermore, by the time the series was well underway, a number of important states had already ratified it, for instance Pennsylvania on December 12. New York held out until July 26; certainly ''The Federalist'' was more important there than anywhere else, but Furtwangler argues that it  " could hardly rival other major forces in the ratification contests " —specifically, these forces included the personal influence of well-known Federalists, for instance Hamilton and Jay, and Anti-Federalists, including Governor George Clinton (vice president)|George Clinton.  Furtwangler, [ p. 21].   Further, by the time New York came to a vote, ten states had already ratified the Constitution and it had thus already passed—only nine states had to ratify it for the new government to be established among them; the ratification by Virginia, the tenth state, placed pressure on New York to ratify. In light of that, Furtwangler observes,  " New York's refusal would make that state an odd outsider. "  Furtwangler, [ p. 22].  
+ 
+ Only 19 Federalists were elected to New York's ratification convention, compared to the Anti-Federalists' 46 delegates. While New York did indeed ratify the Constitution on July 26, the lack of public support for pro-Constitution Federalists has led historian John Kaminski to suggest that the impact of ''The Federalist'' on New York citizens was  " negligible " .    
+ 
+ As for Virginia, which ratified the Constitution only at its Virginia Ratifying Convention|convention on June 25, Hamilton writes in a letter to Madison that the collected edition of ''The Federalist'' had been sent to Virginia; Furtwangler presumes that it was to act as a  " debater's handbook for the convention there " , though he claims that this indirect influence would be a  " dubious distinction " .  Furtwangler, [ p. 23].   Probably of greater importance to the Virginia debate, in any case, were George Washington's support for the proposed Constitution and the presence of Madison and Edmund Randolph, the governor, at the convention arguing for ratification. 
+ 
+ ==Structure and content== 
+ In Federalist No. 1, Hamilton listed six topics to be covered in the subsequent articles: 
+ #  " The utility of the UNION to your political prosperity "  – covered in No. 2 through No. 14 
+ #  " The insufficiency of the present Confederation to preserve that Union "  – covered in No. 15 through No. 22 
+ #  " The necessity of a government at least equally energetic with the one proposed to the attainment of this object "  – covered in No. 23 through No. 36 
+ #  " The conformity of the proposed constitution to the true principles of republican government "  – covered in No. 37 through No. 84 
+ #  " Its analogy to your own state constitution "  – covered in No. 85 
+ #  " The additional security which its adoption will afford to the preservation of that species of government, to liberty and to prosperity "  – covered in No. 85.  This scheme of division is adapted from Charles K. Kesler's introduction to ''The Federalist Papers'' (New York: Signet Classic, 1999) pp. 15–17. A similar division is indicated by Furtwangler, [ pp. 57–58].  
+ 
+ Furtwangler notes that as the series grew, this plan was somewhat changed. The fourth topic expanded into detailed coverage of the individual articles of the Constitution and the institutions it mandated, while the two last topics were merely touched on in the last essay. 
+ 
+ The papers can be broken down by author as well as by topic. At the start of the series, all three authors were contributing; the first 20 papers are broken down as 11 by Hamilton, five by Madison and four by Jay. The rest of the series, however, is dominated by three long segments by a single writer: Nos. 21–36 by Hamilton, Nos. 37–58 by Madison, written while Hamilton was in Albany, and No. 65 through the end by Hamilton, published after Madison had left for Virginia.  Wills, 274.  
+ 
+ ===Opposition to the Bill of Rights=== 
+ ''The Federalist Papers'' (specifically Federalist No. 84) are notable for their opposition to what later became the United States Bill of Rights. The idea of adding a Bill of Rights to the Constitution was originally controversial because the Constitution, as written, did not specifically enumerate or protect the rights of the people, rather it listed the powers of the government and left all that remained to the states and the people. Alexander Hamilton, the author of Federalist No. 84, feared that such an enumeration, once written down explicitly, would later be interpreted as a list of the ''only'' rights that people had. 
+ 
+ However, Hamilton's opposition to a Bill of Rights was far from universal. Robert Yates (politician)|Robert Yates, writing under the pseudonym  " Brutus " , articulated this view point in the so-called Anti-Federalist Papers|Anti-Federalist No. 84, asserting that a government unrestrained by such a bill could easily devolve into tyranny. References in ''The Federalist'' and in the ratification debates warn of demagogues of the variety who through divisive appeals would aim at tyranny. ''The Federalist'' begins and ends with this issue.     In the final paper Hamilton offers  " a lesson of moderation to all sincere lovers of the Union, and  ought to put them on their guard against hazarding anarchy, civil war, a perpetual alienation of the States from each other, and perhaps the military despotism of a successful demagogue " .  Harvey Flaumenhaft,  " Hamilton's Administrative Republic and the American Presidency, "  in ''The Presidency in the Constitutional Order'', ed. Joseph M. Bessette and Jeffrey K. Tulis (Baton Rouge and London: Louisiana State University Press, 1981), 65–114.   The matter was further clarified by the Ninth Amendment to the United States Constitution|Ninth Amendment. 
+ 
+ ==Judicial use== 
+ Federal judges, when interpreting the Constitution, frequently use ''The Federalist Papers'' as a contemporary account of the intentions of the framers and ratifiers.  Lupu, Ira C.;  " The Most-Cited Federalist Papers " . ''Constitutional Commentary'' (1998) pp. 403+; using Supreme Court citations, the five most cited were Federalist No. 42 (Madison) (33 decisions), Federalist No. 78 (Hamilton) (30 decisions), Federalist No. 81 (Hamilton) (27 decisions), Federalist No. 51 (Madison) (26 decisions), Federalist No. 32 (Hamilton) (25 decisions).   They have been applied on issues ranging from the power of the federal government in foreign affairs (in ''Hines v. Davidowitz'') to the validity of ex post facto laws (in the 1798 decision ''Calder v. Bull'', apparently the first decision to mention ''The Federalist'').  See, among others, a very early exploration of the judicial use of ''The Federalist'' in Charles W. Pierson,  " The Federalist in the Supreme Court " , The Yale Law Journal, Vol. 33, No. 7. (May 1924), pp. 728–35.   , ''The Federalist'' had been quoted 291 times in Supreme Court decisions.  Chernow, Ron.  " Alexander Hamilton " . Penguin Books, 2004. (p. 260)  
+ 
+ The amount of deference that should be given to ''The Federalist Papers'' in constitutional interpretation has always been somewhat controversial. As early as 1819, Chief Justice John Marshall noted in the famous case ''McCulloch v. Maryland'', that  " the opinions expressed by the authors of that work have been justly supposed to be entitled to great respect in expounding the Constitution. No tribute can be paid to them which exceeds their merit; but in applying their opinions to the cases which may arise in the progress of our government, a right to judge of their correctness must be retained. "     In a letter to Thomas Ritchie (journalist)|Thomas Ritchie in 1821, James Madison stated of the Constitution that  " the legitimate meaning of the Instrument must be derived from the text itself; or if a key is to be sought elsewhere, it must be not in the opinions or intentions of the Body which planned  &  proposed the Constitution, but in the sense attached to it by the people in their respective State Conventions where it recd. all the authority which it possesses. "  Madison to Thomas Ritchie, September 15, 1821. Quoted in Furtwangler, [ p. 36].     
+ 
+ == Complete list == 
+ The colors used to highlight the rows correspond to the author of the paper. 
+ 
+  
+  
+  
+ 
+ {| class= " sortable wikitable " 
+ ! # 
+ ! Date 
+ ! Title 
+ ! Author 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 1|1 
+ | October 27, 1787 
+ | General Introduction 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #FFDFBF " 
+ | Federalist No. 2|2 
+ | October 31, 1787 
+ | Concerning Dangers from Foreign Force and Influence 
+ | John Jay 
+ 
+ |- style= " background-color: #FFDFBF " 
+ | Federalist No. 3|3 
+ | November 3, 1787 
+ | The Same Subject Continued: Concerning Dangers from Foreign Force and Influence 
+ | John Jay 
+ 
+ |- style= " background-color: #FFDFBF " 
+ | Federalist No. 4|4 
+ | November 7, 1787 
+ | The Same Subject Continued: Concerning Dangers from Foreign Force and Influence 
+ | John Jay 
+ 
+ |- style= " background-color: #FFDFBF " 
+ | Federalist No. 5|5 
+ | November 10, 1787 
+ | The Same Subject Continued: Concerning Dangers from Foreign Force and Influence 
+ | John Jay 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 6|6 
+ | November 14, 1787 
+ | Concerning Dangers from Dissensions Between the States 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 7|7 
+ | November 15, 1787 
+ | The Same Subject Continued: Concerning Dangers from Dissensions Between the States 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 8|8 
+ | November 20, 1787 
+ | The Consequences of Hostilities Between the States 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 9|9 
+ | November 21, 1787 
+ | The Union as a Safeguard Against Domestic Faction and Insurrection 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 10|10 
+ | November 22, 1787 
+ | The Same Subject Continued: The Union as a Safeguard Against Domestic Faction and Insurrection 
+ | James Madison 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 11|11 
+ | November 24, 1787 
+ | The Utility of the Union in Respect to Commercial Relations and a Navy 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 12|12 
+ | November 27, 1787 
+ | The Utility of the Union In Respect to Revenue 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 13|13 
+ | November 28, 1787 
+ | Advantage of the Union in Respect to Economy in Government 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 14|14 
+ | November 30, 1787 
+ | Objections to the Proposed Constitution From Extent of Territory Answered 
+ | James Madison 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 15|15 
+ | December 1, 1787 
+ | The Insufficiency of the Present Confederation to Preserve the Union 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 16|16 
+ | December 4, 1787 
+ | The Same Subject Continued: The Insufficiency of the Present Confederation to Preserve the Union 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 17|17 
+ | December 5, 1787 
+ | The Same Subject Continued: The Insufficiency of the Present Confederation to Preserve the Union 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 18|18 
+ | December 7, 1787 
+ | The Same Subject Continued: The Insufficiency of the Present Confederation to Preserve the Union 
+ | James Madison  Nos. 18, 19, 20 are frequently indicated as being jointly written by Hamilton and Madison. However, Adair concurs with previous historians that these are Madison's writing alone:  " Madison had certainly written all of the essays himself, including in revised form only a small amount of pertinent information submitted by Hamilton from his rather sketchy research on the same subject. "  Adair, 63.  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 19|19 
+ | December 8, 1787 
+ | The Same Subject Continued: The Insufficiency of the Present Confederation to Preserve the Union 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 20|20 
+ | December 11, 1787 
+ | The Same Subject Continued: The Insufficiency of the Present Confederation to Preserve the Union 
+ | James Madison  
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 21|21 
+ | December 12, 1787 
+ | Other Defects of the Present Confederation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 22|22 
+ | December 14, 1787 
+ | The Same Subject Continued: Other Defects of the Present Confederation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 23|23 
+ | December 18, 1787 
+ | The Necessity of a Government as Energetic as the One Proposed to the Preservation of the Union 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 24|24 
+ | December 19, 1787 
+ | The Powers Necessary to the Common Defense Further Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 25|25 
+ | December 21, 1787 
+ | The Same Subject Continued: The Powers Necessary to the Common Defense Further Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 26|26 
+ | December 22, 1787 
+ | The Idea of Restraining the Legislative Authority in Regard to the Common Defense Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 27|27 
+ | December 25, 1787 
+ | The Same Subject Continued: The Idea of Restraining the Legislative Authority in Regard to the Common Defense Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 28|28 
+ | December 26, 1787 
+ | The Same Subject Continued: The Idea of Restraining the Legislative Authority in Regard to the Common Defense Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 29|29 
+ | January 9, 1788 
+ | Concerning the Militia 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 30|30 
+ | December 28, 1787 
+ | Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 31|31 
+ | January 1, 1788 
+ | The Same Subject Continued: Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 32|32 
+ | January 2, 1788 
+ | The Same Subject Continued: Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 33|33 
+ | January 2, 1788 
+ | The Same Subject Continued: Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 34|34 
+ | January 5, 1788 
+ | The Same Subject Continued: Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 35|35 
+ | January 5, 1788 
+ | The Same Subject Continued: Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 36|36 
+ | January 8, 1788 
+ | The Same Subject Continued: Concerning the General Power of Taxation 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 37|37 
+ | January 11, 1788 
+ | Concerning the Difficulties of the Convention in Devising a Proper Form of Government 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 38|38 
+ | January 12, 1788 
+ | The Same Subject Continued, and the Incoherence of the Objections to the New Plan Exposed 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 39|39 
+ | January 16, 1788 
+ | The Conformity of the Plan to Republican Principles 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 40|40 
+ | January 18, 1788 
+ | The Powers of the convention to Form a Mixed Government Examined and Sustained 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 41|41 
+ | January 19, 1788 
+ | General View of the Powers Conferred by the Constitution 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 42|42 
+ | January 22, 1788 
+ | The Powers Conferred by the Constitution Further Considered 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 43|43 
+ | January 23, 1788 
+ | The Same Subject Continued: The Powers Conferred by the Constitution Further Considered 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 44|44 
+ | January 25, 1788 
+ | Restrictions on the Authority of the Several States 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 45|45 
+ | January 26, 1788 
+ | The Alleged Danger From the Powers of the Union to the State Governments Considered 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 46|46 
+ | January 29, 1788 
+ | The Influence of the State and Federal Governments Compared 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 47|47 
+ | January 30, 1788 
+ | The Particular Structure of the New Government and the Distribution of Power Among Its Different Parts 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 48|48 
+ | February 1, 1788 
+ | These Departments Should Not Be So Far Separated as to Have No Constitutional Control Over Each Other 
+ | James Madison 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 49|49 
+ | February 2, 1788 
+ | Method of Guarding Against the Encroachments of Any One Department of Government 
+ | James Madison  One of twelve Federalist Papers#Disputed essays|disputed papers (Nos. 49–58 and 62–63) to which both Madison and Hamilton laid claim. See Adair, 93. Modern scholarly consensus leans towards Madison as the author of all twelve, and he is so credited in this table.  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 50|50 
+ | February 5, 1788 
+ | Periodic Appeals to the People Considered 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 51|51 
+ | February 6, 1788 
+ | The Structure of the Government Must Furnish the Proper Checks and Balances Between the Different Departments 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 52|52 
+ | February 8, 1788 
+ | The House of Representatives 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 53|53 
+ | February 9, 1788 
+ | The Same Subject Continued: The House of Representatives 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 54|54 
+ | February 12, 1788 
+ | The Apportionment of Members Among the States 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 55|55 
+ | February 13, 1788 
+ | The Total Number of the House of Representatives 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 56|56 
+ | February 16, 1788 
+ | The Same Subject Continued: The Total Number of the House of Representatives 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 57|57 
+ | February 19, 1788 
+ | The Alleged Tendency of the New Plan to Elevate the Few at the Expense of the Many 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 58|58 
+ | February 20, 1788 
+ | Objection That The Number of Members Will Not Be Augmented as the Progress of Population Demands Considered 
+ | James Madison  
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 59|59 
+ | February 22, 1788 
+ | Concerning the Power of Congress to Regulate the Election of Members 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 60|60 
+ | February 23, 1788 
+ | The Same Subject Continued: Concerning the Power of Congress to Regulate the Election of Members 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 61|61 
+ | February 26, 1788 
+ | The Same Subject Continued: Concerning the Power of Congress to Regulate the Election of Members 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 62|62 
+ | February 27, 1788 
+ | The Senate 
+ | James Madison  
+ 
+ |- style= " background-color: #FFBFBF " 
+ | Federalist No. 63|63 
+ | March 1, 1788 
+ | The Senate Continued 
+ | James Madison  
+ 
+ |- style= " background-color: #FFDFBF " 
+ | Federalist No. 64|64 
+ | March 5, 1788 
+ | The Powers of the Senate 
+ | John Jay 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 65|65 
+ | March 7, 1788 
+ | The Powers of the Senate Continued 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 66|66 
+ | March 8, 1788 
+ | Objections to the Power of the Senate To Set as a Court for Impeachments Further Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 67|67 
+ | March 11, 1788 
+ | The Executive Department 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 68|68 
+ | March 12, 1788 
+ | The Mode of Electing the President 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 69|69 
+ | March 14, 1788 
+ | The Real Character of the Executive 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 70|70 
+ | March 15, 1788 
+ | The Executive Department Further Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 71|71 
+ | March 18, 1788 
+ | The Duration in Office of the Executive 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 72|72 
+ | March 19, 1788 
+ | The Same Subject Continued, and Re-Eligibility of the Executive Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 73|73 
+ | March 21, 1788 
+ | The Provision For The Support of the Executive, and the Veto Power 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 74|74 
+ | March 25, 1788 
+ | The Command of the Military and Naval Forces, and the Pardoning Power of the Executive 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 75|75 
+ | March 26, 1788 
+ | The Treaty Making Power of the Executive 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 76|76 
+ | April 1, 1788 
+ | The Appointing Power of the Executive 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 77|77 
+ | April 2, 1788 
+ | The Appointing Power Continued and Other Powers of the Executive Considered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 78|78 
+ | May 28, 1788 (book)  June 14, 1788 (newspaper) 
+ | The Judiciary Department 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 79|79 
+ | May 28, 1788 (book)  June 18, 1788 (newspaper) 
+ | The Judiciary Continued 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 80|80 
+ | June 21, 1788 
+ | The Powers of the Judiciary 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 81|81 
+ | June 25, 1788 and  June 28, 1788 
+ | The Judiciary Continued, and the Distribution of the Judicial Authority 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 82|82 
+ | July 2, 1788 
+ | The Judiciary Continued 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 83|83 
+ | July 5, 1788,  July 9, 1788 and  July 12, 1788 
+ | The Judiciary Continued in Relation to Trial by Jury 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 84|84 
+ | July 16, 1788,  July 26, 1788 and  August 9, 1788 
+ | Certain General and Miscellaneous Objections to the Constitution Considered and Answered 
+ | Alexander Hamilton 
+ 
+ |- style= " background-color: #BFE4FF " 
+ | Federalist No. 85|85 
+ | August 13, 1788 and  August 16, 1788 
+ | Concluding Remarks 
+ | Alexander Hamilton 
+ 
+ |} 
+ 
+ == In popular culture == 
+ The purposes and authorship of ''The Federalist Papers'' were prominently highlighted in the lyrics of  " Non-Stop " , the Finale (music)|finale of Act One in the 2015 Broadway musical Hamilton (musical)|''Hamilton'', written by Lin-Manuel Miranda.   |year=2016 |publisher=Grand Central Publishing |isbn=978-1-4555-6753-9 |pages=142–143}}  
+ 
+ ==See also== 
+  
+ * American philosophy 
+ * ''Anti-Federalist Papers|The Anti-Federalist Papers'' 
+ * ''The Complete Anti-Federalist'' 
+ * List of pseudonyms used in the American Constitutional debates 
+ 
+ ==Notes== 
+  
+ 
+ ==References== 
+ *  
+ *  |year=2012 |publisher=Springer Science  &  Business Media |isbn=978-1-4612-5256-6 }} Updated 2nd ed., originally published as    
+ *  |year=1984}} 
+ * Wills, Gary. ''Explaining America: The Federalist''. Garden City, NJ: 1981. 
+ 
+ ==Further reading== 
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  |title=Liberty's Blueprint: How Madison and Hamilton Wrote the Federalist Papers, Defined the Constitution, and Made Democracy Safe for the World |location=New York |publisher=Basic Books |year=2008 }} 
+ * Dietze, Gottfried. ''The Federalist: A Classic on Federalism and Free Government''. Baltimore: The Johns Hopkins Press, 1960. 
+ * Epstein, David F. ''The Political Theory of the Federalist''. Chicago: The University of Chicago Press, 1984. 
+ * Gray, Leslie, and Wynell Burroughs.  " Teaching With Documents: Ratification of the Constitution " . ''Social Education'', 51 (1987): 322–24. 
+ * Gail Heriot|Heriot, Gail.  " [ Are Modern Bloggers Following in the Footsteps of Publius (and Other Musings on Blogging By Legal Scholars)] " , 84 ''Wash. U. L. Rev.'' 1113 (2006). 
+ * Charles Kesler|Kesler, Charles R. ''Saving the Revolution: The Federalist Papers and the American Founding''. New York: 1987. 
+ * Patrick, John J., and Clair W. Keller. ''Lessons on the Federalist Papers: Supplements to High School Courses in American History, Government and Civics''. Bloomington, IN: Organization of American Historians in association with ERIC/ChESS, 1987. ED 280 764. 
+ * Schechter, Stephen L. ''Teaching about American Federal Democracy''. Philadelphia: Center for the Study of Federalism at Temple University, 1984. ED 248 161. 
+ * Scott, Kyle. ''The Federalist Papers: A Reader's Guide'' (New York: Bloomsbury Press, 2013). 
+ * Sunstein, Cass R. ''[ The Enlarged Republic – Then and Now]'', New York Review of Books (March 26, 2009): Volume LVI, Number 5, 45. 
+ * Webster, Mary E. ''The Federalist Papers: In Modern Language Indexed for Today's Political Issues.'' Bellevue, WA: Merril Press, 1999. 
+ * Morton White|White, Morton. ''Philosophy, The Federalist, and the Constitution''. New York: 1987. 
+ * Zebra Edition. ''The Federalist Papers: (Or, How Government Is Supposed to Work)'', ''Edited for Readability''. Oakesdale, WA: Lucky Zebra Press, 2007. 
+ 
+ ==External links== 
+  
+ * [ ''The Federalist Papers'', original 1788 printing] 
+  
+ * [ National Archives on ''The Federalist''] 
+ * [ ''The Federalist Papers'' on the Bill of Rights] 
+ * [ Teaching ''The Federalist Papers''] 
+ * [ ''Booknotes'' interview with Robert Scigliano on Scigliano's Modern Library edition of ''The Federalist Papers'', January 21, 2001.] 
+ * [ Collection of ''The Federalist Papers''] 
+ * [ EDSITEment on ''The Federalist'' and Anti-Federalist debates on diversity and the extended republic] 
+ *  
+ *  
+ 
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+ Category:The Federalist Papers|  
+ Category:1787 in law 
+ Category:1788 in law 
+ Category:1787 in the United States 
+ Category:1788 in the United States 
+ Category:1787 works 
+ Category:1788 works 
+ Category:1788 books 
+ Category:18th-century essays 
+ Category:American political philosophy literature 
+ Category:Democracy 
+ Category:Essay collections 
+ Category:United States documents 
+ Category:Works published under a pseudonym 
+ Category:Works published anonymously

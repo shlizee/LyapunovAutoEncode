@@ -1,0 +1,95 @@
+ 
+  
+ | set_in         =  
+ | publisher      = G.P. Putnam's Sons 
+ | publisher2     =  
+ | pub_date       = May 20, 1988 
+ | english_pub_date =  
+ | published      =  
+ | media_type     = Print (Hardcover, Paperback) 
+ | pages          = 798 
+ | awards         =  
+ | isbn           = 0399133453 
+ | isbn_note      =  
+ | oclc           =  
+ | dewey          =  
+ | congress       =  
+ | preceded_by    = The Hunt for Red October 
+ | followed_by    = Clear and Present Danger 
+ | native_wikisource =  
+ | wikisource     =  
+ | notes          = 
+ | exclude_cover  =  
+ | website        = 
+ }} 
+ 
+ ''The Cardinal of the Kremlin'' is an espionage thriller novel, written by Tom Clancy and released on May 20, 1988. A direct sequel to ''The Hunt for Red October'' (1984), it features CIA analyst Jack Ryan (character)|Jack Ryan as he extracts CARDINAL, the agency's highest placed agent in the Soviet government who is being pursued by the KGB, as well as the Soviet intelligence agency's director. The novel also features the Strategic Defense Initiative (SDI), a real-life missile-defense system developed by the United States during that time, and its Russian counterpart. The book debuted at number one on the New York Times bestseller list.    
+ 
+ ==Plot summary== 
+ For thirty years, Colonel Mikhail Semyonovich  " Misha "  Filitov, a personal aide to the Minister of Defence (Soviet Union)|Soviet Minister of Defense and war hero, has been passing military, technical, and political intelligence to the Central Intelligence Agency|CIA as their highest agent-in-place, codenamed CARDINAL. His latest mission concerns a Soviet anti-ballistic missile research project codenamed  " Bright Star " , based at a secret defense installation in Dushanbe, Tajikistan. 
+ 
+ Colonel Filitov sends Gennady Bondarenko, a Soviet colonel skilled with lasers, to Dushanbe to evaluate the facility and unwittingly procure information that Misha will then send to his CIA contacts. Unfortunately, a minor slip-up in passing Filitov's intelligence alerts the KGB, which then aggressively pursues the couriers involved. They later become suspicious of Filitov and place him under surveillance. The courier chain having been quickly shut down by the CIA station chief in Moscow, Edward Foley, Filitov's more important intelligence on Bright Star is delayed; however, he reveals the presence of a KGB agent infiltrating Bright Star's counterpart, Tea Clipper, which alarms the CIA. 
+ 
+ The CIA then tasks Foley with extracting CARDINAL out of the country. However, when his wife Mary Pat, also a CIA agent, attempts to make a brush pass to Filitov, the two are arrested by the KGB. The Foleys are then declared persona non grata, while Filitov is imprisoned and psychologically tortured until he eventually confesses to his crimes. In an effort to salvage the mission, CIA analyst Jack Ryan (character)|Jack Ryan, who had now learned of CARDINAL's identity, concocts a plan to secure the return of Filitov and at the same time force the defection of KGB chairman Nikolay Gerasimov, who has been vying for the position of General Secretary since Filitov's arrest; Ryan tries to prevent his ascension to power due to his anti-American ideology. 
+ 
+ Ryan, who is part of the American arms negotiation team, travels to Moscow for the arms reduction talks. There he meets Gerasimov, and blackmails him into releasing Filitov and betraying his country; if his demands are not met, he will reveal what actually happened to the Soviet ballistic missile submarine ''Red October (fictional submarine)|Red October'', which would disgrace the KGB chairman, who had used the incident to consolidate the KGB's control over the military. As counter-leverage should he refuse to defect, Gerasimov arranges for the kidnapping of Tea Clipper's top SDI researcher, Major Alan Gregory. 
+ 
+ Gregory's kidnapping was undertaken by KGB agent Tania Bisyarina, who has been handling a mole inside Tea Clipper. The mole, a lesbian named Dr. Beatrice Taussig who unluckily falls in love with Gregory's fiancée, eventually gives up Bisyarina to the FBI out of guilt, and the Hostage Rescue Team later saves Gregory from his Soviet captors in a shabby desert safe house in New Mexico. Ryan later informs Gerasimov, who finally caves into his demands. The KGB chairman's wife and daughter are later extracted by CIA operative John Clark (Tom Clancy character)|John Clark from Estonia into the submarine . Meanwhile, the secret ABM facility in Dushanbe finds itself under attack by the Afghan mudjahedin, whose leader was known as  " the Archer "  due to his expertise in using surface-to-air missiles to bring down Soviet ground support aircraft. Colonel Bondarenko, who was there for a second round of evaluations, manages to repel the attackers, protecting Bright Star's scientific and engineering personnel and eventually killing the Archer. 
+ 
+ On the last day of the arms negotiation talks, Gerasimov releases Filitov so that they can both proceed to Sheremetyevo Airport, joining Ryan and the American negotiation team in returning to the United States. They successfully board the American delegation's aircraft, but Ryan allows himself to be captured by KGB officer Sergey Golovko, who is his counterpart in the arms talks and had become aware of their planned departure. He is then led to the private dacha of General Secretary of the Communist Party of the Soviet Union|General Secretary Narmonov, where they discuss the CIA's interest in his political position and interference in the Soviet Union's internal security. Meanwhile, the Mikoyan-Gurevich MiG-25 attempts to force the American delegation's plane to return to Russia, but the plane successfully evades it. 
+ 
+ Filitov, who was extensively debriefed by the CIA, later dies due to heart disease. He was buried at Camp David, within twenty miles of the Antietam National Battlefield|Antietam battlefield. His funeral was attended by Ryan and the Foleys, among others, as well as a Soviet military attaché who questions why Filitov would be buried close to American soldiers. Ryan, always working to keep the peace, explains to him,  " One way or another, we all fight for what we believe in. Doesn't that give us some common ground? " 
+ 
+ ==Characters== 
+ * Jack Ryan (character)|Jack Ryan: Special Assistant to the CIA Deputy Director of Intelligence and the main CIA representative on the U.S. arms negotiation team. 
+ * Mikhail Semyonovich Filitov: Personal aide to the Minister of Defence (Soviet Union)|Soviet Defense Minister and former tank officer for the Soviet Army during World War II, who is three times a Hero of the Soviet Union. He was later recruited into the CIA by Oleg Penkovsky in the early 1960s under the name of CARDINAL, and becomes their highest agent-in-place in the Kremlin for thirty years. He became alienated from the Soviet government after the death of his wife and two sons and does not care for the current Soviet leadership due to excessive losses in the military. 
+ * Nikolay Gerasimov: Chairman of the Committee for State Security (KGB) 
+ * Klementi Vladimirovich Vatutin: KGB officer in charge of investigating and later interrogating Filitov. 
+ * Andrey Ilych Narmonov: General Secretary of the Communist Party of the Soviet Union 
+ * Sergey Golovko: KGB intelligence officer and Ryan's counterpart in the arms reduction talks. Later gives him a patronymic, Ivan Emmetovich, which translates to  " John, son of Emmet " . 
+ * Colonel Gennady Bondarenko: Colonel of Signal Troops, whose technical expertise Filitov leverages when sending him to Bright Star to evaluate the facility. 
+ * Major Alan Gregory: United States's top Strategic Defense Initiative scientist based in Tea Clipper. 
+ * The Archer: A former mathematics teacher of Afghan descent who becomes an guerrilla leader after losing his family in a Soviet airstrike. He got his name from being an expert with the Soviet SA-7 and the American FIM-92 Stinger|Stinger surface-to-air missiles. 
+ * Dr. Candace  " Candi "  Long: Expert in adaptive optics, Major Gregory's fiancée. 
+ * Dr. Beatrice Taussig: Optical physicist at Tea Clipper and KGB agent (codenamed  " Livia " ) controlled by KGB agent Tania Bisyarina. A lesbian who unluckily falls in love with Dr. Long, her colleague. 
+ * Captain Tania Bisyarina: Female KGB operative (cover name  " Ann " ) who controls Taussig and eventually kidnaps Gregory. Later killed by a sniper rifle during the FBI Hostage Rescue Team's extraction of Gregory. 
+ * Edward  " Ed "  Foley: CIA chief of station in Moscow, under cover as embassy press attaché. Filitov's case officer who is later expelled from the Soviet Union after his arrest. 
+ * Mary Pat Foley: CIA operative, Ed Foley's wife. Filitov's case officer who is also Persona non grata|PNG'd out of the country after his arrest. 
+ * Bart Mancuso: Commanding officer of the   
+ * Marko Ramius: Former commanding officer of Soviet ballistic missile submarine ''Red October (fictional submarine)|Red October'', which appears in the novel as being stripped of its equipment and later scuttled. He now works for the United States Navy and the CIA as Mark Ramsey, utilizing his submarine knowledge and leadership skills. 
+ * John Clark (Tom Clancy character)|John Clark: CIA operations officer who spirits Gerasimov's wife and daughter out of the Soviet Union 
+ * Arthur Moore: Director of Central Intelligence 
+ * James Greer: CIA Deputy Director of Intelligence 
+ 
+ ==Themes== 
+ ''The Cardinal of the Kremlin'' is considered to be Clancy's primary example of a traditional espionage novel until ''Red Rabbit'' (2002). It included “a near fetishist attention to the details of the tradecraft of spying and an exploration of the individuals who take up this dangerous vocation”. In addition, the book was written during the time of Soviet premier Mikhail Gorbachev’s rule, which was considered by historians as a crucial point in world history where Communism in the Soviet Union began its decline. Clancy affirms his opinion that with reformers in the Soviet government like Gorbachev, the country will be more likely to establish a shift in its relations between the United States, which was later made possible by the dissolution of the Soviet Union|dissolution of the country three years later. 
+ 
+ The book was also written at the time of the Soviet invasion in Afghanistan|Soviet occupation of Afghanistan, as well as the Strategic Defense Initiative, a proposed missile defense system intended to protect the United States from attack by Ballistic missile|ballistic strategic nuclear weapons. They were both featured in the novel. It also continues elements set forth in previous novel ''The Hunt for Red October'' (1984), including Filitov and Ramius’s similarities in motivation for committing treason against their own country.    
+ 
+ ==Reception== 
+ The book became the bestselling novel of the year, selling 1,277,000 hardcover copies.     It received positive reviews. Kirkus Reviews praised the book as  " less reliant on technoblather than previous Clancy works, and awash in subplots, most of them entertaining. Plenty of action; no mushy stuff. "     In Robert Lekachman's review of the book for ''The New York Times'', he hailed it as  " by far the best of the Jack Ryan series " , adding:  " While his prose is no better than workmanlike (the genre does not, after all, attract many budding Flauberts), the unmasking of the title's secret agent, the Cardinal, is as sophisticated an exercise in the craft of espionage as I have yet to encounter. "     Bob Woodward, reviewing for ''The Washington Post'', regarded the book as  " a great spy novel "  which  " rivals Clancy's ''The Hunt for Red October'', surpasses his ''Red Storm Rising'' and runs circles around his ''Patriot Games'' " .    
+ 
+ ==Adaptations== 
+ ===Video game=== 
+ ''Cardinal of the Kremlin (video game)|The Cardinal of the Kremlin'' is also the title of a 1991 video game based on the novel, which is a global management simulation developed for Amiga. 
+ 
+ ===Film=== 
+ After the release of ''Clear and Present Danger (film)|Clear and Present Danger'' (1994), a film based on the book was planned before it was deemed too difficult to adapt, resulting in producer Mace Neufeld purchasing the rights to ''The Sum of All Fears''. Harrison Ford was set to reprise his role as Jack Ryan, co-starring with William Shatner.    
+ 
+ ==References== 
+  
+ 
+  
+ 
+  
+ Category:1989 American novels 
+ Category:American thriller novels 
+ Category:Techno-thriller novels 
+ Category:Novels by Tom Clancy 
+ Category:Cold War spy novels 
+ Category:Ryanverse 
+ Category:G. P. Putnam's Sons books 
+ Category:Novels set in Russia 
+ Category:Novels set in Washington, D.C. 
+ Category:Novels set in New Mexico 
+ Category:Novels set in Afghanistan

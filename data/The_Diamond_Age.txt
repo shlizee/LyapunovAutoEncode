@@ -1,0 +1,126 @@
+ 
+  
+  (paperback) 
+ | dewey = 813/.54 20 
+ | congress = PS3569.T3868 D53 1995 
+ | oclc = 30894530 
+ | preceded_by =  
+ | followed_by =  
+ }} 
+ ''The Diamond Age: Or, A Young Lady's Illustrated Primer'' is a science fiction novel by American writer Neal Stephenson. It is to some extent a Bildungsroman or coming-of-age story, focused on a young girl named Nell, set in a future world in which nanotechnology affects all aspects of life. The novel deals with themes of education, social class, ethnicity, and the nature of Artificial Intelligence|artificial intelligence. ''The Diamond Age''  was first published in 1995 by Bantam Books, as a Bantam Spectra hardcover edition. In 1996, it won both the Hugo Award|Hugo and Locus Award|Locus Awards,     and was shortlisted for the Nebula Award|Nebula and other awards.   In 2009, a six-hour miniseries adapted from the novel was slated for development for the Syfy|Syfy Channel,  
+    
+  
+   
+ although the adaptation did not ultimately emerge. 
+ 
+ ==Setting== 
+ ''The Diamond Age'' depicts a near-future world revolutionised by advances in nanotechnology, much as Eric Drexler envisioned it in his 1986 nonfiction book ''Engines of Creation''. Molecular nanotechnology is omnipresent in the novel's world, generally in the form of molecular assembler|Matter Compilers and the products that come out of them.  The book explicitly recognizes the achievements of several existing nanotechnology researchers: Richard Feynman|Feynman, Drexler, and Ralph Merkle are seen among characters of the fresco in Merkle-Hall, where new nanotechnological items are designed and constructed. 
+ 
+ The book contains descriptions of various exotic technologies, such as the ''chevaline'' (a mechanical horse that can fold up and is light enough to be carried one-handed), and forecasts the use of technologies that are in development today, such as Electronic paper|smart paper that can show personalized news headlines. Major cities have immune systems made up of aerostatic defensive micromachines, and public matter compilers provide basic food, blankets, and water Post-scarcity|for free to anyone who requests them. 
+ 
+ Matter compilers receive their raw materials from the Feed, a system analogous to the electrical grid of modern society.  The Feed carries streams of both energy and basic molecules, which are rapidly assembled into usable goods by matter compilers. The Source, where the Feed's stream of matter originates, is controlled by the Victorian phyle (though smaller, independent Feeds are possible).  The hierarchic nature of the Feed and an alternative, anarchic developing technology, known as the Seed, mirror the cultural conflict between East and West that is depicted in the book.  This conflict has an economic element as well, with the Feed representing a centrally-controlled distribution mechanism, while the Seed represents a more flexible, open-ended, decentralized method of creation and organization. 
+ 
+ ===Phyles=== 
+ Society in ''The Diamond Age'' is dominated by a number of ''phyles'', also sometimes called ''tribes'', which are groups of people often distinguished by shared values, similar ethnic heritage, a common religion, or other cultural similarities.  In the extremely Globalization|globalized future depicted in the novel, these cultural divisions have largely supplanted the system of nation-states that divides the world today.  Cities appear divided into sovereign enclaves affiliated or belonging to different phyles within a single metropolis. Most phyles depicted in the novel have a global scope of sovereignty, and maintain segregated enclaves in or near many cities throughout the world. 
+ 
+ The phyles coexist much like historical nation-states under a system of justice and mutual protection, known as the Common Economic Protocol (CEP). The rules of the CEP are intended to provide for the co-existence of, and peaceful economic activity between, phyles with potentially very different values.  The CEP is concerned particularly with upholding rights to personal property, being shown to provide particularly harsh punishment for harming the economic capability of another person. The role of the CEP in the world of the novel could be seen in comparison with the roles of real-life international organizations such as the United Nations and the International Monetary Fund. 
+ 
+ " Thetes "  are individuals who are not members of any phyle and are often socially disadvantaged and economically poor, being similar to second-class citizens under the CEP.  In the novel, the material needs of nearly all thetes are satisfied by freely-available food and clothing, albeit of low quality; thetes without the political connections of a phyle are entitled to similarly low-quality  " legal aid|free justice. " 
+ 
+ The book distinguishes three Great Phyles: the Han (consisting of Han Chinese), the Neo-Victorian New Atlantis (consisting largely of Anglo-Saxons, but also accepting Indians, Africans, and other members of the Anglosphere who identify with the culture) and Nippon (consisting of Japanese). The novel raises the question as to whether Hindustan (consisting of Hindu Indians) is a fourth Great Phyle, or a  " riotously diverse collection of microtribes Sintering|sintered together according to some formula we don't get. " 
+ 
+ Internally, the New Atlantis phyle is a Oligarchy#Corporate Oligarchy .28Corporatocracy.29|corporate oligarchy whose  " equity lords "  rule the organization and its bylaws under allegiance to the vestigial Monarchy of the United Kingdom|British monarchy. Other phyles are less defined – some intentionally, as with the CryptNet group or the mysterious hive-mind Drummers. Over the course of the story, the Common Economic Protocol sponsors the investigation of clandestine Seed technologies in order to preserve the established order from subversion, using the justification that unrestricted access to Sources would lead to the proliferation of high tech weapons and result in anarchy. It is also hinted that property rights are so expansive that the Protocol recognizes children as the economic assets of their parents. 
+ 
+ ==Plot summary== 
+ The protagonist in the story is Nell, a ''thete'' (or person without a tribe; equivalent to the lowest working class) living in the Leased Territories, a lowland slum built on the artificial, diamondoid island of New Chusan, located offshore from the mouth of the Yangtze River, northwest of Shanghai. When she is four, Nell's older brother Harv gives her a stolen copy of a highly sophisticated interactive book, ''Young Lady's Illustrated wikt:primer#Noun|Primer: a wikt:propaedeutic|Propædeutic wikt:enchiridion|Enchiridion, in which is told the tale of Princess Nell and her various friends, kin, associates,  & c.'', commissioned by the wealthy Neo-Victorian  " Equity Lord "  Alexander Chung-Sik Finkle-McGraw for his granddaughter, Elizabeth. The story follows Nell's development under the tutelage of the Primer, and to a lesser degree, the lives of Elizabeth Finkle-McGraw and Fiona Hackworth, Neo-Victorian girls who receive other copies. The Primer is intended to steer its reader intellectually toward a more ''interesting life,'' as defined by Lord Finkle-McGraw, and growing up to be an effective member of society. The most important quality to achieving an interesting life is deemed to be a subversive attitude towards the status quo. The Primer is designed to react to its owner's environment and teach them what they need to know to survive and develop. 
+ 
+ ''The Diamond Age'' is characterized by two intersecting, almost equally-developed story lines: the social downfall of the nanotech engineer designer of the Primer, John Percival Hackworth, who makes an illegal copy of the Primer for his own young daughter, Fiona, and Nell's education through her independent work with the Primer after her brother Harv steals it from Hackworth. Hackworth's crime becomes known to Lord Finkle-McGraw and Dr. X, the black market engineer whose compiler Hackworth used to create the copy of the Primer, and each man attempts to exploit Hackworth to advance their opposing goals. A third storyline follows actress ( " ractor " ) Miranda Redpath, who voices most of the Primer characters who interact with Nell and essentially becomes Nell's surrogate mother. Later Miranda's storyline is taken over by her boss, Carl Hollywood, after Miranda disappears in her quest to find Nell. 
+ 
+ ''Diamond Age'' also includes fully narrated educational tales from the Primer that map Nell's individual experience (e.g. her four toy friends) onto Archetype|archetypal Folklore|folk tales stored in the primer's database. Although ''The Diamond Age'' explores the role of technology and personal relationships in child development, its deeper and darker themes also probe the relative values of cultures (which Stephenson explores in his other novels as well) and the shortcomings in communication between them. 
+ 
+ ==Title== 
+ " Diamond Age "  is an extension of labels for List of archaeological periods|archeological time periods that take central technological materials to define an entire era of human history, such as the Stone Age, the Bronze Age or the Iron Age. Technological visionaries such as Eric Drexler and Ralph Merkle, both of whom receive an honorary mention in ''The Diamond Age'', have argued that if nanotechnology develops the ability to manipulate individual atoms at will, it will become possible to simply assemble diamond structures from carbon atoms, materials also known as diamondoids.  Cf. Dinello, 2005:232   Merkle states:  " In diamond, then, a dense network of strong bonds creates a strong, light, and stiff material. Indeed, just as we named the Stone Age, the Bronze Age, and the Steel Age after the materials that humans could make, we might call the new technological epoch we are entering the Diamond Age " .  
+    In the novel, a near future vision of our world, nanotechnology has developed precisely to this point, which enables the cheap production of diamond structures. 
+ 
+ ==Characters== 
+ File:Diamond Age Penguin 1998.jpg|thumb|right|Cover of the 1998 Penguin edition. 
+ *Nell (Nellodee) – The story's protagonist, from the viewpoint of the novel as a coming-of-age story. She is born to Tequila, a lower-class single mother, and, with the help of the nanotech Primer, grows up to become an independent woman and the leader of a new phyle. 
+ *Harv (Harvard) – Nell's older brother, who plays an important role in the beginning as her protector; he obtains the Primer for his sister by mugging John Percival Hackworth. Harv is forced to leave Nell when she is accepted by the Neo-Victorians. 
+ *Bud – A petty criminal and  " thete " , or tribeless individual, Bud is Tequila's boyfriend and Nell and Harv's father. He is obsessed with his muscular body, and possesses a cranial weapon implant (known as a  " skull gun " ), which he uses to mug people. When he robs a couple who are members of the powerful Ashanti people|Ashanti phyle, he is executed for this crime early in the novel. 
+ *Tequila – Nell and Harv's neglectful thete mother. After Bud's death, she has a series of boyfriends who mistreat the children to varying degrees. 
+ *John Percival Hackworth – The novel's second protagonist. He is a Neo-Victorian nanotech engineer, and develops the code for the Primer. He makes an illicit copy of the Primer for his daughter Fiona, who is Nell's age. When his crime is detected, he is forced to become a double agent in a covert power struggle between the Neo-Victorians and the Chinese Celestial Kingdom. Hackworth is forced to spend ten years with a colony of  " Drummers, "  using their distributed intelligence (similar but not identical to distributed artificial intelligence) for the development of a new form of nanotech, known as the Seed. 
+ *Fiona Hackworth – Hackworth's daughter, and his motivation for stealing a second copy of the Primer. During Hackworth's decade-long exile with the Drummers, he is able to maintain a connection with his daughter through the Primer, and when he returns she joins him, eventually choosing to stay with a surrealistic acting troupe in London. 
+ *Gwendolyn Hackworth – Hackworth's wife and Fiona's mother, who divorces Hackworth during his long absence. 
+ *Lord Alexander Chung-Sik Finkle-McGraw – A Neo-Victorian  " Equity Lord "  with the Apthorp conglomerate, who commissions the development of the Primer for his granddaughter Elizabeth. 
+ *Elizabeth Finkle-McGraw – Lord Finkle-McGraw's granddaughter. It was for her that the project to develop the Illustrated Primer was begun. However, she never became as engrossed in the stories created by the Primer as Nell, and later rebelled against her Neo-Victorian upbringing due in part to the abuse by Miss Stricken, one of her teachers. Elizabeth runs away from her wealthy aristocratic family to join the secretive CryptNet phyle. Lord Finkle-McGraw expresses satisfaction with this outcome to Carl Hollywood, deeming it akin to youthful rebellion. 
+ *Judge Fang – A New York-born Chinese Confucianism|Confucian judge who sentences Bud to death in the beginning of the book. He also investigates Hackworth's mugging by Harv and his gang. As a civil official with deep Confucian principles, his decision to let Nell keep the stolen primer is one of the pivotal plot elements that allows Nell's story to unfold. The fallout from that choice leads him to question his allegiances to the Coastal Republic (which rules Shanghai and the surrounding area), and he eventually joins the inland Celestial Kingdom. 
+ *Lieutenant Chang and Miss Pao – Judge Fang's assistants. 
+ *Dr. X. – A mysterious character who evolves from being an illicit technology specialist and hacker to being a powerful Confucian leader and nefarious force. His name comes from the fact that most westerners cannot pronounce his Chinese name; he encourages people to instead call him by the first letter of his name. 
+ *Constable Moore - Constable of the Dovetail community, semi-retired soldier, and Nell's adoptive father/guardian. 
+ *Miranda Redpath – A  " ractor "  (actor in interactive movies) who, by performing in the stories of Nell's Primer, effectively becomes a mother figure for Nell. 
+ *Carl Hollywood – A theatrical company director and Miranda's boss and adviser. He becomes more important towards the end of the novel, helping Miranda on her quest to find Nell, and during the battle between the Celestial Kingdom and the Coastal Republic. 
+ *Miss Matheson – The head teacher at the academy where Nell, Fiona, and Elizabeth attend. She instructs Nell to find her own path. 
+ *Miss Stricken – An authoritarian teacher at Miss Matheson's Academy who frequently uses corporal punishment on the students for minor infractions. During a confrontation with Nell, Stricken attempts to strike her with the ruler only to be immediately disarmed due to Nell's physical training by the Primer. This leads to her, Elizabeth and Fiona all being placed in detention, where they are forced to mindlessly copy from textbooks. 
+ 
+ ==Allusions to other works and genres== 
+ 
+ ===Charles Dickens=== 
+ The novel's neo-Victorian setting, as well as its narrative form, particularly the chapter headings, suggest a relation to the work of Charles Dickens.  
+    The protagonist's name points directly to Little Nell from Dickens' 1840 novel ''The Old Curiosity Shop''. 
+ 
+ ===Judge Dee mysteries=== 
+ The novel's character Judge Fang is based on a creative extension of Robert van Gulik's Judge Dee mystery series, which is based around a Confucian judge in ancient China who usually solves three cases simultaneously.  
+    The Judge Dee stories are based on the tradition of Chinese mysteries, transposing key elements into Western detective fiction. 
+ 
+ ===Cyberpunk=== 
+ Nell's father, Bud, is presented as an archetypal cyberpunk character. He is a career criminal (though not a particularly skilled or high-ranking one) with various surgically implanted devices to aid him in his 'work'. Stephenson attempts to establish ''The Diamond Age'' as a  " postcyberpunk "  book by killing this character early on, while acknowledging the influence of the cyberpunk genre. 
+ 
+ ===''The Wizard of Oz''=== 
+ When Nell enters the castle of King Coyote in the Primer's final challenge for her, she encounters an enormous computer apparently designed to think and placed in charge of the kingdom. The computer is named  " Wizard 0.2 " , a typographical allusion to ''The Wonderful Wizard of Oz''. In that book, the Wizard puts on a grand appearance but is later revealed to be merely a man hiding behind a curtain. In similar fashion, Wizard 0.2 creates an impressive light show as it apparently processes data, but it is then revealed that the computer's decisions are in fact made by King Coyote himself. 
+ 
+ ==Proposed television adaptation== 
+ In January 2007, the Syfy|Sci-Fi Channel announced that it would be making a six-hour miniseries based on ''The Diamond Age''. According to a June 2009 report in ''Variety (magazine)|Variety'', Zoë Green had been hired to write the series, with George Clooney and Grant Heslov of Smokehouse Productions as executive producers on the project.  
+  
+  
+ However, , no further news on the project has emerged. 
+ 
+ ==See also== 
+ *Molecular nanotechnology 
+ *Nanotechnology in fiction 
+ *Post-scarcity 
+ *Technological singularity 
+ 
+ ==References== 
+  
+ 
+ ==Bibliography== 
+  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ *  
+ 
+  
+  
+  
+ 
+  
+ Category:1995 American novels 
+ Category:Anglosphere 
+ Category:Novels by Neal Stephenson 
+ Category:Hugo Award for Best Novel-winning works 
+ Category:Cyberpunk novels 
+ Category:1995 science fiction novels 
+ Category:Novels set in Shanghai 
+ Category:Steampunk novels 
+ Category:Anarchist fiction 
+ Category:Postcyberpunk novels 
+ Category:American science fiction novels 
+ Category:American bildungsromans 
+ Category:Nanotechnology in fiction 
+ Category:Novels about artificial intelligence

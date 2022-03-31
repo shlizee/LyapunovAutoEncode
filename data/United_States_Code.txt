@@ -1,0 +1,301 @@
+ 
+  
+  
+ 
+ The Code of Laws of the United States of America  [ Title 1 of the Code]  as published by the Office of the Law Revision Counsel   (variously abbreviated to Code of Laws of the United States, United States Code, U.S. Code, U.S.C., or USC) is the official compilation and Codification (law)|codification of the general and permanent Law of the United States#Federal law|federal statutes of the United States. It contains 53 titles (Titles 1–54, excepting Title 53, it being reserved).  [ Public Law No: 113-287,  Enacted title 54, United States Code,  " National Park Service and Related Programs " , as positive law.]   Title 34 ''(Navy)'' was repealed, but the numbering system was retained until the creation of a new Title 34 in 2017. See [ USC Table of Contents].    The main edition is published every six years by the Office of the Law Revision Counsel of the United States House of Representatives|House of Representatives, and cumulative supplements are published annually.     [ About United States Code]. Gpo.gov. Retrieved on 2013-07-19.   The official version of those laws not codified in the United States Code can be found in ''United States Statutes at Large''. 
+ 
+ ==Codification== 
+ 
+ ===Process=== 
+ The official text of an Act of Congress is that of the  " enrolled bill "  (traditionally printed on parchment) presented to the President of the United States|President for his signature or Veto#United States|disapproval. Upon enactment of a law, the original bill is delivered to the Office of the Federal Register (OFR) within the National Archives and Records Administration (NARA).     After authorization from the OFR,     copies are distributed as  " slip laws "  by the United States Government Publishing Office|Government Publishing Office (GPO). The Archivist assembles annual volumes of the enacted laws and publishes them as the ''United States Statutes at Large.''  By law, the text of the ''Statutes at Large'' is  " legal evidence "  of the laws enacted by Congress.     Slip laws are also competent evidence.    
+ 
+ The ''Statutes at Large'', however, is not a convenient tool for legal research. It is arranged strictly in chronological order; statutes addressing related topics may be scattered across many volumes. Statutes often repeal or amend earlier laws, and extensive cross-reference|cross-referencing is required to determine what laws are in force at any given time. 
+ 
+ The United States Code is the result of an effort to make finding relevant and effective statutes simpler by reorganizing them by subject matter, and eliminating expired and amended sections. The Code is maintained by the Office of the Law Revision Counsel (LRC) of the US House of Representatives. The LRC determines which statutes in the United States Statutes at Large should be codified, and which existing statutes are affected by amendments or repeals, or have simply expired by their own terms. The LRC updates the Code accordingly. 
+ 
+ Because of this codification approach, a single named statute (like the Taft–Hartley Act or the Embargo Act of 1807|Embargo Act) may or may not appear in a single place in the Code. Often, complex legislation bundles a series of provisions together as a means of addressing a social or governmental problem; those provisions often fall in different logical areas of the Code. For example, an Act providing relief for family farms might affect items in Title 7 (Agriculture), Title 26 (Tax), and Title 43 (public land|Public Lands). When the Act is codified, its various provisions might well be placed in different parts of those various Titles. Traces of this process are generally found in the Notes accompanying the  " lead section "  associated with the popular name, and in cross-reference tables that identify Code sections corresponding to particular Acts of Congress. 
+ 
+ Usually, the individual sections of a statute are incorporated into the Code exactly as enacted; however, sometimes editorial changes are made by the LRC (for instance, the phrase  " the date of enactment of this Act "  is replaced by the actual date). Though authorized by statute, these changes do not constitute positive law.  
+ 
+ ===Legal status=== 
+ The authority for the material in the United States Code comes from its enactment through the legislative process and not from its presentation in the Code. For example, the United States Code omitted  for decades, apparently because it was thought to have been repealed. In its 1993 ruling in ''U.S. National Bank of Oregon v. Independent Insurance Agents of America'', the Supreme Court ruled that § & nbsp;92 was still valid law.  ''U.S. National Bank of Oregon v. Independent Insurance Agents of America, Inc.'', 508 U.S. 439, 440 (1993).  
+ 
+ By law, those titles of the United States Code that have not been enacted into positive law are  " ''prima facie'' evidence "  See .   of the law in effect. The ''United States Statutes at Large'' remains the ultimate authority. If a dispute arises as to the accuracy or completeness of the codification of an unenacted title, the courts will turn to the language in the United States Statutes at Large. In case of a conflict between the text of the Statutes at Large and the text of a provision of the United States Code that has not been enacted as positive law, the text of the Statutes at Large takes precedence. 
+ 
+ In contrast, if Congress enacts a particular title (or other component) of the Code into positive law, the enactment repeals all of the previous Acts of Congress from which that title of the Code derives; in their place, Congress gives the title of the Code itself the force of law. This process makes that title of the United States Code  " legal evidence "  " [ … ] whenever titles of such Code shall have been enacted into positive law the text thereof shall be legal evidence of the laws therein contained, in all the courts of the United States [ … ] "  .   of the law in force. Where a title has been enacted into positive law, a court may neither permit nor require proof of the underlying original Acts of Congress.  See, e.g., ''United States v. Zuger'', 602 F. Supp. 889, 891 (D. Conn. 1984) ( " Where a title has, however, been enacted into positive law, the Code title itself is deemed to constitute conclusive evidence of the law; recourse to other sources is unnecessary and precluded. " )  
+ 
+ The distinction between enacted and unenacted titles is largely academic because the Code is nearly always accurate. The United States Code is routinely cited by the United States Supreme Court|Supreme Court and other federal courts without mentioning this theoretical caveat. On a day-to-day basis, very few lawyers cross-reference the Code to the ''Statutes at Large''.  Attempting to capitalize on the possibility that the text of the United States Code can differ from the ''United States Statutes at Large'', Bancroft-Whitney for many years published a series of volumes known as United States Code Service (USCS), which used the actual text of the ''United States Statutes at Large''. 
+ 
+ ===Uncodified statutes=== 
+ Only  " general and permanent "  laws are codified in the United States Code; the Code does not usually include provisions that apply only to a limited number of people (a statutory law|private law) or for a limited time, such as most appropriation (law)|appropriation acts or budget laws, which apply only for a single fiscal year. If these limited provisions are significant, however, they may be printed as  " notes "  underneath related sections of the Code. The codification is based on the content of the laws, however, not the vehicle by which they are adopted; so, for instance, if an appropriations act contains substantive, permanent provisions (as is sometimes the case), these provisions will be incorporated into the Code even though they were adopted as part of a non-permanent enactment.  For example, the Department of Defense Appropriations Act, 2006|Department of Defense Appropriations Act of 2006, ,  (2005)—a time-specific appropriations act that the President signed into law on December 30, 2005—contains in its Division A, Title X the Detainee Treatment Act of 2005 ( " DTA " ). The DTA set out, among other things, permanent provisions governing standards for interrogation of persons in Defense Department custody, prohibitions on cruel and unusual punishment, and procedures for status review of extraterritorial detainees. ''See id.'' at div. A, tit. X, §§ & nbsp;1001–1006, –44. Notably, DTA section 1002 was printed as a note to ; DTA section 1003 was codified as  (though the section has not yet been enacted into positive law); and DTA section 1005(e)(1) codified a new subsection (e) of  (which became positive law upon the DTA's enactment). 
+ 
+ Congress also enacted a nearly identical version of the DTA as a component of the National Defense Authorization Act for Fiscal Year 2006, ''see'' , div. A, tit. XIV, §§ & nbsp;1401–1406, , 3474–80 (2006)—an authorization act that the President signed into law on January 6, 2006 (a week after he signed the original DTA into law). The December 2005 and January 2006 versions of the DTA are generally identical except for certain provisions in the section relating to training of Iraqi security forces (section 1006 of the Dec. '05 DTA and section 1406 of the Jan. '06 DTA). As a result, both the Dec. '05 and Jan. '06 DTAs appear to have made essentially simultaneous and duplicative amendments to the Code and its notes. ''But see'' the legislative history notes under  (to the effect that two subsection (e)s of that statutory section have apparently been enacted). 
+ 
+ As of , there has been no litigation challenging the validity of either of the DTA statutes on these grounds.  
+ 
+ ==Versions and history== 
+ 
+ ===Early compilations=== 
+ 
+ Early efforts at codifying the Acts of Congress were undertaken by private publishers; these were useful shortcuts for research purposes, but had no official status.  Congress undertook an official codification called the ''Revised Statutes of the United States'' approved June 22, 1874, for the laws in effect as of December 1, 1873. Congress re-enacted a corrected version in 1878. The 1874 version of the Revised Statutes were enacted as positive law, but the 1878 version was not and subsequent enactments of Congress were not incorporated into the official code, so that over time researchers once again had to delve through many volumes of the ''United States Statutes at Large|Statutes at Large''. 
+ 
+ According to the preface to the Code,  " From 1897 to 1907 a commission was engaged in an effort to codify the great mass of accumulating legislation. The work of the commission involved an expenditure of over $300,000, but was never carried to completion. "  Only the Criminal Code of 1909 and the Judicial Code of 1911 were enacted. In the absence of a comprehensive official code, private publishers once again collected the more recent statutes into unofficial codes.  The first edition of the ''United States Code'' (published as Statutes at Large Volume 44, Part 1) includes cross-reference tables between the USC and two of these unofficial codes, ''United States Compiled Statutes Annotated'' by Thomson West|West Publishing Co. and ''Federal Statutes Annotated'' by Edward Thompson Co. 
+ 
+ ===Official code=== 
+ During the 1920s, some members of Congress revived the codification project, resulting in the approval of the United States Code by Congress in 1926.  ;   
+ 
+ The official version of the Code is published by the LRC as a series of paper volumes. The first edition of the Code was contained in a single bound volume; today, it spans several large volumes. Normally, a new edition of the Code is issued every six years, with annual cumulative supplements identifying the changes made by Congress since the last  " main edition "  was published.  
+ 
+ The official code was last printed in 2018. 
+ 
+ ===Digital and Internet versions=== 
+ Both the LRC and the GPO offer electronic versions of the Code to the public. The LRC electronic version used to be as much as 18 months behind current legislation, but as of 2014 it is one of the most current versions available online. The United States Code is available from the LRC at [ uscode.house.gov] in both HTML and XML bulk formats.        The  " United States Legislative Markup "  (USLM) schema of the XML was designed to be consistent with the Akoma Ntoso project (from the United Nations Department of Economic and Social Affairs) XML schema,     and the LegalDocML|OASIS ''LegalDocML'' technical committee standard will be based upon Akoma Ntoso.    
+ 
+ A number of other online versions are freely available, such as Cornell University|Cornell's Legal Information Institute. 
+ 
+ ===Annotated codes=== 
+ Practicing lawyers who can afford them almost always use an annotated version of the Code from a private company. The two leading annotated versions are the ''United States Code Annotated'', abbreviated as USCA, and the ''United States Code Service'', abbreviated as USCS.  The USCA is published by West (publisher)|West (part of Thomson Reuters), and USCS is published by LexisNexis (part of Reed Elsevier), which purchased the publication from the Lawyers Co-operative Publishing Co. in 1997 as a result of an antitrust settlement.  [ Final Judgment : U.S. et al. v. The Thomson Corporation and West Publishing Company]. Usdoj.gov. Retrieved on 2013-07-19.    These annotated versions contain notes following each section of the law, which organize and summarize court decisions, law review articles, and other authorities that pertain to the code section, and may also include uncodified provisions that are part of the Public Laws. The publishers of these versions frequently issue supplements that contain newly enacted laws, which may not yet have appeared in an official published version of the Code, as well as updated secondary materials such as new court decisions on the subject. When an attorney is viewing an annotated code on an online service, such as Westlaw or LexisNexis, all the citations in the annotations are hyperlinked to the referenced court opinions and other documents. 
+ 
+ ==Organization== 
+ 
+  
+ 
+ ===Divisions=== 
+ The Code is divided into 53 titles (listed below), which deal with broad, logically organized areas of legislation. Titles may optionally be divided into subtitles, parts, subparts, chapters, and subchapters. All titles have sections (represented by a §), as their basic coherent units, and sections are numbered sequentially across the entire title without regard to the previously-mentioned divisions of titles. Sections are often divided into (from largest to smallest) subsections, paragraphs, subparagraphs, clauses, subclauses, items, and subitems.  Bellis MD. (2008). [ Statutory Structure and Legislative Drafting Conventions: A Primer for Judges] . Federal Judicial Center.   Congress, by convention, names a particular subdivision of a section according to its largest element. For example,  " subsection (c)(3)(B)(iv) "  is not a subsection but a clause, namely clause (iv) of subparagraph (B) of paragraph (3) of subsection (c); if the identity of the subsection and paragraph were clear from the context, one would refer to the clause as  " subparagraph (B)(iv) " . 
+ 
+ Not all titles use the same series of subdivisions above the section level, and they may arrange them in different order. For example, in Title 26 (the tax code), the order of subdivision runs: Title – Subtitle – Chapter – Subchapter – Part – Subpart – Section – Subsection – Paragraph – Subparagraph – Clause – Subclause – Item – Subitem. 
+ 
+ The  " Section "  division is the core organizational component of the Code, and the  " Title "  division is always the largest division of the Code. Which intermediate levels between Title and Section appear, if any, varies from Title to Title. For example, in Title 38 (Veteran's Benefits), the order runs Title – Part – Chapter – Subchapter – Section. 
+ 
+ The word  " title "  in this context is roughly akin to a printed  " volume, "  although many of the larger titles span multiple volumes. Similarly, no particular size or length is associated with other subdivisions; a section might run several pages in print, or just a sentence or two. Some subdivisions within particular titles acquire meaning of their own; for example, it is common for lawyers to refer to a  " Chapter 11 bankruptcy "  or a  " Subchapter S corporation "  (often shortened to  " S corporation " ). 
+ 
+ According to one legal style manual,  The Bluebook: A Uniform System of Citation 102 (Columbia Law Review Ass'n et al. eds., 18th ed. 2005)   a sample citation would be  " Privacy Act of 1974,  (2006) " , read aloud as  " Title five, United States Code, section five fifty-two A "  or simply  " five USC five fifty-two A " . 
+ 
+ ===Titles=== 
+ File:Uscatitle11.jpg  | thumb |A few volumes of an annotated version of the United States Code 
+ Titles that have been enacted into positive law  [ Positive Law Codification] Office of the Law Revision Counsel of the US House of Representatives]   are indicated by blue shading below.  Titles whose laws have been repealed are indicated by red shading below. 
+ 
+ {| class=wikitable 
+ |- style= " background:#addfff; " 
+ | Title 1 of the United States Code|Title 1 
+ | General Provisions 
+ |- 
+ | Title 2 of the United States Code|Title 2 
+ | The United States Congress|Congress 
+ |- style= " background:#addfff; " 
+ | Title 3 of the United States Code|Title 3 
+ | The President of the United States|President 
+ |- style= " background:#addfff; " 
+ | Title 4 of the United States Code|Title 4 
+ | Flag of the United States|Flag and Great Seal of the United States|Seal, Washington, D.C.|Seat of Government, and the States 
+ |- style= " background:#addfff; " 
+ | Title 5 of the United States Code|Title 5 
+ | Federal government of the United States|Government Organization and Employees   Includes Appendix of provisions not yet enacted into positive law.  
+ |- 
+ | Title 6 of the United States Code|Title 6 
+ | Department of Homeland Security|Domestic Security  Originally Surety Bonds (''repealed''). Enacted into positive law by the 80th Congress in 1947; combined into Title 31 when it was enacted into positive law.  
+ |- 
+ | Title 7 of the United States Code|Title 7 
+ | Agriculture 
+ |- 
+ | Title 8 of the United States Code|Title 8 
+ | Aliens and Nationality 
+ |- style= " background:#addfff; " 
+ | Title 9 of the United States Code|Title 9 
+ | Arbitration 
+ |- style= " background:#addfff; " 
+ | Title 10 of the United States Code|Title 10 
+ | United States Armed Forces|Armed Forces  Includes the Uniform Code of Military Justice.  
+ |- style= " background:#addfff; " 
+ | Title 11 of the United States Code|Title 11 
+ | Bankruptcy in the United States|Bankruptcy 
+ |- 
+ | Title 12 of the United States Code|Title 12 
+ | Banks and Banking 
+ |- style= " background:#addfff; " 
+ | Title 13 of the United States Code|Title 13 
+ | Census 
+ |- style= " background:#addfff; " 
+ | Title 14 of the United States Code|Title 14 
+ | United States Coast Guard|Coast Guard 
+ |- 
+ | Title 15 of the United States Code|Title 15 
+ | Commerce and Trade 
+ |- 
+ | Title 16 of the United States Code|Title 16 
+ | Conservation 
+ |- style= " background:#addfff; " 
+ | Title 17 of the United States Code|Title 17 
+ | Copyrights 
+ |- style= " background:#addfff; " 
+ | Title 18 of the United States Code|Title 18 
+ | Crimes and Criminal Procedure  
+ |- 
+ | Title 19 of the United States Code|Title 19 
+ | Customs Duties 
+ |- 
+ | Title 20 of the United States Code|Title 20 
+ | Education 
+ |- 
+ | Title 21 of the United States Code|Title 21 
+ | Food and Drug Administration|Food and Drugs 
+ |- 
+ | Title 22 of the United States Code|Title 22 
+ | Foreign relations of the United States|Foreign Relations and Intercourse 
+ |- style= " background:#addfff; " 
+ | Title 23 of the United States Code|Title 23 
+ | Highways 
+ |- 
+ | Title 24 of the United States Code|Title 24 
+ | Hospitals and Psychiatric hospitals|Asylums 
+ |- 
+ | Title 25 of the United States Code|Title 25 
+ | Native Americans in the United States|Indians 
+ |- 
+ | Internal Revenue Code|Title 26 
+ | Internal Revenue Code 
+ |- 
+ | Title 27 of the United States Code|Title 27 
+ | Alcoholic beverage|Intoxicating Liquors 
+ |- style= " background:#addfff; " 
+ | Title 28 of the United States Code|Title 28 
+ | Judiciary and Judicial Procedure 
+ |- 
+ | Title 29 of the United States Code|Title 29 
+ | Labor 
+ |- 
+ | Title 30 of the United States Code|Title 30 
+ | Mineral Lands and Mining 
+ |- style= " background:#addfff; " 
+ | Title 31 of the United States Code|Title 31 
+ | Money and Finance 
+ |- style= " background:#addfff; " 
+ | Title 32 of the United States Code|Title 32 
+ | National Guard of the United States|National Guard 
+ |- 
+ | Title 33 of the United States Code|Title 33 
+ | Navigation and Navigable Waters 
+ |- style= " background:#f08080; " " 
+ |- 
+ | Title 34 of the United States Code|Title 34 
+ | Title 34 of the United States Code|Crime Control and Law Enforcement   Originally United States Navy|Navy (''repealed''). In 1956 Title 34 was moved into Title 10 of the United States Code|Title 10 subtitle C).  
+ |- 
+ | Title 35 of the United States Code|Title 35 
+ | Patents  OLRC has produced a draft version of the codification of Title 35 (subtitles III and IV).  
+ |- style= " background:#addfff; " 
+ | Title 36 of the United States Code|Title 36 
+ | Patriotism|Patriotic Societies and Observances 
+ |- style= " background:#addfff; " 
+ | Title 37 of the United States Code|Title 37 
+ | Pay and Allowances of the Uniformed Services 
+ |- style= " background:#addfff; " 
+ | Title 38 of the United States Code|Title 38 
+ | Veteran|Veterans' Benefits 
+ |- style= " background:#addfff; " 
+ | Title 39 of the United States Code|Title 39 
+ | United States Postal Service|Postal Service 
+ |- style= " background:#addfff; " 
+ | Title 40 of the United States Code|Title 40 
+ | Public Buildings, Properties, and Public works|Works 
+ |- style= " background:#addfff; " 
+ | Title 41 of the United States Code|Title 41 
+ | Public Contracts 
+ |- 
+ | Title 42 of the United States Code|Title 42 
+ | The Public Health and Social welfare|Welfare 
+ |- 
+ | Title 43 of the United States Code|Title 43 
+ | Public Lands 
+ |- style= " background:#addfff; " 
+ | Title 44 of the United States Code|Title 44 
+ | Public Printing and Documents 
+ |- 
+ | Title 45 of the United States Code|Title 45 
+ | Rail transport|Railroads 
+ |- style= " background:#addfff; " 
+ | Title 46 of the United States Code|Title 46 
+ | Shipping 
+ |- 
+ | Title 47 of the United States Code|Title 47 
+ | Telecommunications 
+ |- 
+ | Title 48 of the United States Code|Title 48 
+ | Insular area|Territories and Insular Possessions 
+ |- style= " background:#addfff; " 
+ | Title 49 of the United States Code|Title 49 
+ | Transportation  Enacted into positive law in stages; Title IV in 1978, Title I in 1983, and Titles II, III, and V-X in 1994.  
+ |- 
+ | Title 50 of the United States Code|Title 50 
+ | War and National Defense 
+ |- style= " background:#addfff; " 
+ | Title 51 of the United States Code|Title 51 
+ | National and Commercial Space Programs 
+ |- 
+ | Title 52 of the United States Code|Title 52 
+ | Voting and Elections 
+ |- 
+ | Title 53 of the United States Code|Title 53 
+ | [Reserved] 
+ |- style= " background:#addfff; " 
+ | Title 54 of the United States Code|Title 54 
+ | National Park Service and Related Programs 
+ |- style= " background:#addfff; "  
+ |} 
+ 
+ ===Proposed titles=== 
+ The Office of Law Revision Counsel has produced draft text for three additional titles of federal law. The subject matters of these proposed titles exists today in one or several existing titles. 
+ 
+ {| class=wikitable 
+ |- 
+ | Title 53 
+ | Small Business   [ House Bill: 2009 CONG US HR 1983]. New Title 53 - Small Business  
+ |- 
+ | Title 55 
+ | Environment 
+ |- 
+ | Title 56 
+ | Wildlife 
+ |} 
+ The OLRC announced an  " editorial reclassification "  of the federal laws governing voting and elections that went into effect on September 1, 2014. This reclassification involved moving various laws previously classified in Titles 2 and 42 into a new title 52 of the United States Code|Title 52, which has not been enacted into positive law.   
+ 
+ ===Treatment of repealed laws=== 
+ When sections are repealed, their text is deleted and replaced by a note summarizing what used to be there. This is so that lawyers reading old cases can understand what the cases are talking about. As a result, some portions of the Code consist entirely of empty chapters full of historical notes. For example, Title 8, Chapter 7 is labeled  " Exclusion of Chinese " . This contains historical notes relating to the Chinese Exclusion Act (United States)|Chinese Exclusion Act, which is no longer in effect. 
+ 
+ ==Number and growth of criminalized actions== 
+ There are conflicting opinions on the number of federal crimes,      but many have argued that there has been explosive growth and it has become overwhelming.           In 1982, the United States Department of Justice|US Justice Department could not come up with a number, but estimated 3,000 crimes in the United States Code.       In 1998, the American Bar Association (ABA) said that it was likely much higher than 3,000, but didn't give a specific estimate.    In 2008, the The Heritage Foundation|Heritage Foundation published a report that put the number at a minimum of 4,450.     When staff for a task force of the United States House Committee on the Judiciary|US House Judiciary Committee asked the Congressional Research Service (CRS) to update its 2008 calculation of criminal offenses in the USC in 2013, the CRS responded that they lack the manpower and resources to accomplish the task.    
+ 
+ ==Related codifications== 
+ The Code generally contains only those Acts of Congress, or statutes, designated as public laws. The Code itself does not include Executive order (United States)|Executive Orders or other executive-branch documents related to the statutes, or rules promulgated by the courts. However, such related material is sometimes contained in notes to relevant statutory sections or in appendices. The Code does not include statutes designated at enactment as private laws, nor statutes that are considered temporary in nature, such as appropriations. These laws are included in the ''Statutes at Large'' for the year of enactment. 
+ 
+ Regulations promulgated by executive agencies through the rulemaking process set out in the Administrative Procedure Act (United States)|Administrative Procedure Act are published chronologically in the ''Federal Register'' and then codified in the Code of Federal Regulations (CFR). Similarly, state statutes and regulations are often codified into state-specific codes. 
+ 
+ ==See also== 
+ * List of US state statutory codes 
+ * ''United States Reports'' 
+ 
+ ==Notes== 
+  
+ 
+ ==External links== 
+  
+  
+ * [ United States Code] from the United States Government Publishing Office|Government Publishing Office 
+ * [ United States Code] from the Office of Law Revision Counsel 
+ * [ United States Code] from Cornell's Legal Information Institute 
+ * [ United States Code] from OpenJurist 
+ * [ Popular names of Acts in the United States Code] from Cornell's Legal Information Institute 
+ * [ Positive Law Codification in the United States Code] from the Office of the Law Revision Counsel 
+ * [ United States Statutes and the United States Code: Historical Outlines, Notes, Lists, Tables, and Sources] from the Law Librarians' Society of Washington, DC 
+     
+ * [ How to count Citations in U.S. Law using XML files from Congress] from Gary Sieling 
+ * [ Unraveling the Mysteries of the U.S. Code] from the Law Librarians' Society of Washington, DC 
+ * [ United States Code] from Wikisource 
+ 
+  
+  
+  
+ 
+ Category:United States federal legislation|*Code 
+ Category:Titles of the United States Code 
+ Category:Publications of the United States government 
+ Category:Legal codes
