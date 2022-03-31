@@ -20,6 +20,11 @@ Utilizing the Lyapunov AutoEncoder requires four steps:
 4. Analyze AeLLE
 
 ### Step 1: Train Models (Trials)
+Before we begin any training, we pre-process our data by running the following code:
+~~~
+test_set_prep.py
+~~~
+
 We start by training a number of recurrent models with different hyperparameters.
 To do this, we run 
 ~~~
@@ -27,8 +32,11 @@ CharRNN_trials.py -model [MODEL TYPE] -evals [NO. EVALUATIONS]
 ~~~
 
 For MODEL_TYPE, select either 'lstm', 'gru', or 'rnn' (default: 'lstm')
+
 For NO. EVALUATIONS, select an integer for the number of trials/networks of each size to train. (default: 20)
+
 This code will train [NO. EVALUATIONS] instances of [MODEL TYPE] models each of size 64, 128, 256, 512.
+
 The relevant training outputs for all models of a given size (model parameters, training and validation loss, etc.) will be stored in a Trials object.
 
 ### Step 2: Calculate Lyapunov Exponents
