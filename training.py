@@ -60,7 +60,7 @@ def train_model(full_con, model, optimizer, trial_data, start_epoch= 0, print_in
 			print('Training epoch {} of {}'.format(epoch, full_con.train.max_epoch), end = '')
 		running_loss = 0.0
 		hidden = model.init_hidden(full_con.train.batch_size)
-
+		print(f'Train input shape: {train_input.shape}')
 		#train for all batches in the training set
 		model.train()
 		for batch_in, batch_target in zip(train_input.unsqueeze(dim = -1), train_target):

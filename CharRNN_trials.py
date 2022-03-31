@@ -26,6 +26,7 @@ class CharRNNTrials(object):
 			trial_data = self.load_trial_data(fcon.data, keep_amt = self.keep_amt)
 			model = RNNModel(fcon.model).to(self.device)
 			optimizer = fcon.train.get_optimizer(model.parameters())
+			print(f'Trial Data shape: {trial_data.shape}')
 			train_loss, val_loss = train_model(fcon, model, optimizer, trial_data = trial_data, verbose = False, save_interval = 3)
 			self.train_losses.append(train_loss)
 			self.val_losses[idx] = val_loss
