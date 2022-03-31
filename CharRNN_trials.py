@@ -87,7 +87,7 @@ def main(args):
 	dcon = TestDataConfig('data/', test_file = 'book_data.p', train_frac = 0.8, val_frac = 0.2, test_frac = 0.0)   
 	trials_dir = f'{model_type}/'
 	if not os.path.isdir(trials_dir):
-		os.makedir(trials_dir)
+		os.mkdir(trials_dir)
 	
 	#Define Hyperparameters
 	learning_rate = 0.002
