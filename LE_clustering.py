@@ -131,17 +131,24 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 300, v_frac= 0.2, su
 	fig = plt.figure(figsize = (4,4))
 	
 	ax = fig.add_subplot(111)
+<<<<<<< HEAD
 	if thresh > 0:
+=======
+>>>>>>> 651e42d4bd2449b22a185f06d63f82015bb892b6
 	for idx, size in enumerate(sizes):
 		y = low_rank[splits[idx]]
 		# print(y[:,0].shape)
 		im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
 		im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+<<<<<<< HEAD
 	else:
 		for idx, size in enumerate(sizes):
 		y = low_rank[splits[idx]]
 		# print(y[:,0].shape)
 		im = ax.scatter(y[:,0][splits[idx]], y[:,1][splits[idx]], s = 20, c = 'lime', alpha = 0.5)
+=======
+		
+>>>>>>> 651e42d4bd2449b22a185f06d63f82015bb892b6
 	
 	# if dim == 3:
 		# ax = fig.add_subplot(111, projection='3d')
@@ -315,6 +322,7 @@ def get_cmap(data, n_colors = 5):
 	cmap = plt.cm.get_cmap('gr')
 	return cmap
 
+<<<<<<< HEAD
 if __name__ == '__main__':
 	import sys
 	main(sys.argv[1:])
@@ -332,6 +340,8 @@ def main(args):
 		os.makedir('Figure/Latent')
 	pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = f'{model_type}_', thresh = thresh)
 	pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = f'{model_type}_', thresh = 0)
+=======
+>>>>>>> 651e42d4bd2449b22a185f06d63f82015bb892b6
 
 
 # if __name__ == "__main__":
@@ -342,10 +352,17 @@ def main(args):
 	# param_plot(latent_size, 'gru', no_evals = 100, val_split = 0.9)
 	# param_plot(latent_size, 'lstm', no_evals = 300, val_split = 0.2, dir = 'lstm/')
 	# pca(latent_size = latent_size, dim = 3, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_')
+<<<<<<< HEAD
 	# thresh = 1.75
 	# pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_', thresh = thresh)
 	# param_dist(thresh = thresh)
 	# size_dist(thresh = thresh)
+=======
+	thresh = 1.75
+	# pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_', thresh = thresh)
+	param_dist(thresh = thresh)
+	size_dist(thresh = thresh)
+>>>>>>> 651e42d4bd2449b22a185f06d63f82015bb892b6
 	# logit_plot()
 	# tsne_perf(model_type = 'merged')
 	# pca(3, model_type = 'gru', no_evals = 100, v_frac = 0.9, suffix = 'GRU_')
