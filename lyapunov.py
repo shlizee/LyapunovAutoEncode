@@ -51,7 +51,7 @@ def oneStep(*params, model):
 		states = (params[1], params[2])
 		return model(params[0], states)
 	else:
-        outputs = model(*params)
+        outputs = model()
         print(outputs[1].shape)
         return model(*params)
 
