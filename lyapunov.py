@@ -51,6 +51,8 @@ def oneStep(*params, model):
 		states = (params[1], params[2])
 		return model(params[0], states)
 	else:
+        outputs = model(*params)
+        print(outputs[1].shape)
 		return model(*params)
 
 def oneStepVarQR(J, Q):
