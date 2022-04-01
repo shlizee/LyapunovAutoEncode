@@ -7,3 +7,4 @@ pandas
 seaborn
 unidecode
 keras
+argparse

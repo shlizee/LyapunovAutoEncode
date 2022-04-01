@@ -51,6 +51,8 @@ def oneStep(*params, model):
 		states = (params[1], params[2])
 		return model(params[0], states)
 	else:
+		outputs = model()
+		# print(outputs[1].shape)
 		return model(*params)
 
 def oneStepVarQR(J, Q):
@@ -113,11 +115,12 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer= 0, kappa = 10, diff= 10,
 		else:
 			J = calc_Jac(xt, *states, model=model)
 		_, states = oneStep(xt, *states, model=model)
+		# print(f'Out shape: {states[1].shape}')
 		if cells:
 			(ht, ct) = states
 		else:
 			ht = states
-		ht = ht.transpose(0,1)
+		ht = ht.reshape((num_layers, batch_size, hidden_size))
 		Q = torch.matmul(torch.transpose(J, 1, 2), Q)
 	Q, _ = torch.linalg.qr(Q, mode = 'reduced')
 	#     print(Q.shape)
@@ -162,12 +165,13 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer= 0, kappa = 10, diff= 10,
 		if cells:
 			ht, ct = states
 		else: ht = states
+		ht = ht.reshape((num_layers, batch_size, hidden_size))
 		rvals[:, t] = r
 		#qvect[:, t, :, :] = Q
 
 		t = t+1
 	print(f'Summand Shape: {torch.log2(torch.diagonal(rvals.detach(), dim1 = -2, dim2 = -1)).shape}')
-	LEs = torch.sum(torch.log2(torch.diagonal(rvals.detach()), dim1 = -2, dim2 = -1), dim = -2)/feed_seq
+	LEs = torch.sum(torch.log2(torch.diagonal(rvals.detach(), dim1 = -2, dim2 = -1)), dim = -2)/feed_seq
 	#     print(torch.log2(rvals.detach()).shape)
 	return LEs, rvals#, qvect
 	
@@ -369,6 +373,7 @@ def num_Jac(xt, *states, model, eps= 0.01):
 	del fwd, bwd, hf, hb, fstates, bstates
 	gc.collect()
 	return Jac
+	
 def lstm_jac(params_array, h, c, x, bias):
 	if bias:
 		W, U, b_i, b_h = param_split(params_array, bias)
@@ -397,6 +402,8 @@ def lstm_jac(params_array, h, c, x, bias):
 	o_x = slice(3*hidden_size,4*hidden_size)
 	
 	J = torch.zeros(batch_size, num_layers*hidden_size, num_layers*hidden_size).to(device)
+	# print(f'J shape: {J.shape}')
+	
 	for layer in range(num_layers):
 		if layer>0:
 			x_l = tanh(c_out[layer-1].t()).diagonal(dim1= -2, dim2= -1)*(sig(y[layer-1])[:, o_x])

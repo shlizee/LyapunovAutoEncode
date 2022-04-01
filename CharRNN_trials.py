@@ -21,12 +21,12 @@ class CharRNNTrials(object):
 	def train_trials(self, fcon, model_type = 'lstm', hidden_size = 512):
 		for idx, p in enumerate(self.params):
 			start_time = time.time()
-			print(f'Training network {idx + 1} out of {len(self.params)}', end = ', ')
+			print(f'Training network {idx + 1} out of {len(self.params)}\n')
 			fcon.model.init_params = {'a': -p, 'b':p}
 			trial_data = self.load_trial_data(fcon.data, keep_amt = self.keep_amt)
 			model = RNNModel(fcon.model).to(self.device)
 			optimizer = fcon.train.get_optimizer(model.parameters())
-			print(f'Trial Data shape: {trial_data}')
+			# print(f'Trial Data shape: {trial_data}')
 			train_loss, val_loss = train_model(fcon, model, optimizer, trial_data = trial_data, verbose = False, save_interval = 3)
 			self.train_losses.append(train_loss)
 			self.val_losses[idx] = val_loss
@@ -67,7 +67,8 @@ class CharRNNTrials(object):
 def main(args):
 	parser = argparse.ArgumentParser(description="Train recurrent models")
 	parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
-	parser.add_argument("-evals", "--evals", type=float, default= 20, required=False)
+	# parser.add_argument("-evals", "--evals", type=float, default=20, required=False)
+	parser.add_argument("-evals", "--evals", type=float, default= 2, required=False)
 	args = parser.parse_args(args)
 	model_type = args.model_type
 	evals = args.evals
@@ -76,6 +77,7 @@ def main(args):
 	size = 64 				#Ignore this value (needed for initial creation of Config object but meaningless)
 	batch_size = 32 		#Training batch size
 	max_epoch = 15			#Max epochs for which models are trained
+	# max_epoch = 15
 	keep_amt = 0.2			#Proportion of training set kept for each trial, to maintain independence of models
 	
 	# LE Hyperparameters
@@ -102,6 +104,7 @@ def main(args):
 	
 	#Train Models
 	for hidden_size in [64, 128, 256, 512]:
+	# for hidden_size in [64]:
 		print(f'Hidden Size: {hidden_size}')
 		mcon.rnn_atts['hidden_size'] = hidden_size
 		fcon = FullConfig(dcon, tcon, mcon)
@@ -114,6 +117,7 @@ def main(args):
 	print('Retrieving LE data')
 	le_data = lcon.get_input(fcon)
 	for hidden_size in [64, 128, 256, 512]:
+	# for hidden_size in [64]:
 		print(f'Hidden Size: {hidden_size}')
 		mcon.rnn_atts['hidden_size'] = hidden_size
 		fcon = FullConfig(dcon, tcon, mcon)
@@ -121,7 +125,7 @@ def main(args):
 		trials.LE_spectra(fcon, lcon, le_data, keep_amt = keep_amt)
 		torch.save(trials, f'{trials_dir}/CharRNNTrials_keep{keep_amt}_size{hidden_size}.p')
 		
-def extract_trials(size, dir = '', model_type = 'lstm', keep = 0.4):
+def extract_trials(size, dir = '', model_type = 'lstm', keep = 0.2):
 	trials = torch.load(f'{dir}/CharRNNTrials_keep{keep}_size{size}.p')
 	le_data = trials.all_LEs
 	valLoss = trials.val_losses
