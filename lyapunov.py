@@ -120,7 +120,7 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer= 0, kappa = 10, diff= 10,
 			(ht, ct) = states
 		else:
 			ht = states
-		ht = ht.transpose(0,1)
+		ht = ht.reshape((num_layers, batch_size, hidden_size))
 		Q = torch.matmul(torch.transpose(J, 1, 2), Q)
 	Q, _ = torch.linalg.qr(Q, mode = 'reduced')
 	#     print(Q.shape)
@@ -165,6 +165,7 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer= 0, kappa = 10, diff= 10,
 		if cells:
 			ht, ct = states
 		else: ht = states
+        ht = ht.reshape((num_layers, batch_size, hidden_size))
 		rvals[:, t] = r
 		#qvect[:, t, :, :] = Q
 
