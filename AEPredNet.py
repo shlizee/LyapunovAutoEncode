@@ -10,10 +10,11 @@ class AEPredNet(nn.Module):
 	
 	'''
 	
-	def __init__(self, input_size = 512, latent_size = 128, lr = 1e-3, decay_rate = 0.999, dtype = torch.float, p_drop = 0.1,
+	def __init__(self, input_size = 1024, latent_size = 128, lr = 1e-3, decay_rate = 0.999, dtype = torch.float, p_drop = 0.1,
 					device = torch.device('cpu'), act = 'tanh', act_param = 0.01, prediction_loss_type='L1'):
 		super(AEPredNet, self).__init__()
 		self.input_size = input_size
+		self.latent_size = latent_size
 		self.lr = lr
 		self.learning_rate_decay= decay_rate
 		self.dtype = dtype
@@ -93,7 +94,7 @@ class AEPredNet(nn.Module):
 		if predict:
 			pred = outputs[2]
 			# loss2 = self.pred_loss(pred, targets)
-			targets = targets.type(torch.FloatTensor)
+			targets = targets.type(torch.FloatTensor).to(self.device)
 			loss2 = self.pred_loss(pred, targets)
 		else:
 			loss2 = torch.zeros_like(loss1)
@@ -111,7 +112,7 @@ class AEPredNet(nn.Module):
 			loss1 = self.rec_loss(input, out)
 			if predict:
 				pred = outputs[-1]
-				targets = targets.type(torch.FloatTensor)
+				targets = targets.type(torch.FloatTensor).to(self.device)
 				loss2 = self.pred_loss(pred, targets)
 			else:
 				loss2 = torch.zeros_like(loss1)

@@ -52,7 +52,7 @@ def oneStep(*params, model):
 		return model(params[0], states)
 	else:
 		outputs = model()
-		print(outputs[1].shape)
+		# print(outputs[1].shape)
 		return model(*params)
 
 def oneStepVarQR(J, Q):
@@ -115,7 +115,7 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer= 0, kappa = 10, diff= 10,
 		else:
 			J = calc_Jac(xt, *states, model=model)
 		_, states = oneStep(xt, *states, model=model)
-		print(f'Out shape: {states[1].shape}')
+		# print(f'Out shape: {states[1].shape}')
 		if cells:
 			(ht, ct) = states
 		else:
@@ -402,7 +402,7 @@ def lstm_jac(params_array, h, c, x, bias):
 	o_x = slice(3*hidden_size,4*hidden_size)
 	
 	J = torch.zeros(batch_size, num_layers*hidden_size, num_layers*hidden_size).to(device)
-	print(f'J shape: {J.shape}')
+	# print(f'J shape: {J.shape}')
 	
 	for layer in range(num_layers):
 		if layer>0:

@@ -32,7 +32,7 @@ def load_checkpoint(full_con, load_epoch, verbose = False):
         if not os.path.exists("Models"):
             os.mkdir("Models")
         torch.save(ckpt, ckpt_name)
-        return model, optimizer, train_loss, val_loss
+    return model, optimizer, train_loss, val_loss
 
 def save_checkpoint(full_con, model, optimizer, train_loss, val_loss, save_epoch):
     ckpt_name = '{}/{}_e{}.ckpt'.format(full_con.train.model_dir, full_con.name(), save_epoch)
@@ -58,6 +58,7 @@ def train_model(full_con, model, optimizer, trial_data, start_epoch= 0, print_in
         print('Training ...')
 
     for epoch in range(start_epoch+1, full_con.train.max_epoch+1):
+        print(f'{epoch} / {full_con.train.max_epoch}')
         if epoch%print_interval == 0 and verbose:
             print('Training epoch {} of {}'.format(epoch, full_con.train.max_epoch), end = '')
         running_loss = 0.0
