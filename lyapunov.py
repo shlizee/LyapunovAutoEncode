@@ -42,15 +42,15 @@ def calc_Jac(*params, model):
 	return J
 
 def oneStep(*params, model): 
-	#Params is a tuple including h, x, and c (if LSTM)
-	l = len(params)
-	if l < 2:
-		print('Params must be a tuple containing at least (x_t, h_t)')
-		return None
-	elif l>2:
-		states = (params[1], params[2])
-		return model(params[0], states)
-	else:
+    #Params is a tuple including h, x, and c (if LSTM)
+    l = len(params)
+    if l < 2:
+        print('Params must be a tuple containing at least (x_t, h_t)')
+        return None
+    elif l>2:
+        states = (params[1], params[2])
+        return model(params[0], states)
+    else:
         outputs = model()
         print(outputs[1].shape)
         return model(*params)
