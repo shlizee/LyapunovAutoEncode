@@ -49,7 +49,7 @@ class CharRNNTrials(object):
 		trial_targets_val = val_targets[val_idx][:int(keep_amt*val_len)].to(self.device)
 		return {'train_set': (trial_data_train, trial_targets_train), 'val_set': (trial_data_val, trial_targets_val)}
 	
-	def LE_spectra(self, fcon, lcon,  le_data, keep_amt = 0.4, seq_length = 500, warmup = 500, epoch = 15):
+	def LE_spectra(self, fcon, lcon,  le_data, keep_amt = 0.4, seq_length = 500, warmup = 500, epoch = 1):
 		self.all_LEs = torch.zeros(len(self.params), fcon.model.rnn_atts['hidden_size']).to(self.device)
 		hidden_size = fcon.model.rnn_atts['hidden_size']
 		for idx, p in enumerate(self.params):
@@ -101,7 +101,8 @@ def main(args):
 	tcon = TrainConfig('Models', batch_size, max_epoch, 'adam', learning_rate, {}, start_epoch = 0)
 	
 	#Train Models
-	for hidden_size in [64, 128, 256, 512]:
+	# for hidden_size in [64, 128, 256, 512]:
+	for hidden_size in [64]:
 		print(f'Hidden Size: {hidden_size}')
 		mcon.rnn_atts['hidden_size'] = hidden_size
 		fcon = FullConfig(dcon, tcon, mcon)
@@ -113,7 +114,8 @@ def main(args):
 	lcon = LyapConfig(batch_size = le_batch_size, seq_length = le_seq_length, ON_step = 1, warmup = 500, one_hot= True)
 	print('Retrieving LE data')
 	le_data = lcon.get_input(fcon)
-	for hidden_size in [64, 128, 256, 512]:
+	# for hidden_size in [64, 128, 256, 512]:
+	for hidden_size in [64]:
 		print(f'Hidden Size: {hidden_size}')
 		mcon.rnn_atts['hidden_size'] = hidden_size
 		fcon = FullConfig(dcon, tcon, mcon)
