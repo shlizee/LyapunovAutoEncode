@@ -37,8 +37,8 @@ class RNNModel(nn.ModuleList):
 			self.rnn_layer.flatten_parameters()
 		rnn_out, rnn_hn = self.rnn_layer(encoded.float(), h)
 		d_out = self.dropout(rnn_out)
-		output = self.fc(d_out)
-		return output, rnn_hn
+		output = self.fc(d_out[:, -1])
+		return output, rnn_out
 		
 	def init_hidden(self, batch_size):
 		h = torch.zeros(self.con.rnn_atts['num_layers'], batch_size, self.con.rnn_atts['hidden_size']).to(self.con.device)
