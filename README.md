@@ -10,7 +10,7 @@ Our code is run on Ubuntu 18.04. No non-standard hardware is required.
   - ```bash
     # installation could take a couple minutes
     pip install -r requirements.txt
-## Demo
+## Demo and Instructions
 The following code demo outlines the steps to analyze AeLLE for the CharRNN task.
 
 Utilizing the Lyapunov AutoEncoder requires four steps:
@@ -90,7 +90,3 @@ This will generate plots of the AeLLE with different the performance of the corr
 
 Expected output
 Expected run time for demo on "normal" desktop computer
-
-## Instructions for Use
-How to run software on your data
-Reproduction instructions
