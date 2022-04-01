@@ -165,7 +165,7 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer= 0, kappa = 10, diff= 10,
 		if cells:
 			ht, ct = states
 		else: ht = states
-        ht = ht.reshape((num_layers, batch_size, hidden_size))
+		ht = ht.reshape((num_layers, batch_size, hidden_size))
 		rvals[:, t] = r
 		#qvect[:, t, :, :] = Q
 
