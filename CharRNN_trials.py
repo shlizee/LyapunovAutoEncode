@@ -26,7 +26,7 @@ class CharRNNTrials(object):
 			trial_data = self.load_trial_data(fcon.data, keep_amt = self.keep_amt)
 			model = RNNModel(fcon.model).to(self.device)
 			optimizer = fcon.train.get_optimizer(model.parameters())
-			print(f'Trial Data shape: {trial_data}')
+			# print(f'Trial Data shape: {trial_data}')
 			train_loss, val_loss = train_model(fcon, model, optimizer, trial_data = trial_data, verbose = False, save_interval = 3)
 			self.train_losses.append(train_loss)
 			self.val_losses[idx] = val_loss
@@ -75,7 +75,7 @@ def main(args):
 	# Non-argument hyperparameters
 	size = 64 				#Ignore this value (needed for initial creation of Config object but meaningless)
 	batch_size = 32 		#Training batch size
-	max_epoch = 15			#Max epochs for which models are trained
+	max_epoch = 1			#Max epochs for which models are trained
 	keep_amt = 0.2			#Proportion of training set kept for each trial, to maintain independence of models
 	
 	# LE Hyperparameters
