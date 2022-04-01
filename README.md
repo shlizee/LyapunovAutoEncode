@@ -40,6 +40,8 @@ This code will train [NO. EVALUATIONS] instances of [MODEL TYPE] models each of 
 
 The relevant training outputs for all models of a given size (model parameters, training and validation loss, etc.) will be stored in a Trials object.
 
+Network training takes the most time of this demo. Our tests (with CUDA-enabled device) show that training each network takes 3-10 minutes, depending on network size. This means that for 20 evaluationt at each size, it could take a couple hours. For our experiments, we evaluated 50 times.
+
 ### Step 2: Calculate Lyapunov Exponents
 Running the code for Step 1 will also calculate the Lyapunov Exponents (LEs) of each of these models and store them in the Trial object generated in step 1.
 
@@ -59,6 +61,8 @@ Use the same MODEL TYPE as above. This will combine the LEs across all network s
 The output of this step will be a single dictionary file containing all the LEs split into a training, validation, and test set. 
 The name of this file will be [MODEL TYPE]_data_split_vfrac0.2.p.
 
+Calculating Lyapunov Exponents for these networks takes around ten seconds for the largest networks. For 20 evaluations, this should take just a few minutes.
+
 ### Step 3: Train Lyapunov AutoEncoder
 Once the LEs are calculated for all the models, we use an Autoencoder to project the LEs into a lower dimension and relate them to performance (as measured by validation loss).
 
@@ -77,6 +81,8 @@ python AE_train.py -model lstm -latent 32 -alphas [10, 10, 10, 10] -epochs 500 -
 The model will save the reconstruction loss (standard for autoencoders) as well as the prediction loss, for which it uses the latent LE representation to predict the validation loss of the corresponding network.
 A figure showing the loss as a function of training epoch will be saved in a folder titled 'Figures/'
 
+Training time of the autoencoder will depend on the epochs you select as well as the number of evaluations chosen in the previous steps. This should take several minutes.
+
 ### Step 4: Analyze Latent Lyapunov Exponents (AeLLE)
 Once the autoencoder is trained, we would like to analyze its latent representation of the LEs (AeLLE). We can do this by taking the first 2 principal components of the AeLLE and comparing the performance of these networks.
 
@@ -88,5 +94,4 @@ python LE_clustering.py -model lstm -thresh 1.0 -latent 32
 
 This will generate plots of the AeLLE with different the performance of the corresponding network indicated by color.
 
-Expected output
-Expected run time for demo on "normal" desktop computer
+This plot generation takes a matter of seconds.
