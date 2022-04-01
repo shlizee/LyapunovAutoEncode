@@ -369,7 +369,7 @@ def num_Jac(xt, *states, model, eps= 0.01):
 	del fwd, bwd, hf, hb, fstates, bstates
 	gc.collect()
 	return Jac
-    
+	
 def lstm_jac(params_array, h, c, x, bias):
 	if bias:
 		W, U, b_i, b_h = param_split(params_array, bias)
@@ -399,7 +399,8 @@ def lstm_jac(params_array, h, c, x, bias):
 	
 	J = torch.zeros(batch_size, num_layers*hidden_size, num_layers*hidden_size).to(device)
 	print(f'J shape: {J.shape}')
-    for layer in range(num_layers):
+	
+	for layer in range(num_layers):
 		if layer>0:
 			x_l = tanh(c_out[layer-1].t()).diagonal(dim1= -2, dim2= -1)*(sig(y[layer-1])[:, o_x])
 			x_in.append(x_l.t())
