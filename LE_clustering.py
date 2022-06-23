@@ -108,18 +108,19 @@ def tsne_param(no_evals = 400, model_type = 'lstm'):
     plt.ylabel('TSNE 2')
     plt.savefig('AEPredNet_tsne_params.png', dpi = 200)
 
-def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 1, v_frac= 0.2, suffix = '', thresh = 1.75):
+def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 1, v_frac= 0.2, suffix = '', thresh = 1.75):
     if torch.cuda.is_available():
         device= torch.device('cuda')
     else:
         device= torch.device('cpu')
-    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt').cpu()
+    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_2000.ckpt').cpu()
     model.load_state_dict(model.best_state)
-    x_data = torch.load(f'Processed/{model_type}/{model_type}_allLEs.p')
-    targets = torch.load(f'Processed/{model_type}/{model_type}_allValLoss.p')
+    dir = f'Processed/trials/{task_type}/{model_type}/'
+    x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
+    targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
     target_mask = targets < thresh
     # print(f'Target shape {targets.shape}')
-    split = torch.load(f'Processed/{model_type}_data_split_vfrac{v_frac}.p')
+    split = torch.load(f'{dir}/{model_type}_data_split_vfrac{v_frac}.p')
     indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
     sizes = [64, 128, 256, 512]
     i_list = torch.arange(4*no_evals)
@@ -127,7 +128,7 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 1, v_frac= 0.2, suff
     latent = model(x_data)[1].detach()
     U,S,V = torch.pca_lowrank(latent)
     low_rank = torch.matmul(latent, V[:, :dim])
-    torch.save(low_rank, f'PCA_dim{dim}.p')
+    torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
     #Performance PCA Plot
     fig = plt.figure(figsize = (4,4))
 
@@ -166,6 +167,8 @@ def pca(latent_size, dim=2, model_type = 'lstm', no_evals = 1, v_frac= 0.2, suff
     ax.set_yticks([])
     if dim == 3:
         ax.set_zlabel('PCA 3')
+    # plt.show()
+    print(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png')
     plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png', dpi = 200, bbox_inches = 'tight')
     #Size PCA Plot
     fig = plt.figure(figsize = (4,4))
@@ -321,15 +324,19 @@ def get_cmap(data, n_colors = 5):
 def main(args):
     parser = argparse.ArgumentParser(description="Train recurrent models")
     parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+    parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
     parser.add_argument("-thresh", "--threshold", type=float, default= 1.75, required=False)
     parser.add_argument("-latent", "--latent_size", type=int, default= 32, required=False)
+    parser.add_argument("-evals", "--num_evals", type=int, default=3, required=False)
     args = parser.parse_args(args)
     model_type = args.model_type
+    task_type = args.task_type
     latent_size = args.latent_size
+    num_evals = args.num_evals
     thresh = args.threshold
-    if not os.path.isdir('Figures/Latent'):
-        os.mkdir('Figures/Latent')
-    pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 1, v_frac = 0.2, suffix = f'{model_type}_', thresh = thresh)
+    if not os.path.isdir(f'Figures/Latent/{task_type}'):
+        os.makedirs(f'Figures/Latent/{task_type}')
+    pca(latent_size = latent_size, dim = 2, task_type=task_type, model_type = model_type, no_evals = num_evals, v_frac = 0.2, suffix = f'{model_type}_', thresh = thresh)
     # pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 1, v_frac = 0.2, suffix = f'{model_type}_', thresh = 0)
 
 if __name__ == '__main__':

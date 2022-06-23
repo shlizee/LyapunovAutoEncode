@@ -63,23 +63,33 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
 def main(args):
     parser = argparse.ArgumentParser(description="Train Lyapunov Autoencoder")
     parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
-    parser.add_argument("-latent", "--latent_size", type=float, default= 32, required=False)
-    parser.add_argument("-alphas", "--alphas", type=list, default= [5, 5, 10, 20], required=False)
+    parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
+    parser.add_argument("-latent", "--latent_size", type=int, default= 32, required=False)
+    parser.add_argument("-alphas", "--alphas", type=str, default= '[5, 5, 10, 20]', required=False)
     parser.add_argument("-ae_lr", "--lr", type=float, default= 1e-5, required=False)
     parser.add_argument("-epochs", "--epochs", type=int, default= 1000, required=False)
+
     args = parser.parse_args(args)
     model_type = args.model_type
+    task_type = args.task_type
     latent_size = args.latent_size
-    alphas = args.alphas
+    temp = ''
+
+    for ch in args.alphas:
+        temp += ch
     epochs = args.epochs
     lr = args.lr
-
+    temp = temp[1:-1].split(',')
+    alphas = []
+    for alpha in temp:
+        alphas.append(int(alpha))
     if torch.cuda.is_available():
-        device= torch.device('cuda')
+        device = torch.device('cuda')
     else:
-        device= torch.device('cpu')
-    x_data = torch.load(f'Processed/lstm/{model_type}_allLEs.p')
-    targets = torch.load(f'Processed/lstm/{model_type}_allValLoss.p')
+        device = torch.device('cpu')
+    dir = f'Processed/trials/{task_type}/{model_type}'
+    x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
+    targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
     if os.path.exists(f'Processed/{model_type}_data_split_vfrac0.2.p'):
         split = torch.load(f'Processed/{model_type}_data_split_vfrac0.2.p')
     else:

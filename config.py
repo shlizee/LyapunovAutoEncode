@@ -61,9 +61,10 @@ class TestDataConfig(object):
 			self.train_frac = train_frac
 			self.val_frac = val_frac
 			self.test_frac = test_frac
-        
-		self.input_size = len(self.datasets['char_to_int'])
-
+		if 'char_to_int' in self.datasets:
+			self.input_size = len(self.datasets['char_to_int'])
+		else:
+			self.input_size = 28
 class TrainConfig(object):
 	def __init__(self, model_dir, batch_size, max_epoch, optimizer, learning_rate, optim_params = {}, start_epoch = 0, scheduler = None, scheduler_params = {}):
 		"""
@@ -140,7 +141,7 @@ class ModelConfig(object):
 		else:
 			self.x_init_params = x_init_params
 		if model_type == 'rnn':
-			rnn_atts['nonlinearity'] = self.nonlinearity 
+			self.rnn_atts['nonlinearity'] = self.nonlinearity
 		
 		self.initializations ={'uni': nn.init.uniform_, 'normal': nn.init.normal_, 'xav_uni': nn.init.xavier_uniform_, 'xav_normal': nn.init.xavier_normal_,
 						'ortho': nn.init.orthogonal_, 'kai_uni': nn.init.kaiming_uniform_, 'kai_normal': nn.init.kaiming_normal_}
@@ -175,9 +176,10 @@ class FullConfig(object):
 
     #Return full file prefix name with identifying parameters for this experiment
 	def name(self):
-		fullname = '{0}_L{1}_H{2}_{3}_drop{4}_{5}_lr{6}_{7}_{8:.3f}'.format(self.model.model_type, self.model.rnn_atts['num_layers'], self.model.rnn_atts['hidden_size'],
+		fullname = '{0}_L{1}_H{2}_{3}_drop{4}_{5}_lr{6}_{7}_{8}'.format(self.model.model_type, self.model.rnn_atts['num_layers'], self.model.rnn_atts['hidden_size'],
 																			self.model.nonlinearity, self.model.dropout, self.train.optimizer,
-																			self.train.learning_rate, self.model.init_type, self.model.init_params[self.model.id_init_param])
+																			self.train.learning_rate, self.model.init_type, self.model.id_init_param)
+																			# self.model.init_params[self.model.id_init_param])
 		for param, value in self.model.other_rnn_params.items():
 			fullname += f'_{param}{value}'
 		
@@ -216,23 +218,26 @@ class LyapConfig(object):
 		
 	def get_mnist_input(self, fcon):
 		xt = fcon.data.datasets['test_set']
-		data = torch.zeros((784, len(fcon.data.datasets['test_set']))).to(fcon.device)
-		for i, (x, _) in enumerate(xt):
+		data = torch.zeros((len(fcon.data.datasets['test_set'][1])), 784).to(fcon.device)
+		for i, x in enumerate(xt):
+			x = x[0]
 			idx= torch.randint(high = fcon.data.input_seq_length, size = (1,))
 			b = x.flatten().roll(shifts = idx.item(), dims = 0)
-			data[:, i] = b
+			data[i, :] = b
 		data = data[torch.randperm(data.shape[0])]
-		flattened_data = data.flatten()
-		xt = flattened_data[:self.batch_size *self.seq_length * math.floor(fcon.data.input_seq_length*len(xt)/(self.batch_size * self.seq_length))]
-		xt = xt.view(-1, self.batch_size, self.seq_length).unsqueeze(dim = -1)
+		xt = data[:self.batch_size]
+		# flattened_data = data.flatten()
+		# xt = flattened_data[:self.batch_size *self.seq_length * math.floor(fcon.data.input_seq_length*len(xt)/(self.batch_size * self.seq_length))]
+		# xt = xt.view(-1, self.batch_size, self.seq_length).unsqueeze(dim = -1)
+		xt = xt.reshape([-1, 28, 28])
 		return xt
     
 	def calc_lyap(self, le_input, model, fcon):
 		model.eval()
 		model.lyapunov = True
 		h = model.init_hidden(self.batch_size)
-		i = torch.randint(low = 0, high = le_input.shape[0], size =  (1,)).item()
-		LEs, rvals = lyap.calc_LEs_an(le_input[i], h, model = model, k_LE = 10000, rec_layer = fcon.model.model_type, warmup = self.warmup, T_ons = self.T_ONS)
+		# i = torch.randint(low = 0, high = le_input.shape[0], size =  (1,)).item()
+		LEs, rvals = lyap.calc_LEs_an(le_input, h, model = model, k_LE = 10000, rec_layer = fcon.model.model_type, warmup = self.warmup, T_ons = self.T_ONS)
 		LE_mean, LE_std = lyap.LE_stats(LEs)
 		model.lyapunov = False
 		

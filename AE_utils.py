@@ -3,7 +3,7 @@ from AEPredNet import AEPredNet
 import numpy as np
 from math import floor
 import os
-from CharRNN_trials import *
+from generate_trials import *
 import pickle
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
@@ -41,7 +41,8 @@ def combine_sizes(start_sizes, target_size, prefix = 'lstm', suffix = '', num_pa
         val_data = torch.cat((val_data, torch.load(f'{prefix}_{start_size}{suffix}_valLoss.p').cpu()))
         params = torch.cat((params, torch.load(f'{prefix}_{start_size}{suffix}_params.p').unsqueeze(dim=0)), dim=0)
     if not os.path.exists(f'Processed/{dir}'):
-        os.mkdir(f'Processed/{dir}')
+        os.makedirs(f'Processed/{dir}')
+        # os.mkdir(f'Processed/{dir}')
     torch.save(le_data, f'Processed/{prefix}_{suffix}allLEs.p')
     torch.save(val_data, f'Processed/{prefix}_{suffix}allValLoss.p')
     torch.save(params, f'Processed/{prefix}_{suffix}allParams.p')
@@ -51,9 +52,10 @@ def mini_batch_ae(features, batch_size):
         end = min(start+batch_size,len(features))
         yield features[start:end]
 
-def train_val_split(data, targets, val_split = 0.2, save = True, prefix = 'lstm'):
-    if not os.path.isdir('Processed/'):
-        os.makedir('Processed/')
+def train_val_split(data, targets, val_split = 0.2, dir='none',save = True, model_type = 'lstm', task_type='charRNN'):
+    dir = f'Processed/{dir}'
+    if not os.path.isdir(dir):
+        os.makedirs(dir)
     samples = data.shape[0]
     train_samples = torch.arange(floor(samples * (1- val_split)))
     train_samples = torch.arange(floor(samples * (1 - val_split)))
@@ -66,7 +68,7 @@ def train_val_split(data, targets, val_split = 0.2, save = True, prefix = 'lstm'
 
     split_dict = {'train_data': train_data, 'train_targets':train_targets, 'val_data': val_data,
                     'val_targets': val_targets, 'train_idx': train_idx, 'val_idx': val_idx }
-    torch.save(split_dict, f'Processed/{prefix}_data_split_vfrac{val_split}.p')
+    torch.save(split_dict, f'{dir}/{model_type}_data_split_vfrac{val_split}.p')
     return split_dict
 
 def merge_data(dir = ''):
@@ -86,34 +88,39 @@ def merge_data(dir = ''):
 
 def main(args):
     parser = argparse.ArgumentParser(description="Train recurrent models")
-    parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+    parser.add_argument("-model", "--model_type", type=str, default='lstm', required=False)
+    parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
+    parser.add_argument("-evals", "--evals", type=int, default='20', required=False)
     args = parser.parse_args(args)
     model_type = args.model_type
+    task_type = args.task_type
+    no_evals = args.evals
 
-    dir = model_type
-    no_evals = 1
+    dir = f'trials/{task_type}/{model_type}'
     # no_evals = 300
     sizes = [64, 128, 256, 512]
-    for size  in sizes:
-        extract_trials(size, dir)
+    print(dir)
+    for size in sizes:
+        extract_trials(size, dir, task_type=task_type)
     combine_sizes([64, 128, 256, 512], 1024, prefix = f'{dir}/{model_type}', num_params = no_evals, dir=dir)
     data = torch.load(f'Processed/{dir}/{model_type}_allLEs.p')
     targets = torch.load(f'Processed/{dir}/{model_type}_allValLoss.p')
 
     # data, targets = merge_data()
     # model_type = 'merged'
-    if os.path.exists(f'Processed/{model_type}_data_split_vfrac0.2.p'):
-        split = torch.load(f'Processed/{model_type}_data_split_vfrac0.2.p')
+
+    if os.path.exists(f'Processed/{dir}/{model_type}_data_split_vfrac0.2.p'):
+        split = torch.load(f'Processed/{dir}/{model_type}_data_split_vfrac0.2.p')
     else:
-        split = train_val_split(data, targets, val_split = 0.2, prefix = model_type)
+        split = train_val_split(data, targets, val_split = 0.2, dir=dir, task_type=task_type, model_type=model_type)
         print(f'New dataset created')
         print(split['train_data'].shape[0])
     return split
 
 if __name__ == '__main__':
     import sys
-    a = ['-model', 'lstm']
-    main(a)
+    main(sys.argv[1:])
+
     # main(sys.argv[1:])
 # def main():
     # N = 512

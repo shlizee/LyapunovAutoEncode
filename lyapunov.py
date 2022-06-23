@@ -41,19 +41,34 @@ def calc_Jac(*params, model):
 		h0.grad.zero_()
 	return J
 
-def oneStep(*params, model): 
-	#Params is a tuple including h, x, and c (if LSTM)
+# def oneStep(*params, model):
+# 	#Params is a tuple including h, x, and c (if LSTM)
+# 	l = len(params)
+# 	if l < 2:
+# 		print('Params must be a tuple containing at least (x_t, h_t)')
+# 		return None
+# 	elif l>2:
+# 		states = (params[1], params[2])
+# 		return model(params[0], states)
+# 	else:
+# 		# outputs = model()
+# 		# print(outputs[1].shape)
+# 		return model(*params)
+
+
+def oneStep(*params, model, rec_layer='lstm'):
+	# Params is a tuple including h, x, and c (if LSTM)
 	l = len(params)
 	if l < 2:
 		print('Params must be a tuple containing at least (x_t, h_t)')
 		return None
-	elif l>2:
+	elif l > 2:
 		states = (params[1], params[2])
 		return model(params[0], states)
 	else:
 		outputs = model()
-		# print(outputs[1].shape)
 		return model(*params)
+
 
 def oneStepVarQR(J, Q):
 	Z = torch.matmul(torch.transpose(J, 1, 2), Q) #Linear extrapolation of the network in many directions
