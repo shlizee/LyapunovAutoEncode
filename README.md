@@ -22,17 +22,20 @@ Utilizing the Lyapunov AutoEncoder requires four steps:
 ### Step 1: Train Models (Trials)
 Before we begin any training, we pre-process our data by running the following code:
 ~~~
-python test_set_prep.py
+python test_set_prep.py charRNN
 ~~~
 
+This sets up the dataset for charRNN. Change 'charRNN' to 'SMNIST' can setup dataset for SMNIST
 We start by training a number of recurrent models with different hyperparameters.
 To do this, we run 
 ~~~
 #CharRNN_trials.py -model [MODEL TYPE] -evals [NO. EVALUATIONS]
-python CharRNN_trials.py -model lstm evals 300
+python generate_trials.py -model lstm -task charRNN -evals 300
 ~~~
 
 For MODEL_TYPE, select either 'lstm', 'gru', or 'rnn' (default: 'lstm')
+
+For TASK, select either 'charRNN' or 'SMNIST' (default: 'charRNN')
 
 For NO. EVALUATIONS, select an integer for the number of trials/networks of each size to train. (default: 20)
 
@@ -55,9 +58,9 @@ The hyperparameters that you can change are:
 Once this is done, we run
 ~~~
 # python AE_utils.py -model [MODEL TYPE]
-python AE_utils.py -model lstm
+python AE_utils.py -model lstm -task charRNN -evals 20
 ~~~
-Use the same MODEL TYPE as above. This will combine the LEs across all network sizes into a single-sized dataset by interpolating the values of the smaller networks.
+Use the same MODEL TYPE, TASK, EVALS as above. This will combine the LEs across all network sizes into a single-sized dataset by interpolating the values of the smaller networks.
 The output of this step will be a single dictionary file containing all the LEs split into a training, validation, and test set. 
 The name of this file will be [MODEL TYPE]_data_split_vfrac0.2.p.
 
@@ -76,7 +79,7 @@ We have the following arguments for our Lyapunov Autoencoder training:
 Running the following code will train the autoencoder:
 ~~~
 #AE_train.py -model [MODEL TYPE] -latent [LATENT SIZE] -alphas [ALPHA LIST] -epochs [EPOCHS] -ae_lr [INITIAL LEARNING RATE]
-python AE_train.py -model lstm -latent 32 -alphas [10, 10, 10, 10] -epochs 500 -ae_lr 0.01
+python AE_train.py -model lstm -task charRNN -latent 32 -alphas [10,10,10,10] -epochs 500 -ae_lr 0.01
 ~~~
 The model will save the reconstruction loss (standard for autoencoders) as well as the prediction loss, for which it uses the latent LE representation to predict the validation loss of the corresponding network.
 A figure showing the loss as a function of training epoch will be saved in a folder titled 'Figures/'
@@ -89,7 +92,7 @@ Once the autoencoder is trained, we would like to analyze its latent representat
 Use the following code to generate this PCA plot:
 ~~~
 #LE_clustering.py -model [MODEL TYPE] -thresh [THRESHOLD] -latent [LATENT SIZE]
-python LE_clustering.py -model lstm -thresh 1.0 -latent 32
+python LE_clustering.py -model lstm -task charRNN -thresh 1.0 -latent 32 -evals 5
 ~~~
 
 This will generate plots of the AeLLE with different the performance of the corresponding network indicated by color.
