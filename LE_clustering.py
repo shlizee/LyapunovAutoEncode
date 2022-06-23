@@ -113,7 +113,7 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
         device= torch.device('cuda')
     else:
         device= torch.device('cpu')
-    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_2000.ckpt').cpu()
+    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_400.ckpt').cpu()
     model.load_state_dict(model.best_state)
     dir = f'Processed/trials/{task_type}/{model_type}/'
     x_data = torch.load(f'{dir}/{model_type}_allLEs.p')

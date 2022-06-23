@@ -9,7 +9,7 @@ import pickle as pkl
 
 
 class SMNISTTrails(object):
-    def __init__(self, fcon, min_pval=0.04, max_pval=0.40, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
+    def __init__(self, fcon, min_pval=0.1, max_pval=2, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
         self.params = torch.round((torch.rand(int(evals)) * (max_pval - min_pval) + min_pval) * 10 ** 3) / (10 ** 3)
         self.keep_amt = keep_amt
         # print(self.params)
@@ -165,8 +165,8 @@ def main(args):
         tcon = TrainConfig(f'Models/{task}/', batch_size, max_epoch, 'adam', learning_rate, {}, start_epoch=0)
 
         # Train Models
-        # for hidden_size in [64, 128, 256, 512]:
-        for hidden_size in [64]:
+        for hidden_size in [64, 128, 256, 512]:
+        # for hidden_size in [64]:
             print(f'Hidden Size: {hidden_size}')
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
@@ -178,14 +178,14 @@ def main(args):
         lcon = LyapConfig(batch_size=le_batch_size, seq_length=le_seq_length, ON_step=1, warmup=500, one_hot=True)
         print('Retrieving LE data')
         le_data = lcon.get_input(fcon)
-        # for hidden_size in [64, 128, 256, 512]:
-        for hidden_size in [64]:
+        for hidden_size in [64, 128, 256, 512]:
+        # for hidden_size in [64]:
             print(f'Hidden Size: {hidden_size}')
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
-            trials = torch.load(f'{trials_dir}/CharRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
+            trials = torch.load(f'{trials_dir}/charRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
             trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt)
-            torch.save(trials, f'{trials_dir}/CharRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
+            torch.save(trials, f'{trials_dir}/charRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
 
     elif task == 'SMNIST':
         print("Training SMNIST")
@@ -193,7 +193,7 @@ def main(args):
         mcon = ModelConfig(model_type, num_layers=1, hidden_size=64, input_size=28, output_size=10,
                            dropout=dropout, init_type='uni', device=device, bias=False, id_init_param='b',
                            encoding='one_hot')
-        tcon = TrainConfig(model_dir=f'Models/{task}/', batch_size=100, max_epoch=2, optimizer='adam',
+        tcon = TrainConfig(model_dir=f'Models/{task}/', batch_size=100, max_epoch=10, optimizer='adam',
                            learning_rate=0.01, optim_params={}, start_epoch=0)
 
         #Train Models
