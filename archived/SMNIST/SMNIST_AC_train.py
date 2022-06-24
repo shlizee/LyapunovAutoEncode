@@ -65,9 +65,9 @@ def ae_train(model, train_data, train_targets, val_data, val_targets,
         # torch.save(model, f'Results/{function_type}/N_{N}_g_{g}/epoch_{inputs_epoch}/{model.prediction_loss_type}'
         #                   f'/ae_prednet_{model.global_step}{suffix}.ckpt')
     else:
-        if not os.path.exists(f'../SMNIST/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/{model.prediction_loss_type}'):
-            os.makedirs(f'../SMNIST/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/{model.prediction_loss_type}')
-        torch.save(model, f'../SMNIST/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/{model.prediction_loss_type}'
+        if not os.path.exists(f'/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/{model.prediction_loss_type}'):
+            os.makedirs(f'/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/{model.prediction_loss_type}')
+        torch.save(model, f'/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/{model.prediction_loss_type}'
                           f'/ae_prednet_{model.global_step}{suffix}.ckpt')
 
 
@@ -93,9 +93,9 @@ def main():
     split = train_val_split(data=x_data, targets=targets, val_split=val_split)
 
     if len(a_s) > 1:
-        if not os.path.exists(f'../SMNIST/Results/N_{N}_as_mixed/epoch_{inputs_epoch}'):
-            os.makedirs(f'../SMNIST/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/')
-        torch.save(split, f'../SMNIST/Results//N_{N}_as_mixed/epoch_{inputs_epoch}/data_split_vfrac{val_split}.p')
+        if not os.path.exists(f'/Results/N_{N}_as_mixed/epoch_{inputs_epoch}'):
+            os.makedirs(f'/Results/N_{N}_as_mixed/epoch_{inputs_epoch}/')
+        torch.save(split, f'/Results//N_{N}_as_mixed/epoch_{inputs_epoch}/data_split_vfrac{val_split}.p')
 
     # else:
     #     g = gs[0]

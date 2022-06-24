@@ -96,12 +96,17 @@ def main(args):
     task_type = args.task_type
     no_evals = args.evals
 
+    # testing code
+    model_type = 'gru'
+    task_type  = 'SMNIST'
+    no_evals   = 200
+
     dir = f'trials/{task_type}/{model_type}'
     # no_evals = 300
     sizes = [64, 128, 256, 512]
     print(dir)
     for size in sizes:
-        extract_trials(size, dir, task_type=task_type)
+        extract_trials(size, dir, model_type=model_type,task_type=task_type)
     combine_sizes([64, 128, 256, 512], 1024, prefix = f'{dir}/{model_type}', num_params = no_evals, dir=dir)
     data = torch.load(f'Processed/{dir}/{model_type}_allLEs.p')
     targets = torch.load(f'Processed/{dir}/{model_type}_allValLoss.p')

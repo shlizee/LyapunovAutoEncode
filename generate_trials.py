@@ -9,7 +9,7 @@ import pickle as pkl
 
 
 class SMNISTTrails(object):
-    def __init__(self, fcon, min_pval=0.1, max_pval=2, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
+    def __init__(self, fcon, min_pval=0.1, max_pval=3, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
         self.params = torch.round((torch.rand(int(evals)) * (max_pval - min_pval) + min_pval) * 10 ** 3) / (10 ** 3)
         self.keep_amt = keep_amt
         # print(self.params)
@@ -21,7 +21,8 @@ class SMNISTTrails(object):
     def train_trials(self, fcon, model_type='lstm', hidden_size=512):
         for idx, p in enumerate(self.params):
             start_time = time.time()
-            print(f'Training network {idx + 1} out of {len(self.params)}\n')
+            print(f'Training network {idx + 1} out of {len(self.params)}.\n'
+                  f'init param: [{-p}, {p}]\fn')
             fcon.model.init_params = {'a': -p, 'b': p}
             model = RNNModel(fcon.model).to(self.device)
             optimizer = fcon.train.get_optimizer(model.parameters())

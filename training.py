@@ -41,6 +41,7 @@ def save_checkpoint(full_con, model, optimizer, train_loss, val_loss, save_epoch
         os.makedirs(f'{full_con.train.model_dir}')
     ckpt_name = '{}/{}_e{}.ckpt'.format(full_con.train.model_dir, full_con.name(), save_epoch)
     ckpt = {'model_state_dict': model.state_dict(), 'optimizer_state_dict':optimizer.state_dict(), 'train_loss':train_loss, 'val_loss':val_loss}
+    print(f"Saving checkpoint: {ckpt_name}")
     torch.save(ckpt, ckpt_name)
 
 def train_model(full_con, model, optimizer, trial_data, start_epoch= 0, print_interval = 1, save_interval = 1, verbose = True, keep_amount = 1.0):

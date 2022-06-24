@@ -66,7 +66,7 @@ def oneStep(*params, model, rec_layer='lstm'):
 		states = (params[1], params[2])
 		return model(params[0], states)
 	else:
-		outputs = model()
+		# outputs = model()
 		return model(*params)
 
 

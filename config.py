@@ -178,8 +178,8 @@ class FullConfig(object):
 	def name(self):
 		fullname = '{0}_L{1}_H{2}_{3}_drop{4}_{5}_lr{6}_{7}_{8}'.format(self.model.model_type, self.model.rnn_atts['num_layers'], self.model.rnn_atts['hidden_size'],
 																			self.model.nonlinearity, self.model.dropout, self.train.optimizer,
-																			self.train.learning_rate, self.model.init_type, self.model.id_init_param)
-																			# self.model.init_params[self.model.id_init_param])
+																			self.train.learning_rate, self.model.init_type,
+																		    self.model.init_params[self.model.id_init_param])
 		for param, value in self.model.other_rnn_params.items():
 			fullname += f'_{param}{value}'
 		
