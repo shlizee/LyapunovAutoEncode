@@ -48,7 +48,7 @@ def SMNIST():
             train_data = torch.cat([train_data, images])
             train_labels = torch.cat([train_labels, labels])
         # train_labels.append(labels)
-    print(i, train_data.shape, train_labels.shape)
+    print(i+1, train_data.shape, train_labels.shape)
 
     for i, (images, labels) in enumerate(test_dataloader):
         images = images.reshape(-1, sequence_length * input_size)
@@ -60,7 +60,7 @@ def SMNIST():
             test_data = torch.cat([test_data, images])
             test_labels = torch.cat([test_labels, labels])
         # train_labels.append(labels)
-    print(i, test_data.shape, test_labels.shape)
+    print(i+1, test_data.shape, test_labels.shape)
     dataset = {
         'train_set': [train_data, train_labels],
         'test_set': [test_data, test_labels]

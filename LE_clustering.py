@@ -119,6 +119,8 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
     x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
     targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
     target_mask = targets < thresh
+    print(f"Number of samples smaller than threshold: {torch.sum(target_mask)}")
+    print(f"Number of samples larger than threshold: {torch.sum(~target_mask)}")
     # print(f'Target shape {targets.shape}')
     split = torch.load(f'{dir}/{model_type}_data_split_vfrac{v_frac}.p')
     indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
@@ -193,6 +195,7 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
+
     if dim == 3:
         ax.set_zlabel('PCA 3')
     if thresh >0:
@@ -200,7 +203,7 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
     else:
         ax.colorbar(label = 'Val Loss')
         plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_dim{dim}.png', dpi = 200)
-
+    # plt.show()
 
 def pca_size(latent_size, size = 512, dim=2, model_type = 'lstm'):
     if torch.cuda.is_available():
@@ -337,11 +340,11 @@ def main(args):
     thresh = args.threshold
 
     # # testing code
-    # latent_size = 32
-    # num_evals   = 200
-    # task_type   = 'SMNIST'
-    # model_type  = 'gru'
-    # thresh      = 0.005
+    latent_size = 32
+    num_evals   = 200
+    task_type   = 'SMNIST'
+    model_type  = 'rnn'
+    thresh      = 0.01
 
 
     if not os.path.isdir(f'Figures/Latent/{task_type}'):

@@ -62,7 +62,7 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
 
 def main(args):
     parser = argparse.ArgumentParser(description="Train Lyapunov Autoencoder")
-    parser.add_argument("-model", "--model_type", type=str, default= 'lstm', required=False)
+    parser.add_argument("-model", "--model_type", type=str, default= 'gru', required=False)
     parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
     parser.add_argument("-latent", "--latent_size", type=int, default= 32, required=False)
     parser.add_argument("-alphas", "--alphas", type=str, default= '[5, 5, 10, 20]', required=False)

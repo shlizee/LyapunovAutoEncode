@@ -16,6 +16,7 @@ def interpolate_LEs(start_size, target_size, prefix = 'lstm', suffix = ''):
     print(f'Interpolation Factor: {int(factor_increase)}')
     file_name = f'{prefix}_{start_size}{suffix}_LEs.p'
     le = torch.load(file_name)
+
     device = le.device
     m = le.shape[0]
     for factor in 2**((np.arange(int(np.log2(factor_increase))))+1):
@@ -35,11 +36,28 @@ def combine_sizes(start_sizes, target_size, prefix = 'lstm', suffix = '', num_pa
         os.mkdir('Processed/')
     le_data = torch.zeros((0, target_size))
     val_data = torch.zeros((0, ))
-    params = torch.zeros((0, num_params))
+    params = torch.zeros((0, ))
     for start_size in start_sizes:
-        le_data = torch.cat((le_data, interpolate_LEs(start_size, target_size, prefix, suffix).cpu()))
-        val_data = torch.cat((val_data, torch.load(f'{prefix}_{start_size}{suffix}_valLoss.p').cpu()))
-        params = torch.cat((params, torch.load(f'{prefix}_{start_size}{suffix}_params.p').unsqueeze(dim=0)), dim=0)
+        le_temp = interpolate_LEs(start_size, target_size, prefix, suffix).cpu()
+        # remove nan
+        import numpy as np
+        import random
+        nan_indices = torch.isnan(le_temp[:, 0])
+        not_nan_indices = [not index for index in nan_indices]
+        nan_indices = np.where(nan_indices)
+        not_nan_indices = np.where(not_nan_indices)
+        # not_nan_indices = np.concatenate((not_nan_indices, random.choices(not_nan_indices[0], k=len(nan_indices[0]))), dim=0)
+        augmented_indices = np.array(random.choices(not_nan_indices[0], k=len(nan_indices[0])))
+        new_indices = np.concatenate((not_nan_indices[0], augmented_indices))
+
+        le_temp = le_temp[new_indices]
+        val_data_temp = torch.load(f'{prefix}_{start_size}{suffix}_valLoss.p').cpu()
+        params_temp = torch.load(f'{prefix}_{start_size}{suffix}_params.p').unsqueeze(dim=0)
+        val_data_temp = val_data_temp[new_indices]
+        params_temp = params_temp[:, new_indices]
+        le_data = torch.cat((le_data, le_temp), dim=0)
+        val_data = torch.cat((val_data, val_data_temp), dim=0)
+        params = torch.cat((params, params_temp), dim = 1)
     if not os.path.exists(f'Processed/{dir}'):
         os.makedirs(f'Processed/{dir}')
         # os.mkdir(f'Processed/{dir}')
@@ -97,7 +115,7 @@ def main(args):
     no_evals = args.evals
 
     # testing code
-    model_type = 'gru'
+    model_type = 'rnn'
     task_type  = 'SMNIST'
     no_evals   = 200
 

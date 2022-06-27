@@ -6,8 +6,7 @@ class AEPredNet(nn.Module):
 	'''
 	A simple vanilla autoencoder with three intermediate layers. The latent space can be used to predict the validation loss.
 	Encoder: 3 fully connected layers which reduce the dimensionality of the data by a factor of two. Each layer has 'tanh' activation.
-	Latent Space: 
-	
+	Latent Space:
 	'''
 	
 	def __init__(self, input_size = 1024, latent_size = 128, lr = 1e-3, decay_rate = 0.999, dtype = torch.float, p_drop = 0.1,

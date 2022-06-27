@@ -218,14 +218,19 @@ class LyapConfig(object):
 		
 	def get_mnist_input(self, fcon):
 		xt = fcon.data.datasets['test_set']
-		data = torch.zeros((len(fcon.data.datasets['test_set'][1])), 784).to(fcon.device)
-		for i, x in enumerate(xt):
-			x = x[0]
-			idx= torch.randint(high = fcon.data.input_seq_length, size = (1,))
-			b = x.flatten().roll(shifts = idx.item(), dims = 0)
-			data[i, :] = b
+		# data = torch.zeros((len(fcon.data.datasets['test_set'][1])), 784).to(fcon.device)
+		data = xt[0].to(fcon.device)
 		data = data[torch.randperm(data.shape[0])]
-		xt = data[:self.batch_size]
+		xt = data[:self.batch_size, :]
+
+
+		# for i, x in enumerate(xt):
+		# 	x = x[0]
+		# 	idx= torch.randint(high = fcon.data.input_seq_length, size = (1,))
+		# 	b = x.flatten().roll(shifts = idx.item(), dims = 0)
+		# 	data[i, :] = b
+		# # data = data[torch.randperm(data.shape[0])]
+		# xt = data[:self.batch_size, :]
 		# flattened_data = data.flatten()
 		# xt = flattened_data[:self.batch_size *self.seq_length * math.floor(fcon.data.input_seq_length*len(xt)/(self.batch_size * self.seq_length))]
 		# xt = xt.view(-1, self.batch_size, self.seq_length).unsqueeze(dim = -1)
