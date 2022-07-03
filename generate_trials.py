@@ -9,7 +9,7 @@ import pickle as pkl
 
 
 class SMNISTTrails(object):
-    def __init__(self, fcon, min_pval=0.01, max_pval=0.1, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
+    def __init__(self, fcon, min_pval=0.1, max_pval=3, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
         self.params = torch.round((torch.rand(int(evals)) * (max_pval - min_pval) + min_pval) * 10 ** 3) / (10 ** 3)
         self.keep_amt = keep_amt
         # print(self.params)
@@ -67,7 +67,7 @@ class SMNISTTrails(object):
 
 
 class CharRNNTrials(object):
-    def __init__(self, fcon, min_pval=0.04, max_pval=0.40, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
+    def __init__(self, fcon, min_pval=0.1, max_pval=3, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
         self.params = torch.round((torch.rand(int(evals)) * (max_pval - min_pval) + min_pval) * 10 ** 3) / (10 ** 3)
         self.keep_amt = keep_amt
         # print(self.params)
@@ -128,7 +128,6 @@ class CharRNNTrials(object):
 def main(args):
     parser = argparse.ArgumentParser(description="Train recurrent models")
     parser.add_argument("-model", "--model_type", type=str, default='rnn', required=False)
-    # parser.add_argument("-evals", "--evals", type=float, default=20, required=False)
     parser.add_argument("-evals", "--evals", type=float, default=2, required=False)
     parser.add_argument("-task", "--task", type=str, default='charRNN', required=False)
     args = parser.parse_args(args)
@@ -139,7 +138,7 @@ def main(args):
     # Non-argument hyperparameters
     size = 64  # Ignore this value (needed for initial creation of Config object but meaningless)
     batch_size = 32  # Training batch size
-    max_epoch = 15  # Max epochs for which models are trained
+    max_epoch = 10  # Max epochs for which models are trained
     keep_amt = 0.2  # Proportion of training set kept for each trial, to maintain independence of models
 
     # LE Hyperparameters
@@ -155,8 +154,8 @@ def main(args):
     dropout = 0.1
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-    model_type = 'asrnn'
-    max_epoch = 1
+    model_type = 'cornn'
+    max_epoch = 2
     evals = 1
     task = 'SMNIST'
 
@@ -213,9 +212,9 @@ def main(args):
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
             # print(fcon.name())
-            # trials = SMNISTTrails(fcon, hidden_size=hidden_size, evals=evals, keep_amt=keep_amt)
-            # #
-            # torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
+            trials = SMNISTTrails(fcon, hidden_size=hidden_size, evals=evals, keep_amt=keep_amt)
+            #
+            torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
 
         # Calculate Lyapunov Exponents
         lcon = LyapConfig(batch_size=le_batch_size, seq_length=le_seq_length, ON_step=1, warmup=500, one_hot=True)
@@ -227,7 +226,7 @@ def main(args):
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
             trials = torch.load(f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
-            # print(trials.val_losses.shape)
+            print(trials.val_losses.shape)
             for epoch in range(max_epoch):
                 trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt, epoch=epoch)
             trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt, epoch=max_epoch)
