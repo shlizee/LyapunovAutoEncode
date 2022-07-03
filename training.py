@@ -14,7 +14,7 @@ def load_checkpoint(full_con, load_epoch, verbose = False):
     device = full_con.model.device
     model = RNNModel(full_con.model).to(device)
     optimizer = full_con.train.get_optimizer(model.parameters())
-    ckpt_name = '{}/{}_e{}.ckpt'.format(full_con.train.model_dir, full_con.name(), load_epoch)
+    ckpt_name = '{}/{}/{}_e{}.ckpt'.format(full_con.train.model_dir, full_con.model.model_type, full_con.name(), load_epoch)
     if load_epoch > 0:
         if os.path.isfile(ckpt_name):
             ckpt = torch.load(ckpt_name, map_location = device)
@@ -39,7 +39,7 @@ def load_checkpoint(full_con, load_epoch, verbose = False):
 def save_checkpoint(full_con, model, optimizer, train_loss, val_loss, save_epoch):
     if not os.path.exists(f'{full_con.train.model_dir}/'):
         os.makedirs(f'{full_con.train.model_dir}')
-    ckpt_name = '{}/{}_e{}.ckpt'.format(full_con.train.model_dir, full_con.name(), save_epoch)
+    ckpt_name = '{}/{}/{}_e{}.ckpt'.format(full_con.train.model_dir, full_con.model.model_type, full_con.name(), save_epoch)
     ckpt = {'model_state_dict': model.state_dict(), 'optimizer_state_dict':optimizer.state_dict(), 'train_loss':train_loss, 'val_loss':val_loss}
     print(f"Saving checkpoint: {ckpt_name}")
     torch.save(ckpt, ckpt_name)
@@ -127,11 +127,11 @@ def train_model_SMNIST(full_con, model, optimizer, start_epoch=0, save_interval=
     train_dataset = torchvision.datasets.MNIST(root='data/',
                                               train=True,
                                               transform=transforms.ToTensor(),
-                                              download=False)
+                                              download=True)
     test_dataset = torchvision.datasets.MNIST(root='data/',
                                               train=False,
                                               transform=transforms.ToTensor())
-    train_dataloader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=100,
+    train_dataloader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=full_con.train.batch_size,
                                                       shuffle=True)
     test_dataloader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=100,
                                                       shuffle=True)

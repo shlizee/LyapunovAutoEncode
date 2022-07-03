@@ -4,7 +4,7 @@ from dataloader import *
 import lyapunov as lyap
 import pickle as pkl
 from torch.nn import functional as F
-
+from antisymmetricRNN import AntisymmetricRNN
 
 class DataConfig(object):
 	def __init__(self, data_dir, batch_size, input_seq_length, target_seq_length, train_frac = 0.8, val_frac = 0.1, test_frac= 0.1, input_size = 1):
@@ -147,7 +147,7 @@ class ModelConfig(object):
 						'ortho': nn.init.orthogonal_, 'kai_uni': nn.init.kaiming_uniform_, 'kai_normal': nn.init.kaiming_normal_}
 		
 		self.encodings = {'one_hot': lambda xt: nn.functional.one_hot(xt, input_size), 'none': nn.Identity()}
-		self.rec_layers = {'rnn': nn.RNN, 'lstm': nn.LSTM, 'gru': nn.GRU}#, 'asrnn':AntisymmetricRNN}
+		self.rec_layers = {'rnn': nn.RNN, 'lstm': nn.LSTM, 'gru': nn.GRU, 'asrnn': AntisymmetricRNN}
 		self.gate_sizes = {'rnn': hidden_size, 'lstm': 4*hidden_size, 'gru': 3*hidden_size, 'asrnn': hidden_size}
 	
 		self.encoder = self.get_encoding()
@@ -247,3 +247,14 @@ class LyapConfig(object):
 		model.lyapunov = False
 		
 		return (LE_mean, LE_std), rvals
+
+
+def main():
+	input_dim = 28
+	n_units = 10
+	normal_sampler_V = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([1/input_dim]))
+	Vh_init_weight = nn.Parameter(normal_sampler_V.sample((n_units, input_dim))[..., 0])
+	print(Vh_init_weight)
+
+if __name__ == '__main__':
+    main()

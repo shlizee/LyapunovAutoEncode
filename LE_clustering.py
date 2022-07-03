@@ -20,7 +20,7 @@ def tsne_plot(latent_size, model_type = 'lstm', dir = ''):
         device= torch.device('cuda')
     else:
         device= torch.device('cpu')
-    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt').cpu()
+    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_6000.ckpt').cpu()
     model.load_state_dict(model.best_state)
     x_data = torch.load(f'Processed/{dir}{model_type}_allLEs.p')
     split = torch.load('data_split_vfrac0.2.p')
@@ -113,40 +113,212 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
         device= torch.device('cuda')
     else:
         device= torch.device('cpu')
-    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_2000.ckpt').cpu()
+    load_epoch = 2000
+    print(f'Models/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt')
+    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt').cpu()
     model.load_state_dict(model.best_state)
     dir = f'Processed/trials/{task_type}/{model_type}/'
-    x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
-    targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
+    split_lstm = torch.load(f'Processed/trials/SMNIST/lstm/lstm_data_split_vfrac0.1_testfrac0.2.p')
+    split_gru = torch.load(f'Processed/trials/SMNIST/gru/gru_data_split_vfrac0.1_testfrac0.2.p')
+    split_rnn = torch.load(f'Processed/trials/SMNIST/rnn/rnn_data_split_vfrac0.1_testfrac0.2.p')
+    x_data_lstm = split_lstm['train_data'].detach()
+    targets_lstm = split_lstm['train_targets']
+    x_data_gru = split_gru['train_data'].detach()
+    targets_gru = split_gru['train_targets']
+    x_data_rnn = split_rnn['train_data'].detach()
+    targets_rnn = split_rnn['train_targets']
+
+    # x_data_lstm = split_lstm['val_data'].detach()
+    # targets_lstm = split_lstm['val_targets']
+    # x_data_gru = split_gru['val_data'].detach()
+    # targets_gru = split_gru['val_targets']
+
+
+    # x_data = torch.cat((split1['train_data'].detach(), split1['val_data'].detach()), dim=0)
+    # targets = torch.cat((split1['train_targets'], split1['val_targets']))
+    # x_data_lstm = torch.load('Processed/trials/SMNIST/lstm/lstm_allLEs.p')
+    # targets_lstm = torch.load('Processed/trials/SMNIST/lstm/lstm_allValLoss.p')
+    # x_data_gru = torch.load('Processed/trials/SMNIST/gru/gru_allLEs.p')
+    # targets_gru = torch.load('Processed/trials/SMNIST/gru/gru_allValLoss.p')
+    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn), dim=0)
+    targets = torch.cat((targets_lstm, targets_gru, targets_rnn))
+    # x_data = x_data_lstm
+    # targets = targets_lstm
+
+    # plt.figure(3)
+    # plt.scatter(range(len(targets)), targets)
+    # plt.show()
+    #
+    # # x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
+    # # targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
+    # #
+    # # x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
+    # # targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
+    target_mask = targets < thresh
+    outputs = model(x_data)
+    latent = outputs[1].detach()
+    print(f"Number of samples smaller than threshold: {torch.sum(target_mask)}")
+    print(f"Number of samples larger than threshold: {torch.sum(~target_mask)}")
+
+    # plt.figure(3)
+    # plt.scatter(torch.ones(len(targets)), outputs[2].detach())
+    # plt.show()
+    #
+    U, S, V = torch.pca_lowrank(latent)
+    low_rank = torch.matmul(latent, V[:, :dim])
+    plt.figure(2)
+    plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s=20, c='lime', alpha=.5)
+    plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s=20, c='red', alpha=.5)
+    plt.title("LSTM, GRU and RNN validation")
+    plt.show()
+    plt.figure(1)
+    num_lstm = 560
+    num_gru = 560
+    plt.scatter(low_rank[:num_lstm, 0], low_rank[:num_lstm, 1], s=20, c='b', alpha=.5, label='lstm')
+    plt.scatter(low_rank[num_lstm:(num_lstm + num_gru), 0], low_rank[num_lstm:(num_lstm + num_gru), 1], s=20, c='y', alpha=.5, label='gru')
+    plt.scatter(low_rank[(num_lstm + num_gru):, 0], low_rank[(num_lstm + num_gru):, 1], s=20, c='g', alpha=.5, label='rnn')
+    plt.title("LSTM, GRU and RNN validation")
+    plt.legend()
+    plt.show()
+    # print("This")
+    # print(f'Target shape {targets.shape}')
+    val_split = 0.1
+    test_split = 0.2
+    split = torch.load(f'{dir}/{model_type}_data_split_vfrac{val_split}_testfrac{test_split}.p')
+    # x_data = split['train_data']
+    # targets = split['train_targets']
+    x_data = split['val_data']
+    targets = split['val_targets']
+    # x_data = split['test_data']
+    # targets = split['test_targets']
+
+    # x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
+    # targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
     target_mask = targets < thresh
     print(f"Number of samples smaller than threshold: {torch.sum(target_mask)}")
     print(f"Number of samples larger than threshold: {torch.sum(~target_mask)}")
-    # print(f'Target shape {targets.shape}')
-    split = torch.load(f'{dir}/{model_type}_data_split_vfrac{v_frac}.p')
-    indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
-    print(f"indices: {indices}")
-    sizes = [64, 128, 256, 512]
-    i_list = torch.arange(4*no_evals)
-    splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
-    latent = model(x_data)[1].detach()
-    U,S,V = torch.pca_lowrank(latent)
+    outputs = model(x_data)
+
+    predictions = outputs[2].detach()
+    plt.figure()
+    plt.scatter(torch.zeros_like(predictions), predictions, label='pred')
+    plt.scatter(torch.ones_like(targets), targets, label='target')
+    plt.legend()
+    plt.show()
+
+
+    latent = outputs[1].detach()
+    if os.path.exists(f'{dir}/PCA_dim{dim}.p'):
+        trained_project = torch.load(f'{dir}/PCA_dim{dim}.p')
+        V = trained_project['V']
+    else:
+        U,S,V = torch.pca_lowrank(latent)
     low_rank = torch.matmul(latent, V[:, :dim])
-    torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
-    #Performance PCA Plot
+    trained_project = {'V': V, 'low_rank': low_rank, 'latent': latent}
+    torch.save(trained_project, f'{dir}/PCA_dim{dim}.p')
+
+    fig = plt.figure(figsize = (4,4))
+    plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s = 20, c = 'lime', alpha = 0.5)
+    plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s = 20, c = 'red', alpha = 0.5)
+    plt.xlabel('PC 1')
+    plt.ylabel('PC 2')
+    plt.title('val')
+    plt.xlim([-7, 11])
+    plt.ylim([-9, 6])
+    plt.show()
+
+
+    # indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
+    # print(f"indices: {indices}")
+    # sizes = [64, 128, 256, 512]
+    # i_list = torch.arange(4*no_evals)
+    # splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
+    #
+    # latent = model(x_data)[1].detach()
+    # U,S,V = torch.pca_lowrank(latent)
+    # low_rank = torch.matmul(latent, V[:, :dim])
+    # torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
+
+    x_data = torch.load(f'Processed/trials/SMNIST/{model_type}/{model_type}_allLEs.p')
+    targets = torch.load(f'Processed/trials/SMNIST/{model_type}/{model_type}_allValLoss.p')
+    target_mask = targets < thresh
+    epochs = [0, 1, 2, 3, 4, 5]
+    indices = [0, 1 * no_evals, 2 * no_evals, 3 * no_evals, 4 * no_evals, 5 * no_evals, 6 * no_evals]
+    i_list = torch.arange(len(epochs)*no_evals)
+    splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
+
+    latent = model(x_data)[1].detach()
+    # U,S,V = torch.pca_lowrank(latent)
+    low_rank = torch.matmul(latent, V[:, :dim])
+    # # torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
+    #
+    # #Performance PCA Plot
     fig = plt.figure(figsize = (4,4))
 
     ax = fig.add_subplot(111)
-    if thresh > 0:
-        for idx, size in enumerate(sizes):
-            y = low_rank[splits[idx]]
-            # print(y[:,0].shape)
-            im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
-            im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
-    else:
-        for idx, size in enumerate(sizes):
-            y = low_rank[splits[idx]]
-            # print(y[:,0].shape)
-            im = ax.scatter(y[:,0][splits[idx]], y[:,1][splits[idx]], s = 20, c = 'lime', alpha = 0.5)
+    idx = 0
+    y = low_rank[splits[idx]]
+    # print(y[:,0].shape)
+    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+    plt.title('epoch 0')
+    plt.xlim([-7, 11])
+    plt.ylim([-9, 6])
+    plt.show()
+
+    fig = plt.figure(figsize=(4, 4))
+    ax = fig.add_subplot(111)
+    idx = 1
+    y = low_rank[splits[idx]]
+    # print(y[:,0].shape)
+    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+    plt.title('epoch 1')
+    plt.xlim([-7, 11])
+    plt.ylim([-9, 6])
+    plt.show()
+
+
+    fig = plt.figure(figsize=(4, 4))
+    ax = fig.add_subplot(111)
+    idx = 2
+    y = low_rank[splits[idx]]
+    # print(y[:,0].shape)
+    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+    plt.title('epoch 2')
+    plt.xlim([-7, 11])
+    plt.ylim([-9, 6])
+    plt.show()
+
+    fig = plt.figure(figsize=(4, 4))
+    ax = fig.add_subplot(111)
+    idx = 5
+    y = low_rank[splits[idx]]
+    # print(y[:,0].shape)
+    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+    plt.title('epoch 5')
+    plt.xlim([-7, 11])
+    plt.ylim([-9, 6])
+    plt.show()
+
+
+    # #Performance PCA Plot
+    # fig = plt.figure(figsize = (4,4))
+    #
+    # ax = fig.add_subplot(111)
+    # if thresh > 0:
+    #     for idx, size in enumerate(sizes):
+    #         y = low_rank[splits[idx]]
+    #         # print(y[:,0].shape)
+    #         im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+    #         im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+    # else:
+    #     for idx, size in enumerate(sizes):
+    #         y = low_rank[splits[idx]]
+    #         # print(y[:,0].shape)
+    #         im = ax.scatter(y[:,0][splits[idx]], y[:,1][splits[idx]], s = 20, c = 'lime', alpha = 0.5)
 
     # if dim == 3:
         # ax = fig.add_subplot(111, projection='3d')
@@ -160,49 +332,51 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
             # im = ax.scatter(y[:,0], y[:,1], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
     # ax.add_colorbar(label = 'Val Loss')
     # plt.colorbar(im, label = 'Val Loss', )
-    ax.set_xlabel('PC 1')
-    ax.set_ylabel('PC 2')
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    ax.set_xticks([])
-    ax.set_yticks([])
-    if dim == 3:
-        ax.set_zlabel('PCA 3')
+    # ax.set_xlabel('PC 1')
+    # ax.set_ylabel('PC 2')
+    # plt.title('Trained on GRU, tested on GRU')
+    # ax.spines['top'].set_visible(False)
+    # ax.spines['right'].set_visible(False)
+    # ax.spines['left'].set_visible(False)
+    # ax.spines['bottom'].set_visible(False)
+    # ax.set_xticks([])
+    # ax.set_yticks([])
     # plt.show()
-    print(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png')
-    plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png', dpi = 200, bbox_inches = 'tight')
+    # if dim == 3:
+    #     ax.set_zlabel('PCA 3')
+    # # plt.show()
+    # print(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png')
+    # plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png', dpi = 200, bbox_inches = 'tight')
     #Size PCA Plot
-    fig = plt.figure(figsize = (4,4))
-    if dim == 3:
-        ax = fig.add_subplot(111, projection='3d')
-    else:
-        ax = fig.add_subplot(111)
-    for idx, size in enumerate(sizes):
-        y = low_rank[splits[idx]]
-        if dim == 3:
-            im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, label = size)
-        else:
-            im = ax.scatter(y[:,0], y[:,1], s = 6, label = size)
-    plt.legend()
-    # plt.colorbar(label = 'Val Loss')
-    ax.set_xlabel('PCA 1')
-    ax.set_ylabel('PCA 2')
-    ax.set_xticks([])
-    ax.set_yticks([])
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-
-    if dim == 3:
-        ax.set_zlabel('PCA 3')
-    if thresh >0:
-        plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_classifier_dim{dim}.png', dpi = 200)
-    else:
-        ax.colorbar(label = 'Val Loss')
-        plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_dim{dim}.png', dpi = 200)
+    # fig = plt.figure(figsize = (4,4))
+    # if dim == 3:
+    #     ax = fig.add_subplot(111, projection='3d')
+    # else:
+    #     ax = fig.add_subplot(111)
+    # for idx, size in enumerate(sizes):
+    #     y = low_rank[splits[idx]]
+    #     if dim == 3:
+    #         im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, label = size)
+    #     else:
+    #         im = ax.scatter(y[:,0], y[:,1], s = 6, label = size)
+    # plt.legend()
+    # # plt.colorbar(label = 'Val Loss')
+    # ax.set_xlabel('PCA 1')
+    # ax.set_ylabel('PCA 2')
+    # ax.set_xticks([])
+    # ax.set_yticks([])
+    # ax.spines['top'].set_visible(False)
+    # ax.spines['right'].set_visible(False)
+    # ax.spines['left'].set_visible(False)
+    # ax.spines['bottom'].set_visible(False)
+    #
+    # if dim == 3:
+    #     ax.set_zlabel('PCA 3')
+    # if thresh >0:
+    #     plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_classifier_dim{dim}.png', dpi = 200)
+    # else:
+    #     ax.colorbar(label = 'Val Loss')
+    #     plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_dim{dim}.png', dpi = 200)
     # plt.show()
 
 def pca_size(latent_size, size = 512, dim=2, model_type = 'lstm'):
@@ -210,7 +384,7 @@ def pca_size(latent_size, size = 512, dim=2, model_type = 'lstm'):
         device= torch.device('cuda')
     else:
         device= torch.device('cpu')
-    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt').cpu()
+    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_2000.ckpt').cpu()
     model.load_state_dict(model.best_state)
     x_data = torch.load('Processed/lstm_allLEs.p')
     targets = torch.load('Processed/lstm_allValLoss.p')
@@ -344,7 +518,7 @@ def main(args):
     num_evals   = 200
     task_type   = 'SMNIST'
     model_type  = 'rnn'
-    thresh      = 0.01
+    thresh      = 0.015
 
 
     if not os.path.isdir(f'Figures/Latent/{task_type}'):

@@ -12,21 +12,34 @@ class RNNModel(nn.ModuleList):
 		#self.encoder = lambda xt: nn.functional.one_hot(xt.long(), self.con.rnn_atts['input_size']).to(self.con.device)
 		self.encoder = self.con.encoder
 		self.dropout = nn.Dropout(p = self.con.dropout)
-		self.fc = nn.Linear(in_features = self.con.rnn_atts['hidden_size'], out_features = self.con.output_size)
+		self.fc = nn.Linear(in_features = self.con.rnn_atts['hidden_size'], out_features = self.con.output_size).cuda()
 		
 		self.rnn_layer = model_con.get_RNN()
 		self.gate_size = model_con.get_gate_size()
-		
-		for layer_p in self.rnn_layer._all_weights:
-			for p in layer_p:
-				if 'weight' in p:
-					# self.con.get_init(self.rnn_layer.__getattr__(p))
-					w = getattr(self.rnn_layer, p)
-					if w.shape[-1] == self.con.rnn_atts['input_size']:
-						self.con.get_init(w, input = True)
-					else:
-						self.con.get_init(getattr(self.rnn_layer, p))
-				
+		if self.con.model_type == 'asrnn':
+			self.rnn_layer.get_init(self.con.init_params['b'])
+			# normal_sampler_V = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([1 / input_size]))
+			# Vh_init_weight = nn.Parameter(normal_sampler_V.sample((hidden_size, input_size))[..., 0])
+			# Vh_init_bias = nn.Parameter(torch.zeros(hidden_size))
+			# self.Vh = nn.Linear(input_size, hidden_size)
+			# self.Vh.weight = Vh_init_weight
+			# if bias:
+			# 	self.Vh.bias = Vh_init_bias
+			#
+			# # init W
+			# normal_sampler_W = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([init_W_std / hidden_size]))
+			# self.W = nn.Parameter(normal_sampler_W.sample((hidden_size, hidden_size))[..., 0])
+		else:
+			for layer_p in self.rnn_layer._all_weights:
+				for p in layer_p:
+					if 'weight' in p:
+						# self.con.get_init(self.rnn_layer.__getattr__(p))
+						w = getattr(self.rnn_layer, p)
+						if w.shape[-1] == self.con.rnn_atts['input_size']:
+							self.con.get_init(w, input = True)
+						else:
+							self.con.get_init(getattr(self.rnn_layer, p))
+
 	def forward(self, xt, h = None):
 		if xt.shape[-1] == self.con.rnn_atts['input_size']:
 			encoded = xt

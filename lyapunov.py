@@ -547,7 +547,9 @@ def rnn_jac(params_array, h, x, bias):
 			for l in range(layer, 0, -1):
 				J[:, layer*hidden_size:(layer+1)*hidden_size, (l-1)*hidden_size:l*hidden_size] = J_xt@J[:, (layer-1)*hidden_size:(layer)*hidden_size, (l-1)*hidden_size:l*hidden_size]
 	return J
+
 def asrnn_jac(params_array, h, x, bias, eps, gamma):
+
 	if bias:
 		W, U, b_i, b_h = param_split(params_array, bias)
 	else:

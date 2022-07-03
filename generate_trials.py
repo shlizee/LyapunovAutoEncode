@@ -9,7 +9,7 @@ import pickle as pkl
 
 
 class SMNISTTrails(object):
-    def __init__(self, fcon, min_pval=0.1, max_pval=3, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
+    def __init__(self, fcon, min_pval=0.01, max_pval=0.1, hidden_size=512, evals=300, keep_amt=0.4, model_type='lstm'):
         self.params = torch.round((torch.rand(int(evals)) * (max_pval - min_pval) + min_pval) * 10 ** 3) / (10 ** 3)
         self.keep_amt = keep_amt
         # print(self.params)
@@ -42,7 +42,8 @@ class SMNISTTrails(object):
                 print(f'Network {idx + 1} of {len(self.params)}:')
             fcon.model.init_params = {'a': -p, 'b': p}
             epoch_ = epoch
-            while (not os.path.exists(f'{fcon.train.model_dir}/{fcon.name()}_e{epoch}.ckpt')):
+            print(f'{fcon.train.model_dir}/{fcon.model.model_type}{fcon.name()}_e{epoch}.ckpt')
+            while (not os.path.exists(f'{fcon.train.model_dir}/{fcon.model.model_type}/{fcon.name()}_e{epoch}.ckpt')):
                 epoch_ -= 1
             ckpt = load_checkpoint(fcon, epoch_)
             model = ckpt[0].to(self.device)
@@ -53,8 +54,8 @@ class SMNISTTrails(object):
             # print(f"LE_stats: {LE_stats}")
             if not os.path.exists('LE_stats'):
                 os.mkdir('LE_stats')
-            torch.save(LE_stats, 'LE_stats/{}_LE_stats_e{}.p'.format(fcon.name(), epoch))
-        torch.save(self.all_LEs, f'LE_stats/{fcon.model.model_type}_{hidden_size}_allLEs.p')
+            # torch.save(LE_stats, 'LE_stats/{}_LE_stats_e{}.p'.format(fcon.name(), epoch))
+        torch.save(self.all_LEs, f'LE_stats/{fcon.model.model_type}_{hidden_size}_allLEs_e{epoch}.p')
 
 
 # calculate LEs
@@ -126,7 +127,7 @@ class CharRNNTrials(object):
 
 def main(args):
     parser = argparse.ArgumentParser(description="Train recurrent models")
-    parser.add_argument("-model", "--model_type", type=str, default='lstm', required=False)
+    parser.add_argument("-model", "--model_type", type=str, default='rnn', required=False)
     # parser.add_argument("-evals", "--evals", type=float, default=20, required=False)
     parser.add_argument("-evals", "--evals", type=float, default=2, required=False)
     parser.add_argument("-task", "--task", type=str, default='charRNN', required=False)
@@ -154,15 +155,16 @@ def main(args):
     dropout = 0.1
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-    # model_type = 'rnn'
-    # max_epoch = 10
-    # evals = 10
-    # task = 'SMNIST'
+    model_type = 'asrnn'
+    max_epoch = 1
+    evals = 1
+    task = 'SMNIST'
 
     trials_dir = f'trials/{task}/{model_type}/'
     if not os.path.isdir(trials_dir):
-        os.makedirs(trials_dir)
-
+        # os.makedirs(trials_dir)
+        os.mkdir(trials_dir)
+    print(f"trials_dir: {trials_dir}")
     if task == 'charRNN':
         print('Training charRNN')
         # Define data configuration and trial directory
@@ -173,8 +175,8 @@ def main(args):
         tcon = TrainConfig(f'Models/{task}/', batch_size, max_epoch, 'adam', learning_rate, {}, start_epoch=0)
 
         # Train Models
-        for hidden_size in [64, 128, 256, 512]:
-        # for hidden_size in [64]:
+        # for hidden_size in [64, 128, 256, 512]:
+        for hidden_size in [256]:
             print(f'Hidden Size: {hidden_size}')
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
@@ -197,12 +199,11 @@ def main(args):
             print(trials)
     elif task == 'SMNIST':
         print("Training SMNIST")
-        max_epoch = 10
         dcon = TestDataConfig('data/MNIST/', test_file='MNIST_train_test.p', train_frac=0.8, val_frac=0.2, test_frac=0.0)
         mcon = ModelConfig(model_type, num_layers=1, hidden_size=64, input_size=28, output_size=10,
                            dropout=dropout, init_type='uni', device=device, bias=False, id_init_param='b',
                            encoding='one_hot')
-        tcon = TrainConfig(model_dir=f'Models/{task}/', batch_size=100, max_epoch=max_epoch, optimizer='adam',
+        tcon = TrainConfig(model_dir=f'Models/{task}/', batch_size=128, max_epoch=max_epoch, optimizer='adam',
                            learning_rate=0.01, optim_params={}, start_epoch=0)
 
         #Train Models
@@ -212,9 +213,9 @@ def main(args):
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
             # print(fcon.name())
-            trials = SMNISTTrails(fcon, hidden_size=hidden_size, evals=evals, keep_amt=keep_amt)
-
-            torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
+            # trials = SMNISTTrails(fcon, hidden_size=hidden_size, evals=evals, keep_amt=keep_amt)
+            # #
+            # torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
 
         # Calculate Lyapunov Exponents
         lcon = LyapConfig(batch_size=le_batch_size, seq_length=le_seq_length, ON_step=1, warmup=500, one_hot=True)
@@ -226,9 +227,11 @@ def main(args):
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
             trials = torch.load(f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
-            print(trials.val_losses.shape)
+            # print(trials.val_losses.shape)
+            for epoch in range(max_epoch):
+                trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt, epoch=epoch)
             trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt, epoch=max_epoch)
-            torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
+            # torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
             # print(trials)
 
 def extract_trials(size, dir='', model_type='lstm', task_type='charRNN',keep=0.2):
@@ -237,10 +240,10 @@ def extract_trials(size, dir='', model_type='lstm', task_type='charRNN',keep=0.2
     le_data = trials.all_LEs
     valLoss = trials.val_losses
     params = trials.params
-    print(valLoss)
-    # torch.save(le_data, f'{dir}/{model_type}_{size}_LEs.p')
-    # torch.save(valLoss, f'{dir}/{model_type}_{size}_valLoss.p')
-    # torch.save(params, f'{dir}/{model_type}_{size}_params.p')
+    # print(valLoss)
+    torch.save(le_data, f'{dir}/{model_type}_{size}_LEs.p')
+    torch.save(valLoss, f'{dir}/{model_type}_{size}_valLoss.p')
+    torch.save(params, f'{dir}/{model_type}_{size}_params.p')
 
 
 if __name__ == '__main__':

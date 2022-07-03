@@ -48,8 +48,8 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
         model.global_step +=1
         if verbose and epoch%print_interval == 0:
             # print(model.val_loss)
-            print(f'Validation Loss at epoch {model.global_step -1}: {val_loss[epoch]:.3f}')
-            print(f'Best Prediction Loss: {model.best_val:.3f}')
+            print(f'Validation Loss at epoch {model.global_step -1}: {val_loss[epoch]:.8f}')
+            print(f'Best Prediction Loss: {model.best_val:.8f}')
     model.train_loss = torch.cat((model.train_loss, train_loss.cpu()))
     model.val_loss = torch.cat((model.val_loss, val_loss.cpu()))
     model.vl1 = torch.cat((model.vl1, val1.cpu()))
@@ -62,11 +62,11 @@ def ae_train(model, train_data, train_targets, val_data, val_targets, batch_size
 
 def main(args):
     parser = argparse.ArgumentParser(description="Train Lyapunov Autoencoder")
-    parser.add_argument("-model", "--model_type", type=str, default= 'gru', required=False)
+    parser.add_argument("-model", "--model_type", type=str, default= 'rnn', required=False)
     parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
     parser.add_argument("-latent", "--latent_size", type=int, default= 32, required=False)
     parser.add_argument("-alphas", "--alphas", type=str, default= '[5, 5, 10, 20]', required=False)
-    parser.add_argument("-ae_lr", "--lr", type=float, default= 1e-5, required=False)
+    parser.add_argument("-ae_lr", "--lr", type=float, default= 1e-3, required=False)
     parser.add_argument("-epochs", "--epochs", type=int, default= 1000, required=False)
 
     args = parser.parse_args(args)
@@ -88,16 +88,41 @@ def main(args):
     else:
         device = torch.device('cpu')
     dir = f'Processed/trials/{task_type}/{model_type}'
-    x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
-    targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
-    if os.path.exists(f'Processed/{model_type}_data_split_vfrac0.2.p'):
-        split = torch.load(f'Processed/{model_type}_data_split_vfrac0.2.p')
+    val_split = 0.1
+    test_split = 0.2
+    dataset_path = f'{dir}/{model_type}_data_split_vfrac{val_split}_testfrac{test_split}.p'
+    print(f'dataset path: {dataset_path}')
+    if os.path.exists(f'{dataset_path}'):
+        print("loading dataset ...")
+        split = torch.load(f'{dataset_path}')
     else:
-        split = train_val_split(x_data, targets, 0.2)
+        print("creating dataset ...")
+        x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
+        targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
+        split = train_val_split(x_data, targets, val_split=val_split, test_split=test_split)
     x_train, y_train, x_val, y_val = split['train_data'], split['train_targets'], split['val_data'], split['val_targets']
+
+    split_lstm = torch.load(f'Processed/trials/SMNIST/lstm/lstm_data_split_vfrac0.1_testfrac0.2.p')
+    split_gru = torch.load(f'Processed/trials/SMNIST/gru/gru_data_split_vfrac0.1_testfrac0.2.p')
+    split_rnn = torch.load(f'Processed/trials/SMNIST/rnn/rnn_data_split_vfrac0.1_testfrac0.2.p')
+    x_train = torch.cat((split_lstm['train_data'], split_gru['train_data'], split_rnn['train_data']))
+    y_train = torch.cat((split_lstm['train_targets'], split_gru['train_targets'], split_rnn['train_targets']))
+
+    # y_train_lstm = split_lstm['train_targets']
+    # y_train_lstm = y_train_lstm / (torch.max(y_train_lstm) - torch.min(y_train_lstm))
+    # y_train_lstm = split_lstm['train_targets']
+    # y_train_lstm = y_train_lstm / (torch.max(y_train_lstm) - torch.min(y_train_lstm))
+
+    # shuffle_indices = torch.randperm(x_train.size()[0])
+    # x_train = x_train[shuffle_indices]
+    # y_train = y_train[shuffle_indices]
+    x_val = torch.cat((split_lstm['val_data'], split_gru['val_data'], split_rnn['val_data']))
+    y_val = torch.cat((split_lstm['val_targets'], split_gru['val_targets'], split_rnn['val_targets']))
+
+
     if not os.path.isdir('Models/'):
         os.mkdir('Models')
-    model = AEPredNet(latent_size = latent_size, lr = lr, act = 'tanh', device = device)
+    model = AEPredNet(latent_size = latent_size, lr = lr, act = 'tanh', device = device, prediction_loss_type='MSE')
     for alpha in alphas:
         ae_train(model, x_train, y_train, x_val, y_val, alpha = alpha, epochs = epochs, print_interval = 250, batch_size = 128, device = device)
     plt.plot(range(model.global_step), model.val_loss, label = 'total')
@@ -110,8 +135,6 @@ def main(args):
     if not os.path.isdir('Figures/'):
         os.mkdir('Figures')
     plt.savefig(f"Figures/{model_type}_Prednet_AE_valCurve.png",bbox_inches="tight",dpi=200)
-
-
 
 if __name__ == '__main__':
     import sys
