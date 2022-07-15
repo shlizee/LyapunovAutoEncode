@@ -4,8 +4,10 @@ from AEPredNet import AEPredNet
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from matplotlib import colors
+from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 # from config import *
+from scipy.ndimage import rotate
 import argparse
 latent_size = 32
 def tsne(model, X, tsne_params = {}, model_type = 'lstm'):
@@ -113,99 +115,108 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
         device= torch.device('cuda')
     else:
         device= torch.device('cpu')
-    load_epoch = 2000
-    print(f'Models/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt')
-    model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt').cpu()
+    # model_type = 'all'
+    load_epoch = 4000
+    print(f'Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt')
+    model = torch.load(f'Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt').cpu()
     model.load_state_dict(model.best_state)
     dir = f'Processed/trials/{task_type}/{model_type}/'
     split_lstm = torch.load(f'Processed/trials/SMNIST/lstm/lstm_data_split_vfrac0.1_testfrac0.2.p')
     split_gru = torch.load(f'Processed/trials/SMNIST/gru/gru_data_split_vfrac0.1_testfrac0.2.p')
     split_rnn = torch.load(f'Processed/trials/SMNIST/rnn/rnn_data_split_vfrac0.1_testfrac0.2.p')
+    split_asrnn = torch.load(f'Processed/trials/SMNIST/asrnn/asrnn_data_split_vfrac0.1_testfrac0.2.p')
+    split_cornn = torch.load(f'Processed/trials/SMNIST/cornn/cornn_data_split_vfrac0.1_testfrac0.2.p')
     x_data_lstm = split_lstm['train_data'].detach()
     targets_lstm = split_lstm['train_targets']
     x_data_gru = split_gru['train_data'].detach()
     targets_gru = split_gru['train_targets']
     x_data_rnn = split_rnn['train_data'].detach()
     targets_rnn = split_rnn['train_targets']
+    x_data_asrnn = split_asrnn['train_data'].detach()
+    targets_asrnn = split_asrnn['train_targets']
+    x_data_cornn = split_cornn['train_data'].detach()
+    targets_cornn = split_cornn['train_targets']
 
-    # x_data_lstm = split_lstm['val_data'].detach()
-    # targets_lstm = split_lstm['val_targets']
-    # x_data_gru = split_gru['val_data'].detach()
-    # targets_gru = split_gru['val_targets']
+    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn, x_data_asrnn, x_data_cornn), dim=0)
+    targets = torch.cat((targets_lstm, targets_gru, targets_rnn, targets_asrnn, targets_cornn))
 
+    num_lstm = 840
+    num_gru = 840
+    num_rnn = 840
+    num_asrnn = 840
+    num_cornn = 840
+    indices = [num_lstm, num_lstm + num_gru, num_lstm + num_gru + num_rnn, num_lstm + num_gru + num_rnn + num_asrnn,
+               num_lstm + num_gru + num_rnn + num_asrnn + num_cornn]
 
-    # x_data = torch.cat((split1['train_data'].detach(), split1['val_data'].detach()), dim=0)
-    # targets = torch.cat((split1['train_targets'], split1['val_targets']))
-    # x_data_lstm = torch.load('Processed/trials/SMNIST/lstm/lstm_allLEs.p')
-    # targets_lstm = torch.load('Processed/trials/SMNIST/lstm/lstm_allValLoss.p')
-    # x_data_gru = torch.load('Processed/trials/SMNIST/gru/gru_allLEs.p')
-    # targets_gru = torch.load('Processed/trials/SMNIST/gru/gru_allValLoss.p')
-    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn), dim=0)
-    targets = torch.cat((targets_lstm, targets_gru, targets_rnn))
-    # x_data = x_data_lstm
-    # targets = targets_lstm
+    plt.figure(3)
+    plt.scatter(range(0, indices[0]), targets[:indices[0]], s=20, c='b', alpha=.5, label='lstm')
+    plt.scatter(range(indices[0], indices[1]), targets[indices[0]:indices[1]], s=20, c='y', alpha=.5, label='gru')
+    plt.scatter(range(indices[1], indices[2]), targets[indices[1]:indices[2]], s=20, c='g', alpha=.5, label='rnn')
+    plt.scatter(range(indices[2], indices[3]), targets[indices[2]:indices[3]], s=20, c='c', alpha=.5, label='asrnn')
+    plt.scatter(range(indices[3], indices[4]), targets[indices[3]:indices[4]], s=20, c='r', alpha=.5, label='cornn')
+    plt.legend()
+    plt.show()
 
-    # plt.figure(3)
-    # plt.scatter(range(len(targets)), targets)
-    # plt.show()
-    #
-    # # x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
-    # # targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
-    # #
-    # # x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
-    # # targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
     target_mask = targets < thresh
     outputs = model(x_data)
     latent = outputs[1].detach()
     print(f"Number of samples smaller than threshold: {torch.sum(target_mask)}")
     print(f"Number of samples larger than threshold: {torch.sum(~target_mask)}")
 
-    # plt.figure(3)
-    # plt.scatter(torch.ones(len(targets)), outputs[2].detach())
-    # plt.show()
-    #
     U, S, V = torch.pca_lowrank(latent)
     low_rank = torch.matmul(latent, V[:, :dim])
-    plt.figure(2)
-    plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s=20, c='lime', alpha=.5)
-    plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s=20, c='red', alpha=.5)
-    plt.title("LSTM, GRU and RNN validation")
-    plt.show()
-    plt.figure(1)
-    num_lstm = 560
-    num_gru = 560
-    plt.scatter(low_rank[:num_lstm, 0], low_rank[:num_lstm, 1], s=20, c='b', alpha=.5, label='lstm')
-    plt.scatter(low_rank[num_lstm:(num_lstm + num_gru), 0], low_rank[num_lstm:(num_lstm + num_gru), 1], s=20, c='y', alpha=.5, label='gru')
-    plt.scatter(low_rank[(num_lstm + num_gru):, 0], low_rank[(num_lstm + num_gru):, 1], s=20, c='g', alpha=.5, label='rnn')
-    plt.title("LSTM, GRU and RNN validation")
-    plt.legend()
-    plt.show()
-    # print("This")
-    # print(f'Target shape {targets.shape}')
-    val_split = 0.1
-    test_split = 0.2
-    split = torch.load(f'{dir}/{model_type}_data_split_vfrac{val_split}_testfrac{test_split}.p')
-    # x_data = split['train_data']
-    # targets = split['train_targets']
-    x_data = split['val_data']
-    targets = split['val_targets']
-    # x_data = split['test_data']
-    # targets = split['test_targets']
+    # plt.figure(2)
+    # plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s=20, c='lime', alpha=.5)
+    # plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s=20, c='red', alpha=.5)
+    # plt.title("LSTM, GRU, RNN, ASRNN, CORNN training data")
+    # plt.show()
+    # plt.figure(1)
+    # plt.scatter(low_rank[:indices[0], 0], low_rank[:indices[0], 1], s=20, c='b', alpha=.5, label='lstm')
+    # plt.scatter(low_rank[indices[0]:indices[1], 0], low_rank[indices[0]:indices[1], 1], s=20, c='y', alpha=.5, label='gru')
+    # plt.scatter(low_rank[indices[1]:indices[2], 0], low_rank[indices[1]:indices[2], 1], s=20, c='g', alpha=.5, label='rnn')
+    # plt.scatter(low_rank[indices[2]:indices[3], 0], low_rank[indices[2]:indices[3], 1], s=20, c='c', alpha=.5, label='asrnn')
+    # plt.scatter(low_rank[indices[3]:indices[4], 0], low_rank[indices[3]:indices[4], 1], s=20, c='r', alpha=.5, label='cornn')
+    # plt.title("LSTM, GRU, RNN, ASRNN, CORNN training data")
+    # plt.legend()
+    # plt.show()
+
+    # val_split = 0.1
+    # test_split = 0.2
+    # split = torch.load(f'{dir}/{model_type}_data_split_vfrac{val_split}_testfrac{test_split}.p')
+    # x_data = split['val_data']
+    # targets = split['val_targets']
+
+    x_data_lstm = split_lstm['val_data'].detach()
+    targets_lstm = split_lstm['val_targets']
+    x_data_gru = split_gru['val_data'].detach()
+    targets_gru = split_gru['val_targets']
+    x_data_rnn = split_rnn['val_data'].detach()
+    targets_rnn = split_rnn['val_targets']
+    x_data_asrnn = split_asrnn['val_data'].detach()
+    targets_asrnn = split_asrnn['val_targets']
+    x_data_cornn = split_cornn['val_data'].detach()
+    targets_cornn = split_cornn['val_targets']
+
+    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn, x_data_asrnn, x_data_cornn), dim=0)
+    targets = torch.cat((targets_lstm, targets_gru, targets_rnn, targets_asrnn, targets_cornn))
+    # thresh = 0.02
+    thresh = torch.median(targets)
 
     # x_data = torch.load(f'{dir}/{model_type}_allLEs.p')
     # targets = torch.load(f'{dir}/{model_type}_allValLoss.p')
     target_mask = targets < thresh
+    print(f'thresh: {thresh}')
     print(f"Number of samples smaller than threshold: {torch.sum(target_mask)}")
     print(f"Number of samples larger than threshold: {torch.sum(~target_mask)}")
+
     outputs = model(x_data)
-
     predictions = outputs[2].detach()
-    plt.figure()
-    plt.scatter(torch.zeros_like(predictions), predictions, label='pred')
-    plt.scatter(torch.ones_like(targets), targets, label='target')
-    plt.legend()
-    plt.show()
 
+    # plt.figure()
+    # plt.scatter(torch.zeros_like(predictions), predictions, label='pred')
+    # plt.scatter(torch.ones_like(targets), targets, label='target')
+    # plt.legend()
+    # plt.show()
 
     latent = outputs[1].detach()
     if os.path.exists(f'{dir}/PCA_dim{dim}.p'):
@@ -216,168 +227,342 @@ def pca(latent_size, dim=2, task_type='SMNIST', model_type = 'lstm', no_evals = 
     low_rank = torch.matmul(latent, V[:, :dim])
     trained_project = {'V': V, 'low_rank': low_rank, 'latent': latent}
     torch.save(trained_project, f'{dir}/PCA_dim{dim}.p')
-
+    #
     fig = plt.figure(figsize = (4,4))
+    pc1_thresholds = torch.arange(-2, 2, 0.1)
+    f1 = torch.zeros(len(pc1_thresholds))
+    for i, pc1_threshold in enumerate(pc1_thresholds):
+        f1[i] = f1_score(low_rank, target_mask, pc1_threshold, dim=0, inverse=False, verbose=False)
+    print(f'f1 score with threshold ({pc1_thresholds}) is: {f1}')
+    idx = torch.argmax(f1)
+    optimal_threshold = pc1_thresholds[idx]
+    print(f'optimal_threshold: {optimal_threshold}, optimal f1: {f1[idx]}')
     plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s = 20, c = 'lime', alpha = 0.5)
     plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s = 20, c = 'red', alpha = 0.5)
     plt.xlabel('PC 1')
     plt.ylabel('PC 2')
     plt.title('val')
-    plt.xlim([-7, 11])
-    plt.ylim([-9, 6])
+    # plt.xlim([-5.5, 5])
+    # plt.ylim([-5, 5])
     plt.show()
 
 
-    # indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
-    # print(f"indices: {indices}")
+    indices = [0, 1*no_evals, 2*no_evals, 3*no_evals, 4*no_evals]
+    print(f"indices: {indices}")
     # sizes = [64, 128, 256, 512]
-    # i_list = torch.arange(4*no_evals)
-    # splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
-    #
+    i_list = torch.arange(4*no_evals)
+    splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
+
     # latent = model(x_data)[1].detach()
     # U,S,V = torch.pca_lowrank(latent)
     # low_rank = torch.matmul(latent, V[:, :dim])
     # torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
-
+    model_type = 'lstm'
     x_data = torch.load(f'Processed/trials/SMNIST/{model_type}/{model_type}_allLEs.p')
     targets = torch.load(f'Processed/trials/SMNIST/{model_type}/{model_type}_allValLoss.p')
     target_mask = targets < thresh
     epochs = [0, 1, 2, 3, 4, 5]
     indices = [0, 1 * no_evals, 2 * no_evals, 3 * no_evals, 4 * no_evals, 5 * no_evals, 6 * no_evals]
     i_list = torch.arange(len(epochs)*no_evals)
-    splits = [(i_list>torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
+    splits = [(i_list>=torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
 
     latent = model(x_data)[1].detach()
     # U,S,V = torch.pca_lowrank(latent)
     low_rank = torch.matmul(latent, V[:, :dim])
     # # torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
-    #
-    # #Performance PCA Plot
-    fig = plt.figure(figsize = (4,4))
 
-    ax = fig.add_subplot(111)
-    idx = 0
-    y = low_rank[splits[idx]]
-    # print(y[:,0].shape)
-    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
-    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
-    plt.title('epoch 0')
-    plt.xlim([-7, 11])
-    plt.ylim([-9, 6])
+    for idx in [0, 1, 2, 5]:
+        pca_and_hist(target_mask, splits, idx=idx, low_rank=low_rank, xy_dim=[0, 1], threshold=optimal_threshold, inverse=False, verbose=True)
+
+def pca_all(latent_size, dim=2, task_type='SMNIST', model_type='all', no_evals=1, v_frac=0.2, suffix='', thresh=1.75):
+    if torch.cuda.is_available():
+        device = torch.device('cuda')
+    else:
+        device = torch.device('cpu')
+    # model_type = 'all'
+    load_epoch = 4000
+    print(f'Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt')
+    model = torch.load(f'Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt').cpu()
+    model.load_state_dict(model.best_state)
+    dir = f'Processed/trials/{task_type}/{model_type}/'
+    split_lstm = torch.load(f'Processed/trials/SMNIST/lstm/lstm_data_split_vfrac0.1_testfrac0.2.p')
+    split_gru = torch.load(f'Processed/trials/SMNIST/gru/gru_data_split_vfrac0.1_testfrac0.2.p')
+    split_rnn = torch.load(f'Processed/trials/SMNIST/rnn/rnn_data_split_vfrac0.1_testfrac0.2.p')
+    split_asrnn = torch.load(f'Processed/trials/SMNIST/asrnn/asrnn_data_split_vfrac0.1_testfrac0.2.p')
+    split_cornn = torch.load(f'Processed/trials/SMNIST/cornn/cornn_data_split_vfrac0.1_testfrac0.2.p')
+    x_data_lstm = split_lstm['train_data'].detach()
+    targets_lstm = split_lstm['train_targets']
+    x_data_gru = split_gru['train_data'].detach()
+    targets_gru = split_gru['train_targets']
+    x_data_rnn = split_rnn['train_data'].detach()
+    targets_rnn = split_rnn['train_targets']
+    x_data_asrnn = split_asrnn['train_data'].detach()
+    targets_asrnn = split_asrnn['train_targets']
+    x_data_cornn = split_cornn['train_data'].detach()
+    targets_cornn = split_cornn['train_targets']
+
+    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn, x_data_asrnn, x_data_cornn), dim=0)
+    targets = torch.cat((targets_lstm, targets_gru, targets_rnn, targets_asrnn, targets_cornn))
+
+    num_lstm = 840
+    num_gru = 840
+    num_rnn = 840
+    num_asrnn = 840
+    num_cornn = 840
+    indices = [num_lstm, num_lstm + num_gru, num_lstm + num_gru + num_rnn, num_lstm + num_gru + num_rnn + num_asrnn,
+               num_lstm + num_gru + num_rnn + num_asrnn + num_cornn]
+
+    plt.figure(1)
+    plt.scatter(range(0, indices[0]), targets[:indices[0]], s=20, c='b', alpha=.5, label='lstm')
+    plt.scatter(range(indices[0], indices[1]), targets[indices[0]:indices[1]], s=20, c='y', alpha=.5, label='gru')
+    plt.scatter(range(indices[1], indices[2]), targets[indices[1]:indices[2]], s=20, c='g', alpha=.5, label='rnn')
+    plt.scatter(range(indices[2], indices[3]), targets[indices[2]:indices[3]], s=20, c='c', alpha=.5, label='asrnn')
+    plt.scatter(range(indices[3], indices[4]), targets[indices[3]:indices[4]], s=20, c='purple', alpha=.5, label='cornn')
+    plt.title("LSTM, GRU, RNN, ASRNN and CoRNN loss")
+    plt.legend()
     plt.show()
+    thresh = torch.median(targets)
+    # thresh = 0.005
+    target_mask = targets <= thresh
+    outputs = model(x_data)
+    latent = outputs[1].detach()
+    print(f"Threshold in training data: {thresh}")
+    print(f"Number of samples smaller than threshold: {torch.sum(target_mask)}")
+    print(f"Number of samples larger than threshold: {torch.sum(~target_mask)}")
 
-    fig = plt.figure(figsize=(4, 4))
-    ax = fig.add_subplot(111)
-    idx = 1
-    y = low_rank[splits[idx]]
-    # print(y[:,0].shape)
-    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
-    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
-    plt.title('epoch 1')
-    plt.xlim([-7, 11])
-    plt.ylim([-9, 6])
-    plt.show()
+    if os.path.exists(f'{dir}/PCA_dim{dim}.p'):
+        print("Loading V")
+        trained_project = torch.load(f'{dir}/PCA_dim{dim}.p')
+        V = trained_project['V']
+    else:
+        print("Creating new V")
+        U, S, V = torch.pca_lowrank(latent)
 
+    low_rank = torch.matmul(latent, V[:, :dim])
+    PC1_mean = torch.mean(low_rank[:, 0])
+    PC1_median = torch.median(low_rank[:, 0])
+    PC2_mean = torch.mean(low_rank[:, 1])
+    PC2_median = torch.median(low_rank[:, 1])
+    print(f"PC1 mean: {PC1_mean}, median: {PC1_median}")
+    print(f"PC2 mean: {PC2_mean}, median: {PC2_median}")
+    plt.figure(2)
+    linewidth = 1
+    plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s=20, c='red', alpha=.5)
+    plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s=20, c='lime', alpha=.5)
 
-    fig = plt.figure(figsize=(4, 4))
-    ax = fig.add_subplot(111)
-    idx = 2
-    y = low_rank[splits[idx]]
-    # print(y[:,0].shape)
-    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
-    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
-    plt.title('epoch 2')
-    plt.xlim([-7, 11])
-    plt.ylim([-9, 6])
-    plt.show()
-
-    fig = plt.figure(figsize=(4, 4))
-    ax = fig.add_subplot(111)
-    idx = 5
-    y = low_rank[splits[idx]]
-    # print(y[:,0].shape)
-    im = ax.scatter(y[:, 0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
-    im = ax.scatter(y[:, 0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
-    plt.title('epoch 5')
-    plt.xlim([-7, 11])
-    plt.ylim([-9, 6])
-    plt.show()
-
-
-    # #Performance PCA Plot
-    # fig = plt.figure(figsize = (4,4))
-    #
-    # ax = fig.add_subplot(111)
-    # if thresh > 0:
-    #     for idx, size in enumerate(sizes):
-    #         y = low_rank[splits[idx]]
-    #         # print(y[:,0].shape)
-    #         im = ax.scatter(y[:,0][target_mask[splits[idx]]], y[:,1][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
-    #         im = ax.scatter(y[:,0][~target_mask[splits[idx]]], y[:,1][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
-    # else:
-    #     for idx, size in enumerate(sizes):
-    #         y = low_rank[splits[idx]]
-    #         # print(y[:,0].shape)
-    #         im = ax.scatter(y[:,0][splits[idx]], y[:,1][splits[idx]], s = 20, c = 'lime', alpha = 0.5)
-
-    # if dim == 3:
-        # ax = fig.add_subplot(111, projection='3d')
-    # else:
-        # ax = fig.add_subplot(111)
-    # for idx, size in enumerate(sizes):
-        # y = low_rank[splits[idx]]
-        # if dim == 3:
-            # im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
-        # else:
-            # im = ax.scatter(y[:,0], y[:,1], s = 6, c = targets[splits[idx]], norm=colors.LogNorm(vmin=targets.min(), vmax=targets.max()+1.2), cmap = plt.get_cmap('brg_r'))
-    # ax.add_colorbar(label = 'Val Loss')
-    # plt.colorbar(im, label = 'Val Loss', )
-    # ax.set_xlabel('PC 1')
-    # ax.set_ylabel('PC 2')
-    # plt.title('Trained on GRU, tested on GRU')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    # ax.set_xticks([])
-    # ax.set_yticks([])
-    # plt.show()
-    # if dim == 3:
-    #     ax.set_zlabel('PCA 3')
-    # # plt.show()
-    # print(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png')
-    # plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_perf_dim{dim}.png', dpi = 200, bbox_inches = 'tight')
-    #Size PCA Plot
-    # fig = plt.figure(figsize = (4,4))
-    # if dim == 3:
-    #     ax = fig.add_subplot(111, projection='3d')
-    # else:
-    #     ax = fig.add_subplot(111)
-    # for idx, size in enumerate(sizes):
-    #     y = low_rank[splits[idx]]
-    #     if dim == 3:
-    #         im = ax.scatter(y[:,0], y[:,1], y[:,2], s = 6, label = size)
-    #     else:
-    #         im = ax.scatter(y[:,0], y[:,1], s = 6, label = size)
+    plt.plot([PC1_mean, PC1_mean], [torch.min(low_rank[:, 1]), torch.max(low_rank[:, 1])], label='PC1 mean',
+             linewidth=linewidth, color='m')
+    plt.plot([PC1_median, PC1_median], [torch.min(low_rank[:, 1]), torch.max(low_rank[:, 1])], label='PC1 median',
+             linewidth=linewidth, color='k')
+    plt.plot([torch.min(low_rank[:, 0]), torch.max(low_rank[:, 0])], [PC2_mean, PC2_mean], label='PC2 mean',
+             linewidth=linewidth, color='m')
+    plt.plot([torch.min(low_rank[:, 0]), torch.max(low_rank[:, 0])], [PC2_median, PC2_median], label='PC2 median',
+             linewidth=linewidth, color='k')
+    plt.title("LSTM, GRU, RNN, ASRNN and CoRNN training data")
     # plt.legend()
-    # # plt.colorbar(label = 'Val Loss')
-    # ax.set_xlabel('PCA 1')
-    # ax.set_ylabel('PCA 2')
-    # ax.set_xticks([])
-    # ax.set_yticks([])
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    #
-    # if dim == 3:
-    #     ax.set_zlabel('PCA 3')
-    # if thresh >0:
-    #     plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_classifier_dim{dim}.png', dpi = 200)
-    # else:
-    #     ax.colorbar(label = 'Val Loss')
-    #     plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_dim{dim}.png', dpi = 200)
-    # plt.show()
+    plt.show()
+
+    plt.figure(3)
+    plt.scatter(low_rank[:indices[0], 0], low_rank[:indices[0], 1], s=20, c='b', alpha=.5, label='lstm')
+    plt.scatter(low_rank[indices[0]:indices[1], 0], low_rank[indices[0]:indices[1], 1], s=20, c='y', alpha=.5, label='gru')
+    plt.scatter(low_rank[indices[1]:indices[2], 0], low_rank[indices[1]:indices[2], 1], s=20, c='g', alpha=.5, label='rnn')
+    plt.scatter(low_rank[indices[2]:indices[3], 0], low_rank[indices[2]:indices[3], 1], s=20, c='c', alpha=.5, label='asrnn')
+    plt.scatter(low_rank[indices[3]:indices[4], 0], low_rank[indices[3]:indices[4], 1], s=20, c='purple', alpha=.5, label='cornn')
+    plt.plot([PC1_mean, PC1_mean], [torch.min(low_rank[:, 1]), torch.max(low_rank[:, 1])], label='PC1 mean',
+             linewidth=linewidth, color='m')
+    plt.plot([PC1_median, PC1_median], [torch.min(low_rank[:, 1]), torch.max(low_rank[:, 1])], label='PC1 median',
+             linewidth=linewidth, color='k')
+    plt.plot([torch.min(low_rank[:, 0]), torch.max(low_rank[:, 0])], [PC2_mean, PC2_mean], label='PC2 mean',
+             linewidth=linewidth, color='m')
+    plt.plot([torch.min(low_rank[:, 0]), torch.max(low_rank[:, 0])], [PC2_median, PC2_median], label='PC2 median',
+             linewidth=linewidth, color='k')
+    plt.title("LSTM, GRU, RNN, ASRNN and CoRNN training data")
+    # plt.legend()
+    plt.show()
+    metric = PC2_median
+    metric_dim = 1
+    LSTM_right = torch.sum(low_rank[0:indices[0], metric_dim] >= metric)
+    GRU_right = torch.sum(low_rank[indices[0]:indices[1], metric_dim] >= metric)
+    RNN_right = torch.sum(low_rank[indices[1]:indices[2], metric_dim] >= metric)
+    ASRNN_right = torch.sum(low_rank[indices[2]:indices[3], metric_dim] >= metric)
+    CoRNN_right = torch.sum(low_rank[indices[3]:indices[4], metric_dim] >= metric)
+
+    LSTM_left = torch.sum(low_rank[0:indices[0], metric_dim] < metric)
+    GRU_left = torch.sum(low_rank[indices[0]:indices[1], metric_dim] < metric)
+    RNN_left = torch.sum(low_rank[indices[1]:indices[2], metric_dim] < metric)
+    ASRNN_left = torch.sum(low_rank[indices[2]:indices[3], metric_dim] < metric)
+    CoRNN_left = torch.sum(low_rank[indices[3]:indices[4], metric_dim] < metric)
+    print(f'{LSTM_right / (LSTM_right+LSTM_left)*100:.1f}, {GRU_right / (LSTM_right+LSTM_left)*100:.1f},' 
+          f'{RNN_right / (LSTM_right+LSTM_left)*100:.1f}, {ASRNN_right / (LSTM_right+LSTM_left)*100:.1f}, '
+          f'{CoRNN_right / (LSTM_right+LSTM_left)*100:.1f}')
+    print(f'{LSTM_left / (LSTM_right+LSTM_left)*100:.1f}, {GRU_left  / (LSTM_right+LSTM_left)*100:.1f}, '
+          f'{RNN_left / (LSTM_right+LSTM_left)*100:.1f}, {ASRNN_left / (LSTM_right+LSTM_left)*100:.1f}, '
+          f'{CoRNN_left / (LSTM_right+LSTM_left)*100:.1f}')
+    x_data_lstm = split_lstm['val_data'].detach()
+    targets_lstm = split_lstm['val_targets']
+    x_data_gru = split_gru['val_data'].detach()
+    targets_gru = split_gru['val_targets']
+    x_data_rnn = split_rnn['val_data'].detach()
+    targets_rnn = split_rnn['val_targets']
+    x_data_asrnn = split_asrnn['val_data'].detach()
+    targets_asrnn = split_asrnn['val_targets']
+    x_data_cornn = split_cornn['val_data'].detach()
+    targets_cornn = split_cornn['val_targets']
+    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn, x_data_asrnn, x_data_cornn), dim=0)
+    targets = torch.cat((targets_lstm, targets_gru, targets_rnn, targets_asrnn, targets_cornn))
+    # thresh = 0.005
+    thresh = torch.median(targets)
+
+    target_mask = targets < thresh
+    print(f'thresh: {thresh}')
+    print(f"Val Number of samples smaller than threshold: {torch.sum(target_mask)}")
+    print(f"Val Number of samples larger than threshold: {torch.sum(~target_mask)}")
+
+    outputs = model(x_data)
+    latent = outputs[1].detach()
+    if os.path.exists(f'{dir}/PCA_dim{dim}.p'):
+        trained_project = torch.load(f'{dir}/PCA_dim{dim}.p')
+        V = trained_project['V']
+        low_rank = torch.matmul(latent, V[:, :dim])
+    else:
+        U, S, V = torch.pca_lowrank(latent)
+        low_rank = torch.matmul(latent, V[:, :dim])
+        trained_project = {'V': V, 'low_rank': low_rank, 'latent': latent}
+        torch.save(trained_project, f'{dir}/PCA_dim{dim}.p')
+
+    fig = plt.figure(figsize=(4, 4))
+    pc1_thresholds = torch.arange(-2, 0, )
+    # ks = torch.arange(0.5, 2.0, 0.1)
+    f1 = torch.zeros(len(pc1_thresholds))
+    # f1 = torch.zeros(len(pc1_thresholds), len(ks))
+    for i, pc1_threshold in enumerate(pc1_thresholds):
+        f1[i] = f1_score(low_rank, target_mask, pc1_threshold, inverse=False, verbose=True)
+        # for j, k in enumerate(ks):
+        #     f1[i][j] = f1_score_2d(low_rank, target_mask, pc1_threshold, k=k, inverse=False, verbose=True)
+    print(f'f1 score with threshold ({pc1_thresholds}) is: {f1}')
+    idx = [(f1 == torch.max(f1)).nonzero()]
+    optimal_threshold = pc1_thresholds[idx[0]]
+    # optimal_k = ks[idx[1]]
+    print(f'optimal_threshold: {optimal_threshold}, optimal f1: {f1[idx[0]]}')
+    plt.scatter(low_rank[target_mask, 0], low_rank[target_mask, 1], s=20, c='lime', alpha=0.5)
+    plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s=20, c='red', alpha=0.5)
+    # plt.plot(torch.arange(-25, 10, 0.1), torch.arange(-25, 10, 0.1) * optimal_k + optimal_threshold)
+    plt.xlabel('PC 1')
+    plt.ylabel('PC 2')
+    plt.title('val')
+    # plt.xlim([-25, 10])
+    # plt.ylim([-10, 30])
+    plt.show()
+
+    # indices = [0, 1 * no_evals, 2 * no_evals, 3 * no_evals, 4 * no_evals]
+    # print(f"indices: {indices}")
+    # i_list = torch.arange(4 * no_evals)
+    # splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1])
+    #           for i in range(len(indices) - 1)]
+    epochs = [0, 1, 2, 3, 4, 5]
+    model_types = ['lstm', 'gru', 'rnn', 'asrnn']
+    # splits = {'lstm': split_lstm, 'gru': split_gru, 'rnn': split_rnn, 'asrnn': split_asrnn}
+    x_data_processed, targets_processed, indices = data_all(model_types, no_evals, epochs=epochs)
+
+    targets_processed_mask = targets_processed < thresh
+    indices = [0, 1 * no_evals * len(model_types), 2 * no_evals * len(model_types), 3 * no_evals * len(model_types),
+               4 * no_evals * len(model_types), 5 * no_evals * len(model_types), 6 * no_evals * len(model_types)]
+    i_list = torch.arange(len(epochs) * no_evals * len(model_types))
+    splits = [(i_list >= torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1])
+              for i in range(len(indices) - 1)]
+
+    latent = model(x_data_processed)[1].detach()
+    # U,S,V = torch.pca_lowrank(latent)
+    low_rank = torch.matmul(latent, V[:, :dim])
+    # # torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
+
+    # for idx in [0, 1, 2, 5]:
+    #     pca_and_hist(targets_processed_mask, splits, idx=idx, low_rank=low_rank, xy_dim=[0, 1],
+    #                  threshold=optimal_threshold, k=None,
+    #                  inverse=False, verbose=True)
+def data_process(model_type, no_evals=200, epochs=[]):
+    x_data = torch.load(f'Processed/trials/SMNIST/{model_type}/{model_type}_allLEs.p')
+    n_dim = x_data.shape[1]
+    targets = torch.load(f'Processed/trials/SMNIST/{model_type}/{model_type}_allValLoss.p')
+    indices = [0]
+    x_data_processed = torch.zeros((len(epochs), no_evals, n_dim))
+    targets_processed = torch.zeros((len(epochs), no_evals))
+    for i, epoch in enumerate(epochs):
+        indices.append((epoch+1) * no_evals)
+        x_data_processed[i] = x_data[indices[i]:indices[i+1]]
+        targets_processed[i] = targets[indices[i]:indices[i+1]]
+    return indices, x_data_processed, targets_processed
+
+def data_all(model_types, no_evals, epochs=[]):
+    n_hid = 1024
+    x_data_temp = torch.zeros((len(model_types), len(epochs), no_evals, n_hid))
+    targets_temp = torch.zeros((len(model_types), len(epochs), no_evals))
+    for i, model_type in enumerate(model_types):
+        indices, x_data_temp[i], targets_temp[i] = data_process(model_type, no_evals=200, epochs=epochs)
+    x_data_processed = x_data_temp.transpose(0, 1).reshape(len(epochs), len(model_types) * no_evals, -1).reshape(-1, n_hid)
+    targets_processed = targets_temp.transpose(0, 1). reshape(len(epochs), len(model_types) * no_evals).reshape(-1,)
+    return x_data_processed, targets_processed, indices
+
+def f1_score(low_rank, target_mask, threshold, dim=0, inverse=False, verbose=False):
+    if inverse:
+        fn = torch.sum(low_rank[target_mask, dim] < threshold)
+        tp = torch.sum(low_rank[target_mask, dim] > threshold)
+        tn = torch.sum(low_rank[~target_mask, dim] < threshold)
+        fp = torch.sum(low_rank[~target_mask, dim] > threshold)
+    else:
+        fn = torch.sum(low_rank[target_mask, dim] > threshold)
+        tp = torch.sum(low_rank[target_mask, dim] < threshold)
+        tn = torch.sum(low_rank[~target_mask, dim] > threshold)
+        fp = torch.sum(low_rank[~target_mask, dim] < threshold)
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    if verbose:
+        print(f'threshold: {threshold}. tp:{tp}, tn: {tn}, fp: {fp}, fn: {fn}. precision: {precision}. recall: {recall}')
+    return (2 * precision * recall) / (precision + recall)
+
+def f1_score_2d(low_rank, target_mask, threshold, k=1, inverse=False, verbose=False):
+    if inverse:
+        print("inverse")
+        tp = torch.sum((k * low_rank[target_mask, 0] - low_rank[target_mask, 1]) > -threshold)
+        fp = torch.sum((k * low_rank[target_mask, 0] - low_rank[target_mask, 1]) < -threshold)
+        tn = torch.sum((k * low_rank[~target_mask, 0] - low_rank[~target_mask, 1]) < -threshold)
+        fn = torch.sum((k * low_rank[~target_mask, 0] - low_rank[~target_mask, 1]) > -threshold)
+    else:
+        tp = torch.sum((k * low_rank[target_mask, 0] - low_rank[target_mask, 1]) < -threshold)
+        fp = torch.sum((k * low_rank[target_mask, 0] - low_rank[target_mask, 1]) > -threshold)
+        tn = torch.sum((k * low_rank[~target_mask, 0] - low_rank[~target_mask, 1]) > -threshold)
+        fn = torch.sum((k * low_rank[~target_mask, 0] - low_rank[~target_mask, 1]) < -threshold)
+
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    if verbose:
+        print(f'threshold: {threshold}, k: {k}. tp:{tp}, tn: {tn}, fp: {fp}, fn: {fn}. precision: {precision}. recall: {recall}')
+    return (2 * precision * recall) / (precision + recall)
+
+def pca_and_hist(target_mask, splits, idx, low_rank, xy_dim=[0, 1], threshold=None, k=None, inverse=False, verbose=False):
+    fig = plt.figure(figsize = (4,4))
+    plt.subplot(211)
+    x_dim, y_dim = xy_dim[0], xy_dim[1]
+    y = low_rank[splits[idx]]
+
+    plt.scatter(y[:, x_dim][target_mask[splits[idx]]], y[:,y_dim][target_mask[splits[idx]]], s = 20, c = 'lime', alpha = 0.5)
+    plt.scatter(y[:, x_dim][~target_mask[splits[idx]]], y[:,y_dim][~target_mask[splits[idx]]], s = 20, c = 'r', alpha = 0.5)
+    # plt.plot(torch.arange(-25, 10, 0.1), torch.arange(-25, 10, 0.1) * k + threshold)
+    if threshold is not None:
+        # f1 = f1_score_2d(y, target_mask[splits[idx]], threshold, k=k, inverse=False, verbose=True)
+        f1 = f1_score(y, target_mask[splits[idx]], threshold, dim=0, inverse=inverse, verbose=verbose)
+    print(f'f1 score with threshold ({threshold}) is: {f1}')
+
+    plt.title(f'epoch {idx}')
+    plt.xlim([-25, 10])
+    plt.ylim([-10, 30])
+    plt.axis('off')
+    bins = torch.arange(-25, 10, 0.5).tolist()
+    plt.subplot(212)
+    plt.hist(y[:, x_dim], bins=bins,  color='lime')
+    plt.hist(y[:, x_dim][~target_mask[splits[idx]]], bins=bins,color='r')
+    plt.ylim([0, 60])
+    plt.show()
 
 def pca_size(latent_size, size = 512, dim=2, model_type = 'lstm'):
     if torch.cuda.is_available():
@@ -456,7 +641,6 @@ def param_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, 
     # plt.xlabel('Initialization Parameter')
     plt.savefig(f'Figures/param_dist.png', bbox_inches = 'tight', dpi = 200)
 
-
 def size_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, suffix = '', thresh = 1.75):
     if torch.cuda.is_available():
         device= torch.device('cuda')
@@ -517,13 +701,13 @@ def main(args):
     latent_size = 32
     num_evals   = 200
     task_type   = 'SMNIST'
-    model_type  = 'rnn'
-    thresh      = 0.015
+    model_type  = 'all'
+    thresh      = 0.0041
 
 
     if not os.path.isdir(f'Figures/Latent/{task_type}'):
         os.makedirs(f'Figures/Latent/{task_type}')
-    pca(latent_size = latent_size, dim = 2, task_type=task_type, model_type = model_type, no_evals = num_evals, v_frac = 0.2, suffix = f'{model_type}_', thresh = thresh)
+    pca_all(latent_size = latent_size, dim = 2, task_type=task_type, model_type = model_type, no_evals = num_evals, v_frac = 0.2, suffix = f'{model_type}_', thresh = thresh)
     # pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 1, v_frac = 0.2, suffix = f'{model_type}_', thresh = 0)
 
 if __name__ == '__main__':

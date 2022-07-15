@@ -23,7 +23,9 @@ class AntisymmetricRNN(nn.Module):
 		self.get_init(self.init_W_std)
 
 	def get_init(self, init_W_std):
-		normal_sampler_ih_l0 = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([1 / self.input_size]))
+		print(f"init_W_std: {init_W_std}")
+		normal_sampler_ih_l0 = torch.distributions.uniform.Uniform(torch.Tensor([-init_W_std]), torch.Tensor([init_W_std]))
+		# normal_sampler_ih_l0 = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([1 / self.input_size]))
 		weight_ih_l0 = nn.Parameter(normal_sampler_ih_l0.sample((self.hidden_size, self.input_size))[..., 0])
 		bias_ih_l0 = nn.Parameter(torch.zeros(self.hidden_size))
 		self.weight_ih_l0 = nn.Linear(self.input_size, self.hidden_size)
@@ -33,9 +35,14 @@ class AntisymmetricRNN(nn.Module):
 
 
 		# init W
-		normal_sampler_W = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([init_W_std/ self.hidden_size]))
+		normal_sampler_W = torch.distributions.uniform.Uniform(torch.Tensor([-init_W_std]), torch.Tensor([init_W_std]))
+		# normal_sampler_W = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([init_W_std]))
+		# normal_sampler_W = torch.distributions.Normal(torch.Tensor([0]), torch.Tensor([init_W_std/ self.hidden_size]))
 		self.weight_W_l0 = nn.Parameter(normal_sampler_W.sample((self.hidden_size, self.hidden_size))[..., 0])
 		self.all_weights = [[self.weight_ih_l0.weight, self.weight_W_l0]]
+
+		self.gamma = init_W_std
+		self.gamma_I = torch.eye(self.hidden_size, self.hidden_size).cuda() * self.gamma
 
 	def forward(self, x, h=None):
 		# x.shape = (batch_size, timesteps, input_dim)

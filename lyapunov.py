@@ -647,7 +647,7 @@ def cornn_jac(params_array, hy, hz, x, gamma, dt, bias=False):
     x_ = x.squeeze(dim=1).t()
     y = torch.tanh(torch.matmul(wy, hy_[0]) + torch.matmul(wz, hz_[0]) + torch.matmul(V, x_)).t()
     J = (1 - dt ** 2 * gamma) * torch.eye(hidden_size).unsqueeze(dim=0).repeat(batch_size, 1, 1).cuda() \
-         + dt ** 2 * wy.unsqueeze(dim=0).repeat(batch_size, 1, 1) / (1 - y.unsqueeze(dim=1) ** 2)
+         + dt ** 2 * wy.t().unsqueeze(dim=0).repeat(batch_size, 1, 1) * (1 - y.unsqueeze(dim=1) ** 2)
     return J
 
 def param_split(model_params, bias):

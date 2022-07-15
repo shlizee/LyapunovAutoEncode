@@ -122,6 +122,44 @@ def train_model(full_con, model, optimizer, trial_data, start_epoch= 0, print_in
 
     return train_loss, val_loss
 
+def test_model_SMNIST(full_con, model, epoch):
+    test_dataset = torchvision.datasets.MNIST(root='data/',
+                                              train=False,
+                                              transform=transforms.ToTensor())
+    test_dataloader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=100,
+                                                      shuffle=True)
+
+    sequence_length = 28
+    input_size = 28
+    device = full_con.device
+    criterion = nn.CrossEntropyLoss()
+
+    # Test the model
+    model.eval()
+    running_loss = 0
+    running_samples = 0
+    with torch.no_grad():
+        correct = 0
+        total = 0
+        for i, (images, labels) in enumerate(test_dataloader):
+            images = images.reshape(-1, sequence_length, input_size).to(device)
+            labels = labels.to(device)
+            outputs, _ = model(images)
+            outputs = outputs[:, -1, :]
+
+            loss = criterion(outputs, labels)
+            running_loss += loss.item()
+            running_samples += images.shape[0]
+
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+        val_loss = running_loss / running_samples
+        print('Loss: {}, Test Accuracy: {} %'.format(val_loss, 100 * correct / total))
+
+    return val_loss
+
+
 def train_model_SMNIST(full_con, model, optimizer, start_epoch=0, save_interval=2):
     full_con.data.data_dir
     train_dataset = torchvision.datasets.MNIST(root='data/',

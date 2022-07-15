@@ -16,10 +16,10 @@ def interpolate_LEs(start_size, target_size, prefix = 'lstm', suffix = '', epoch
     if not np.modf(np.log2(factor_increase))[0] == 0:
         raise ValueError(f'Target size ({target_size}) must be a power of 2 times the start size ({start_size}). The factor is {factor_increase:.2f}.')
     print(f'Interpolation Factor: {int(factor_increase)}')
-    # file_name = f'LE_stats/{model_type}_{start_size}_allLEs_e{epoch}.p'
-
-    file_name = f'{prefix}_{start_size}{suffix}_LEs.p'
-    print(file_name)
+    file_name = f'LE_stats/{model_type}_{start_size}_allLEs_e{epoch}.p'
+    #
+    # file_name = f'{prefix}_{start_size}{suffix}_LEs.p'
+    print(f'loading from: {file_name}')
     le = torch.load(file_name)
 
     device = le.device
@@ -32,7 +32,8 @@ def interpolate_LEs(start_size, target_size, prefix = 'lstm', suffix = '', epoch
             test = torch.cat((test, col.unsqueeze(1)), dim = 1)
             test = torch.cat((test, (col-diff).unsqueeze(1)), dim = 1)
             le = test
-    torch.save(le, f'{prefix}_{start_size}{suffix}_LEs_{target_size}.p')
+    # print(f'saving to: {prefix}_{start_size}{suffix}_LEs_{target_size}.p')
+    # torch.save(le, f'{prefix}_{start_size}{suffix}_LEs_{target_size}.p')
     return le
 
 
@@ -43,8 +44,8 @@ def combine_sizes(start_sizes, target_size, prefix = 'lstm', suffix = '', num_pa
     le_data = torch.zeros((0, target_size))
     val_data = torch.zeros((0, ))
     params = torch.zeros((0, ))
-    # epochs = range(11)
-    epochs = [10]
+    epochs = range(6)
+    # epochs = [10]
     for start_size in start_sizes:
         for epoch in epochs:
             le_temp = interpolate_LEs(start_size, target_size, prefix, suffix, epoch, model_type).cpu()
@@ -54,6 +55,7 @@ def combine_sizes(start_sizes, target_size, prefix = 'lstm', suffix = '', num_pa
             # not_nan_indices = [not index for index in nan_indices]
             # if nan_indices:
             nan_indices = np.where(torch.sum(nan_temp, dim=1))
+            print(f"nan_indices: {nan_indices}")
             # else:
             #     nan_indices = []
             not_nan_indices = np.where(torch.sum(~nan_temp, dim=1) == 1024)
@@ -66,12 +68,27 @@ def combine_sizes(start_sizes, target_size, prefix = 'lstm', suffix = '', num_pa
             le_temp = le_temp[new_indices]
             val_data_temp = torch.load(f'{prefix}_{start_size}{suffix}_valLoss.p').cpu()
             params_temp = torch.load(f'{prefix}_{start_size}{suffix}_params.p').unsqueeze(dim=0)
+            # plt.figure()
+            # plt.scatter(range(200), val_data_temp)
+            # plt.show()
+            #
+            # plt.figure()
+            # plt.scatter(range(200), params_temp[0])
+            # plt.show()
             val_data_temp = val_data_temp[new_indices]
             params_temp = params_temp[:, new_indices]
             le_data = torch.cat((le_data, le_temp), dim=0)
             val_data = torch.cat((val_data, val_data_temp), dim=0)
             params = torch.cat((params, params_temp), dim = 1)
 
+            # plt.figure()
+            # plt.scatter(range(200), val_data_temp)
+            # plt.show()
+            #
+            # plt.figure()
+            # plt.scatter(range(200), params_temp[0])
+            # plt.show()
+            # print("ss")
     # b = torch.unsqueeze(torch.arange(0, 1200), 1)
     # x = torch.ones_like(le_data)
     # x = b * x
@@ -145,7 +162,7 @@ def main(args):
 
     dir = f'trials/{task_type}/{model_type}'
     # no_evals = 300
-    sizes = [64, 128, 256, 512]
+    sizes = [64]#, 128, 256, 512]
     # sizes = [512]
     print(dir)
     for size in sizes:
@@ -160,6 +177,7 @@ def main(args):
     val_split = 0.1
     test_split = 0.2
     dataset_path = f'Processed/{dir}/{model_type}_data_split_vfrac{val_split}_testfrac{test_split}.p'
+    print("")
     if os.path.exists(f'{dataset_path}'):
         split = torch.load(f'{dataset_path}')
     else:
