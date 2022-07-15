@@ -3,19 +3,14 @@ from AEPredNet import AEPredNet
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from matplotlib import colors
-<<<<<<< HEAD
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 # from config import *
 from scipy.ndimage import rotate
 import argparse
-=======
+import os
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
-
->>>>>>> origin/main
-latent_size = 32
-
 
 def tsne(model, X, tsne_params={}, model_type='lstm'):
     encoded = model(X)[1]
@@ -136,7 +131,6 @@ def perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2
     if torch.cuda.is_available():
         device = torch.device('cuda')
     else:
-<<<<<<< HEAD
         device= torch.device('cpu')
     # model_type = 'all'
     load_epoch = 4000
@@ -288,8 +282,7 @@ def perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2
     indices = [0, 1 * no_evals, 2 * no_evals, 3 * no_evals, 4 * no_evals, 5 * no_evals, 6 * no_evals]
     i_list = torch.arange(len(epochs)*no_evals)
     splits = [(i_list>=torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
-=======
-        device = torch.device('cpu')
+    device = torch.device('cpu')
     model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt', map_location=device)
     model.load_state_dict(model.best_state)
     new_model = AEPredNet(model.input_size, model.latent_size)
@@ -358,10 +351,11 @@ def pca(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2, suffix=
     splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
               i in range(len(indices) - 1)]
     _, latent, preds = model(x_data)
->>>>>>> origin/main
+
 
     U, S, V = torch.pca_lowrank(latent)
     low_rank = torch.matmul(latent, V[:, :dim])
+
     # # torch.save(low_rank, f'{dir}/PCA_dim{dim}.p')
 
     for idx in [0, 1, 2, 5]:
@@ -491,6 +485,15 @@ def pca_all(latent_size, dim=2, task_type='SMNIST', model_type='all', no_evals=1
     print(f'{LSTM_left / (LSTM_right+LSTM_left)*100:.1f}, {GRU_left  / (LSTM_right+LSTM_left)*100:.1f}, '
           f'{RNN_left / (LSTM_right+LSTM_left)*100:.1f}, {ASRNN_left / (LSTM_right+LSTM_left)*100:.1f}, '
           f'{CoRNN_left / (LSTM_right+LSTM_left)*100:.1f}')
+    total_right = LSTM_right + GRU_right + RNN_right + ASRNN_right + CoRNN_right
+    total_left = LSTM_left + GRU_left + RNN_left + ASRNN_left + CoRNN_left
+    print(f'Percentage on PC1 right: LSTM/GRU/RNN/ASRNN/CoRNN: {LSTM_right/total_right*100:.1f}/'
+          f'{GRU_right/total_right*100:.1f}/{RNN_right/total_right*100:.1f}/'
+          f'{ASRNN_right/total_right*100:.1f}/{CoRNN_right/total_right*100:.1f}')
+    print(f'Percentage on PC1 left: LSTM/GRU/RNN/ASRNN/CoRNN: {LSTM_left/total_left*100:.1f}/'
+          f'{GRU_left/total_left*100:.1f}/{RNN_left/total_left*100:.1f}/'
+          f'{ASRNN_left/total_left*100:.1f}/{CoRNN_left/total_left*100:.1f}')
+
     x_data_lstm = split_lstm['val_data'].detach()
     targets_lstm = split_lstm['val_targets']
     x_data_gru = split_gru['val_data'].detach()
@@ -656,7 +659,7 @@ def pca_and_hist(target_mask, splits, idx, low_rank, xy_dim=[0, 1], threshold=No
     plt.hist(y[:, x_dim][~target_mask[splits[idx]]], bins=bins,color='r')
     plt.ylim([0, 60])
     plt.show()
-=======
+
     torch.save(low_rank, f'PCA_dim{dim}.p')
     # Performance PCA Plot
     fig = plt.figure()
@@ -705,7 +708,6 @@ def pca_and_hist(target_mask, splits, idx, low_rank, xy_dim=[0, 1], threshold=No
         ax.set_zlabel('PCA 3')
     plt.savefig(f'Figures/Latent/{suffix}AEPredNet_pca_size_dim{dim}.png', dpi=200)
 
->>>>>>> origin/main
 
 def pca_size(latent_size, size=512, dim=2, model_type='lstm'):
     if torch.cuda.is_available():
@@ -759,8 +761,6 @@ def pca_size(latent_size, size=512, dim=2, model_type='lstm'):
     ax.set_title(f'PCA for size {size}')
     plt.savefig(f'Figures/Latent/AEPredNet_pcaPerf_dim{dim}_size{size}.png', bbox_inches='tight', dpi=200)
 
-
-<<<<<<< HEAD
 def size_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, suffix = '', thresh = 1.75):
     if torch.cuda.is_available():
         device= torch.device('cuda')
@@ -794,10 +794,8 @@ def size_dist(model_type = 'lstm', dir = 'lstm/', no_evals = 300, v_frac= 0.2, s
     plt.savefig(f'Figures/size_dist.png', bbox_inches = 'tight', dpi = 200)
 
 
-def get_cmap(data, n_colors = 5):
-=======
 def get_cmap(data, n_colors=5):
->>>>>>> origin/main
+
     base = np.min(data)
     dmax = np.max(data)
     gradient = np.logspace(base=base, start=np.log(0.5) / np.log(base), stop=np.log(dmax) / np.log(base), num=n_colors)
@@ -807,41 +805,10 @@ def get_cmap(data, n_colors=5):
 
 if __name__ == "__main__":
     latent_size = 32
-<<<<<<< HEAD
     num_evals   = 200
     task_type   = 'SMNIST'
     model_type  = 'all'
     thresh      = 0.0041
-
-
     if not os.path.isdir(f'Figures/Latent/{task_type}'):
         os.makedirs(f'Figures/Latent/{task_type}')
     pca_all(latent_size = latent_size, dim = 2, task_type=task_type, model_type = model_type, no_evals = num_evals, v_frac = 0.2, suffix = f'{model_type}_', thresh = thresh)
-    # pca(latent_size = latent_size, dim = 2, model_type = model_type, no_evals = 1, v_frac = 0.2, suffix = f'{model_type}_', thresh = 0)
-
-if __name__ == '__main__':
-	import sys
-	main(sys.argv[1:])
-
-
-# if __name__ == "__main__":
-    # latent_size = 32
-    # model_type = 'lstm'
-=======
-    model_type = 'lstm'
->>>>>>> origin/main
-    # main(latent_size)
-    # tsne_param(model_type = 'merged')
-    # param_plot(latent_size, 'gru', no_evals = 100, val_split = 0.9)
-    # param_plot(latent_size, 'lstm', no_evals = 300, val_split = 0.2, dir = 'lstm/')
-    # pca(latent_size = latent_size, dim = 3, model_type = model_type, no_evals = 300, v_frac = 0.2, suffix = 'LSTM_')
-    # pca(latent_size=latent_size, dim=2, model_type=model_type, no_evals=300, v_frac=0.2, suffix='LSTM_')
-    for delta in [0.005, 0.01, 0.02, 0.1, 0.2, 0.5, 1, 2, 5]:
-        l_prime, le_perturbed = perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2,
-                                             delta=delta)
-# tsne_perf(model_type = 'merged')
-# pca(3, model_type = 'gru', no_evals = 100, v_frac = 0.9, suffix = 'GRU_')
-# pca(3)
-# for size in [64, 128, 256, 512]:
-# pca_size(size, dim = 2)
-# pca_size(size, dim = 3)
