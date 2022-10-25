@@ -26,7 +26,7 @@ class SMNISTTrails(object):
             fcon.model.init_params = {'a': -p, 'b': p}
             model = RNNModel(fcon.model).to(self.device)
             optimizer = fcon.train.get_optimizer(model.parameters())
-            train_loss, val_loss = train_model_SMNIST(fcon, model, optimizer, start_epoch= 0)
+            train_loss, val_loss = train_model_SMNIST(fcon, model, optimizer, start_epoch=0, save_interval=5)
             self.train_losses.append(train_loss)
             self.val_losses[idx] = val_loss
             end_time = time.time()
@@ -42,7 +42,7 @@ class SMNISTTrails(object):
                 print(f'Network {idx + 1} of {len(self.params)}:')
             fcon.model.init_params = {'a': -p, 'b': p}
             epoch_ = epoch
-            print(f'{fcon.train.model_dir}{fcon.model.model_type}/{fcon.name()}_e{epoch}.ckpt')
+            print(f'{fcon.train.model_dir}/{fcon.model.model_type}/{fcon.name()}_e{epoch}.ckpt')
             while (not os.path.exists(f'{fcon.train.model_dir}/{fcon.model.model_type}/{fcon.name()}_e{epoch}.ckpt')):
                 epoch_ -= 1
             ckpt = load_checkpoint(fcon, epoch_)
@@ -103,7 +103,7 @@ class CharRNNTrials(object):
             optimizer = fcon.train.get_optimizer(model.parameters())
             # print(f'Trial Data shape: {trial_data}')
             train_loss, val_loss = train_model(fcon, model, optimizer, trial_data=trial_data, verbose=False,
-                                               save_interval=1)
+                                               save_interval=5)
             self.train_losses.append(train_loss)
             self.val_losses[idx] = val_loss
             end_time = time.time()
@@ -124,7 +124,7 @@ class CharRNNTrials(object):
         trial_targets_val = val_targets[val_idx][:int(keep_amt * val_len)].to(self.device)
         return {'train_set': (trial_data_train, trial_targets_train), 'val_set': (trial_data_val, trial_targets_val)}
 
-    def LE_spectra(self, fcon, lcon, le_data, keep_amt=0.4, seq_length=500, warmup=500, epoch=1):
+    def LE_spectra(self, fcon, lcon, le_data, keep_amt=0.4, seq_length=500, warmup=500, epoch=1, task=''):
         self.all_LEs = torch.zeros(len(self.params), fcon.model.rnn_atts['hidden_size']).to(self.device)
         hidden_size = fcon.model.rnn_atts['hidden_size']
         for idx, p in enumerate(self.params):
@@ -138,14 +138,15 @@ class CharRNNTrials(object):
             LE_stats, _ = lcon.calc_lyap(le_data[i], model, fcon)
 
             self.all_LEs[idx] = LE_stats[0]
-            torch.save(LE_stats, 'LE_stats/{}_LE_stats_e{}.p'.format(fcon.name(), epoch))
-        torch.save(self.all_LEs, f'LE_stats/{fcon.model.model_type}_{hidden_size}_allLEs.p')
+            torch.save(LE_stats, f'{task}/LE_stats/{fcon.name()}_LE_stats_e{epoch}.p')
+        torch.save(self.all_LEs, f'{task}/LE_stats/{fcon.model.model_type}_{hidden_size}_allLEs_e{epoch}.p')
+
 
 def main(args):
     parser = argparse.ArgumentParser(description="Train recurrent models")
     parser.add_argument("-model", "--model_type", type=str, default='rnn', required=False)
     parser.add_argument("-evals", "--evals", type=float, default=2, required=False)
-    parser.add_argument("-task", "--task", type=str, default='charRNN', required=False)
+    parser.add_argument("-task", "--task", type=str, default='CharRNN', required=False)
     args = parser.parse_args(args)
     model_type = args.model_type
     evals = args.evals
@@ -170,55 +171,55 @@ def main(args):
     dropout = 0.1
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-    model_type = 'lstm'
-    max_epoch = 10
-    evals = 200
-    task = 'SMNIST'
+    # model_type = 'lstm'
+    # max_epoch = 10
+    # evals = 200
+    # task = 'SMNIST'
 
-    trials_dir = f'trials/{task}/{model_type}/'
+    trials_dir = f'{task}/trials/{model_type}'
     if not os.path.isdir(trials_dir):
         # os.makedirs(trials_dir)
         os.mkdir(trials_dir)
     print(f"trials_dir: {trials_dir}")
-    if task == 'charRNN':
-        print('Training charRNN')
+    if task == 'CharRNN':
+        print('Training CharRNN')
         # Define data configuration and trial directory
-        dcon = TestDataConfig('data/charRNN/', test_file='book_data.p', train_frac=0.8, val_frac=0.2, test_frac=0.0)
+        dcon = TestDataConfig('CharRNN/data/', test_file='book_data.p', train_frac=0.8, val_frac=0.2, test_frac=0.0)
         # Create Model and Training Configuration Objects
         mcon = ModelConfig(model_type, 1, 64, dcon.input_size, output_size=dcon.input_size, dropout=dropout,
                            init_type='uni', device=device, bias=False, id_init_param='b', encoding='one_hot')
-        tcon = TrainConfig(f'Models/{task}/', batch_size, max_epoch, 'adam', learning_rate, {}, start_epoch=0)
+        tcon = TrainConfig(f'Models/{task}', batch_size, max_epoch, 'adam', learning_rate, {}, start_epoch=0)
 
         # Train Models
-        # for hidden_size in [64, 128, 256, 512]:
-        for hidden_size in [256]:
+        for hidden_size in [64, 128, 256, 512]:
+        # for hidden_size in [256]:
             print(f'Hidden Size: {hidden_size}')
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
-            print(fcon.name())
-            trials = CharRNNTrials(fcon, hidden_size=hidden_size, evals=evals, keep_amt=keep_amt)
-            torch.save(trials, f'{trials_dir}/CharRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
+            # print(fcon.name())
+            #trials = CharRNNTrials(fcon, hidden_size=hidden_size, evals=evals, keep_amt=keep_amt)
+            #torch.save(trials, f'{trials_dir}/CharRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
             #
         # Calculate Lyapunov Exponents
         lcon = LyapConfig(batch_size=le_batch_size, seq_length=le_seq_length, ON_step=1, warmup=500, one_hot=True)
         print('Retrieving LE data')
         le_data = lcon.get_input(fcon)
-        for hidden_size in [64, 128, 256, 512]:
-        # for hidden_size in [64]:
+        # for hidden_size in [64, 128, 256, 512]:
+        for hidden_size in [512]:
             print(f'Hidden Size: {hidden_size}')
             mcon.rnn_atts['hidden_size'] = hidden_size
             fcon = FullConfig(dcon, tcon, mcon)
-            trials = torch.load(f'{trials_dir}/charRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
-            # trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt)
-            # torch.save(trials, f'{trials_dir}/charRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
-            print(trials)
+            trials = torch.load(f'{trials_dir}/CharRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
+            trials.LE_spectra(fcon, lcon, le_data, keep_amt=keep_amt, epoch=max_epoch, task=task)
+            torch.save(trials, f'{trials_dir}/CharRNN_Trials_keep{keep_amt}_size{hidden_size}.p')
+            # print(trials)
     elif task == 'SMNIST':
         print("Training SMNIST")
         dcon = TestDataConfig('data/MNIST/', test_file='MNIST_train_test.p', train_frac=0.8, val_frac=0.2, test_frac=0.0)
         mcon = ModelConfig(model_type, num_layers=1, hidden_size=64, input_size=28, output_size=10,
                            dropout=dropout, init_type='uni', device=device, bias=False, id_init_param='b',
                            encoding='one_hot')
-        tcon = TrainConfig(model_dir=f'Models/{task}/', batch_size=128, max_epoch=max_epoch, optimizer='adam',
+        tcon = TrainConfig(model_dir=f'Models/{task}', batch_size=128, max_epoch=max_epoch, optimizer='adam',
                            learning_rate=0.01, optim_params={}, start_epoch=0)
 
         #Train Models
@@ -263,18 +264,23 @@ def main(args):
         #     torch.save(trials, f'{trials_dir}/SMNIST_Trials_keep{keep_amt}_size{hidden_size}.p')
             # print(trials)
 
-def extract_trials(size, dir='', model_type='lstm', task_type='charRNN',keep=0.2):
+
+def extract_trials(size, dir='', model_type='lstm', task_type='CharRNN', keep=0.2):
     # trials = torch.load(f'{dir}/CharRNNTrials_keep{keep}_size{size}.p')
     trials = torch.load(f'{dir}/{task_type}_Trials_keep{keep}_size{size}.p')
     le_data = trials.all_LEs
     valLoss = trials.val_losses
     params = trials.params
-    val_loss_epochs = trials.val_loss_epochs
-    for epoch in val_loss_epochs.keys():
-        print(val_loss_epochs[epoch].shape)
-    # torch.save(le_data, f'{dir}/{model_type}_{size}_LEs.p')
-    # torch.save(valLoss, f'{dir}/{model_type}_{size}_valLoss.p')
-    # torch.save(params, f'{dir}/{model_type}_{size}_params.p')
+    # val_loss_epochs = trials.val_loss_epochs
+    # for epoch in val_loss_epochs.keys():
+    #     print(val_loss_epochs[epoch].shape)
+    # print(f'Directory: {dir}')
+    save_dir = f'{dir}/Data'
+    if not os.path.isdir(save_dir):
+        os.mkdir(save_dir)
+    torch.save(le_data, f'{save_dir}/{model_type}_{size}_LEs.p')
+    torch.save(valLoss, f'{save_dir}/{model_type}_{size}_valLoss.p')
+    torch.save(params, f'{save_dir}/{model_type}_{size}_params.p')
 
 if __name__ == '__main__':
     import sys

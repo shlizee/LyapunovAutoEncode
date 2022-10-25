@@ -25,6 +25,7 @@ class AEPredNet(nn.Module):
         self.vl2 = torch.zeros((0,))
         self.alphas = torch.zeros((0, 2))
         self.prediction_loss_type = prediction_loss_type
+        self.latent_size = latent_size
 
         self.drop = nn.Dropout(p=p_drop)
         if act == 'tanh':
@@ -50,11 +51,11 @@ class AEPredNet(nn.Module):
 
         self.opt = torch.optim.Adam(self.parameters(), lr=self.lr)
         self.rec_loss = nn.L1Loss()
-        if (self.prediction_loss_type == 'MSE'):
+        if self.prediction_loss_type == 'MSE':
             self.pred_loss = nn.MSELoss()
-        elif (self.prediction_loss_type == 'L1'):
+        elif self.prediction_loss_type == 'L1':
             self.pred_loss = nn.L1Loss()
-        elif (self.prediction_loss_type == 'BCE'):
+        elif self.prediction_loss_type == 'BCE':
             self.pred_loss = nn.BCELoss()
 
         self.best_val = 1e7
@@ -93,7 +94,7 @@ class AEPredNet(nn.Module):
         if predict:
             pred = outputs[2]
             # loss2 = self.pred_loss(pred, targets)
-            targets = targets.type(torch.FloatTensor)
+            targets = targets.type(torch.FloatTensor).to(out.device)
             loss2 = self.pred_loss(pred, targets)
         else:
             loss2 = torch.zeros_like(loss1)
@@ -111,12 +112,9 @@ class AEPredNet(nn.Module):
             loss1 = self.rec_loss(input, out)
             if predict:
                 pred = outputs[-1]
-                targets = targets.type(torch.FloatTensor)
+                targets = targets.type(torch.FloatTensor).to(out.device)
                 loss2 = self.pred_loss(pred, targets)
             else:
                 loss2 = torch.zeros_like(loss1)
             loss = loss1 + alpha * loss2
             return loss, loss1, loss2, outputs
-
-
-

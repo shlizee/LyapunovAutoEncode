@@ -14,8 +14,10 @@ from tqdm import tqdm
 import torchvision
 import torchvision.transforms as transforms
 
-def process_text(text):
+
+def process_text(text, dcon):
     test_chars= set([c for c in text])
+    char_map = dcon.datasets['char_to_int']
     for c in test_chars:
         if c not in dcon.datasets['char_to_int'].keys():
             text = text.replace(c, '')
@@ -23,6 +25,7 @@ def process_text(text):
     for idx, c in enumerate(text):
         data[idx] = char_map[c]
     return data
+
 
 def SMNIST():
     train_dataset = torchvision.datasets.MNIST(root='data/',
@@ -49,7 +52,6 @@ def SMNIST():
             train_labels = torch.cat([train_labels, labels])
         # train_labels.append(labels)
     print(i+1, train_data.shape, train_labels.shape)
-
     for i, (images, labels) in enumerate(test_dataloader):
         images = images.reshape(-1, sequence_length * input_size)
         labels = labels
@@ -76,7 +78,7 @@ def charRNN():
     full_target_set = torch.ByteTensor(0, batch_size, seq_length - 1)
     char_map = dcon.datasets['char_to_int']
 
-    txt_dir = 'data/'
+    txt_dir = 'CharRNN/data/'
     text_files = glob.glob(txt_dir+ "*.txt")
     for file in tqdm(text_files):
         f = open(file, 'rt', encoding = 'utf8')
@@ -85,7 +87,7 @@ def charRNN():
     #     print(orig_text.split('}} \n \n'))
     #     text = orig_text.split('}} \n \n')[1]
 
-        data = process_text(text)
+        data = process_text(text, dcon)
         target = torch.ByteTensor(len(data))
         for i in range(int(len(data) / seq_length)):
             src_seq = data[i * seq_length : (i + 1) * seq_length]   # length: seq_length
@@ -115,7 +117,7 @@ def charRNN():
     val_set = (full_input_set[shuffle_idx][split_idx:], full_target_set[shuffle_idx][split_idx:])
     data = {'train_set': train_set, 'val_set': val_set, 'char_to_int': char_map}
 
-    torch.save(data, 'data/book_data.p')
+    torch.save(data, 'CharRNN/data/book_data.p')
 
 if __name__ == '__main__':
     if sys.argv[1] == 'charRNN':

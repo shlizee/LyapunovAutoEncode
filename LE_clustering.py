@@ -3,17 +3,14 @@ from AEPredNet import AEPredNet
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from matplotlib import colors
-<<<<<<< HEAD
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 # from config import *
 from scipy.ndimage import rotate
 import argparse
-=======
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 
->>>>>>> origin/main
 latent_size = 32
 
 
@@ -26,10 +23,15 @@ def tsne(model, X, tsne_params={}, model_type='lstm'):
 
 
 def main(latent_size, model_type='lstm', dir=''):
+    parser = argparse.ArgumentParser(description="Train Lyapunov Autoencoder")
+    parser.add_argument("-model", "--model_type", type=str, default='rnn', required=False)
+    parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
+    parser.add_argument("-latent", "--latent_size", type=int, default=32, required=False)
     if torch.cuda.is_available():
         device = torch.device('cuda')
     else:
         device = torch.device('cpu')
+    model_dir = f'{}
     model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt').cpu()
     model.load_state_dict(model.best_state)
     new_model = AEPredNet(model.input_size, model.latent_size)
@@ -132,51 +134,53 @@ def tsne_param(no_evals=400, model_type='lstm'):
 
 
 # noinspection PyShadowingNames
-def perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2, delta=1):
+def perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2, delta=1, task_type='', thresh=1):
     if torch.cuda.is_available():
         device = torch.device('cuda')
     else:
-<<<<<<< HEAD
         device= torch.device('cpu')
     # model_type = 'all'
     load_epoch = 4000
-    print(f'Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt')
-    model = torch.load(f'Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt').cpu()
+    model_name= f'{task_type}/AE_Models/{model_type}/Latent_{latent_size}/ae_prednet_{load_epoch}.ckpt'
+    print(model_name)
+    model = torch.load(model_name).cpu()
     model.load_state_dict(model.best_state)
-    dir = f'Processed/trials/{task_type}/{model_type}/'
-    split_lstm = torch.load(f'Processed/trials/SMNIST/lstm/lstm_data_split_vfrac0.1_testfrac0.2.p')
-    split_gru = torch.load(f'Processed/trials/SMNIST/gru/gru_data_split_vfrac0.1_testfrac0.2.p')
-    split_rnn = torch.load(f'Processed/trials/SMNIST/rnn/rnn_data_split_vfrac0.1_testfrac0.2.p')
-    split_asrnn = torch.load(f'Processed/trials/SMNIST/asrnn/asrnn_data_split_vfrac0.1_testfrac0.2.p')
-    split_cornn = torch.load(f'Processed/trials/SMNIST/cornn/cornn_data_split_vfrac0.1_testfrac0.2.p')
+    data_dir = f'{task_type}/Processed/'
+    split_lstm = torch.load(f'{data_dir}/{model_type}_data_split_vfrac0.1_testfrac0.2.p')
+    # split_gru = torch.load(f'Processed/trials/SMNIST/gru/gru_data_split_vfrac0.1_testfrac0.2.p')
+    # split_rnn = torch.load(f'Processed/trials/SMNIST/rnn/rnn_data_split_vfrac0.1_testfrac0.2.p')
+    # split_asrnn = torch.load(f'Processed/trials/SMNIST/asrnn/asrnn_data_split_vfrac0.1_testfrac0.2.p')
+    # split_cornn = torch.load(f'Processed/trials/SMNIST/cornn/cornn_data_split_vfrac0.1_testfrac0.2.p')
     x_data_lstm = split_lstm['train_data'].detach()
     targets_lstm = split_lstm['train_targets']
-    x_data_gru = split_gru['train_data'].detach()
-    targets_gru = split_gru['train_targets']
-    x_data_rnn = split_rnn['train_data'].detach()
-    targets_rnn = split_rnn['train_targets']
-    x_data_asrnn = split_asrnn['train_data'].detach()
-    targets_asrnn = split_asrnn['train_targets']
-    x_data_cornn = split_cornn['train_data'].detach()
-    targets_cornn = split_cornn['train_targets']
+    # x_data_gru = split_gru['train_data'].detach()
+    # targets_gru = split_gru['train_targets']
+    # x_data_rnn = split_rnn['train_data'].detach()
+    # targets_rnn = split_rnn['train_targets']
+    # x_data_asrnn = split_asrnn['train_data'].detach()
+    # targets_asrnn = split_asrnn['train_targets']
+    # x_data_cornn = split_cornn['train_data'].detach()
+    # targets_cornn = split_cornn['train_targets']
 
-    x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn, x_data_asrnn, x_data_cornn), dim=0)
-    targets = torch.cat((targets_lstm, targets_gru, targets_rnn, targets_asrnn, targets_cornn))
+    # x_data = torch.cat((x_data_lstm, x_data_gru, x_data_rnn, x_data_asrnn, x_data_cornn), dim=0)
+    # targets = torch.cat((targets_lstm, targets_gru, targets_rnn, targets_asrnn, targets_cornn))
+    x_data = x_data_lstm
+    targets = targets_lstm
 
     num_lstm = 840
-    num_gru = 840
-    num_rnn = 840
-    num_asrnn = 840
-    num_cornn = 840
-    indices = [num_lstm, num_lstm + num_gru, num_lstm + num_gru + num_rnn, num_lstm + num_gru + num_rnn + num_asrnn,
-               num_lstm + num_gru + num_rnn + num_asrnn + num_cornn]
-
+    # num_gru = 840
+    # num_rnn = 840
+    # num_asrnn = 840
+    # num_cornn = 840
+    # indices = [num_lstm, num_lstm + num_gru, num_lstm + num_gru + num_rnn, num_lstm + num_gru + num_rnn + num_asrnn,
+    #            num_lstm + num_gru + num_rnn + num_asrnn + num_cornn]
+    indices = [num_lstm]
     plt.figure(3)
     plt.scatter(range(0, indices[0]), targets[:indices[0]], s=20, c='b', alpha=.5, label='lstm')
-    plt.scatter(range(indices[0], indices[1]), targets[indices[0]:indices[1]], s=20, c='y', alpha=.5, label='gru')
-    plt.scatter(range(indices[1], indices[2]), targets[indices[1]:indices[2]], s=20, c='g', alpha=.5, label='rnn')
-    plt.scatter(range(indices[2], indices[3]), targets[indices[2]:indices[3]], s=20, c='c', alpha=.5, label='asrnn')
-    plt.scatter(range(indices[3], indices[4]), targets[indices[3]:indices[4]], s=20, c='r', alpha=.5, label='cornn')
+    # plt.scatter(range(indices[0], indices[1]), targets[indices[0]:indices[1]], s=20, c='y', alpha=.5, label='gru')
+    # plt.scatter(range(indices[1], indices[2]), targets[indices[1]:indices[2]], s=20, c='g', alpha=.5, label='rnn')
+    # plt.scatter(range(indices[2], indices[3]), targets[indices[2]:indices[3]], s=20, c='c', alpha=.5, label='asrnn')
+    # plt.scatter(range(indices[3], indices[4]), targets[indices[3]:indices[4]], s=20, c='r', alpha=.5, label='cornn')
     plt.legend()
     plt.show()
 
@@ -288,8 +292,8 @@ def perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2
     indices = [0, 1 * no_evals, 2 * no_evals, 3 * no_evals, 4 * no_evals, 5 * no_evals, 6 * no_evals]
     i_list = torch.arange(len(epochs)*no_evals)
     splits = [(i_list>=torch.ones_like(i_list)*indices[i])*(i_list<torch.ones_like(i_list)*indices[i+1]) for i in range(len(indices)-1)]
-=======
-        device = torch.device('cpu')
+
+    device = torch.device('cpu')
     model = torch.load(f'Models/Latent_{latent_size}/ae_prednet_4000.ckpt', map_location=device)
     model.load_state_dict(model.best_state)
     new_model = AEPredNet(model.input_size, model.latent_size)
@@ -358,7 +362,6 @@ def pca(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2, suffix=
     splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
               i in range(len(indices) - 1)]
     _, latent, preds = model(x_data)
->>>>>>> origin/main
 
     U, S, V = torch.pca_lowrank(latent)
     low_rank = torch.matmul(latent, V[:, :dim])
@@ -656,7 +659,7 @@ def pca_and_hist(target_mask, splits, idx, low_rank, xy_dim=[0, 1], threshold=No
     plt.hist(y[:, x_dim][~target_mask[splits[idx]]], bins=bins,color='r')
     plt.ylim([0, 60])
     plt.show()
-=======
+
     torch.save(low_rank, f'PCA_dim{dim}.p')
     # Performance PCA Plot
     fig = plt.figure()

@@ -196,7 +196,7 @@ def calc_LEs_an(*params, model, k_LE=100000, rec_layer=0, kappa=10, diff=10, war
         # qvect[:, t, :, :] = Q
 
         t = t + 1
-    print(f'Summand Shape: {torch.log2(torch.diagonal(rvals.detach(), dim1=-2, dim2=-1)).shape}')
+    # print(f'Summand Shape: {torch.log2(torch.diagonal(rvals.detach(), dim1=-2, dim2=-1)).shape}')
     LEs = torch.sum(torch.log2(torch.diagonal(rvals.detach(), dim1=-2, dim2=-1)), dim=-2) / feed_seq
     #     print(torch.log2(rvals.detach()).shape)
     return LEs, rvals  # , qvect

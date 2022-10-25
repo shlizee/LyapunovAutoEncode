@@ -64,7 +64,7 @@ def train_model(full_con, model, optimizer, trial_data, start_epoch= 0, print_in
         print('Training ...')
 
     for epoch in range(start_epoch+1, full_con.train.max_epoch+1):
-        print(f'{epoch} / {full_con.train.max_epoch}')
+        # print(f'{epoch} / {full_con.train.max_epoch}')
         if epoch%print_interval == 0 and verbose:
             print('Training epoch {} of {}'.format(epoch, full_con.train.max_epoch), end = '')
         running_loss = 0.0

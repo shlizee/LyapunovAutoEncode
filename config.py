@@ -105,9 +105,10 @@ class TrainConfig(object):
 			return torch.optim.lr_scheduler.MultiStepLR(opt, [1,], gamma=1.0)
 		return self.scheduler(opt, **self.scheduler_params)
 
+
 class ModelConfig(object):
 	def __init__(self, model_type, num_layers, hidden_size, input_size, output_size, dropout, init_type, device, init_params = {}, x_init_params = {}, other_rnn_params = {}, 
-					bias = True, nonlinearity = 'tanh', id_init_param= None, batch_first = True, encoding = 'none'):
+					bias=True, nonlinearity='tanh', id_init_param=None, batch_first=True, encoding='none'):
 		"""
 		Creates configuration for model hyperparameters
 		
@@ -169,15 +170,16 @@ class ModelConfig(object):
 
 
 class FullConfig(object):
-	def __init__(self, dataCon, trainCon, modelCon):
+	def __init__(self, dataCon, trainCon, modelCon, param_precision=3):
 		self.data = dataCon
 		self.train = trainCon
 		self.model = modelCon
 		self.device = modelCon.device
+		self.param_precision = param_precision
 
     #Return full file prefix name with identifying parameters for this experiment
 	def name(self):
-		fullname = '{0}_L{1}_H{2}_{3}_drop{4}_{5}_lr{6}_{7}_{8}'.format(self.model.model_type, self.model.rnn_atts['num_layers'], self.model.rnn_atts['hidden_size'],
+		fullname = '{0}_L{1}_H{2}_{3}_drop{4}_{5}_lr{6}_{7}_{8:.3f}'.format(self.model.model_type, self.model.rnn_atts['num_layers'], self.model.rnn_atts['hidden_size'],
 																			self.model.nonlinearity, self.model.dropout, self.train.optimizer,
 																			self.train.learning_rate, self.model.init_type,
 																		    self.model.init_params[self.model.id_init_param])
