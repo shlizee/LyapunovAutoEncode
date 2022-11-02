@@ -22,29 +22,43 @@ def tsne(model, X, tsne_params={}, model_type='lstm'):
     return tsne_model
 
 
-def main(latent_size, model_type='lstm', dir=''):
+def main(args):
     parser = argparse.ArgumentParser(description="Train Lyapunov Autoencoder")
     parser.add_argument("-model", "--model_type", type=str, default='rnn', required=False)
-    parser.add_argument("-task", "--task_type", type=str, default='SMNIST', required=False)
+    parser.add_argument("-task", "--task_type", type=str, default='CharRNN', required=False)
     parser.add_argument("-latent", "--latent_size", type=int, default=32, required=False)
     parser.add_argument("-max_epoch", "--max_epoch", type=int, default=4000, required=False)
-    parser.add_argument("-evals", "--evals", type=int, default=4000, required=False)
+    parser.add_argument("-evals", "--evals", type=int, default=300, required=False)
+    parser.add_argument("-val_split", "--val_split", type=float, default=0.1, required=False)
+    parser.add_argument("-test_split", "--test_split", type=float, default=0.2, required=False)
     if torch.cuda.is_available():
         device = torch.device('cuda')
     else:
         device = torch.device('cpu')
+
+    args = parser.parse_args(args)
+    model_type = args.model_type
+    task_type = args.task_type
+    latent_size = args.latent_size
+    max_epoch = args.max_epoch
+    val_split = args.val_split
+    test_split = args.test_split
+    evals = args.evals
+
     model_dir = f'{task_type}/AE_Models/{model_type}/Latent_{latent_size}'
     model = torch.load(f'{model_dir}/ae_prednet_{max_epoch}.ckpt').cpu()
     model.load_state_dict(model.best_state)
     data_dir = f'{task_type}/Processed'
     x_data = torch.load(f'{data_dir}/{model_type}_allLEs.p')
     targets = torch.load(f'{data_dir}/{model_type}_allValLoss.p')
-    split = torch.load(f'{data_dir}/{model_type}_data_split_vfrac0.2.p')
+    split = torch.load(f'{data_dir}/{model_type}_data_split_vfrac{val_split}_testfrac{test_split}.p')
     indices = [0, 300, 600, 900, 1200]
     sizes = [64, 128, 256, 512]
-    thresh = torch.mean(targets)
+    thresh = torch.median(targets)
+    target_mask = targets < thresh
 
-    low_rank = pca(latent_size, dim=2, model_type=model_type, no_evals=evals, threshold=thresh)
+    low_rank = pca(latent_size, dim=2, model_type=model_type, no_evals=evals, thresh=thresh, task_type = task_type,
+                   v_frac=val_split, t_frac=test_split).detach()
     plt.figure(2)
     linewidth = 1
     plt.scatter(low_rank[~target_mask, 0], low_rank[~target_mask, 1], s=20, c='red', alpha=.5, label='Low')
@@ -54,20 +68,19 @@ def main(latent_size, model_type='lstm', dir=''):
     plt.title('Coloring by Accuracy')
     plt.savefig(f'{task_type}/Figures/Latent/{model_type}_pca_perf.png', bbox_inches='tight', dpi=200)
 
+    i_list = torch.arange(1200)
+    splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
+              i in range(len(indices) - 1)]
 
-    # tsne_model = tsne(model, split['train_data'], tsne_params={'perplexity': 10})
-    # splits = []
-    # i_list = torch.arange(1200)
-    # splits = [(i_list > torch.ones_like(i_list) * indices[i]) * (i_list < torch.ones_like(i_list) * indices[i + 1]) for
-    #           i in range(len(indices) - 1)]
-    # Y = tsne_model.fit_transform(model(x_data)[1].detach())
-    # plt.figure()
-    # for idx, size in enumerate(sizes):
-    #     y = Y[splits[idx]]
-    #     plt.scatter(y[:, 0], y[:, 1], s=6, label=size)
-    # plt.legend()
-    # torch.save(Y, f'{data_dir}/{model_type}_tsne.p')
-    # plt.savefig(f'{task_type}/Figures/Latent/{model_type}_AEPredNet_tsne_size.png', dpi=200)
+    plt.figure(3)
+    for idx, size in enumerate(sizes):
+        y = low_rank[splits[idx]]
+        plt.scatter(y[:, 0], y[:, 1], s=6, label=size)
+    plt.legend(title='size')
+    plt.title('Coloring by Size')
+    plt.xlabel('PC 1')
+    plt.ylabel('PC 2')
+    plt.savefig(f'{task_type}/Figures/Latent/{model_type}_AEPredNet_pca_size.png', dpi=200)
 
 
 def param_plot(latent_size, model_type='lstm', dir='', no_evals=300, val_split=0.2):
@@ -303,20 +316,18 @@ def perturbation(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2
     return l_prime, le_perturbed
 
 
-def pca(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2, thresh=1.75):
+def pca(latent_size, dim=2, model_type='lstm', no_evals=300, v_frac=0.2, t_frac=0.1, thresh=1.75, task_type='SMNIST'):
     if torch.cuda.is_available():
         device = torch.device('cuda')
     else:
         device = torch.device('cpu')
     model = torch.load(f'{task_type}/AE_Models/{model_type}/Latent_{latent_size}/ae_prednet_4000.ckpt').cpu()
     model.load_state_dict(model.best_state)
-    new_model = AEPredNet(model.input_size, model.latent_size)
-    new_model.load_state_dict(model.best_state)
     x_data = torch.load(f'{task_type}/Processed/{model_type}_allLEs.p')
     targets = torch.load(f'{task_type}/Processed/{model_type}_allValLoss.p')
     target_mask = targets < thresh
     # print(f'Target shape {targets.shape}')
-    split = torch.load(f'{task_type}/Processed/{model_type}_data_split_vfrac{v_frac}.p')
+    split = torch.load(f'{task_type}/Processed/{model_type}_data_split_vfrac{v_frac}_testfrac{t_frac}.p')
     indices = [0, 1 * no_evals, 2 * no_evals, 3 * no_evals, 4 * no_evals]
     sizes = [64, 128, 256, 512]
     i_list = torch.arange(len(sizes) * no_evals)
